@@ -273,5 +273,8 @@
   <ItemGroup>
     <None Include="Resources\BalhamLogin6.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courseAdminPage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
