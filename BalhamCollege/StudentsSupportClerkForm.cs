@@ -12,9 +12,14 @@ namespace BalhamCollege
 {
     public partial class StudentsSupportClerkForm : Form
     {
-        public StudentsSupportClerkForm()
+        private DataController DC;
+        private LoginForm frmLogin;
+        public StudentsSupportClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
+            DC = dc;
+            frmLogin = lgin;
+            frmLogin.Hide();
         }
 
         private void btnRecordIssue_Click(object sender, EventArgs e)
@@ -29,7 +34,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }

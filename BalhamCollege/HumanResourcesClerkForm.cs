@@ -12,9 +12,14 @@ namespace BalhamCollege
 {
     public partial class HumanResourcesClerkForm : Form
     {
-        public HumanResourcesClerkForm()
+        private DataController DC;
+        private LoginForm frmLogin;
+        public HumanResourcesClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
+            DC = dc;
+            frmLogin = lgin;
+            frmLogin.Hide();
         }
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
@@ -39,7 +44,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }

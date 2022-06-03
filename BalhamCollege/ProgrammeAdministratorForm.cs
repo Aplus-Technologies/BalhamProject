@@ -12,9 +12,14 @@ namespace BalhamCollege
 {
     public partial class ProgrammeAdministratorForm : Form
     {
-        public ProgrammeAdministratorForm()
+        private DataController DC;
+        private LoginForm frmLogin;
+        public ProgrammeAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
+            DC = dc;
+            frmLogin = lgin;
+            frmLogin.Hide();
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
@@ -64,7 +69,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }

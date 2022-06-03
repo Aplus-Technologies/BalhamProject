@@ -12,9 +12,14 @@ namespace BalhamCollege
 {
     public partial class ResearchAdministratorForm : Form
     {
-        public ResearchAdministratorForm()
+        private DataController DC;
+        private LoginForm frmLogin;
+        public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
+            DC = dc;
+            frmLogin = lgin;
+            frmLogin.Hide();
         }
 
         private void btnAddResearchProject_Click(object sender, EventArgs e)
@@ -49,7 +54,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmLogin.Show();
         }
     }
 }
