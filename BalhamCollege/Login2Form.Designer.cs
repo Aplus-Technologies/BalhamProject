@@ -67,6 +67,7 @@ namespace BalhamCollege
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(288, 20);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // panel1
             // 
