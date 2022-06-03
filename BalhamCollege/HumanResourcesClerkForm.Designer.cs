@@ -46,7 +46,7 @@ namespace BalhamCollege
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Location = new System.Drawing.Point(30, 621);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(243, 73);
             this.btnReturn.TabIndex = 18;
@@ -61,7 +61,7 @@ namespace BalhamCollege
             this.btnLecturerReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLecturerReport.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecturerReport.Location = new System.Drawing.Point(30, 551);
-            this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecturerReport.Name = "btnLecturerReport";
             this.btnLecturerReport.Size = new System.Drawing.Size(243, 66);
             this.btnLecturerReport.TabIndex = 17;
@@ -76,7 +76,7 @@ namespace BalhamCollege
             this.btnAddLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddLecturer.Location = new System.Drawing.Point(30, 306);
-            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddLecturer.Name = "btnAddLecturer";
             this.btnAddLecturer.Size = new System.Drawing.Size(243, 79);
             this.btnAddLecturer.TabIndex = 16;
@@ -91,7 +91,7 @@ namespace BalhamCollege
             this.btnUpdateLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateLecturer.Location = new System.Drawing.Point(30, 389);
-            this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateLecturer.Name = "btnUpdateLecturer";
             this.btnUpdateLecturer.Size = new System.Drawing.Size(243, 79);
             this.btnUpdateLecturer.TabIndex = 15;
@@ -106,7 +106,7 @@ namespace BalhamCollege
             this.btnDeleteLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteLecturer.Location = new System.Drawing.Point(30, 472);
-            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
             this.btnDeleteLecturer.Size = new System.Drawing.Size(243, 75);
             this.btnDeleteLecturer.TabIndex = 14;
@@ -135,9 +135,9 @@ namespace BalhamCollege
             this.Controls.Add(this.btnDeleteLecturer);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HumanResourcesClerkForm";
-            this.Text = "HumanResourcesClerkForm";
+            this.Text = "Human Resources Clerk Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
