@@ -19,10 +19,11 @@ namespace BalhamCollege
         private ProgrammeAdministratorForm frmProgramAdministrator;
         private CourseAdministratorForm frmCourseAdministrator;
         private StudentsSupportClerkForm frmStudentsSupportClerk;
-        private trialLogin4 trialogin;
+        
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
       
@@ -30,6 +31,7 @@ namespace BalhamCollege
         private void LoginForm_Load(object sender, EventArgs e)
         {
             DC = new DataController();
+            
         }
 
         private void ClearFields()
@@ -103,5 +105,7 @@ namespace BalhamCollege
             }
             
         }
+
+       
     }
 }
