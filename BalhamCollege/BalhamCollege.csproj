@@ -69,11 +69,13 @@
     <Compile Include="EnrolmentsClerkForm.Designer.cs">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </Compile>
+
     <Compile Include="HumanResourcesClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HumanResourcesClerkForm.Designer.cs">
       <DependentUpon>HumanResourcesClerkForm.cs</DependentUpon>
+
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -110,8 +112,10 @@
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="HumanResourcesClerkForm.resx">
       <DependentUpon>HumanResourcesClerkForm.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -127,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ResearchAdministratorForm.resx">
       <DependentUpon>ResearchAdministratorForm.cs</DependentUpon>
@@ -157,6 +162,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossButton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossButton3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonQuit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
