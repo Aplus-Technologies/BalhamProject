@@ -71,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataController.resx">
+      <DependentUpon>DataController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </EmbeddedResource>
