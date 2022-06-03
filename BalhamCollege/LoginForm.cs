@@ -25,76 +25,83 @@ namespace BalhamCollege
             InitializeComponent();
         }
 
-        private void btnEnrolmentsClerk_Click(object sender, EventArgs e)
-        {
-            if (frmEnrolmentClerk == null)
-            {
-                frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
-            }
-            frmEnrolmentClerk.ShowDialog();
-        }
-        private void btnHumanResourcesClerk_Click(object sender, EventArgs e)
-        {
-            if (frmHumanResourcesClerk == null)
-            {
-                frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
-            }
-            frmHumanResourcesClerk.ShowDialog();
-        }
-
-        private void btnResearchAdministrator_Click(object sender, EventArgs e)
-        {
-            if (frmResearchAdministrator == null)
-            {
-                frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
-            }
-            frmResearchAdministrator.ShowDialog();
-        }
-
-        private void btnProgramAdministrator_Click(object sender, EventArgs e)
-        {
-            if (frmProgramAdministrator == null)
-            {
-                frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
-            }
-            frmProgramAdministrator.ShowDialog();
-        }
-
-        private void btnCourseAdministrator_Click(object sender, EventArgs e)
-        {
-            if (frmCourseAdministrator == null)
-            {
-                frmCourseAdministrator = new CourseAdministratorForm(DC, this);
-            }
-            frmCourseAdministrator.ShowDialog();
-        }
-
-        private void btnStudentsSupportClerk_Click(object sender, EventArgs e)
-        {
-            if (frmStudentsSupportClerk == null)
-            {
-                frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
-            }
-            frmStudentsSupportClerk.ShowDialog();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
+      
+       
         private void LoginForm_Load(object sender, EventArgs e)
         {
             DC = new DataController();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ClearFields()
+        { // clear textboxes and check box
+            txtPassword.Text = "";
+            txtUsername.Text = "";
+            chkBox_login.Checked = false;
+        }
+
+
+      // system checks username and password combination and takes user to matching page
+        private void pbLoginButton_Click(object sender, EventArgs e)
         {
-            if (trialogin == null)
+            if (txtUsername.Text == "enrol" && txtPassword.Text == "enrol123")
             {
-                trialogin = new trialLogin4(DC, this);
+                if (frmEnrolmentClerk == null)
+                {
+                    frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
+                }
+                ClearFields();
+                frmEnrolmentClerk.ShowDialog();
             }
-            trialogin.ShowDialog();
+            else if (txtUsername.Text == "course" && txtPassword.Text == "course123")
+            {
+                if (frmCourseAdministrator == null)
+                {
+                    frmCourseAdministrator = new CourseAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmCourseAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "human" && txtPassword.Text == "human123")
+            {
+                if (frmHumanResourcesClerk == null)
+                {
+                    frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
+                }
+                ClearFields();
+                frmHumanResourcesClerk.ShowDialog();
+            }
+            else if (txtUsername.Text == "programme" && txtPassword.Text == "programme123")
+            {
+                if (frmProgramAdministrator == null)
+                {
+                    frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmProgramAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "research" && txtPassword.Text == "research123")
+            {
+                if (frmResearchAdministrator == null)
+                {
+                    frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmResearchAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "student" && txtPassword.Text == "student123")
+            {
+                if (frmStudentsSupportClerk == null)
+                {
+                    frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
+                }
+                ClearFields();
+                frmStudentsSupportClerk.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Username or Password invalid, please re-enter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
     }
 }

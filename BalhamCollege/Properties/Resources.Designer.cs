@@ -203,6 +203,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loginBtn {
+            get {
+                object obj = ResourceManager.GetObject("loginBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap programmeAdminPage {
             get {
                 object obj = ResourceManager.GetObject("programmeAdminPage", resourceCulture);

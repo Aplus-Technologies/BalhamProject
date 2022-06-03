@@ -136,9 +136,6 @@
   <data name="enrolmentsClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enrolmentsClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="researchAdminPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\researchAdminPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="crossButton2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crossButton2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -147,6 +144,9 @@
   </data>
   <data name="buttonQuit3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonQuit3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="studentSupportClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\studentSupportClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="humanResourcesClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\humanResourcesClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,13 +160,16 @@
   <data name="BalhamLogin5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BalhamLogin5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="researchAdminPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\researchAdminPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="courseAdminPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courseAdminPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="studentSupportClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\studentSupportClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loginBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
