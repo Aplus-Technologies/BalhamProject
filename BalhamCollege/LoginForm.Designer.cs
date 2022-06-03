@@ -41,12 +41,13 @@ namespace BalhamCollege
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHumanResourcesClerk
             // 
             this.btnHumanResourcesClerk.Location = new System.Drawing.Point(486, 68);
-            this.btnHumanResourcesClerk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHumanResourcesClerk.Margin = new System.Windows.Forms.Padding(2);
             this.btnHumanResourcesClerk.Name = "btnHumanResourcesClerk";
             this.btnHumanResourcesClerk.Size = new System.Drawing.Size(218, 40);
             this.btnHumanResourcesClerk.TabIndex = 0;
@@ -57,7 +58,7 @@ namespace BalhamCollege
             // btnEnrolmentsClerk
             // 
             this.btnEnrolmentsClerk.Location = new System.Drawing.Point(486, 18);
-            this.btnEnrolmentsClerk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnrolmentsClerk.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnrolmentsClerk.Name = "btnEnrolmentsClerk";
             this.btnEnrolmentsClerk.Size = new System.Drawing.Size(218, 40);
             this.btnEnrolmentsClerk.TabIndex = 1;
@@ -68,7 +69,7 @@ namespace BalhamCollege
             // btnCourseAdministrator
             // 
             this.btnCourseAdministrator.Location = new System.Drawing.Point(486, 215);
-            this.btnCourseAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCourseAdministrator.Margin = new System.Windows.Forms.Padding(2);
             this.btnCourseAdministrator.Name = "btnCourseAdministrator";
             this.btnCourseAdministrator.Size = new System.Drawing.Size(218, 40);
             this.btnCourseAdministrator.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace BalhamCollege
             // btnStudentsSupportClerk
             // 
             this.btnStudentsSupportClerk.Location = new System.Drawing.Point(486, 259);
-            this.btnStudentsSupportClerk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStudentsSupportClerk.Margin = new System.Windows.Forms.Padding(2);
             this.btnStudentsSupportClerk.Name = "btnStudentsSupportClerk";
             this.btnStudentsSupportClerk.Size = new System.Drawing.Size(218, 40);
             this.btnStudentsSupportClerk.TabIndex = 3;
@@ -90,7 +91,7 @@ namespace BalhamCollege
             // btnResearchAdministrator
             // 
             this.btnResearchAdministrator.Location = new System.Drawing.Point(486, 121);
-            this.btnResearchAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResearchAdministrator.Margin = new System.Windows.Forms.Padding(2);
             this.btnResearchAdministrator.Name = "btnResearchAdministrator";
             this.btnResearchAdministrator.Size = new System.Drawing.Size(218, 40);
             this.btnResearchAdministrator.TabIndex = 4;
@@ -101,7 +102,7 @@ namespace BalhamCollege
             // btnProgramAdministrator
             // 
             this.btnProgramAdministrator.Location = new System.Drawing.Point(486, 171);
-            this.btnProgramAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProgramAdministrator.Margin = new System.Windows.Forms.Padding(2);
             this.btnProgramAdministrator.Name = "btnProgramAdministrator";
             this.btnProgramAdministrator.Size = new System.Drawing.Size(218, 40);
             this.btnProgramAdministrator.TabIndex = 5;
@@ -112,7 +113,7 @@ namespace BalhamCollege
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(193, 115);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(164, 22);
             this.txtUsername.TabIndex = 6;
@@ -140,7 +141,7 @@ namespace BalhamCollege
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(193, 159);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(164, 22);
             this.txtPassword.TabIndex = 9;
@@ -148,7 +149,7 @@ namespace BalhamCollege
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(274, 215);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(126, 40);
             this.btnExit.TabIndex = 10;
@@ -159,18 +160,29 @@ namespace BalhamCollege
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(114, 215);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(126, 40);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(391, 358);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 35);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Amy";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtPassword);
@@ -207,6 +219,7 @@ namespace BalhamCollege
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button button1;
     }
 }
 

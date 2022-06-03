@@ -12,9 +12,15 @@ namespace BalhamCollege
 {
     public partial class trialLogin4 : Form
     {
-        public trialLogin4()
+        private DataController DC;
+        private LoginForm frmLogin;
+        public trialLogin4(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
+            InitializeComponent();
+            DC = dc;
+            frmLogin = lgin;
+            frmLogin.Hide();
         }
     }
 }
