@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace BalhamCollege
 {
     public partial class DataController : Form
-    {
+    { // set up global variables 
         public DataTable dtAssessment;
         public DataTable dtAssignment;
         public DataTable dtCourse;
