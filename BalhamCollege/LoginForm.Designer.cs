@@ -44,20 +44,20 @@ namespace BalhamCollege
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(431, 386);
+            this.txtPassword.Location = new System.Drawing.Point(448, 386);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(293, 16);
+            this.txtPassword.Size = new System.Drawing.Size(266, 16);
             this.txtPassword.TabIndex = 9;
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(431, 282);
+            this.txtUsername.Location = new System.Drawing.Point(448, 282);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(293, 16);
+            this.txtUsername.Size = new System.Drawing.Size(266, 16);
             this.txtUsername.TabIndex = 6;
             // 
             // chkBox_login

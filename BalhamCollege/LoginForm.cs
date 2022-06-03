@@ -31,7 +31,8 @@ namespace BalhamCollege
         private void LoginForm_Load(object sender, EventArgs e)
         {
             DC = new DataController();
-            
+           
+
         }
 
         private void ClearFields()
@@ -100,7 +101,7 @@ namespace BalhamCollege
                 frmStudentsSupportClerk.ShowDialog();
             }
             else
-            {
+            {  // error message if username and password combination are invalid
                 MessageBox.Show("Username or Password invalid, please re-enter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
