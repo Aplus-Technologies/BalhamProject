@@ -36,8 +36,8 @@ namespace BalhamCollege
             this.btnAddAssessment = new System.Windows.Forms.Button();
             this.btnProduceAssessmentsReport = new System.Windows.Forms.Button();
             this.btnEnterResult = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbCourseAdmin = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdateAssessment
@@ -48,7 +48,7 @@ namespace BalhamCollege
             this.btnUpdateAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateAssessment.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateAssessment.Location = new System.Drawing.Point(25, 342);
-            this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
             this.btnUpdateAssessment.Size = new System.Drawing.Size(242, 63);
             this.btnUpdateAssessment.TabIndex = 36;
@@ -63,7 +63,7 @@ namespace BalhamCollege
             this.btnDeleteAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAssessment.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteAssessment.Location = new System.Drawing.Point(25, 409);
-            this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
             this.btnDeleteAssessment.Size = new System.Drawing.Size(242, 65);
             this.btnDeleteAssessment.TabIndex = 35;
@@ -78,7 +78,7 @@ namespace BalhamCollege
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Location = new System.Drawing.Point(25, 621);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(242, 71);
             this.btnReturn.TabIndex = 34;
@@ -93,7 +93,7 @@ namespace BalhamCollege
             this.btnAddAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAssessment.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddAssessment.Location = new System.Drawing.Point(25, 269);
-            this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAssessment.Name = "btnAddAssessment";
             this.btnAddAssessment.Size = new System.Drawing.Size(242, 69);
             this.btnAddAssessment.TabIndex = 33;
@@ -108,7 +108,7 @@ namespace BalhamCollege
             this.btnProduceAssessmentsReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduceAssessmentsReport.ForeColor = System.Drawing.SystemColors.Control;
             this.btnProduceAssessmentsReport.Location = new System.Drawing.Point(25, 550);
-            this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceAssessmentsReport.Name = "btnProduceAssessmentsReport";
             this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(242, 67);
             this.btnProduceAssessmentsReport.TabIndex = 32;
@@ -123,7 +123,7 @@ namespace BalhamCollege
             this.btnEnterResult.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterResult.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEnterResult.Location = new System.Drawing.Point(25, 478);
-            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnterResult.Name = "btnEnterResult";
             this.btnEnterResult.Size = new System.Drawing.Size(242, 68);
             this.btnEnterResult.TabIndex = 31;
@@ -131,14 +131,14 @@ namespace BalhamCollege
             this.btnEnterResult.UseVisualStyleBackColor = false;
             this.btnEnterResult.Click += new System.EventHandler(this.btnEnterResult_Click);
             // 
-            // pictureBox1
+            // pbCourseAdmin
             // 
-            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.courseAdminPage;
-            this.pictureBox1.Location = new System.Drawing.Point(-6, -4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1116, 710);
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
+            this.pbCourseAdmin.Image = global::BalhamCollege.Properties.Resources.courseAdminPage;
+            this.pbCourseAdmin.Location = new System.Drawing.Point(-6, -4);
+            this.pbCourseAdmin.Name = "pbCourseAdmin";
+            this.pbCourseAdmin.Size = new System.Drawing.Size(1116, 710);
+            this.pbCourseAdmin.TabIndex = 37;
+            this.pbCourseAdmin.TabStop = false;
             // 
             // CourseAdministratorForm
             // 
@@ -151,12 +151,12 @@ namespace BalhamCollege
             this.Controls.Add(this.btnAddAssessment);
             this.Controls.Add(this.btnProduceAssessmentsReport);
             this.Controls.Add(this.btnEnterResult);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbCourseAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CourseAdministratorForm";
             this.Text = "Course Administrator";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,6 +170,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnAddAssessment;
         private System.Windows.Forms.Button btnProduceAssessmentsReport;
         private System.Windows.Forms.Button btnEnterResult;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbCourseAdmin;
     }
 }
