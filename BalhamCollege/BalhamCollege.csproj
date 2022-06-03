@@ -46,6 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="DeleteAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAssessmentForm.Designer.cs">
+      <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCourseForm.Designer.cs">
+      <DependentUpon>DeleteCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteLecturerForm.Designer.cs">
+      <DependentUpon>DeleteLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteProgrammeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteProgrammeForm.Designer.cs">
+      <DependentUpon>DeleteProgrammeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteResearchTopicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteResearchTopicForm.Designer.cs">
+      <DependentUpon>DeleteResearchTopicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudentForm.Designer.cs">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
+
     <Compile Include="CourseAdministratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +99,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBalhamCollegeAzure.xsd</DependentUpon>
+
     </Compile>
     <Compile Include="EnrolmentsClerkForm.cs">
       <SubType>Form</SubType>
@@ -89,6 +127,37 @@
       <DependentUpon>ProgrammeAdministratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="RemoveLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveLecturerForm.Designer.cs">
+      <DependentUpon>RemoveLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveResearchProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveResearchProjectForm.Designer.cs">
+      <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DeleteAssessmentForm.resx">
+      <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCourseForm.resx">
+      <DependentUpon>DeleteCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteLecturerForm.resx">
+      <DependentUpon>DeleteLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteProgrammeForm.resx">
+      <DependentUpon>DeleteProgrammeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteResearchTopicForm.resx">
+      <DependentUpon>DeleteResearchTopicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudentForm.resx">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
+
     <Compile Include="ResearchAdministratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +181,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataController.resx">
       <DependentUpon>DataController.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
@@ -135,6 +205,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+
+    <EmbeddedResource Include="RemoveLecturerForm.resx">
+      <DependentUpon>RemoveLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveResearchProjectForm.resx">
+      <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="ResearchAdministratorForm.resx">
       <DependentUpon>ResearchAdministratorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +233,7 @@
     <None Include="dsBalhamCollegeAzure.xss">
       <DependentUpon>dsBalhamCollegeAzure.xsd</DependentUpon>
     </None>
+
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
