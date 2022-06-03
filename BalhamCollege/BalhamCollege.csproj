@@ -157,7 +157,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteStudentForm.resx">
       <DependentUpon>DeleteStudentForm.cs</DependentUpon>
-
+    </EmbeddedResource>
     <Compile Include="ResearchAdministratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,7 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataController.resx">
       <DependentUpon>DataController.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
