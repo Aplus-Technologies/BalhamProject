@@ -29,7 +29,6 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResearchAdministratorForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnUpdateResearchTopic = new System.Windows.Forms.Button();
             this.btnAddResearchProject = new System.Windows.Forms.Button();
@@ -41,10 +40,9 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(242, 258);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Location = new System.Drawing.Point(322, 317);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(121, 46);
+            this.btnReturn.Size = new System.Drawing.Size(161, 56);
             this.btnReturn.TabIndex = 20;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -52,10 +50,9 @@ namespace BalhamCollege
             // 
             // btnUpdateResearchTopic
             // 
-            this.btnUpdateResearchTopic.Location = new System.Drawing.Point(119, 180);
-            this.btnUpdateResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateResearchTopic.Location = new System.Drawing.Point(159, 222);
             this.btnUpdateResearchTopic.Name = "btnUpdateResearchTopic";
-            this.btnUpdateResearchTopic.Size = new System.Drawing.Size(150, 49);
+            this.btnUpdateResearchTopic.Size = new System.Drawing.Size(200, 60);
             this.btnUpdateResearchTopic.TabIndex = 19;
             this.btnUpdateResearchTopic.Text = "Update Research Topic";
             this.btnUpdateResearchTopic.UseVisualStyleBackColor = true;
@@ -63,10 +60,9 @@ namespace BalhamCollege
             // 
             // btnAddResearchProject
             // 
-            this.btnAddResearchProject.Location = new System.Drawing.Point(119, 63);
-            this.btnAddResearchProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddResearchProject.Location = new System.Drawing.Point(159, 77);
             this.btnAddResearchProject.Name = "btnAddResearchProject";
-            this.btnAddResearchProject.Size = new System.Drawing.Size(150, 49);
+            this.btnAddResearchProject.Size = new System.Drawing.Size(200, 60);
             this.btnAddResearchProject.TabIndex = 18;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = true;
@@ -74,10 +70,9 @@ namespace BalhamCollege
             // 
             // btnDeleteResearchTopic
             // 
-            this.btnDeleteResearchTopic.Location = new System.Drawing.Point(332, 120);
-            this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteResearchTopic.Location = new System.Drawing.Point(442, 148);
             this.btnDeleteResearchTopic.Name = "btnDeleteResearchTopic";
-            this.btnDeleteResearchTopic.Size = new System.Drawing.Size(150, 49);
+            this.btnDeleteResearchTopic.Size = new System.Drawing.Size(200, 60);
             this.btnDeleteResearchTopic.TabIndex = 17;
             this.btnDeleteResearchTopic.Text = "Delete Research Topic";
             this.btnDeleteResearchTopic.UseVisualStyleBackColor = true;
@@ -85,10 +80,9 @@ namespace BalhamCollege
             // 
             // btnAddResearchTopic
             // 
-            this.btnAddResearchTopic.Location = new System.Drawing.Point(119, 120);
-            this.btnAddResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddResearchTopic.Location = new System.Drawing.Point(159, 148);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
-            this.btnAddResearchTopic.Size = new System.Drawing.Size(150, 49);
+            this.btnAddResearchTopic.Size = new System.Drawing.Size(200, 60);
             this.btnAddResearchTopic.TabIndex = 16;
             this.btnAddResearchTopic.Text = "Add Research Topic";
             this.btnAddResearchTopic.UseVisualStyleBackColor = true;
@@ -96,10 +90,9 @@ namespace BalhamCollege
             // 
             // btnProduceResearchReport
             // 
-            this.btnProduceResearchReport.Location = new System.Drawing.Point(332, 180);
-            this.btnProduceResearchReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProduceResearchReport.Location = new System.Drawing.Point(442, 222);
             this.btnProduceResearchReport.Name = "btnProduceResearchReport";
-            this.btnProduceResearchReport.Size = new System.Drawing.Size(150, 49);
+            this.btnProduceResearchReport.Size = new System.Drawing.Size(200, 60);
             this.btnProduceResearchReport.TabIndex = 15;
             this.btnProduceResearchReport.Text = "Produce Research Report";
             this.btnProduceResearchReport.UseVisualStyleBackColor = true;
@@ -107,10 +100,9 @@ namespace BalhamCollege
             // 
             // btnRemoveResearchProject
             // 
-            this.btnRemoveResearchProject.Location = new System.Drawing.Point(332, 63);
-            this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveResearchProject.Location = new System.Drawing.Point(442, 77);
             this.btnRemoveResearchProject.Name = "btnRemoveResearchProject";
-            this.btnRemoveResearchProject.Size = new System.Drawing.Size(150, 49);
+            this.btnRemoveResearchProject.Size = new System.Drawing.Size(200, 60);
             this.btnRemoveResearchProject.TabIndex = 14;
             this.btnRemoveResearchProject.Text = "Remove Research Project";
             this.btnRemoveResearchProject.UseVisualStyleBackColor = true;
@@ -118,9 +110,9 @@ namespace BalhamCollege
             // 
             // ResearchAdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnUpdateResearchTopic);
             this.Controls.Add(this.btnAddResearchProject);
@@ -128,8 +120,6 @@ namespace BalhamCollege
             this.Controls.Add(this.btnAddResearchTopic);
             this.Controls.Add(this.btnProduceResearchReport);
             this.Controls.Add(this.btnRemoveResearchProject);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ResearchAdministratorForm";
             this.Text = "ResearchAdministratorForm";
             this.ResumeLayout(false);

@@ -29,7 +29,6 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HumanResourcesClerkForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnLecturerReport = new System.Windows.Forms.Button();
             this.btnAddLecturer = new System.Windows.Forms.Button();
@@ -39,10 +38,9 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(232, 249);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Location = new System.Drawing.Point(309, 306);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(121, 46);
+            this.btnReturn.Size = new System.Drawing.Size(161, 56);
             this.btnReturn.TabIndex = 18;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -50,10 +48,9 @@ namespace BalhamCollege
             // 
             // btnLecturerReport
             // 
-            this.btnLecturerReport.Location = new System.Drawing.Point(332, 72);
-            this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLecturerReport.Location = new System.Drawing.Point(442, 89);
             this.btnLecturerReport.Name = "btnLecturerReport";
-            this.btnLecturerReport.Size = new System.Drawing.Size(150, 49);
+            this.btnLecturerReport.Size = new System.Drawing.Size(200, 60);
             this.btnLecturerReport.TabIndex = 17;
             this.btnLecturerReport.Text = "Produce Students Report";
             this.btnLecturerReport.UseVisualStyleBackColor = true;
@@ -61,10 +58,9 @@ namespace BalhamCollege
             // 
             // btnAddLecturer
             // 
-            this.btnAddLecturer.Location = new System.Drawing.Point(119, 72);
-            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddLecturer.Location = new System.Drawing.Point(159, 89);
             this.btnAddLecturer.Name = "btnAddLecturer";
-            this.btnAddLecturer.Size = new System.Drawing.Size(150, 49);
+            this.btnAddLecturer.Size = new System.Drawing.Size(200, 60);
             this.btnAddLecturer.TabIndex = 16;
             this.btnAddLecturer.Text = "Add Lecturer";
             this.btnAddLecturer.UseVisualStyleBackColor = true;
@@ -72,10 +68,9 @@ namespace BalhamCollege
             // 
             // btnUpdateLecturer
             // 
-            this.btnUpdateLecturer.Location = new System.Drawing.Point(119, 130);
-            this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateLecturer.Location = new System.Drawing.Point(159, 160);
             this.btnUpdateLecturer.Name = "btnUpdateLecturer";
-            this.btnUpdateLecturer.Size = new System.Drawing.Size(150, 49);
+            this.btnUpdateLecturer.Size = new System.Drawing.Size(200, 60);
             this.btnUpdateLecturer.TabIndex = 15;
             this.btnUpdateLecturer.Text = "Update Lecturer";
             this.btnUpdateLecturer.UseVisualStyleBackColor = true;
@@ -83,10 +78,9 @@ namespace BalhamCollege
             // 
             // btnDeleteLecturer
             // 
-            this.btnDeleteLecturer.Location = new System.Drawing.Point(332, 130);
-            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteLecturer.Location = new System.Drawing.Point(442, 160);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
-            this.btnDeleteLecturer.Size = new System.Drawing.Size(150, 49);
+            this.btnDeleteLecturer.Size = new System.Drawing.Size(200, 60);
             this.btnDeleteLecturer.TabIndex = 14;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = true;
@@ -94,16 +88,14 @@ namespace BalhamCollege
             // 
             // HumanResourcesClerkForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnLecturerReport);
             this.Controls.Add(this.btnAddLecturer);
             this.Controls.Add(this.btnUpdateLecturer);
             this.Controls.Add(this.btnDeleteLecturer);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "HumanResourcesClerkForm";
             this.Text = "HumanResourcesClerkForm";
             this.ResumeLayout(false);
