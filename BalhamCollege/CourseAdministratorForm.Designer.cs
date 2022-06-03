@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAdministratorForm));
             this.btnUpdateAssessment = new System.Windows.Forms.Button();
             this.btnDeleteAssessment = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -39,9 +40,10 @@ namespace BalhamCollege
             // 
             // btnUpdateAssessment
             // 
-            this.btnUpdateAssessment.Location = new System.Drawing.Point(413, 66);
+            this.btnUpdateAssessment.Location = new System.Drawing.Point(310, 54);
+            this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
-            this.btnUpdateAssessment.Size = new System.Drawing.Size(200, 60);
+            this.btnUpdateAssessment.Size = new System.Drawing.Size(150, 49);
             this.btnUpdateAssessment.TabIndex = 36;
             this.btnUpdateAssessment.Text = "Update Assessment";
             this.btnUpdateAssessment.UseVisualStyleBackColor = true;
@@ -49,9 +51,10 @@ namespace BalhamCollege
             // 
             // btnDeleteAssessment
             // 
-            this.btnDeleteAssessment.Location = new System.Drawing.Point(187, 142);
+            this.btnDeleteAssessment.Location = new System.Drawing.Point(140, 115);
+            this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
-            this.btnDeleteAssessment.Size = new System.Drawing.Size(200, 60);
+            this.btnDeleteAssessment.Size = new System.Drawing.Size(150, 49);
             this.btnDeleteAssessment.TabIndex = 35;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = true;
@@ -59,9 +62,10 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(321, 329);
+            this.btnReturn.Location = new System.Drawing.Point(241, 267);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(161, 56);
+            this.btnReturn.Size = new System.Drawing.Size(121, 46);
             this.btnReturn.TabIndex = 34;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -69,9 +73,10 @@ namespace BalhamCollege
             // 
             // btnAddAssessment
             // 
-            this.btnAddAssessment.Location = new System.Drawing.Point(187, 66);
+            this.btnAddAssessment.Location = new System.Drawing.Point(140, 54);
+            this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddAssessment.Name = "btnAddAssessment";
-            this.btnAddAssessment.Size = new System.Drawing.Size(200, 60);
+            this.btnAddAssessment.Size = new System.Drawing.Size(150, 49);
             this.btnAddAssessment.TabIndex = 33;
             this.btnAddAssessment.Text = "Add Assessment";
             this.btnAddAssessment.UseVisualStyleBackColor = true;
@@ -79,9 +84,10 @@ namespace BalhamCollege
             // 
             // btnProduceAssessmentsReport
             // 
-            this.btnProduceAssessmentsReport.Location = new System.Drawing.Point(413, 142);
+            this.btnProduceAssessmentsReport.Location = new System.Drawing.Point(310, 115);
+            this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProduceAssessmentsReport.Name = "btnProduceAssessmentsReport";
-            this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(200, 60);
+            this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(150, 49);
             this.btnProduceAssessmentsReport.TabIndex = 32;
             this.btnProduceAssessmentsReport.Text = "Produce Assessments Report";
             this.btnProduceAssessmentsReport.UseVisualStyleBackColor = true;
@@ -89,9 +95,10 @@ namespace BalhamCollege
             // 
             // btnEnterResult
             // 
-            this.btnEnterResult.Location = new System.Drawing.Point(304, 218);
+            this.btnEnterResult.Location = new System.Drawing.Point(228, 177);
+            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnterResult.Name = "btnEnterResult";
-            this.btnEnterResult.Size = new System.Drawing.Size(200, 60);
+            this.btnEnterResult.Size = new System.Drawing.Size(150, 49);
             this.btnEnterResult.TabIndex = 31;
             this.btnEnterResult.Text = "Enter Result";
             this.btnEnterResult.UseVisualStyleBackColor = true;
@@ -99,15 +106,17 @@ namespace BalhamCollege
             // 
             // CourseAdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnUpdateAssessment);
             this.Controls.Add(this.btnDeleteAssessment);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddAssessment);
             this.Controls.Add(this.btnProduceAssessmentsReport);
             this.Controls.Add(this.btnEnterResult);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CourseAdministratorForm";
             this.Text = "CourseAdministratorForm";
             this.ResumeLayout(false);
