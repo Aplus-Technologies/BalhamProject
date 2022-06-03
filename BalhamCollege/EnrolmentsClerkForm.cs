@@ -16,5 +16,40 @@ namespace BalhamCollege
         {
             InitializeComponent();
         }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnStudentsReport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnrolStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnWithdrawStudent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace BalhamCollege
             this.btnUpdateAssessment.TabIndex = 36;
             this.btnUpdateAssessment.Text = "Update Assessment";
             this.btnUpdateAssessment.UseVisualStyleBackColor = true;
+            this.btnUpdateAssessment.Click += new System.EventHandler(this.btnUpdateAssessment_Click);
             // 
             // btnDeleteAssessment
             // 
@@ -54,6 +55,7 @@ namespace BalhamCollege
             this.btnDeleteAssessment.TabIndex = 35;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = true;
+            this.btnDeleteAssessment.Click += new System.EventHandler(this.btnDeleteAssessment_Click);
             // 
             // btnReturn
             // 
@@ -63,6 +65,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 34;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnAddAssessment
             // 
@@ -72,6 +75,7 @@ namespace BalhamCollege
             this.btnAddAssessment.TabIndex = 33;
             this.btnAddAssessment.Text = "Add Assessment";
             this.btnAddAssessment.UseVisualStyleBackColor = true;
+            this.btnAddAssessment.Click += new System.EventHandler(this.btnAddAssessment_Click);
             // 
             // btnProduceAssessmentsReport
             // 
@@ -81,6 +85,7 @@ namespace BalhamCollege
             this.btnProduceAssessmentsReport.TabIndex = 32;
             this.btnProduceAssessmentsReport.Text = "Produce Assessments Report";
             this.btnProduceAssessmentsReport.UseVisualStyleBackColor = true;
+            this.btnProduceAssessmentsReport.Click += new System.EventHandler(this.btnProduceAssessmentsReport_Click);
             // 
             // btnEnterResult
             // 
@@ -90,6 +95,7 @@ namespace BalhamCollege
             this.btnEnterResult.TabIndex = 31;
             this.btnEnterResult.Text = "Enter Result";
             this.btnEnterResult.UseVisualStyleBackColor = true;
+            this.btnEnterResult.Click += new System.EventHandler(this.btnEnterResult_Click);
             // 
             // CourseAdministratorForm
             // 

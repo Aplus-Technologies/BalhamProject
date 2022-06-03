@@ -46,6 +46,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 20;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnUpdateResearchTopic
             // 
@@ -55,6 +56,7 @@ namespace BalhamCollege
             this.btnUpdateResearchTopic.TabIndex = 19;
             this.btnUpdateResearchTopic.Text = "Update Research Topic";
             this.btnUpdateResearchTopic.UseVisualStyleBackColor = true;
+            this.btnUpdateResearchTopic.Click += new System.EventHandler(this.btnUpdateResearchTopic_Click);
             // 
             // btnAddResearchProject
             // 
@@ -64,6 +66,7 @@ namespace BalhamCollege
             this.btnAddResearchProject.TabIndex = 18;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = true;
+            this.btnAddResearchProject.Click += new System.EventHandler(this.btnAddResearchProject_Click);
             // 
             // btnDeleteResearchTopic
             // 
@@ -73,6 +76,7 @@ namespace BalhamCollege
             this.btnDeleteResearchTopic.TabIndex = 17;
             this.btnDeleteResearchTopic.Text = "Delete Research Topic";
             this.btnDeleteResearchTopic.UseVisualStyleBackColor = true;
+            this.btnDeleteResearchTopic.Click += new System.EventHandler(this.btnDeleteResearchTopic_Click);
             // 
             // btnAddResearchTopic
             // 
@@ -82,6 +86,7 @@ namespace BalhamCollege
             this.btnAddResearchTopic.TabIndex = 16;
             this.btnAddResearchTopic.Text = "Add Research Topic";
             this.btnAddResearchTopic.UseVisualStyleBackColor = true;
+            this.btnAddResearchTopic.Click += new System.EventHandler(this.btnAddResearchTopic_Click);
             // 
             // btnProduceResearchReport
             // 
@@ -91,6 +96,7 @@ namespace BalhamCollege
             this.btnProduceResearchReport.TabIndex = 15;
             this.btnProduceResearchReport.Text = "Produce Research Report";
             this.btnProduceResearchReport.UseVisualStyleBackColor = true;
+            this.btnProduceResearchReport.Click += new System.EventHandler(this.btnProduceResearchReport_Click);
             // 
             // btnRemoveResearchProject
             // 
@@ -100,6 +106,7 @@ namespace BalhamCollege
             this.btnRemoveResearchProject.TabIndex = 14;
             this.btnRemoveResearchProject.Text = "Remove Research Project";
             this.btnRemoveResearchProject.UseVisualStyleBackColor = true;
+            this.btnRemoveResearchProject.Click += new System.EventHandler(this.btnRemoveResearchProject_Click);
             // 
             // ResearchAdministratorForm
             // 

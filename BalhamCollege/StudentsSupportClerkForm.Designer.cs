@@ -42,6 +42,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 35;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnProduceIssuesReport
             // 
@@ -51,6 +52,7 @@ namespace BalhamCollege
             this.btnProduceIssuesReport.TabIndex = 34;
             this.btnProduceIssuesReport.Text = "Produce Issues Report";
             this.btnProduceIssuesReport.UseVisualStyleBackColor = true;
+            this.btnProduceIssuesReport.Click += new System.EventHandler(this.btnProduceIssuesReport_Click);
             // 
             // btnRecordIssue
             // 
@@ -60,6 +62,7 @@ namespace BalhamCollege
             this.btnRecordIssue.TabIndex = 33;
             this.btnRecordIssue.Text = "Record Issue";
             this.btnRecordIssue.UseVisualStyleBackColor = true;
+            this.btnRecordIssue.Click += new System.EventHandler(this.btnRecordIssue_Click);
             // 
             // StudentsSupportClerkForm
             // 

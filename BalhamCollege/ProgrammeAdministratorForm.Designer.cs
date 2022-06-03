@@ -49,6 +49,7 @@ namespace BalhamCollege
             this.btnUpdateProgramme.TabIndex = 33;
             this.btnUpdateProgramme.Text = "Update Programme";
             this.btnUpdateProgramme.UseVisualStyleBackColor = true;
+            this.btnUpdateProgramme.Click += new System.EventHandler(this.btnUpdateProgramme_Click);
             // 
             // btnDeleteProgramme
             // 
@@ -58,6 +59,7 @@ namespace BalhamCollege
             this.btnDeleteProgramme.TabIndex = 32;
             this.btnDeleteProgramme.Text = "Delete Programme";
             this.btnDeleteProgramme.UseVisualStyleBackColor = true;
+            this.btnDeleteProgramme.Click += new System.EventHandler(this.btnDeleteProgramme_Click);
             // 
             // btnAssignLecturer
             // 
@@ -67,6 +69,7 @@ namespace BalhamCollege
             this.btnAssignLecturer.TabIndex = 31;
             this.btnAssignLecturer.Text = "Assign Lecturer";
             this.btnAssignLecturer.UseVisualStyleBackColor = true;
+            this.btnAssignLecturer.Click += new System.EventHandler(this.btnAssignLecturer_Click);
             // 
             // btnReturn
             // 
@@ -76,6 +79,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 30;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnUpdateCourse
             // 
@@ -85,6 +89,7 @@ namespace BalhamCollege
             this.btnUpdateCourse.TabIndex = 29;
             this.btnUpdateCourse.Text = "Update Course";
             this.btnUpdateCourse.UseVisualStyleBackColor = true;
+            this.btnUpdateCourse.Click += new System.EventHandler(this.btnUpdateCourse_Click);
             // 
             // btnAddCourse
             // 
@@ -94,6 +99,7 @@ namespace BalhamCollege
             this.btnAddCourse.TabIndex = 28;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // btnDeleteCourse
             // 
@@ -103,6 +109,7 @@ namespace BalhamCollege
             this.btnDeleteCourse.TabIndex = 27;
             this.btnDeleteCourse.Text = "Delete Course";
             this.btnDeleteCourse.UseVisualStyleBackColor = true;
+            this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
             // 
             // btnAddProgramme
             // 
@@ -112,6 +119,7 @@ namespace BalhamCollege
             this.btnAddProgramme.TabIndex = 26;
             this.btnAddProgramme.Text = "Add Programme";
             this.btnAddProgramme.UseVisualStyleBackColor = true;
+            this.btnAddProgramme.Click += new System.EventHandler(this.btnAddProgramme_Click);
             // 
             // btnProduceCoursesReport
             // 
@@ -121,6 +129,7 @@ namespace BalhamCollege
             this.btnProduceCoursesReport.TabIndex = 25;
             this.btnProduceCoursesReport.Text = "Produce Courses Report";
             this.btnProduceCoursesReport.UseVisualStyleBackColor = true;
+            this.btnProduceCoursesReport.Click += new System.EventHandler(this.btnProduceCoursesReport_Click);
             // 
             // btnRemoveLecturer
             // 
@@ -130,6 +139,7 @@ namespace BalhamCollege
             this.btnRemoveLecturer.TabIndex = 24;
             this.btnRemoveLecturer.Text = "Remove Lecturer";
             this.btnRemoveLecturer.UseVisualStyleBackColor = true;
+            this.btnRemoveLecturer.Click += new System.EventHandler(this.btnRemoveLecturer_Click);
             // 
             // ProgrammeAdministratorForm
             // 
