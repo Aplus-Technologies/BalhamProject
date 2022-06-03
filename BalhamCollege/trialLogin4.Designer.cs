@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(trialLogin4));
             this.pbLoginPage = new System.Windows.Forms.PictureBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -91,6 +92,7 @@ namespace BalhamCollege
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.pbLoginPage);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "trialLogin4";
             this.Text = "trialLogin4";
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginPage)).EndInit();
