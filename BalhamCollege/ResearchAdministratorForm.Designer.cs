@@ -48,7 +48,7 @@ namespace BalhamCollege
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Location = new System.Drawing.Point(34, 622);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(242, 67);
             this.btnReturn.TabIndex = 20;
@@ -63,7 +63,7 @@ namespace BalhamCollege
             this.btnUpdateResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateResearchTopic.Location = new System.Drawing.Point(34, 440);
-            this.btnUpdateResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateResearchTopic.Name = "btnUpdateResearchTopic";
             this.btnUpdateResearchTopic.Size = new System.Drawing.Size(242, 57);
             this.btnUpdateResearchTopic.TabIndex = 19;
@@ -78,7 +78,7 @@ namespace BalhamCollege
             this.btnAddResearchProject.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddResearchProject.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddResearchProject.Location = new System.Drawing.Point(34, 257);
-            this.btnAddResearchProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchProject.Name = "btnAddResearchProject";
             this.btnAddResearchProject.Size = new System.Drawing.Size(242, 62);
             this.btnAddResearchProject.TabIndex = 18;
@@ -93,7 +93,7 @@ namespace BalhamCollege
             this.btnDeleteResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteResearchTopic.Location = new System.Drawing.Point(34, 501);
-            this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteResearchTopic.Name = "btnDeleteResearchTopic";
             this.btnDeleteResearchTopic.Size = new System.Drawing.Size(242, 59);
             this.btnDeleteResearchTopic.TabIndex = 17;
@@ -108,7 +108,7 @@ namespace BalhamCollege
             this.btnAddResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddResearchTopic.Location = new System.Drawing.Point(34, 381);
-            this.btnAddResearchTopic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
             this.btnAddResearchTopic.Size = new System.Drawing.Size(242, 55);
             this.btnAddResearchTopic.TabIndex = 16;
@@ -123,7 +123,7 @@ namespace BalhamCollege
             this.btnProduceResearchReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduceResearchReport.ForeColor = System.Drawing.SystemColors.Control;
             this.btnProduceResearchReport.Location = new System.Drawing.Point(34, 564);
-            this.btnProduceResearchReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProduceResearchReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceResearchReport.Name = "btnProduceResearchReport";
             this.btnProduceResearchReport.Size = new System.Drawing.Size(242, 54);
             this.btnProduceResearchReport.TabIndex = 15;
@@ -138,7 +138,7 @@ namespace BalhamCollege
             this.btnRemoveResearchProject.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveResearchProject.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRemoveResearchProject.Location = new System.Drawing.Point(34, 323);
-            this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveResearchProject.Name = "btnRemoveResearchProject";
             this.btnRemoveResearchProject.Size = new System.Drawing.Size(242, 54);
             this.btnRemoveResearchProject.TabIndex = 14;
@@ -159,6 +159,7 @@ namespace BalhamCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1104, 700);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnUpdateResearchTopic);
@@ -169,7 +170,7 @@ namespace BalhamCollege
             this.Controls.Add(this.btnRemoveResearchProject);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ResearchAdministratorForm";
             this.Text = "Research Administrator Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
