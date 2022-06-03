@@ -22,10 +22,5 @@ namespace BalhamCollege
             // Close form upon click
             Close(); 
         }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
