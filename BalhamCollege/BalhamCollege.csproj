@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="DeleteAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,7 +98,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsBalhamCollegeAzure.xsd</DependentUpon>
-
     </Compile>
     <Compile Include="EnrolmentsClerkForm.cs">
       <SubType>Form</SubType>
@@ -127,7 +125,6 @@
       <DependentUpon>ProgrammeAdministratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-
     <Compile Include="RemoveLecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,14 +201,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <EmbeddedResource Include="RemoveLecturerForm.resx">
       <DependentUpon>RemoveLecturerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RemoveResearchProjectForm.resx">
       <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="ResearchAdministratorForm.resx">
       <DependentUpon>ResearchAdministratorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,7 +227,6 @@
     <None Include="dsBalhamCollegeAzure.xss">
       <DependentUpon>dsBalhamCollegeAzure.xsd</DependentUpon>
     </None>
-
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
