@@ -10,45 +10,44 @@ using System.Windows.Forms;
 
 namespace BalhamCollege
 {
-    public partial class EnrolmentsClerkForm : Form
+    public partial class ResearchAdministratorForm : Form
     {
         private DataController DC;
         private LoginForm frmLogin;
-        public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
+        public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
-
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
+        private void btnAddResearchProject_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnUpdateStudent_Click(object sender, EventArgs e)
+        private void btnRemoveResearchProject_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        private void btnAddResearchTopic_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnStudentsReport_Click(object sender, EventArgs e)
+        private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEnrolStudent_Click(object sender, EventArgs e)
+        private void btnUpdateResearchTopic_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnWithdrawStudent_Click(object sender, EventArgs e)
+        private void btnProduceResearchReport_Click(object sender, EventArgs e)
         {
 
         }
