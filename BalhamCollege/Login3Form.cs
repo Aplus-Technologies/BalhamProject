@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace BalhamCollege
 {
-    public partial class Login2Form : Form
+    public partial class Login3Form : Form
     {
-        public Login2Form()
+        public Login3Form()
         {
             InitializeComponent();
         }
 
-        private void pbQuitLogin_Click(object sender, EventArgs e)
+        private void txtUserName_TextChanged(object sender, EventArgs e)
         {
-            // Close form upon click
-            Close(); 
+
         }
     }
 }
