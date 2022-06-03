@@ -41,56 +41,62 @@ namespace BalhamCollege
             // pbLoginPage
             // 
             this.pbLoginPage.Image = global::BalhamCollege.Properties.Resources.BalhamLogin6;
-            this.pbLoginPage.Location = new System.Drawing.Point(-3, -42);
+            this.pbLoginPage.Location = new System.Drawing.Point(-4, -52);
+            this.pbLoginPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbLoginPage.Name = "pbLoginPage";
-            this.pbLoginPage.Size = new System.Drawing.Size(1115, 712);
+            this.pbLoginPage.Size = new System.Drawing.Size(1487, 876);
             this.pbLoginPage.TabIndex = 0;
             this.pbLoginPage.TabStop = false;
             // 
             // txtUserName
             // 
             this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUserName.Location = new System.Drawing.Point(439, 282);
+            this.txtUserName.Location = new System.Drawing.Point(585, 347);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(277, 13);
+            this.txtUserName.Size = new System.Drawing.Size(369, 15);
             this.txtUserName.TabIndex = 1;
             // 
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Location = new System.Drawing.Point(439, 387);
+            this.txtPassword.Location = new System.Drawing.Point(585, 476);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(277, 13);
+            this.txtPassword.Size = new System.Drawing.Size(369, 15);
             this.txtPassword.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.btnLogin;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 501);
+            this.pictureBox1.Location = new System.Drawing.Point(533, 617);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(348, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(464, 98);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(424, 458);
+            this.checkBox1.Location = new System.Drawing.Point(565, 564);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // trialLogin4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 652);
+            this.ClientSize = new System.Drawing.Size(1480, 802);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.pbLoginPage);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "trialLogin4";
             this.Text = "trialLogin4";
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginPage)).EndInit();
