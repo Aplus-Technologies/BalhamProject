@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudentForm.Designer.cs">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnrolmentsClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DeleteStudentForm.resx">
+      <DependentUpon>DeleteStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </EmbeddedResource>
