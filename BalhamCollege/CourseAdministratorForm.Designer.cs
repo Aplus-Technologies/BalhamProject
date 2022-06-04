@@ -156,6 +156,7 @@ namespace BalhamCollege
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CourseAdministratorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Course Administrator Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).EndInit();
             this.ResumeLayout(false);
