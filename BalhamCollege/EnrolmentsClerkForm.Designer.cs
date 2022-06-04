@@ -173,6 +173,7 @@ namespace BalhamCollege
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EnrolmentsClerkForm";
             this.Text = "Enrolments Clerk Menu";
+            this.Load += new System.EventHandler(this.EnrolmentsClerkForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbEnrolmentsClerk)).EndInit();
             this.ResumeLayout(false);
 
