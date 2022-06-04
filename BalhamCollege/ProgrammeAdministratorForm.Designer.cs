@@ -223,6 +223,7 @@ namespace BalhamCollege
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProgrammeAdministratorForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Programme Administrator Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbProgrammeAdmin)).EndInit();
             this.ResumeLayout(false);

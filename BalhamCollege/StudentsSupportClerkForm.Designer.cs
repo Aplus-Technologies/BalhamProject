@@ -104,6 +104,7 @@ namespace BalhamCollege
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentsSupportClerkForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Support Clerk Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentSupportClerk)).EndInit();
             this.ResumeLayout(false);
