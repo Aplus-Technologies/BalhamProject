@@ -63,7 +63,7 @@ namespace BalhamCollege
             // chkBox_login
             // 
             this.chkBox_login.AutoSize = true;
-            this.chkBox_login.Location = new System.Drawing.Point(422, 460);
+            this.chkBox_login.Location = new System.Drawing.Point(425, 461);
             this.chkBox_login.Name = "chkBox_login";
             this.chkBox_login.Size = new System.Drawing.Size(15, 14);
             this.chkBox_login.TabIndex = 14;
