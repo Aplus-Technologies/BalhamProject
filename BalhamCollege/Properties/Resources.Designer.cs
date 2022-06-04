@@ -133,6 +133,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap courseAdminPage {
+            get {
+                object obj = ResourceManager.GetObject("courseAdminPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap crossButton {
             get {
                 object obj = ResourceManager.GetObject("crossButton", resourceCulture);
@@ -163,9 +173,69 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enrolmentsClerkPage {
+            get {
+                object obj = ResourceManager.GetObject("enrolmentsClerkPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Group_3 {
             get {
                 object obj = ResourceManager.GetObject("Group 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap humanResourcesClerkPage {
+            get {
+                object obj = ResourceManager.GetObject("humanResourcesClerkPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginBtn {
+            get {
+                object obj = ResourceManager.GetObject("loginBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap programmeAdminPage {
+            get {
+                object obj = ResourceManager.GetObject("programmeAdminPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap researchAdminPage {
+            get {
+                object obj = ResourceManager.GetObject("researchAdminPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap studentSupportClerkPage {
+            get {
+                object obj = ResourceManager.GetObject("studentSupportClerkPage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

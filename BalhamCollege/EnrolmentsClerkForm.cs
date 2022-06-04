@@ -15,7 +15,7 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private DeleteStudentForm frmDeleteStudent;
-
+        private AddStudentForm frmAddStudent; // the reference to the Add Student form
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -25,9 +25,16 @@ namespace BalhamCollege
 
         }
 
+
+
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-
+            //show Add Student form upon click
+            if (frmAddStudent == null)
+            {
+                frmAddStudent = new AddStudentForm(DC, this);
+            }
+            frmAddStudent.ShowDialog();
         }
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
@@ -63,6 +70,11 @@ namespace BalhamCollege
         {
             this.Hide();
             frmLogin.Show();
+        }
+
+        private void EnrolmentsClerkForm_Load(object sender, EventArgs e)
+        {
+            DC = new DataController(); // create the data controller and load the dataset
         }
     }
 }

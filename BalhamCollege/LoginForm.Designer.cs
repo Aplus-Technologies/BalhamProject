@@ -29,197 +29,109 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHumanResourcesClerk = new System.Windows.Forms.Button();
-            this.btnEnrolmentsClerk = new System.Windows.Forms.Button();
-            this.btnCourseAdministrator = new System.Windows.Forms.Button();
-            this.btnStudentsSupportClerk = new System.Windows.Forms.Button();
-            this.btnResearchAdministrator = new System.Windows.Forms.Button();
-            this.btnProgramAdministrator = new System.Windows.Forms.Button();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.chkBox_login = new System.Windows.Forms.CheckBox();
+            this.pbLoginButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnHumanResourcesClerk
-            // 
-            this.btnHumanResourcesClerk.Location = new System.Drawing.Point(486, 68);
-            this.btnHumanResourcesClerk.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHumanResourcesClerk.Name = "btnHumanResourcesClerk";
-            this.btnHumanResourcesClerk.Size = new System.Drawing.Size(218, 40);
-            this.btnHumanResourcesClerk.TabIndex = 0;
-            this.btnHumanResourcesClerk.Text = "Human Resources Clerk";
-            this.btnHumanResourcesClerk.UseVisualStyleBackColor = true;
-            this.btnHumanResourcesClerk.Click += new System.EventHandler(this.btnHumanResourcesClerk_Click);
-            // 
-            // btnEnrolmentsClerk
-            // 
-            this.btnEnrolmentsClerk.Location = new System.Drawing.Point(486, 18);
-            this.btnEnrolmentsClerk.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEnrolmentsClerk.Name = "btnEnrolmentsClerk";
-            this.btnEnrolmentsClerk.Size = new System.Drawing.Size(218, 40);
-            this.btnEnrolmentsClerk.TabIndex = 1;
-            this.btnEnrolmentsClerk.Text = "Enrolments Clerk";
-            this.btnEnrolmentsClerk.UseVisualStyleBackColor = true;
-            this.btnEnrolmentsClerk.Click += new System.EventHandler(this.btnEnrolmentsClerk_Click);
-            // 
-            // btnCourseAdministrator
-            // 
-            this.btnCourseAdministrator.Location = new System.Drawing.Point(486, 215);
-            this.btnCourseAdministrator.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCourseAdministrator.Name = "btnCourseAdministrator";
-            this.btnCourseAdministrator.Size = new System.Drawing.Size(218, 40);
-            this.btnCourseAdministrator.TabIndex = 2;
-            this.btnCourseAdministrator.Text = "Course Administrator";
-            this.btnCourseAdministrator.UseVisualStyleBackColor = true;
-            this.btnCourseAdministrator.Click += new System.EventHandler(this.btnCourseAdministrator_Click);
-            // 
-            // btnStudentsSupportClerk
-            // 
-            this.btnStudentsSupportClerk.Location = new System.Drawing.Point(486, 259);
-            this.btnStudentsSupportClerk.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStudentsSupportClerk.Name = "btnStudentsSupportClerk";
-            this.btnStudentsSupportClerk.Size = new System.Drawing.Size(218, 40);
-            this.btnStudentsSupportClerk.TabIndex = 3;
-            this.btnStudentsSupportClerk.Text = "Students Support Clerk";
-            this.btnStudentsSupportClerk.UseVisualStyleBackColor = true;
-            this.btnStudentsSupportClerk.Click += new System.EventHandler(this.btnStudentsSupportClerk_Click);
-            // 
-            // btnResearchAdministrator
-            // 
-            this.btnResearchAdministrator.Location = new System.Drawing.Point(486, 121);
-            this.btnResearchAdministrator.Margin = new System.Windows.Forms.Padding(2);
-            this.btnResearchAdministrator.Name = "btnResearchAdministrator";
-            this.btnResearchAdministrator.Size = new System.Drawing.Size(218, 40);
-            this.btnResearchAdministrator.TabIndex = 4;
-            this.btnResearchAdministrator.Text = "Research Administrator";
-            this.btnResearchAdministrator.UseVisualStyleBackColor = true;
-            this.btnResearchAdministrator.Click += new System.EventHandler(this.btnResearchAdministrator_Click);
-            // 
-            // btnProgramAdministrator
-            // 
-            this.btnProgramAdministrator.Location = new System.Drawing.Point(486, 171);
-            this.btnProgramAdministrator.Margin = new System.Windows.Forms.Padding(2);
-            this.btnProgramAdministrator.Name = "btnProgramAdministrator";
-            this.btnProgramAdministrator.Size = new System.Drawing.Size(218, 40);
-            this.btnProgramAdministrator.TabIndex = 5;
-            this.btnProgramAdministrator.Text = "Program Administrator";
-            this.btnProgramAdministrator.UseVisualStyleBackColor = true;
-            this.btnProgramAdministrator.Click += new System.EventHandler(this.btnProgramAdministrator_Click);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(193, 115);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(164, 22);
-            this.txtUsername.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(107, 117);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Username:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(111, 159);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Password:";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(193, 159);
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(448, 386);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(164, 22);
+            this.txtPassword.Size = new System.Drawing.Size(266, 16);
             this.txtPassword.TabIndex = 9;
             // 
-            // btnExit
+            // txtUsername
             // 
-            this.btnExit.Location = new System.Drawing.Point(274, 215);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(126, 40);
-            this.btnExit.TabIndex = 10;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(448, 282);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(266, 16);
+            this.txtUsername.TabIndex = 6;
             // 
-            // btnLogin
+            // chkBox_login
             // 
-            this.btnLogin.Location = new System.Drawing.Point(114, 215);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(126, 40);
-            this.btnLogin.TabIndex = 11;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.chkBox_login.AutoSize = true;
+            this.chkBox_login.Location = new System.Drawing.Point(422, 460);
+            this.chkBox_login.Name = "chkBox_login";
+            this.chkBox_login.Size = new System.Drawing.Size(15, 14);
+            this.chkBox_login.TabIndex = 14;
+            this.chkBox_login.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // pbLoginButton
             // 
-            this.button1.Location = new System.Drawing.Point(391, 358);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Amy";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pbLoginButton.Image = global::BalhamCollege.Properties.Resources.loginBtn;
+            this.pbLoginButton.Location = new System.Drawing.Point(422, 521);
+            this.pbLoginButton.Name = "pbLoginButton";
+            this.pbLoginButton.Size = new System.Drawing.Size(319, 50);
+            this.pbLoginButton.TabIndex = 15;
+            this.pbLoginButton.TabStop = false;
+            this.pbLoginButton.Click += new System.EventHandler(this.pbLoginButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.BalhamLogin6;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1103, 713);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(25, 49);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(268, 314);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnExit);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(1094, 671);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pbLoginButton);
+            this.Controls.Add(this.chkBox_login);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnProgramAdministrator);
-            this.Controls.Add(this.btnResearchAdministrator);
-            this.Controls.Add(this.btnStudentsSupportClerk);
-            this.Controls.Add(this.btnCourseAdministrator);
-            this.Controls.Add(this.btnEnrolmentsClerk);
-            this.Controls.Add(this.btnHumanResourcesClerk);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.RightToLeftLayout = true;
             this.Text = "User Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnHumanResourcesClerk;
-        private System.Windows.Forms.Button btnEnrolmentsClerk;
-        private System.Windows.Forms.Button btnCourseAdministrator;
-        private System.Windows.Forms.Button btnStudentsSupportClerk;
-        private System.Windows.Forms.Button btnResearchAdministrator;
-        private System.Windows.Forms.Button btnProgramAdministrator;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.CheckBox chkBox_login;
+        private System.Windows.Forms.PictureBox pbLoginButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

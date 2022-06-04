@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     <Compile Include="RemoveResearchProjectForm.Designer.cs">
       <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteAssessmentForm.resx">
       <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,12 +175,6 @@
     </Compile>
     <Compile Include="StudentsSupportClerkForm.Designer.cs">
       <DependentUpon>StudentsSupportClerkForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="trialLogin4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="trialLogin4.Designer.cs">
-      <DependentUpon>trialLogin4.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CourseAdministratorForm.resx">
       <DependentUpon>CourseAdministratorForm.cs</DependentUpon>
@@ -212,9 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsSupportClerkForm.resx">
       <DependentUpon>StudentsSupportClerkForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="trialLogin4.resx">
-      <DependentUpon>trialLogin4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="dsBalhamCollegeAzure.xsc">
       <DependentUpon>dsBalhamCollegeAzure.xsd</DependentUpon>
@@ -272,6 +272,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BalhamLogin6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courseAdminPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enrolmentsClerkPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humanResourcesClerkPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmeAdminPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\researchAdminPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studentSupportClerkPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginBtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
