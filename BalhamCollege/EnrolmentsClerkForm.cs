@@ -14,6 +14,8 @@ namespace BalhamCollege
     {
         private DataController DC;
         private LoginForm frmLogin;
+        private DeleteStudentForm frmDeleteStudent;
+
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -35,7 +37,11 @@ namespace BalhamCollege
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-
+            if (frmDeleteStudent == null)
+            {
+                frmDeleteStudent = new DeleteStudentForm(DC, this);
+            }
+            frmDeleteStudent.ShowDialog();
         }
 
         private void btnStudentsReport_Click(object sender, EventArgs e)
