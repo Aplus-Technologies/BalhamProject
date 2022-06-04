@@ -16,6 +16,8 @@ namespace BalhamCollege
         private LoginForm frmLogin;
         private DeleteStudentForm frmDeleteStudent;
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
+        private UpdateStudentForm frmUpdateStudent;
+
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -39,7 +41,11 @@ namespace BalhamCollege
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
-
+            if (frmUpdateStudent == null)
+            {
+                frmUpdateStudent = new UpdateStudentForm(DC, this);
+            }
+            frmUpdateStudent.ShowDialog();
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
