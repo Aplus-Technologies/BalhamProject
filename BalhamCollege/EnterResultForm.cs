@@ -13,13 +13,13 @@ namespace BalhamCollege
     public partial class EnterResultForm : Form
     {
         private DataController DC;
-        private EnrolmentsClerkForm frmEnrolMenu;
-        public EnterResultForm(DataController dc, EnrolmentsClerkForm enrolmnu)
+        private CourseAdministratorForm frmCourseAdministrator;
+        public EnterResultForm(DataController dc, CourseAdministratorForm couadm)
         {
             InitializeComponent();
             DC = dc;
-            frmEnrolMenu = enrolmnu;
-            frmEnrolMenu.Hide();
+            frmCourseAdministrator = couadm;
+            frmCourseAdministrator.Hide();
         }
 
         private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -44,7 +44,7 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
-            frmEnrolMenu.Show();
+            frmCourseAdministrator.Show();
         }
     }
 }

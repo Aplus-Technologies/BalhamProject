@@ -14,6 +14,7 @@ namespace BalhamCollege
     {
         private DataController DC;
         private LoginForm frmLogin;
+        private EnterResultForm frmEnterResult;
         public CourseAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -44,7 +45,11 @@ namespace BalhamCollege
 
         private void btnEnterResult_Click(object sender, EventArgs e)
         {
-
+            if (frmEnterResult == null)
+            {
+                frmEnterResult = new EnterResultForm(DC, this);
+            }
+            frmEnterResult.ShowDialog();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
