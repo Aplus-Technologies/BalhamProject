@@ -16,7 +16,7 @@ namespace BalhamCollege
         private LoginForm frmLogin;
         private DeleteStudentForm frmDeleteStudent;
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
-        private UpdateStudentForm frmUpdateStudent;
+        private UpdateStudentForm frmUpdateStudent; // the reference to the Update Student form
 
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
@@ -41,6 +41,7 @@ namespace BalhamCollege
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
+            // show Update Student form upon click
             if (frmUpdateStudent == null)
             {
                 frmUpdateStudent = new UpdateStudentForm(DC, this);
