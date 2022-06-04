@@ -34,10 +34,10 @@ namespace BalhamCollege
             this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
-            this.txtVisitID = new System.Windows.Forms.TextBox();
-            this.txtCatName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAssessmentNumber = new System.Windows.Forms.TextBox();
+            this.txtCourseName = new System.Windows.Forms.TextBox();
+            this.AssessmentName = new System.Windows.Forms.TextBox();
+            this.txtMaximumMark = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@ namespace BalhamCollege
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.numMark = new System.Windows.Forms.NumericUpDown();
             this.btnAssignTreatment = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -69,7 +69,7 @@ namespace BalhamCollege
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
@@ -107,41 +107,41 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // txtVisitID
+            // txtAssessmentNumber
             // 
-            this.txtVisitID.Location = new System.Drawing.Point(1042, 52);
-            this.txtVisitID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtVisitID.Name = "txtVisitID";
-            this.txtVisitID.ReadOnly = true;
-            this.txtVisitID.Size = new System.Drawing.Size(86, 26);
-            this.txtVisitID.TabIndex = 12;
+            this.txtAssessmentNumber.Location = new System.Drawing.Point(1042, 52);
+            this.txtAssessmentNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAssessmentNumber.Name = "txtAssessmentNumber";
+            this.txtAssessmentNumber.ReadOnly = true;
+            this.txtAssessmentNumber.Size = new System.Drawing.Size(86, 26);
+            this.txtAssessmentNumber.TabIndex = 12;
             // 
-            // txtCatName
+            // txtCourseName
             // 
-            this.txtCatName.Location = new System.Drawing.Point(1042, 154);
-            this.txtCatName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtCatName.Name = "txtCatName";
-            this.txtCatName.ReadOnly = true;
-            this.txtCatName.Size = new System.Drawing.Size(284, 26);
-            this.txtCatName.TabIndex = 13;
+            this.txtCourseName.Location = new System.Drawing.Point(1042, 154);
+            this.txtCourseName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
+            this.txtCourseName.Size = new System.Drawing.Size(284, 26);
+            this.txtCourseName.TabIndex = 13;
             // 
-            // textBox1
+            // AssessmentName
             // 
-            this.textBox1.Location = new System.Drawing.Point(1042, 86);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(284, 26);
-            this.textBox1.TabIndex = 14;
+            this.AssessmentName.Location = new System.Drawing.Point(1042, 86);
+            this.AssessmentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AssessmentName.Name = "AssessmentName";
+            this.AssessmentName.ReadOnly = true;
+            this.AssessmentName.Size = new System.Drawing.Size(284, 26);
+            this.AssessmentName.TabIndex = 14;
             // 
-            // textBox2
+            // txtMaximumMark
             // 
-            this.textBox2.Location = new System.Drawing.Point(1042, 120);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(66, 26);
-            this.textBox2.TabIndex = 15;
+            this.txtMaximumMark.Location = new System.Drawing.Point(1042, 120);
+            this.txtMaximumMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMaximumMark.Name = "txtMaximumMark";
+            this.txtMaximumMark.ReadOnly = true;
+            this.txtMaximumMark.Size = new System.Drawing.Size(66, 26);
+            this.txtMaximumMark.TabIndex = 15;
             // 
             // label2
             // 
@@ -207,19 +207,19 @@ namespace BalhamCollege
             this.dtpDate.Size = new System.Drawing.Size(149, 26);
             this.dtpDate.TabIndex = 24;
             // 
-            // numQuantity
+            // numMark
             // 
-            this.numQuantity.Location = new System.Drawing.Point(1058, 296);
-            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numQuantity.Maximum = new decimal(new int[] {
+            this.numMark.Location = new System.Drawing.Point(1058, 296);
+            this.numMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numMark.Maximum = new decimal(new int[] {
             40,
             0,
             0,
             0});
-            this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(75, 26);
-            this.numQuantity.TabIndex = 25;
-            this.numQuantity.Value = new decimal(new int[] {
+            this.numMark.Name = "numMark";
+            this.numMark.Size = new System.Drawing.Size(75, 26);
+            this.numMark.TabIndex = 25;
+            this.numMark.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -418,7 +418,7 @@ namespace BalhamCollege
             this.Controls.Add(this.aSSESSMENTDataGridView);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAssignTreatment);
-            this.Controls.Add(this.numQuantity);
+            this.Controls.Add(this.numMark);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -426,10 +426,10 @@ namespace BalhamCollege
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtCatName);
-            this.Controls.Add(this.txtVisitID);
+            this.Controls.Add(this.txtMaximumMark);
+            this.Controls.Add(this.AssessmentName);
+            this.Controls.Add(this.txtCourseName);
+            this.Controls.Add(this.txtAssessmentNumber);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "EnterResultForm";
@@ -437,7 +437,7 @@ namespace BalhamCollege
             this.Load += new System.EventHandler(this.EnterResultForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
@@ -453,10 +453,10 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource lECTURERBindingSource;
         private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox txtVisitID;
-        private System.Windows.Forms.TextBox txtCatName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAssessmentNumber;
+        private System.Windows.Forms.TextBox txtCourseName;
+        private System.Windows.Forms.TextBox AssessmentName;
+        private System.Windows.Forms.TextBox txtMaximumMark;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -464,7 +464,7 @@ namespace BalhamCollege
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.NumericUpDown numQuantity;
+        private System.Windows.Forms.NumericUpDown numMark;
         private System.Windows.Forms.Button btnAssignTreatment;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
