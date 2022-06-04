@@ -14,6 +14,8 @@ namespace BalhamCollege
     {
         private DataController DC;
         private LoginForm frmLogin;
+        private UpdateLecturerForm frmUpdateLecturer; // the reference to the Update Lecturer form
+
         public HumanResourcesClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -29,7 +31,12 @@ namespace BalhamCollege
 
         private void btnUpdateLecturer_Click(object sender, EventArgs e)
         {
-
+            // show Update Lecturer form upon click
+            if (frmUpdateLecturer == null)
+            {
+                frmUpdateLecturer = new UpdateLecturerForm(DC, this);
+            }
+            frmUpdateLecturer.ShowDialog();
         }
 
         private void btnLecturerReport_Click(object sender, EventArgs e)
