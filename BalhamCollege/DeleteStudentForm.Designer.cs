@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
@@ -50,6 +51,16 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblStudentID = new System.Windows.Forms.Label();
             this.lstStudents = new System.Windows.Forms.ListBox();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.dsBalhamCollegeAzure1 = new BalhamCollege.dsBalhamCollegeAzure();
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
+            this.studentTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,6 +80,7 @@
             this.btnReturn.TabIndex = 42;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnDeleteStudent
             // 
@@ -78,6 +90,7 @@
             this.btnDeleteStudent.TabIndex = 41;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // txtStatus
             // 
@@ -231,12 +244,47 @@
             this.lstStudents.Name = "lstStudents";
             this.lstStudents.Size = new System.Drawing.Size(200, 284);
             this.lstStudents.TabIndex = 22;
+            this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dsBalhamCollegeAzure1
+            // 
+            this.dsBalhamCollegeAzure1.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure1.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.dsBalhamCollegeAzure1;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure1;
+            // 
+            // eNROLMENTTableAdapter
+            // 
+            this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // studentTableAdapter1
+            // 
+            this.studentTableAdapter1.ClearBeforeFill = true;
             // 
             // DeleteStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 630);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeleteStudent);
@@ -261,6 +309,10 @@
             this.Controls.Add(this.lstStudents);
             this.Name = "DeleteStudentForm";
             this.Text = "DeleteStudentForm";
+            this.Load += new System.EventHandler(this.DeleteStudentForm_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,5 +342,12 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblStudentID;
         private System.Windows.Forms.ListBox lstStudents;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure1;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter studentTableAdapter1;
     }
 }

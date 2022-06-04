@@ -14,6 +14,7 @@ namespace BalhamCollege
     {
         private DataController DC;
         private LoginForm frmLogin;
+        private DeleteStudentForm frmDeleteStudent;
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
@@ -43,7 +44,11 @@ namespace BalhamCollege
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-
+            if (frmDeleteStudent == null)
+            {
+                frmDeleteStudent = new DeleteStudentForm(DC, this);
+            }
+            frmDeleteStudent.ShowDialog();
         }
 
         private void btnStudentsReport_Click(object sender, EventArgs e)
