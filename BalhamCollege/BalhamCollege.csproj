@@ -111,6 +111,12 @@
     <Compile Include="EnrolmentsClerkForm.Designer.cs">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnterResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterResultForm.Designer.cs">
+      <DependentUpon>EnterResultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HumanResourcesClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,12 @@
       <DependentUpon>ProgrammeAdministratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordIssueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordIssueForm.Designer.cs">
+      <DependentUpon>RecordIssueForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RemoveLecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,9 @@
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EnterResultForm.resx">
+      <DependentUpon>EnterResultForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HumanResourcesClerkForm.resx">
       <DependentUpon>HumanResourcesClerkForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +219,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RecordIssueForm.resx">
+      <DependentUpon>RecordIssueForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoveLecturerForm.resx">
       <DependentUpon>RemoveLecturerForm.cs</DependentUpon>
     </EmbeddedResource>
