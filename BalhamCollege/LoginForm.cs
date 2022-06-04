@@ -113,5 +113,15 @@ namespace BalhamCollege
             MessageBox.Show("Usernames and Passwords:\n\nCourse Administrator\nUser: course, Password: course123\n\nEnrolments Clerk\nUser: enrol, Password: enrol123\n\nHuman Resources Clerk\nUser: human, Password: human123\n\nProgramme Admin\nUser: programme, Password: programme123\n\nResearch Administrator\nUser: research, Password: research123\n\nStudent Support Clerk\nUser: student, Password: student123", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void btnCourseAdmin_Click(object sender, EventArgs e)
+        {
+            if (frmCourseAdministrator == null)
+            {
+                frmCourseAdministrator = new CourseAdministratorForm(DC, this);
+            }
+            ClearFields();
+            frmCourseAdministrator.ShowDialog();
+        }
     }
 }

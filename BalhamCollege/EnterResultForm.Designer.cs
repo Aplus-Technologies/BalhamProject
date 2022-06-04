@@ -36,7 +36,7 @@ namespace BalhamCollege
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             this.txtAssessmentNumber = new System.Windows.Forms.TextBox();
             this.txtCourseName = new System.Windows.Forms.TextBox();
-            this.AssessmentName = new System.Windows.Forms.TextBox();
+            this.txtAssessmentName = new System.Windows.Forms.TextBox();
             this.txtMaximumMark = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,14 +50,6 @@ namespace BalhamCollege
             this.btnReturn = new System.Windows.Forms.Button();
             this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aSSESSMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
-            this.aSSESSMENTDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
             this.eNROLMENTDataGridView = new System.Windows.Forms.DataGridView();
@@ -67,13 +59,17 @@ namespace BalhamCollege
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAssessments = new System.Windows.Forms.DataGridView();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAssessments)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dsBalhamCollegeAzure
@@ -125,14 +121,14 @@ namespace BalhamCollege
             this.txtCourseName.Size = new System.Drawing.Size(284, 26);
             this.txtCourseName.TabIndex = 13;
             // 
-            // AssessmentName
+            // txtAssessmentName
             // 
-            this.AssessmentName.Location = new System.Drawing.Point(1042, 86);
-            this.AssessmentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AssessmentName.Name = "AssessmentName";
-            this.AssessmentName.ReadOnly = true;
-            this.AssessmentName.Size = new System.Drawing.Size(284, 26);
-            this.AssessmentName.TabIndex = 14;
+            this.txtAssessmentName.Location = new System.Drawing.Point(1042, 86);
+            this.txtAssessmentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAssessmentName.Name = "txtAssessmentName";
+            this.txtAssessmentName.ReadOnly = true;
+            this.txtAssessmentName.Size = new System.Drawing.Size(284, 26);
+            this.txtAssessmentName.TabIndex = 14;
             // 
             // txtMaximumMark
             // 
@@ -255,83 +251,6 @@ namespace BalhamCollege
             // 
             this.aSSESSMENTTableAdapter.ClearBeforeFill = true;
             // 
-            // aSSESSMENTDataGridView
-            // 
-            this.aSSESSMENTDataGridView.AutoGenerateColumns = false;
-            this.aSSESSMENTDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.aSSESSMENTDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17});
-            this.aSSESSMENTDataGridView.DataSource = this.aSSESSMENTBindingSource;
-            this.aSSESSMENTDataGridView.Location = new System.Drawing.Point(15, 33);
-            this.aSSESSMENTDataGridView.Name = "aSSESSMENTDataGridView";
-            this.aSSESSMENTDataGridView.RowHeadersWidth = 51;
-            this.aSSESSMENTDataGridView.RowTemplate.Height = 24;
-            this.aSSESSMENTDataGridView.Size = new System.Drawing.Size(784, 250);
-            this.aSSESSMENTDataGridView.TabIndex = 27;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "AssessmentID";
-            this.dataGridViewTextBoxColumn11.HeaderText = "AssessmentID";
-            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "AssessmentNumber";
-            this.dataGridViewTextBoxColumn12.HeaderText = "AssessmentNumber";
-            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "AssessmentName";
-            this.dataGridViewTextBoxColumn13.HeaderText = "AssessmentName";
-            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Type";
-            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "Weighting";
-            this.dataGridViewTextBoxColumn15.HeaderText = "Weighting";
-            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            this.dataGridViewTextBoxColumn15.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "MaximumMark";
-            this.dataGridViewTextBoxColumn16.HeaderText = "MaximumMark";
-            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "CourseID";
-            this.dataGridViewTextBoxColumn17.HeaderText = "CourseID";
-            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.Width = 125;
-            // 
             // eNROLMENTBindingSource
             // 
             this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
@@ -409,13 +328,36 @@ namespace BalhamCollege
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
+            // dgvAssessments
+            // 
+            this.dgvAssessments.AllowUserToAddRows = false;
+            this.dgvAssessments.AllowUserToDeleteRows = false;
+            this.dgvAssessments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAssessments.Location = new System.Drawing.Point(15, 41);
+            this.dgvAssessments.Name = "dgvAssessments";
+            this.dgvAssessments.ReadOnly = true;
+            this.dgvAssessments.RowHeadersWidth = 51;
+            this.dgvAssessments.RowTemplate.Height = 24;
+            this.dgvAssessments.Size = new System.Drawing.Size(750, 250);
+            this.dgvAssessments.TabIndex = 28;
+            this.dgvAssessments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssessments_CellClick);
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
             // EnterResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1390, 702);
+            this.Controls.Add(this.dgvAssessments);
             this.Controls.Add(this.eNROLMENTDataGridView);
-            this.Controls.Add(this.aSSESSMENTDataGridView);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAssignTreatment);
             this.Controls.Add(this.numMark);
@@ -427,7 +369,7 @@ namespace BalhamCollege
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaximumMark);
-            this.Controls.Add(this.AssessmentName);
+            this.Controls.Add(this.txtAssessmentName);
             this.Controls.Add(this.txtCourseName);
             this.Controls.Add(this.txtAssessmentNumber);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -439,9 +381,10 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAssessments)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,7 +398,7 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox txtAssessmentNumber;
         private System.Windows.Forms.TextBox txtCourseName;
-        private System.Windows.Forms.TextBox AssessmentName;
+        private System.Windows.Forms.TextBox txtAssessmentName;
         private System.Windows.Forms.TextBox txtMaximumMark;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -469,14 +412,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
-        private System.Windows.Forms.DataGridView aSSESSMENTDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
         private System.Windows.Forms.DataGridView eNROLMENTDataGridView;
@@ -486,5 +421,8 @@ namespace BalhamCollege
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dgvAssessments;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
     }
 }

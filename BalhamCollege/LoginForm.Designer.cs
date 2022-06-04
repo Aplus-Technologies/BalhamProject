@@ -36,6 +36,7 @@ namespace BalhamCollege
             this.pbLoginButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.Label();
+            this.btnCourseAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,7 @@ namespace BalhamCollege
             this.txtPassword.Location = new System.Drawing.Point(448, 386);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(266, 16);
+            this.txtPassword.Size = new System.Drawing.Size(266, 20);
             this.txtPassword.TabIndex = 9;
             // 
             // txtUsername
@@ -57,7 +58,7 @@ namespace BalhamCollege
             this.txtUsername.Location = new System.Drawing.Point(448, 282);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(266, 16);
+            this.txtUsername.Size = new System.Drawing.Size(266, 20);
             this.txtUsername.TabIndex = 6;
             // 
             // chkBox_login
@@ -65,7 +66,7 @@ namespace BalhamCollege
             this.chkBox_login.AutoSize = true;
             this.chkBox_login.Location = new System.Drawing.Point(425, 461);
             this.chkBox_login.Name = "chkBox_login";
-            this.chkBox_login.Size = new System.Drawing.Size(15, 14);
+            this.chkBox_login.Size = new System.Drawing.Size(18, 17);
             this.chkBox_login.TabIndex = 14;
             this.chkBox_login.UseVisualStyleBackColor = true;
             // 
@@ -96,17 +97,28 @@ namespace BalhamCollege
             this.lblForgot.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lblForgot.Location = new System.Drawing.Point(468, 490);
             this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(227, 13);
+            this.lblForgot.Size = new System.Drawing.Size(289, 17);
             this.lblForgot.TabIndex = 19;
             this.lblForgot.Text = "Forgot your username or password, click here";
             this.lblForgot.Click += new System.EventHandler(this.lblForgot_Click);
             // 
+            // btnCourseAdmin
+            // 
+            this.btnCourseAdmin.Location = new System.Drawing.Point(873, 192);
+            this.btnCourseAdmin.Name = "btnCourseAdmin";
+            this.btnCourseAdmin.Size = new System.Drawing.Size(150, 40);
+            this.btnCourseAdmin.TabIndex = 20;
+            this.btnCourseAdmin.Text = "Course Admin";
+            this.btnCourseAdmin.UseVisualStyleBackColor = true;
+            this.btnCourseAdmin.Click += new System.EventHandler(this.btnCourseAdmin_Click);
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1094, 671);
+            this.Controls.Add(this.btnCourseAdmin);
             this.Controls.Add(this.lblForgot);
             this.Controls.Add(this.pbLoginButton);
             this.Controls.Add(this.chkBox_login);
@@ -134,6 +146,7 @@ namespace BalhamCollege
         private System.Windows.Forms.CheckBox chkBox_login;
         private System.Windows.Forms.PictureBox pbLoginButton;
         private System.Windows.Forms.Label lblForgot;
+        private System.Windows.Forms.Button btnCourseAdmin;
     }
 }
 
