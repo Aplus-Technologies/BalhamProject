@@ -35,7 +35,7 @@ namespace BalhamCollege
             this.chkBox_login = new System.Windows.Forms.CheckBox();
             this.pbLoginButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtForgot = new System.Windows.Forms.TextBox();
+            this.lblForgot = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,20 +88,18 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // txtForgot
+            // lblForgot
             // 
-            this.txtForgot.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtForgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtForgot.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtForgot.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.txtForgot.Location = new System.Drawing.Point(448, 491);
-            this.txtForgot.Name = "txtForgot";
-            this.txtForgot.ReadOnly = true;
-            this.txtForgot.Size = new System.Drawing.Size(273, 14);
-            this.txtForgot.TabIndex = 18;
-            this.txtForgot.Text = "Forgot your username or password, click here";
-            this.txtForgot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtForgot.Click += new System.EventHandler(this.txtForgot_Click);
+            this.lblForgot.AutoSize = true;
+            this.lblForgot.BackColor = System.Drawing.Color.White;
+            this.lblForgot.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgot.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblForgot.Location = new System.Drawing.Point(468, 490);
+            this.lblForgot.Name = "lblForgot";
+            this.lblForgot.Size = new System.Drawing.Size(227, 13);
+            this.lblForgot.TabIndex = 19;
+            this.lblForgot.Text = "Forgot your username or password, click here";
+            this.lblForgot.Click += new System.EventHandler(this.lblForgot_Click);
             // 
             // LoginForm
             // 
@@ -109,7 +107,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1094, 671);
-            this.Controls.Add(this.txtForgot);
+            this.Controls.Add(this.lblForgot);
             this.Controls.Add(this.pbLoginButton);
             this.Controls.Add(this.chkBox_login);
             this.Controls.Add(this.txtPassword);
@@ -135,7 +133,7 @@ namespace BalhamCollege
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.CheckBox chkBox_login;
         private System.Windows.Forms.PictureBox pbLoginButton;
-        private System.Windows.Forms.TextBox txtForgot;
+        private System.Windows.Forms.Label lblForgot;
     }
 }
 
