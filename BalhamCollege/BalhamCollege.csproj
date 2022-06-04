@@ -158,6 +158,12 @@
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="UpdateCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCourseForm.Designer.cs">
+      <DependentUpon>UpdateCourseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateLecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsSupportClerkForm.resx">
       <DependentUpon>StudentsSupportClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCourseForm.resx">
+      <DependentUpon>UpdateCourseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateLecturerForm.resx">
       <DependentUpon>UpdateLecturerForm.cs</DependentUpon>
