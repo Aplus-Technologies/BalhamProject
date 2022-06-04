@@ -28,5 +28,21 @@ namespace BalhamCollege
             this.Close();
             frmEnrolMenu.Show(); 
         }
+
+        private void sTUDENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.sTUDENTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void AddStudentForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
+            this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+
+        }
+        student
     }
 }
