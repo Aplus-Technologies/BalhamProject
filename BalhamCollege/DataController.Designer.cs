@@ -958,7 +958,7 @@ namespace BalhamCollege
 
         #endregion
 
-        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        public dsBalhamCollegeAzure dsBalhamCollegeAzure;
         private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
