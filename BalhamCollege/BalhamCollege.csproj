@@ -143,6 +143,9 @@
     <Compile Include="RemoveResearchProjectForm.Designer.cs">
       <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteAssessmentForm.resx">
       <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>

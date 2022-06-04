@@ -22,5 +22,11 @@ namespace BalhamCollege
             frmEnrolMenu = enrolmnu;
             frmEnrolMenu.Hide();
         }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {// closes form
+            this.Close();
+            frmEnrolMenu.Show(); 
+        }
     }
 }
