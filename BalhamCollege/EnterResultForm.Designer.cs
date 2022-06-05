@@ -46,7 +46,7 @@ namespace BalhamCollege
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.numMark = new System.Windows.Forms.NumericUpDown();
-            this.btnAssignTreatment = new System.Windows.Forms.Button();
+            this.btnEnterResult = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aSSESSMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
@@ -60,6 +60,11 @@ namespace BalhamCollege
             this.label8 = new System.Windows.Forms.Label();
             this.studentTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESULTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESULTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMark)).BeginInit();
@@ -69,6 +74,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESULTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dsBalhamCollegeAzure
@@ -104,107 +110,106 @@ namespace BalhamCollege
             // 
             // txtAssessmentNumber
             // 
-            this.txtAssessmentNumber.Location = new System.Drawing.Point(1042, 52);
+            this.txtAssessmentNumber.Location = new System.Drawing.Point(979, 123);
             this.txtAssessmentNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
-            this.txtAssessmentNumber.Size = new System.Drawing.Size(86, 26);
+            this.txtAssessmentNumber.Size = new System.Drawing.Size(86, 23);
             this.txtAssessmentNumber.TabIndex = 12;
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(1042, 154);
+            this.txtCourseName.Location = new System.Drawing.Point(979, 225);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(284, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(284, 23);
             this.txtCourseName.TabIndex = 13;
             // 
             // txtAssessmentName
             // 
-            this.txtAssessmentName.Location = new System.Drawing.Point(1042, 86);
+            this.txtAssessmentName.Location = new System.Drawing.Point(979, 157);
             this.txtAssessmentName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
-            this.txtAssessmentName.Size = new System.Drawing.Size(284, 26);
+            this.txtAssessmentName.Size = new System.Drawing.Size(284, 23);
             this.txtAssessmentName.TabIndex = 14;
             // 
             // txtMaximumMark
             // 
-            this.txtMaximumMark.Location = new System.Drawing.Point(1042, 120);
+            this.txtMaximumMark.Location = new System.Drawing.Point(979, 191);
             this.txtMaximumMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaximumMark.Name = "txtMaximumMark";
             this.txtMaximumMark.ReadOnly = true;
-            this.txtMaximumMark.Size = new System.Drawing.Size(66, 26);
+            this.txtMaximumMark.Size = new System.Drawing.Size(66, 23);
             this.txtMaximumMark.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(880, 92);
+            this.label2.Location = new System.Drawing.Point(844, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.Size = new System.Drawing.Size(129, 17);
             this.label2.TabIndex = 18;
             this.label2.Text = "Assessment Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(865, 55);
+            this.label1.Location = new System.Drawing.Point(831, 126);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 20);
+            this.label1.Size = new System.Drawing.Size(142, 17);
             this.label1.TabIndex = 19;
             this.label1.Text = "Assessment Number:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(913, 123);
+            this.label3.Location = new System.Drawing.Point(873, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 20);
+            this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Maximim Mark:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(919, 160);
+            this.label4.Location = new System.Drawing.Point(875, 228);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 20);
+            this.label4.Size = new System.Drawing.Size(98, 17);
             this.label4.TabIndex = 21;
             this.label4.Text = "Course Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(985, 298);
+            this.label5.Location = new System.Drawing.Point(988, 316);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 22;
             this.label5.Text = "Mark:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(933, 353);
+            this.label6.Location = new System.Drawing.Point(945, 370);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Result Date:";
             // 
             // dtpDate
             // 
-            this.dtpDate.Enabled = false;
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(1058, 347);
+            this.dtpDate.Location = new System.Drawing.Point(1037, 365);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(149, 26);
+            this.dtpDate.Size = new System.Drawing.Size(149, 23);
             this.dtpDate.TabIndex = 24;
             // 
             // numMark
             // 
-            this.numMark.Location = new System.Drawing.Point(1058, 296);
+            this.numMark.Location = new System.Drawing.Point(1037, 314);
             this.numMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numMark.Maximum = new decimal(new int[] {
             40,
@@ -212,27 +217,23 @@ namespace BalhamCollege
             0,
             0});
             this.numMark.Name = "numMark";
-            this.numMark.Size = new System.Drawing.Size(75, 26);
+            this.numMark.Size = new System.Drawing.Size(75, 23);
             this.numMark.TabIndex = 25;
-            this.numMark.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
-            // btnAssignTreatment
+            // btnEnterResult
             // 
-            this.btnAssignTreatment.Location = new System.Drawing.Point(869, 493);
-            this.btnAssignTreatment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAssignTreatment.Name = "btnAssignTreatment";
-            this.btnAssignTreatment.Size = new System.Drawing.Size(212, 82);
-            this.btnAssignTreatment.TabIndex = 26;
-            this.btnAssignTreatment.Text = "Enter Result";
-            this.btnAssignTreatment.UseVisualStyleBackColor = true;
+            this.btnEnterResult.Location = new System.Drawing.Point(818, 493);
+            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnEnterResult.Name = "btnEnterResult";
+            this.btnEnterResult.Size = new System.Drawing.Size(212, 82);
+            this.btnEnterResult.TabIndex = 26;
+            this.btnEnterResult.Text = "Enter Result";
+            this.btnEnterResult.UseVisualStyleBackColor = true;
+            this.btnEnterResult.Click += new System.EventHandler(this.btnEnterResult_Click);
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(1123, 493);
+            this.btnReturn.Location = new System.Drawing.Point(1072, 493);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(212, 82);
@@ -294,13 +295,14 @@ namespace BalhamCollege
             this.dgvEnrolments.RowTemplate.Height = 24;
             this.dgvEnrolments.Size = new System.Drawing.Size(750, 250);
             this.dgvEnrolments.TabIndex = 29;
+            this.dgvEnrolments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnrolments_CellClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(12, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 20);
+            this.label7.Size = new System.Drawing.Size(151, 17);
             this.label7.TabIndex = 30;
             this.label7.Text = "Select an Assessment:";
             // 
@@ -309,9 +311,9 @@ namespace BalhamCollege
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(12, 302);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 20);
+            this.label8.Size = new System.Drawing.Size(139, 17);
             this.label8.TabIndex = 31;
-            this.label8.Text = "Select an Enrolment";
+            this.label8.Text = "Select an Enrolment:";
             // 
             // studentTableAdapter1
             // 
@@ -322,17 +324,59 @@ namespace BalhamCollege
             this.sTUDENTBindingSource.DataMember = "STUDENT";
             this.sTUDENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
+            // rESULTBindingSource
+            // 
+            this.rESULTBindingSource.DataMember = "RESULT";
+            this.rESULTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESULTTableAdapter
+            // 
+            this.rESULTTableAdapter.ClearBeforeFill = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(1157, 437);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 17);
+            this.label9.TabIndex = 32;
+            this.label9.Text = "*Required Fields";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(936, 370);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(13, 17);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "*";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(976, 316);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(13, 17);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "*";
+            // 
             // EnterResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1390, 850);
+            this.ClientSize = new System.Drawing.Size(1322, 621);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvEnrolments);
             this.Controls.Add(this.dgvAssessments);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnAssignTreatment);
+            this.Controls.Add(this.btnEnterResult);
             this.Controls.Add(this.numMark);
             this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.label6);
@@ -359,6 +403,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESULTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +427,7 @@ namespace BalhamCollege
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.NumericUpDown numMark;
-        private System.Windows.Forms.Button btnAssignTreatment;
+        private System.Windows.Forms.Button btnEnterResult;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
@@ -396,5 +441,10 @@ namespace BalhamCollege
         private System.Windows.Forms.Label label8;
         private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter studentTableAdapter1;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private System.Windows.Forms.BindingSource rESULTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter rESULTTableAdapter;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
