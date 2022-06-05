@@ -213,6 +213,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeName
             // 
+            this.txtProgrammeName.Enabled = false;
             this.txtProgrammeName.Location = new System.Drawing.Point(483, 242);
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
@@ -320,7 +321,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lstCourses);
             this.Controls.Add(this.lblSelectCourse);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateCourseForm";
             this.Text = "Update Course";
             ((System.ComponentModel.ISupportInitialize)(this.nudCredits)).EndInit();
