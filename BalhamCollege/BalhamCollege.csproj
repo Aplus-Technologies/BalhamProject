@@ -52,6 +52,12 @@
     <Compile Include="AddStudentForm.Designer.cs">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssignLecturerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignLecturerForm.Designer.cs">
+      <DependentUpon>AssignLecturerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     <Compile Include="UpdateStudentForm.Designer.cs">
       <DependentUpon>UpdateStudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AssignLecturerForm.resx">
+      <DependentUpon>AssignLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteAssessmentForm.resx">
       <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>

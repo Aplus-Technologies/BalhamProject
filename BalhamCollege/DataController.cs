@@ -40,6 +40,7 @@ namespace BalhamCollege
         {
             InitializeComponent();
             dsBalhamCollegeAzure.EnforceConstraints = false;
+
             daAssessment.Fill(dsBalhamCollegeAzure);
             daAssignment.Fill(dsBalhamCollegeAzure);
             daCourse.Fill(dsBalhamCollegeAzure);
@@ -89,6 +90,7 @@ namespace BalhamCollege
             studentView = new DataView(dtStudent);
             studentView.Sort = "StudentID";
 
+            dsBalhamCollegeAzure.EnforceConstraints = true;
         }
 
         private void aSSESSMENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
