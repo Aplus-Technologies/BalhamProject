@@ -703,7 +703,7 @@
   <xs:element name="dsBalhamCollegeAzure" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsBalhamCollegeAzure" msprop:Generator_UserDSName="dsBalhamCollegeAzure">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ASSESSMENT" msprop:Generator_TableClassName="ASSESSMENTDataTable" msprop:Generator_TableVarName="tableASSESSMENT" msprop:Generator_RowChangedName="ASSESSMENTRowChanged" msprop:Generator_TablePropName="ASSESSMENT" msprop:Generator_RowDeletingName="ASSESSMENTRowDeleting" msprop:Generator_RowChangingName="ASSESSMENTRowChanging" msprop:Generator_RowEvHandlerName="ASSESSMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ASSESSMENTRowDeleted" msprop:Generator_RowClassName="ASSESSMENTRow" msprop:Generator_UserTableName="ASSESSMENT" msprop:Generator_RowEvArgName="ASSESSMENTRowChangeEvent">
+        <xs:element name="ASSESSMENT" msprop:Generator_TableClassName="ASSESSMENTDataTable" msprop:Generator_TableVarName="tableASSESSMENT" msprop:Generator_TablePropName="ASSESSMENT" msprop:Generator_RowDeletingName="ASSESSMENTRowDeleting" msprop:Generator_RowChangingName="ASSESSMENTRowChanging" msprop:Generator_RowEvHandlerName="ASSESSMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ASSESSMENTRowDeleted" msprop:Generator_UserTableName="ASSESSMENT" msprop:Generator_RowChangedName="ASSESSMENTRowChanged" msprop:Generator_RowEvArgName="ASSESSMENTRowChangeEvent" msprop:Generator_RowClassName="ASSESSMENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AssessmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnAssessmentID" msprop:Generator_ColumnPropNameInRow="AssessmentID" msprop:Generator_ColumnPropNameInTable="AssessmentIDColumn" msprop:Generator_UserColumnName="AssessmentID" type="xs:int" />
@@ -728,7 +728,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ASSIGNMENT" msprop:Generator_TableClassName="ASSIGNMENTDataTable" msprop:Generator_TableVarName="tableASSIGNMENT" msprop:Generator_RowChangedName="ASSIGNMENTRowChanged" msprop:Generator_TablePropName="ASSIGNMENT" msprop:Generator_RowDeletingName="ASSIGNMENTRowDeleting" msprop:Generator_RowChangingName="ASSIGNMENTRowChanging" msprop:Generator_RowEvHandlerName="ASSIGNMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ASSIGNMENTRowDeleted" msprop:Generator_RowClassName="ASSIGNMENTRow" msprop:Generator_UserTableName="ASSIGNMENT" msprop:Generator_RowEvArgName="ASSIGNMENTRowChangeEvent">
+        <xs:element name="ASSIGNMENT" msprop:Generator_TableClassName="ASSIGNMENTDataTable" msprop:Generator_TableVarName="tableASSIGNMENT" msprop:Generator_TablePropName="ASSIGNMENT" msprop:Generator_RowDeletingName="ASSIGNMENTRowDeleting" msprop:Generator_RowChangingName="ASSIGNMENTRowChanging" msprop:Generator_RowEvHandlerName="ASSIGNMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ASSIGNMENTRowDeleted" msprop:Generator_UserTableName="ASSIGNMENT" msprop:Generator_RowChangedName="ASSIGNMENTRowChanged" msprop:Generator_RowEvArgName="ASSIGNMENTRowChangeEvent" msprop:Generator_RowClassName="ASSIGNMENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CourseID" msprop:Generator_ColumnVarNameInTable="columnCourseID" msprop:Generator_ColumnPropNameInRow="CourseID" msprop:Generator_ColumnPropNameInTable="CourseIDColumn" msprop:Generator_UserColumnName="CourseID" type="xs:int" />
@@ -743,7 +743,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="COURSE" msprop:Generator_TableClassName="COURSEDataTable" msprop:Generator_TableVarName="tableCOURSE" msprop:Generator_RowChangedName="COURSERowChanged" msprop:Generator_TablePropName="COURSE" msprop:Generator_RowDeletingName="COURSERowDeleting" msprop:Generator_RowChangingName="COURSERowChanging" msprop:Generator_RowEvHandlerName="COURSERowChangeEventHandler" msprop:Generator_RowDeletedName="COURSERowDeleted" msprop:Generator_RowClassName="COURSERow" msprop:Generator_UserTableName="COURSE" msprop:Generator_RowEvArgName="COURSERowChangeEvent">
+        <xs:element name="COURSE" msprop:Generator_TableClassName="COURSEDataTable" msprop:Generator_TableVarName="tableCOURSE" msprop:Generator_TablePropName="COURSE" msprop:Generator_RowDeletingName="COURSERowDeleting" msprop:Generator_RowChangingName="COURSERowChanging" msprop:Generator_RowEvHandlerName="COURSERowChangeEventHandler" msprop:Generator_RowDeletedName="COURSERowDeleted" msprop:Generator_UserTableName="COURSE" msprop:Generator_RowChangedName="COURSERowChanged" msprop:Generator_RowEvArgName="COURSERowChangeEvent" msprop:Generator_RowClassName="COURSERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CourseID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCourseID" msprop:Generator_ColumnPropNameInRow="CourseID" msprop:Generator_ColumnPropNameInTable="CourseIDColumn" msprop:Generator_UserColumnName="CourseID" type="xs:int" />
@@ -767,7 +767,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ENROLMENT" msprop:Generator_TableClassName="ENROLMENTDataTable" msprop:Generator_TableVarName="tableENROLMENT" msprop:Generator_RowChangedName="ENROLMENTRowChanged" msprop:Generator_TablePropName="ENROLMENT" msprop:Generator_RowDeletingName="ENROLMENTRowDeleting" msprop:Generator_RowChangingName="ENROLMENTRowChanging" msprop:Generator_RowEvHandlerName="ENROLMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ENROLMENTRowDeleted" msprop:Generator_RowClassName="ENROLMENTRow" msprop:Generator_UserTableName="ENROLMENT" msprop:Generator_RowEvArgName="ENROLMENTRowChangeEvent">
+        <xs:element name="ENROLMENT" msprop:Generator_TableClassName="ENROLMENTDataTable" msprop:Generator_TableVarName="tableENROLMENT" msprop:Generator_TablePropName="ENROLMENT" msprop:Generator_RowDeletingName="ENROLMENTRowDeleting" msprop:Generator_RowChangingName="ENROLMENTRowChanging" msprop:Generator_RowEvHandlerName="ENROLMENTRowChangeEventHandler" msprop:Generator_RowDeletedName="ENROLMENTRowDeleted" msprop:Generator_UserTableName="ENROLMENT" msprop:Generator_RowChangedName="ENROLMENTRowChanged" msprop:Generator_RowEvArgName="ENROLMENTRowChangeEvent" msprop:Generator_RowClassName="ENROLMENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EnrolmentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEnrolmentID" msprop:Generator_ColumnPropNameInRow="EnrolmentID" msprop:Generator_ColumnPropNameInTable="EnrolmentIDColumn" msprop:Generator_UserColumnName="EnrolmentID" type="xs:int" />
@@ -785,7 +785,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ISSUE" msprop:Generator_TableClassName="ISSUEDataTable" msprop:Generator_TableVarName="tableISSUE" msprop:Generator_RowChangedName="ISSUERowChanged" msprop:Generator_TablePropName="ISSUE" msprop:Generator_RowDeletingName="ISSUERowDeleting" msprop:Generator_RowChangingName="ISSUERowChanging" msprop:Generator_RowEvHandlerName="ISSUERowChangeEventHandler" msprop:Generator_RowDeletedName="ISSUERowDeleted" msprop:Generator_RowClassName="ISSUERow" msprop:Generator_UserTableName="ISSUE" msprop:Generator_RowEvArgName="ISSUERowChangeEvent">
+        <xs:element name="ISSUE" msprop:Generator_TableClassName="ISSUEDataTable" msprop:Generator_TableVarName="tableISSUE" msprop:Generator_TablePropName="ISSUE" msprop:Generator_RowDeletingName="ISSUERowDeleting" msprop:Generator_RowChangingName="ISSUERowChanging" msprop:Generator_RowEvHandlerName="ISSUERowChangeEventHandler" msprop:Generator_RowDeletedName="ISSUERowDeleted" msprop:Generator_UserTableName="ISSUE" msprop:Generator_RowChangedName="ISSUERowChanged" msprop:Generator_RowEvArgName="ISSUERowChangeEvent" msprop:Generator_RowClassName="ISSUERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IssueID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIssueID" msprop:Generator_ColumnPropNameInRow="IssueID" msprop:Generator_ColumnPropNameInTable="IssueIDColumn" msprop:Generator_UserColumnName="IssueID" type="xs:int" />
@@ -814,7 +814,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LECTURER" msprop:Generator_TableClassName="LECTURERDataTable" msprop:Generator_TableVarName="tableLECTURER" msprop:Generator_RowChangedName="LECTURERRowChanged" msprop:Generator_TablePropName="LECTURER" msprop:Generator_RowDeletingName="LECTURERRowDeleting" msprop:Generator_RowChangingName="LECTURERRowChanging" msprop:Generator_RowEvHandlerName="LECTURERRowChangeEventHandler" msprop:Generator_RowDeletedName="LECTURERRowDeleted" msprop:Generator_RowClassName="LECTURERRow" msprop:Generator_UserTableName="LECTURER" msprop:Generator_RowEvArgName="LECTURERRowChangeEvent">
+        <xs:element name="LECTURER" msprop:Generator_TableClassName="LECTURERDataTable" msprop:Generator_TableVarName="tableLECTURER" msprop:Generator_TablePropName="LECTURER" msprop:Generator_RowDeletingName="LECTURERRowDeleting" msprop:Generator_RowChangingName="LECTURERRowChanging" msprop:Generator_RowEvHandlerName="LECTURERRowChangeEventHandler" msprop:Generator_RowDeletedName="LECTURERRowDeleted" msprop:Generator_UserTableName="LECTURER" msprop:Generator_RowChangedName="LECTURERRowChanged" msprop:Generator_RowEvArgName="LECTURERRowChangeEvent" msprop:Generator_RowClassName="LECTURERRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="LecturerID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnLecturerID" msprop:Generator_ColumnPropNameInRow="LecturerID" msprop:Generator_ColumnPropNameInTable="LecturerIDColumn" msprop:Generator_UserColumnName="LecturerID" type="xs:int" />
@@ -884,7 +884,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PROGRAMME" msprop:Generator_TableClassName="PROGRAMMEDataTable" msprop:Generator_TableVarName="tablePROGRAMME" msprop:Generator_RowChangedName="PROGRAMMERowChanged" msprop:Generator_TablePropName="PROGRAMME" msprop:Generator_RowDeletingName="PROGRAMMERowDeleting" msprop:Generator_RowChangingName="PROGRAMMERowChanging" msprop:Generator_RowEvHandlerName="PROGRAMMERowChangeEventHandler" msprop:Generator_RowDeletedName="PROGRAMMERowDeleted" msprop:Generator_RowClassName="PROGRAMMERow" msprop:Generator_UserTableName="PROGRAMME" msprop:Generator_RowEvArgName="PROGRAMMERowChangeEvent">
+        <xs:element name="PROGRAMME" msprop:Generator_TableClassName="PROGRAMMEDataTable" msprop:Generator_TableVarName="tablePROGRAMME" msprop:Generator_TablePropName="PROGRAMME" msprop:Generator_RowDeletingName="PROGRAMMERowDeleting" msprop:Generator_RowChangingName="PROGRAMMERowChanging" msprop:Generator_RowEvHandlerName="PROGRAMMERowChangeEventHandler" msprop:Generator_RowDeletedName="PROGRAMMERowDeleted" msprop:Generator_UserTableName="PROGRAMME" msprop:Generator_RowChangedName="PROGRAMMERowChanged" msprop:Generator_RowEvArgName="PROGRAMMERowChangeEvent" msprop:Generator_RowClassName="PROGRAMMERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProgrammeID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProgrammeID" msprop:Generator_ColumnPropNameInRow="ProgrammeID" msprop:Generator_ColumnPropNameInTable="ProgrammeIDColumn" msprop:Generator_UserColumnName="ProgrammeID" type="xs:int" />
@@ -899,7 +899,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RESEARCHPROJECT" msprop:Generator_TableClassName="RESEARCHPROJECTDataTable" msprop:Generator_TableVarName="tableRESEARCHPROJECT" msprop:Generator_RowChangedName="RESEARCHPROJECTRowChanged" msprop:Generator_TablePropName="RESEARCHPROJECT" msprop:Generator_RowDeletingName="RESEARCHPROJECTRowDeleting" msprop:Generator_RowChangingName="RESEARCHPROJECTRowChanging" msprop:Generator_RowEvHandlerName="RESEARCHPROJECTRowChangeEventHandler" msprop:Generator_RowDeletedName="RESEARCHPROJECTRowDeleted" msprop:Generator_RowClassName="RESEARCHPROJECTRow" msprop:Generator_UserTableName="RESEARCHPROJECT" msprop:Generator_RowEvArgName="RESEARCHPROJECTRowChangeEvent">
+        <xs:element name="RESEARCHPROJECT" msprop:Generator_TableClassName="RESEARCHPROJECTDataTable" msprop:Generator_TableVarName="tableRESEARCHPROJECT" msprop:Generator_TablePropName="RESEARCHPROJECT" msprop:Generator_RowDeletingName="RESEARCHPROJECTRowDeleting" msprop:Generator_RowChangingName="RESEARCHPROJECTRowChanging" msprop:Generator_RowEvHandlerName="RESEARCHPROJECTRowChangeEventHandler" msprop:Generator_RowDeletedName="RESEARCHPROJECTRowDeleted" msprop:Generator_UserTableName="RESEARCHPROJECT" msprop:Generator_RowChangedName="RESEARCHPROJECTRowChanged" msprop:Generator_RowEvArgName="RESEARCHPROJECTRowChangeEvent" msprop:Generator_RowClassName="RESEARCHPROJECTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ResearchProjectID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnResearchProjectID" msprop:Generator_ColumnPropNameInRow="ResearchProjectID" msprop:Generator_ColumnPropNameInTable="ResearchProjectIDColumn" msprop:Generator_UserColumnName="ResearchProjectID" type="xs:int" />
@@ -929,7 +929,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RESEARCHTOPIC" msprop:Generator_TableClassName="RESEARCHTOPICDataTable" msprop:Generator_TableVarName="tableRESEARCHTOPIC" msprop:Generator_RowChangedName="RESEARCHTOPICRowChanged" msprop:Generator_TablePropName="RESEARCHTOPIC" msprop:Generator_RowDeletingName="RESEARCHTOPICRowDeleting" msprop:Generator_RowChangingName="RESEARCHTOPICRowChanging" msprop:Generator_RowEvHandlerName="RESEARCHTOPICRowChangeEventHandler" msprop:Generator_RowDeletedName="RESEARCHTOPICRowDeleted" msprop:Generator_RowClassName="RESEARCHTOPICRow" msprop:Generator_UserTableName="RESEARCHTOPIC" msprop:Generator_RowEvArgName="RESEARCHTOPICRowChangeEvent">
+        <xs:element name="RESEARCHTOPIC" msprop:Generator_TableClassName="RESEARCHTOPICDataTable" msprop:Generator_TableVarName="tableRESEARCHTOPIC" msprop:Generator_TablePropName="RESEARCHTOPIC" msprop:Generator_RowDeletingName="RESEARCHTOPICRowDeleting" msprop:Generator_RowChangingName="RESEARCHTOPICRowChanging" msprop:Generator_RowEvHandlerName="RESEARCHTOPICRowChangeEventHandler" msprop:Generator_RowDeletedName="RESEARCHTOPICRowDeleted" msprop:Generator_UserTableName="RESEARCHTOPIC" msprop:Generator_RowChangedName="RESEARCHTOPICRowChanged" msprop:Generator_RowEvArgName="RESEARCHTOPICRowChangeEvent" msprop:Generator_RowClassName="RESEARCHTOPICRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TopicID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnTopicID" msprop:Generator_ColumnPropNameInRow="TopicID" msprop:Generator_ColumnPropNameInTable="TopicIDColumn" msprop:Generator_UserColumnName="TopicID" type="xs:int" />
@@ -950,7 +950,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RESULT" msprop:Generator_TableClassName="RESULTDataTable" msprop:Generator_TableVarName="tableRESULT" msprop:Generator_RowChangedName="RESULTRowChanged" msprop:Generator_TablePropName="RESULT" msprop:Generator_RowDeletingName="RESULTRowDeleting" msprop:Generator_RowChangingName="RESULTRowChanging" msprop:Generator_RowEvHandlerName="RESULTRowChangeEventHandler" msprop:Generator_RowDeletedName="RESULTRowDeleted" msprop:Generator_RowClassName="RESULTRow" msprop:Generator_UserTableName="RESULT" msprop:Generator_RowEvArgName="RESULTRowChangeEvent">
+        <xs:element name="RESULT" msprop:Generator_TableClassName="RESULTDataTable" msprop:Generator_TableVarName="tableRESULT" msprop:Generator_TablePropName="RESULT" msprop:Generator_RowDeletingName="RESULTRowDeleting" msprop:Generator_RowChangingName="RESULTRowChanging" msprop:Generator_RowEvHandlerName="RESULTRowChangeEventHandler" msprop:Generator_RowDeletedName="RESULTRowDeleted" msprop:Generator_UserTableName="RESULT" msprop:Generator_RowChangedName="RESULTRowChanged" msprop:Generator_RowEvArgName="RESULTRowChangeEvent" msprop:Generator_RowClassName="RESULTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="AssessmentID" msprop:Generator_ColumnVarNameInTable="columnAssessmentID" msprop:Generator_ColumnPropNameInRow="AssessmentID" msprop:Generator_ColumnPropNameInTable="AssessmentIDColumn" msprop:Generator_UserColumnName="AssessmentID" type="xs:int" />
@@ -966,7 +966,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="STUDENT" msprop:Generator_TableClassName="STUDENTDataTable" msprop:Generator_TableVarName="tableSTUDENT" msprop:Generator_RowChangedName="STUDENTRowChanged" msprop:Generator_TablePropName="STUDENT" msprop:Generator_RowDeletingName="STUDENTRowDeleting" msprop:Generator_RowChangingName="STUDENTRowChanging" msprop:Generator_RowEvHandlerName="STUDENTRowChangeEventHandler" msprop:Generator_RowDeletedName="STUDENTRowDeleted" msprop:Generator_RowClassName="STUDENTRow" msprop:Generator_UserTableName="STUDENT" msprop:Generator_RowEvArgName="STUDENTRowChangeEvent">
+        <xs:element name="STUDENT" msprop:Generator_TableClassName="STUDENTDataTable" msprop:Generator_TableVarName="tableSTUDENT" msprop:Generator_TablePropName="STUDENT" msprop:Generator_RowDeletingName="STUDENTRowDeleting" msprop:Generator_RowChangingName="STUDENTRowChanging" msprop:Generator_RowEvHandlerName="STUDENTRowChangeEventHandler" msprop:Generator_RowDeletedName="STUDENTRowDeleted" msprop:Generator_UserTableName="STUDENT" msprop:Generator_RowChangedName="STUDENTRowChanged" msprop:Generator_RowEvArgName="STUDENTRowChangeEvent" msprop:Generator_RowClassName="STUDENTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="StudentID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID" type="xs:int" />
@@ -1077,43 +1077,47 @@
       <xs:selector xpath=".//mstns:STUDENT" />
       <xs:field xpath="mstns:StudentID" />
     </xs:unique>
-    <xs:keyref name="RESULT_x0024_ENROLMENTRESULT" refer="ENROLMENT_Constraint1" msprop:rel_Generator_UserChildTable="RESULT" msprop:rel_Generator_ChildPropName="GetRESULTRows" msprop:rel_Generator_UserRelationName="RESULT$ENROLMENTRESULT" msprop:rel_Generator_ParentPropName="ENROLMENTRow" msprop:rel_Generator_RelationVarName="_relationRESULT_ENROLMENTRESULT" msprop:rel_Generator_UserParentTable="ENROLMENT" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="FK_ASSESSMENT_RESULT" refer="Constraint1" msprop:rel_Generator_UserChildTable="RESULT" msprop:rel_Generator_ChildPropName="GetRESULTRows" msprop:rel_Generator_UserRelationName="FK_ASSESSMENT_RESULT" msprop:rel_Generator_ParentPropName="ASSESSMENTRow" msprop:rel_Generator_RelationVarName="relationFK_ASSESSMENT_RESULT" msprop:rel_Generator_UserParentTable="ASSESSMENT" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:RESULT" />
+      <xs:field xpath="mstns:AssessmentID" />
+    </xs:keyref>
+    <xs:keyref name="RESULT_x0024_ENROLMENTRESULT" refer="ENROLMENT_Constraint1" msprop:rel_Generator_UserChildTable="RESULT" msprop:rel_Generator_ChildPropName="GetRESULTRows" msprop:rel_Generator_UserRelationName="RESULT$ENROLMENTRESULT" msprop:rel_Generator_RelationVarName="_relationRESULT_ENROLMENTRESULT" msprop:rel_Generator_UserParentTable="ENROLMENT" msprop:rel_Generator_ParentPropName="ENROLMENTRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:RESULT" />
       <xs:field xpath="mstns:EnrolmentID" />
     </xs:keyref>
-    <xs:keyref name="RESEARCHPROJECT_x0024_RESEARCHTOPICRESEARCHPROJECT" refer="RESEARCHTOPIC_Constraint1" msprop:rel_Generator_UserChildTable="RESEARCHPROJECT" msprop:rel_Generator_ChildPropName="GetRESEARCHPROJECTRows" msprop:rel_Generator_UserRelationName="RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT" msprop:rel_Generator_RelationVarName="_relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT" msprop:rel_Generator_UserParentTable="RESEARCHTOPIC" msprop:rel_Generator_ParentPropName="RESEARCHTOPICRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="RESEARCHPROJECT_x0024_LECTURERRESEARCHPROJECT" refer="LECTURER_Constraint1" msprop:rel_Generator_UserChildTable="RESEARCHPROJECT" msprop:rel_Generator_ChildPropName="GetRESEARCHPROJECTRows" msprop:rel_Generator_UserRelationName="RESEARCHPROJECT$LECTURERRESEARCHPROJECT" msprop:rel_Generator_RelationVarName="_relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT" msprop:rel_Generator_UserParentTable="LECTURER" msprop:rel_Generator_ParentPropName="LECTURERRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:RESEARCHPROJECT" />
+      <xs:field xpath="mstns:LecturerID" />
+    </xs:keyref>
+    <xs:keyref name="RESEARCHPROJECT_x0024_RESEARCHTOPICRESEARCHPROJECT" refer="RESEARCHTOPIC_Constraint1" msprop:rel_Generator_UserChildTable="RESEARCHPROJECT" msprop:rel_Generator_ChildPropName="GetRESEARCHPROJECTRows" msprop:rel_Generator_UserRelationName="RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT" msprop:rel_Generator_ParentPropName="RESEARCHTOPICRow" msprop:rel_Generator_RelationVarName="_relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT" msprop:rel_Generator_UserParentTable="RESEARCHTOPIC" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:RESEARCHPROJECT" />
       <xs:field xpath="mstns:TopicID" />
     </xs:keyref>
-    <xs:keyref name="RESEARCHPROJECT_x0024_LECTURERRESEARCHPROJECT" refer="LECTURER_Constraint1" msprop:rel_Generator_UserChildTable="RESEARCHPROJECT" msprop:rel_Generator_ChildPropName="GetRESEARCHPROJECTRows" msprop:rel_Generator_UserRelationName="RESEARCHPROJECT$LECTURERRESEARCHPROJECT" msprop:rel_Generator_ParentPropName="LECTURERRow" msprop:rel_Generator_RelationVarName="_relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT" msprop:rel_Generator_UserParentTable="LECTURER" msdata:UpdateRule="None" msdata:DeleteRule="None">
-      <xs:selector xpath=".//mstns:RESEARCHPROJECT" />
-      <xs:field xpath="mstns:LecturerID" />
-    </xs:keyref>
-    <xs:keyref name="ISSUE_x0024_ENROLMENTISSUE" refer="ENROLMENT_Constraint1" msprop:rel_Generator_UserChildTable="ISSUE" msprop:rel_Generator_ChildPropName="GetISSUERows" msprop:rel_Generator_UserRelationName="ISSUE$ENROLMENTISSUE" msprop:rel_Generator_ParentPropName="ENROLMENTRow" msprop:rel_Generator_RelationVarName="_relationISSUE_ENROLMENTISSUE" msprop:rel_Generator_UserParentTable="ENROLMENT" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="ISSUE_x0024_ENROLMENTISSUE" refer="ENROLMENT_Constraint1" msprop:rel_Generator_UserChildTable="ISSUE" msprop:rel_Generator_ChildPropName="GetISSUERows" msprop:rel_Generator_UserRelationName="ISSUE$ENROLMENTISSUE" msprop:rel_Generator_RelationVarName="_relationISSUE_ENROLMENTISSUE" msprop:rel_Generator_UserParentTable="ENROLMENT" msprop:rel_Generator_ParentPropName="ENROLMENTRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:ISSUE" />
       <xs:field xpath="mstns:EnrolmentID" />
     </xs:keyref>
-    <xs:keyref name="ENROLMENT_x0024_STUDENTENROLMENT" refer="STUDENT_Constraint1" msprop:rel_Generator_UserChildTable="ENROLMENT" msprop:rel_Generator_ChildPropName="GetENROLMENTRows" msprop:rel_Generator_UserRelationName="ENROLMENT$STUDENTENROLMENT" msprop:rel_Generator_RelationVarName="_relationENROLMENT_STUDENTENROLMENT" msprop:rel_Generator_UserParentTable="STUDENT" msprop:rel_Generator_ParentPropName="STUDENTRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="ENROLMENT_x0024_COURSEENROLMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ENROLMENT" msprop:rel_Generator_ChildPropName="GetENROLMENTRows" msprop:rel_Generator_UserRelationName="ENROLMENT$COURSEENROLMENT" msprop:rel_Generator_RelationVarName="_relationENROLMENT_COURSEENROLMENT" msprop:rel_Generator_UserParentTable="COURSE" msprop:rel_Generator_ParentPropName="COURSERow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ENROLMENT" />
+      <xs:field xpath="mstns:CourseID" />
+    </xs:keyref>
+    <xs:keyref name="ENROLMENT_x0024_STUDENTENROLMENT" refer="STUDENT_Constraint1" msprop:rel_Generator_UserChildTable="ENROLMENT" msprop:rel_Generator_ChildPropName="GetENROLMENTRows" msprop:rel_Generator_UserRelationName="ENROLMENT$STUDENTENROLMENT" msprop:rel_Generator_ParentPropName="STUDENTRow" msprop:rel_Generator_RelationVarName="_relationENROLMENT_STUDENTENROLMENT" msprop:rel_Generator_UserParentTable="STUDENT" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:ENROLMENT" />
       <xs:field xpath="mstns:StudentID" />
     </xs:keyref>
-    <xs:keyref name="ENROLMENT_x0024_COURSEENROLMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ENROLMENT" msprop:rel_Generator_ChildPropName="GetENROLMENTRows" msprop:rel_Generator_UserRelationName="ENROLMENT$COURSEENROLMENT" msprop:rel_Generator_ParentPropName="COURSERow" msprop:rel_Generator_RelationVarName="_relationENROLMENT_COURSEENROLMENT" msprop:rel_Generator_UserParentTable="COURSE" msdata:UpdateRule="None" msdata:DeleteRule="None">
-      <xs:selector xpath=".//mstns:ENROLMENT" />
-      <xs:field xpath="mstns:CourseID" />
-    </xs:keyref>
-    <xs:keyref name="COURSE_x0024_PROGRAMMECOURSE" refer="PROGRAMME_Constraint1" msprop:rel_Generator_UserChildTable="COURSE" msprop:rel_Generator_ChildPropName="GetCOURSERows" msprop:rel_Generator_UserRelationName="COURSE$PROGRAMMECOURSE" msprop:rel_Generator_RelationVarName="_relationCOURSE_PROGRAMMECOURSE" msprop:rel_Generator_UserParentTable="PROGRAMME" msprop:rel_Generator_ParentPropName="PROGRAMMERow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="COURSE_x0024_PROGRAMMECOURSE" refer="PROGRAMME_Constraint1" msprop:rel_Generator_UserChildTable="COURSE" msprop:rel_Generator_ChildPropName="GetCOURSERows" msprop:rel_Generator_UserRelationName="COURSE$PROGRAMMECOURSE" msprop:rel_Generator_ParentPropName="PROGRAMMERow" msprop:rel_Generator_RelationVarName="_relationCOURSE_PROGRAMMECOURSE" msprop:rel_Generator_UserParentTable="PROGRAMME" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:COURSE" />
       <xs:field xpath="mstns:ProgrammeID" />
     </xs:keyref>
-    <xs:keyref name="ASSIGNMENT_x0024_LECTURERASSIGNMENT" refer="LECTURER_Constraint1" msprop:rel_Generator_UserChildTable="ASSIGNMENT" msprop:rel_Generator_ChildPropName="GetASSIGNMENTRows" msprop:rel_Generator_UserRelationName="ASSIGNMENT$LECTURERASSIGNMENT" msprop:rel_Generator_RelationVarName="_relationASSIGNMENT_LECTURERASSIGNMENT" msprop:rel_Generator_UserParentTable="LECTURER" msprop:rel_Generator_ParentPropName="LECTURERRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
-      <xs:selector xpath=".//mstns:ASSIGNMENT" />
-      <xs:field xpath="mstns:LecturerID" />
-    </xs:keyref>
-    <xs:keyref name="ASSIGNMENT_x0024_COURSEASSIGNMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ASSIGNMENT" msprop:rel_Generator_ChildPropName="GetASSIGNMENTRows" msprop:rel_Generator_UserRelationName="ASSIGNMENT$COURSEASSIGNMENT" msprop:rel_Generator_RelationVarName="_relationASSIGNMENT_COURSEASSIGNMENT" msprop:rel_Generator_UserParentTable="COURSE" msprop:rel_Generator_ParentPropName="COURSERow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="ASSIGNMENT_x0024_COURSEASSIGNMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ASSIGNMENT" msprop:rel_Generator_ChildPropName="GetASSIGNMENTRows" msprop:rel_Generator_UserRelationName="ASSIGNMENT$COURSEASSIGNMENT" msprop:rel_Generator_ParentPropName="COURSERow" msprop:rel_Generator_RelationVarName="_relationASSIGNMENT_COURSEASSIGNMENT" msprop:rel_Generator_UserParentTable="COURSE" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:ASSIGNMENT" />
       <xs:field xpath="mstns:CourseID" />
     </xs:keyref>
-    <xs:keyref name="ASSESSMENT_x0024_COURSEASSESSMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ASSESSMENT" msprop:rel_Generator_ChildPropName="GetASSESSMENTRows" msprop:rel_Generator_UserRelationName="ASSESSMENT$COURSEASSESSMENT" msprop:rel_Generator_RelationVarName="_relationASSESSMENT_COURSEASSESSMENT" msprop:rel_Generator_UserParentTable="COURSE" msprop:rel_Generator_ParentPropName="COURSERow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="ASSIGNMENT_x0024_LECTURERASSIGNMENT" refer="LECTURER_Constraint1" msprop:rel_Generator_UserChildTable="ASSIGNMENT" msprop:rel_Generator_ChildPropName="GetASSIGNMENTRows" msprop:rel_Generator_UserRelationName="ASSIGNMENT$LECTURERASSIGNMENT" msprop:rel_Generator_ParentPropName="LECTURERRow" msprop:rel_Generator_RelationVarName="_relationASSIGNMENT_LECTURERASSIGNMENT" msprop:rel_Generator_UserParentTable="LECTURER" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ASSIGNMENT" />
+      <xs:field xpath="mstns:LecturerID" />
+    </xs:keyref>
+    <xs:keyref name="ASSESSMENT_x0024_COURSEASSESSMENT" refer="COURSE_Constraint1" msprop:rel_Generator_UserChildTable="ASSESSMENT" msprop:rel_Generator_ChildPropName="GetASSESSMENTRows" msprop:rel_Generator_UserRelationName="ASSESSMENT$COURSEASSESSMENT" msprop:rel_Generator_ParentPropName="COURSERow" msprop:rel_Generator_RelationVarName="_relationASSESSMENT_COURSEASSESSMENT" msprop:rel_Generator_UserParentTable="COURSE" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:ASSESSMENT" />
       <xs:field xpath="mstns:CourseID" />
     </xs:keyref>
