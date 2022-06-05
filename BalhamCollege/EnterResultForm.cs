@@ -19,7 +19,7 @@ namespace BalhamCollege
         private CurrencyManager cmEnrolment;
         private CurrencyManager cmStudent;
         private int initCount = 0;
-        public DataTable assignments = new DataTable();
+        public DataTable assessments = new DataTable();
         
         string selectedCourseID = "";
         int selectedAssessmentID;
@@ -31,12 +31,12 @@ namespace BalhamCollege
             frmCourseAdministrator = couadm;
             frmCourseAdministrator.Hide();
             BindControls();
-            assignments.Columns.Add("ID", typeof(int));
-            assignments.Columns.Add("Number", typeof(string));
-            assignments.Columns.Add("Name", typeof(string));
-            assignments.Columns.Add("Course Name", typeof(string));
-            assignments.Columns.Add("Maximum Mark", typeof(string));
-            assignments.Columns.Add("CourseID", typeof(int));
+            assessments.Columns.Add("ID", typeof(int));
+            assessments.Columns.Add("Number", typeof(string));
+            assessments.Columns.Add("Name", typeof(string));
+            assessments.Columns.Add("Course Name", typeof(string));
+            assessments.Columns.Add("Maximum Mark", typeof(string));
+            assessments.Columns.Add("CourseID", typeof(int));
             GetAssessments();
             LoadAssessments();
         }
@@ -61,12 +61,12 @@ namespace BalhamCollege
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
 
-            assignments.Rows.Clear();
+            assessments.Rows.Clear();
             foreach (DataRow drAssess in dsBalhamCollegeAzure.ASSESSMENT.Rows)
             {
                 DataRow drAssessToAdd;
-                drAssessToAdd = assignments.NewRow();
-                assignments.Rows.Add(drAssessToAdd);
+                drAssessToAdd = assessments.NewRow();
+                assessments.Rows.Add(drAssessToAdd);
                 drAssessToAdd[0] = drAssess[0];
                 drAssessToAdd[1] = drAssess[1].ToString();
                 drAssessToAdd[2] = drAssess[2].ToString();
@@ -85,7 +85,7 @@ namespace BalhamCollege
         {
             dgvAssessments.ClearSelection();
             
-            dgvAssessments.DataSource = assignments;
+            dgvAssessments.DataSource = assessments;
             dgvAssessments.Columns[0].Width = 70;
             dgvAssessments.Columns[1].Width = 70;
             dgvAssessments.Columns[2].Width = 300;
@@ -207,10 +207,10 @@ namespace BalhamCollege
         }
         private void BindFields()
         {
-            txtAssessmentNumber.DataBindings.Add("Text", assignments, "Number");
-            txtCourseName.DataBindings.Add("Text", assignments, "Course Name");
-            txtMaximumMark.DataBindings.Add("Text", assignments, "Maximum Mark");
-            txtAssessmentName.DataBindings.Add("Text", assignments, "Name");
+            txtAssessmentNumber.DataBindings.Add("Text", assessments, "Number");
+            txtCourseName.DataBindings.Add("Text", assessments, "Course Name");
+            txtMaximumMark.DataBindings.Add("Text", assessments, "Maximum Mark");
+            txtAssessmentName.DataBindings.Add("Text", assessments, "Name");
         }
         private void UnBindIt()
         {            

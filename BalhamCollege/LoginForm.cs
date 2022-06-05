@@ -123,5 +123,15 @@ namespace BalhamCollege
             ClearFields();
             frmCourseAdministrator.ShowDialog();
         }
+
+        private void btnStudentSupport_Click(object sender, EventArgs e)
+        {
+            if (frmStudentsSupportClerk == null)
+            {
+                frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
+            }
+            ClearFields();
+            frmStudentsSupportClerk.ShowDialog();
+        }
     }
 }

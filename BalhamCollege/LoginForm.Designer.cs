@@ -37,6 +37,7 @@ namespace BalhamCollege
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.Label();
             this.btnCourseAdmin = new System.Windows.Forms.Button();
+            this.btnStudentSupport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -112,12 +113,23 @@ namespace BalhamCollege
             this.btnCourseAdmin.UseVisualStyleBackColor = true;
             this.btnCourseAdmin.Click += new System.EventHandler(this.btnCourseAdmin_Click);
             // 
+            // btnStudentSupport
+            // 
+            this.btnStudentSupport.Location = new System.Drawing.Point(873, 238);
+            this.btnStudentSupport.Name = "btnStudentSupport";
+            this.btnStudentSupport.Size = new System.Drawing.Size(150, 40);
+            this.btnStudentSupport.TabIndex = 21;
+            this.btnStudentSupport.Text = "Student Support";
+            this.btnStudentSupport.UseVisualStyleBackColor = true;
+            this.btnStudentSupport.Click += new System.EventHandler(this.btnStudentSupport_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1094, 671);
+            this.Controls.Add(this.btnStudentSupport);
             this.Controls.Add(this.btnCourseAdmin);
             this.Controls.Add(this.lblForgot);
             this.Controls.Add(this.pbLoginButton);
@@ -147,6 +159,7 @@ namespace BalhamCollege
         private System.Windows.Forms.PictureBox pbLoginButton;
         private System.Windows.Forms.Label lblForgot;
         private System.Windows.Forms.Button btnCourseAdmin;
+        private System.Windows.Forms.Button btnStudentSupport;
     }
 }
 
