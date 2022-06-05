@@ -15,6 +15,8 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private UpdateCourseForm frmUpdateCourse; // the reference to the Update Course form
+        private AssignLecturerForm frmAssignLecturer; // the reference to the Assign Lecturer form
+
 
         public ProgrammeAdministratorForm(DataController dc, LoginForm lgin)
         {
@@ -52,7 +54,12 @@ namespace BalhamCollege
 
         private void btnAssignLecturer_Click(object sender, EventArgs e)
         {
-
+            // show Assign Lecturer form upon click
+            if (frmAssignLecturer == null)
+            {
+                frmAssignLecturer = new AssignLecturerForm(DC, this);
+            }
+            frmAssignLecturer.ShowDialog();
         }
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
