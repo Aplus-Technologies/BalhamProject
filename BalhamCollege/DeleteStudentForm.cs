@@ -17,21 +17,43 @@ namespace BalhamCollege
         private CurrencyManager cmStudent;
 
         private string studentText;
+
+        private DataTable dtStudent2; // reference to student table
+        private DataView studentView2; // reference to dataview of student table 
+
+
         public DeleteStudentForm(DataController dc, EnrolmentsClerkForm enrlmnu)
         {
             InitializeComponent();
             DC = dc;
             frmEnrolmnu = enrlmnu;
             frmEnrolmnu.Hide();
-            LoadStudents();
-            cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure1, "Student"];
-
+            TableAndView(); // generate updated table and views
+            BindControls();  // call bind controls
+           
         }
+
+        public void BindControls()
+        { // Create currency manager instance
+            cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure1, "STUDENT"];
+        }
+
+        private void TableAndView()
+        { // generate new instances of Student table and dataview for student table 
+             dtStudent2 = dsBalhamCollegeAzure1.STUDENT; 
+             studentView2 = new DataView(dtStudent2);
+             studentView2.Sort = "StudentID"; 
+        }
+
+
+
+
+
         private void LoadStudents()
-        {
-            foreach (DataRow drStudent in DC.dtStudent.Rows)
+        { // Load students that have no enrollments
+            foreach (DataRow drStudent in dtStudent2.Rows)
             {
-                DataRow[] drEnrolments = drStudent.GetChildRows(DC.dtStudent.ChildRelations["STUDENT$ENROLMENT"]);
+                DataRow[] drEnrolments = drStudent.GetChildRows(dtStudent2.ChildRelations["ENROLMENT$STUDENTENROLMENT"]);
                 if (drEnrolments.Length == 0)
                 {
                     studentText = "";
@@ -45,24 +67,24 @@ namespace BalhamCollege
         private void ClearFields()
         { // clears the following controls 
 
-            txtStudentID.Text = String.Empty;
-            txtLastName.Text = String.Empty;
-            txtFirstName.Text = String.Empty;
-            txtStreetAddress.Text = String.Empty;
-            txtSuburb.Text = String.Empty;
-            txtCity.Text = String.Empty;
-            txtEmailAddress.Text = String.Empty;
-            txtPhoneNumber.Text = String.Empty;
-            txtStatus.Text = String.Empty;
+            txtStudentID.Text = "";
+            txtLastName.Text = "";
+            txtFirstName.Text = "";
+            txtStreetAddress.Text = "";
+            txtSuburb.Text = "";
+            txtCity.Text = "";
+            txtEmailAddress.Text = "";
+            txtPhoneNumber.Text = "";
+            txtStatus.Text = "";
         }
         private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { // populate the following controls based on what is selected in the list box 
             string student = "";
             student = lstStudents.SelectedItem.ToString();
             string[] parts = student.Split(',');
             int studentID = Convert.ToInt32(parts[0]);
-            cmStudent.Position = DC.studentView.Find(studentID);
-            DataRow drStudent = DC.dtStudent.Rows[cmStudent.Position];
+            cmStudent.Position = studentView2.Find(studentID);
+            DataRow drStudent = dtStudent2.Rows[cmStudent.Position];
             txtStudentID.Text = drStudent["StudentID"].ToString();
             txtLastName.Text = drStudent["LastName"].ToString();
             txtFirstName.Text = drStudent["FirstName"].ToString();
@@ -76,10 +98,13 @@ namespace BalhamCollege
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            DataRow deleteStudentRow = DC.dtStudent.Rows[cmStudent.Position];
+            DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
+
             if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 deleteStudentRow.Delete();
+                dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
+                
                 DC.UpdateStudent();
                 lstStudents.Items.Clear();
                 LoadStudents();
@@ -91,14 +116,11 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close(); // prevents exception 'cannot access a disposed object' being thrown upon clicking Print Veterinarians Report option on the Main Menu
             frmEnrolmnu.Show();
         }
 
-        private void DeleteStudentForm_Load(object sender, EventArgs e)
-        {
-            ClearFields();
-        }
+      
 
         private void sTUDENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -114,6 +136,13 @@ namespace BalhamCollege
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.ENROLMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.STUDENT);
+           
+            // clears fields upon form load
+            ClearFields(); 
+            // clear list upon form load
+            lstStudents.Items.Clear();
+            // load students 
+            LoadStudents(); 
 
         }
         
