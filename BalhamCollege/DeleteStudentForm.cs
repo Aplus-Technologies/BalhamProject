@@ -79,21 +79,24 @@ namespace BalhamCollege
         }
         private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
         { // populate the following controls based on what is selected in the list box 
-            string student = "";
-            student = lstStudents.SelectedItem.ToString();
-            string[] parts = student.Split(',');
-            int studentID = Convert.ToInt32(parts[0]);
-            cmStudent.Position = studentView2.Find(studentID);
-            DataRow drStudent = dtStudent2.Rows[cmStudent.Position];
-            txtStudentID.Text = drStudent["StudentID"].ToString();
-            txtLastName.Text = drStudent["LastName"].ToString();
-            txtFirstName.Text = drStudent["FirstName"].ToString();
-            txtStreetAddress.Text = drStudent["StreetAddress"].ToString();
-            txtSuburb.Text = drStudent["Suburb"].ToString();
-            txtCity.Text = drStudent["City"].ToString();
-            txtPhoneNumber.Text = drStudent["PhoneNumber"].ToString();
-            txtEmailAddress.Text = drStudent["EmailAddress"].ToString();
-            txtStatus.Text = drStudent["Status"].ToString();
+            if (lstStudents.SelectedItem != null)
+            {
+                string student = "";
+                student = lstStudents.SelectedItem.ToString();
+                string[] parts = student.Split(',');
+                int studentID = Convert.ToInt32(parts[0]);
+                cmStudent.Position = studentView2.Find(studentID);
+                DataRow drStudent = dtStudent2.Rows[cmStudent.Position];
+                txtStudentID.Text = drStudent["StudentID"].ToString();
+                txtLastName.Text = drStudent["LastName"].ToString();
+                txtFirstName.Text = drStudent["FirstName"].ToString();
+                txtStreetAddress.Text = drStudent["StreetAddress"].ToString();
+                txtSuburb.Text = drStudent["Suburb"].ToString();
+                txtCity.Text = drStudent["City"].ToString();
+                txtPhoneNumber.Text = drStudent["PhoneNumber"].ToString();
+                txtEmailAddress.Text = drStudent["EmailAddress"].ToString();
+                txtStatus.Text = drStudent["Status"].ToString();
+            }
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
