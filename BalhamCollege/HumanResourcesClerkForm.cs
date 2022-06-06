@@ -15,6 +15,7 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private UpdateLecturerForm frmUpdateLecturer; // the reference to the Update Lecturer form
+        private DeleteLecturerForm frmDeleteLecturer; // reference to Delete Lecturer Form
 
         public HumanResourcesClerkForm(DataController dc, LoginForm lgin)
         {
@@ -46,7 +47,12 @@ namespace BalhamCollege
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-
+            // show Delete Lecturer form upon click
+            if (frmDeleteLecturer == null)
+            {
+                frmDeleteLecturer = new DeleteLecturerForm(DC, this);
+            }
+            frmDeleteLecturer.ShowDialog();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
