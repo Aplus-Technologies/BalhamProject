@@ -117,6 +117,12 @@
     <Compile Include="EnrolmentsClerkForm.Designer.cs">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EnrolStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrolStudentForm.Designer.cs">
+      <DependentUpon>EnrolStudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EnterResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EnrolmentsClerkForm.resx">
       <DependentUpon>EnrolmentsClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrolStudentForm.resx">
+      <DependentUpon>EnrolStudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EnterResultForm.resx">
       <DependentUpon>EnterResultForm.cs</DependentUpon>
