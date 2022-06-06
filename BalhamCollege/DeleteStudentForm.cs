@@ -33,7 +33,7 @@ namespace BalhamCollege
            
         }
 
-        private void BindControls()
+        public void BindControls()
         { // Create currency manager instance
             cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure1, "STUDENT"];
         }
@@ -99,9 +99,12 @@ namespace BalhamCollege
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
             DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
+
             if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 deleteStudentRow.Delete();
+                dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
+                
                 DC.UpdateStudent();
                 lstStudents.Items.Clear();
                 LoadStudents();
