@@ -65,7 +65,7 @@ namespace BalhamCollege
         }
 
         private void btnEnrolStudent_Click(object sender, EventArgs e)
-        {
+        {// show Enrol Student form 
             if (frmEnrolStudent == null)
             {
                 frmEnrolStudent = new EnrolStudentForm(DC, this);

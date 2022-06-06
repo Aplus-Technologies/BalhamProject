@@ -31,6 +31,8 @@ namespace BalhamCollege
         private DataView courseView2;  // reference to dataview for course table
         private DataView programmeView2; // reference to dataview for programme table
 
+        private int courseID; 
+
 
 
         public EnrolStudentForm(DataController dc, EnrolmentsClerkForm enrolmnu)
@@ -174,6 +176,47 @@ namespace BalhamCollege
 
         }
 
+        private void ClearFields()
+        {
+            lstStudents.SelectedItem = null;
+            lstCourses.SelectedItem = null;
+            nudYear.Value = 2020;
+            nudSemester.Value = 1;
+            cboStatus.Text = "Pending"; 
+        } 
+        
+        private void btnEnrolStudent_Click(object sender, EventArgs e)
+        {
+            
+
+            if ((cboStatus.Text == "") || (txtStudentID.Text == "") || (txtCourseID.Text == ""))
+            { // checking if any required fields are null
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+            else
+            { // adding a new row to Enrolment table and display a success message 
+
+                this.eNROLMENTTableAdapter.Insert(Convert.ToInt32(nudYear.Value), Convert.ToInt32(nudSemester.Value), cboStatus.Text, Convert.ToInt32(txtStudentID.Text), Convert.ToInt32(txtCourseID.Text));
+
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
+                this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ENROLMENT' table. You can move, or remove it, as needed.
+                this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
+                this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+
+
+                MessageBox.Show("Enrolment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields(); // reset the fields that can be filled in to blank or to their default values
+                lstCourses.Items.Clear();
+                lstStudents.Items.Clear();
+                LoadStudents(); 
+            }
+        }
+
         private void btnReturn_Click(object sender, EventArgs e)
         { // closes the form
             this.Close();
@@ -207,6 +250,6 @@ namespace BalhamCollege
            LoadStudents();  
         }
 
-        
+       
     }
 }

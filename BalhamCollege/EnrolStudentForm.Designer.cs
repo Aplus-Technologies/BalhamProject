@@ -72,12 +72,12 @@ namespace BalhamCollege
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
-            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
-            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
-            this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
             this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudYear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSemester)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
@@ -263,6 +263,7 @@ namespace BalhamCollege
             this.btnEnrolStudent.TabIndex = 18;
             this.btnEnrolStudent.Text = "Enrol Student";
             this.btnEnrolStudent.UseVisualStyleBackColor = true;
+            this.btnEnrolStudent.Click += new System.EventHandler(this.btnEnrolStudent_Click);
             // 
             // btnReturn
             // 
@@ -512,32 +513,32 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // eNROLMENTBindingSource
+            // cOURSETableAdapter
             // 
-            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
-            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            this.cOURSETableAdapter.ClearBeforeFill = true;
             // 
             // eNROLMENTTableAdapter
             // 
             this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // pROGRAMMETableAdapter
+            // 
+            this.pROGRAMMETableAdapter.ClearBeforeFill = true;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
             // cOURSEBindingSource
             // 
             this.cOURSEBindingSource.DataMember = "COURSE";
             this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
-            // cOURSETableAdapter
-            // 
-            this.cOURSETableAdapter.ClearBeforeFill = true;
-            // 
             // pROGRAMMEBindingSource
             // 
             this.pROGRAMMEBindingSource.DataMember = "PROGRAMME";
             this.pROGRAMMEBindingSource.DataSource = this.dsBalhamCollegeAzure;
-            // 
-            // pROGRAMMETableAdapter
-            // 
-            this.pROGRAMMETableAdapter.ClearBeforeFill = true;
             // 
             // EnrolStudentForm
             // 
