@@ -48,6 +48,7 @@ namespace BalhamCollege
             foreach (DataRow drResearchTopic in dtResearchTopic2.Rows)
             { // list only research topics with an associated research project
                 DataRow[] drResearchProjects = drResearchTopic.GetChildRows(dtResearchTopic2.ChildRelations["RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT"]);
+                
                 if (drResearchProjects.Length == 0)
                 {
                     researchtopicText = "";
