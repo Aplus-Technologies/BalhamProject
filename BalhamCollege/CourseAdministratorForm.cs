@@ -15,6 +15,8 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private EnterResultForm frmEnterResult;
+        private UpdateAssessmentForm frmUpdateAssessment; // the reference to the Update Assessment form
+
         public CourseAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -30,6 +32,12 @@ namespace BalhamCollege
 
         private void btnUpdateAssessment_Click(object sender, EventArgs e)
         {
+            // show Update Assessment form upon click
+            if (frmUpdateAssessment == null)
+            {
+                frmUpdateAssessment = new UpdateAssessmentForm(DC, this);
+            }
+            frmUpdateAssessment.ShowDialog();
 
         }
 
