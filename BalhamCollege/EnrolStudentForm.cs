@@ -133,15 +133,17 @@ namespace BalhamCollege
 
         private void LoadCourses()
         {
-            // To load all courses
+           
             string courseText;
             foreach (DataRow drCourse in dtCourse2.Rows)
-            {
-                courseText = drCourse["CourseID"].ToString() + ", ";
-                courseText += drCourse["CourseName"].ToString() + ", ";
-               
-                lstCourses.Items.Add(courseText);
+            { // only load courses with a current status 
+                if (drCourse["Status"].ToString() == "Current")
+                {
+                    courseText = drCourse["CourseID"].ToString() + ", ";
+                    courseText += drCourse["CourseName"].ToString() + ", ";
 
+                    lstCourses.Items.Add(courseText);
+                }
 
             }
         }
@@ -234,7 +236,7 @@ namespace BalhamCollege
                     }
                     else
                     {
-                        // adding a new row to Enrolment table and display a success message if no student has no enrolments yet
+                        // adding a new row to Enrolment table and display a success message if student won't be enrolled in the same year, same semester and same course 
 
                         this.eNROLMENTTableAdapter.Insert(Convert.ToInt32(nudYear.Value), Convert.ToInt32(nudSemester.Value), cboStatus.Text, Convert.ToInt32(txtStudentID.Text), Convert.ToInt32(txtCourseID.Text));
 
