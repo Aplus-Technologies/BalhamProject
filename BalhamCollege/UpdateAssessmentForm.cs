@@ -15,7 +15,6 @@ namespace BalhamCollege
         private DataController DC;
         private CourseAdministratorForm frmCourseAdministrator;
         private CurrencyManager cmAssessment;
-        private CurrencyManager cmCourse;
 
         public UpdateAssessmentForm(DataController dc, CourseAdministratorForm courseAdministrator)
         {
