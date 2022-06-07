@@ -123,6 +123,8 @@ namespace BalhamCollege
 
         private void DeleteLecturerForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+            this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
