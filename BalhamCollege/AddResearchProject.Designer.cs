@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lstLecturers = new System.Windows.Forms.ListBox();
             this.lblLecturers = new System.Windows.Forms.Label();
             this.lblResearchTopic = new System.Windows.Forms.Label();
@@ -55,8 +56,20 @@ namespace BalhamCollege
             this.lblAsterix1 = new System.Windows.Forms.Label();
             this.lblAsterix2 = new System.Windows.Forms.Label();
             this.lblAsterix3 = new System.Windows.Forms.Label();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.rESEARCHPROJECTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHPROJECTTableAdapter();
+            this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
+            this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESEARCHPROJECTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResearchTopics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResearchProjects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lstLecturers
@@ -68,6 +81,7 @@ namespace BalhamCollege
             this.lstLecturers.ScrollAlwaysVisible = true;
             this.lstLecturers.Size = new System.Drawing.Size(361, 292);
             this.lstLecturers.TabIndex = 0;
+            this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
             // lblLecturers
             // 
@@ -161,10 +175,10 @@ namespace BalhamCollege
             // 
             // dgvResearchTopics
             // 
-            this.dgvResearchTopics.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResearchTopics.ColumnHeadersHeight = 29;
             this.dgvResearchTopics.Location = new System.Drawing.Point(46, 421);
             this.dgvResearchTopics.Name = "dgvResearchTopics";
-            this.dgvResearchTopics.RowHeadersWidth = 51;
+            this.dgvResearchTopics.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvResearchTopics.RowTemplate.Height = 24;
             this.dgvResearchTopics.Size = new System.Drawing.Size(361, 267);
             this.dgvResearchTopics.TabIndex = 13;
@@ -186,6 +200,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 15;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // txtLecturerID
             // 
@@ -304,11 +319,60 @@ namespace BalhamCollege
             this.lblAsterix3.TabIndex = 31;
             this.lblAsterix3.Text = "*";
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lECTURERBindingSource
+            // 
+            this.lECTURERBindingSource.DataMember = "LECTURER";
+            this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // lECTURERTableAdapter
+            // 
+            this.lECTURERTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = this.lECTURERTableAdapter;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = this.rESEARCHPROJECTTableAdapter;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = this.rESEARCHTOPICTableAdapter;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // rESEARCHPROJECTTableAdapter
+            // 
+            this.rESEARCHPROJECTTableAdapter.ClearBeforeFill = true;
+            // 
+            // rESEARCHTOPICTableAdapter
+            // 
+            this.rESEARCHTOPICTableAdapter.ClearBeforeFill = true;
+            // 
+            // rESEARCHTOPICBindingSource
+            // 
+            this.rESEARCHTOPICBindingSource.DataMember = "RESEARCHTOPIC";
+            this.rESEARCHTOPICBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESEARCHPROJECTBindingSource
+            // 
+            this.rESEARCHPROJECTBindingSource.DataMember = "RESEARCHPROJECT";
+            this.rESEARCHPROJECTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
             // AddResearchProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 824);
+            this.ClientSize = new System.Drawing.Size(1153, 832);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblResearchProjectDescription);
@@ -336,11 +400,16 @@ namespace BalhamCollege
             this.Controls.Add(this.lblLecturers);
             this.Controls.Add(this.lstLecturers);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddResearchProject";
             this.Text = "Add Research Project";
+            this.Load += new System.EventHandler(this.AddResearchProject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResearchTopics)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResearchProjects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,5 +443,13 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblAsterix1;
         private System.Windows.Forms.Label lblAsterix2;
         private System.Windows.Forms.Label lblAsterix3;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource lECTURERBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter rESEARCHTOPICTableAdapter;
+        private System.Windows.Forms.BindingSource rESEARCHTOPICBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.RESEARCHPROJECTTableAdapter rESEARCHPROJECTTableAdapter;
+        private System.Windows.Forms.BindingSource rESEARCHPROJECTBindingSource;
     }
 }
