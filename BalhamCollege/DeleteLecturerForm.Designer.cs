@@ -57,17 +57,17 @@ namespace BalhamCollege
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 42);
+            this.label1.Location = new System.Drawing.Point(29, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 19);
+            this.label1.Size = new System.Drawing.Size(221, 29);
             this.label1.TabIndex = 58;
             this.label1.Text = "Please select a lecturer:";
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(608, 275);
+            this.btnReturn.Location = new System.Drawing.Point(514, 275);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(158, 39);
+            this.btnReturn.Size = new System.Drawing.Size(134, 39);
             this.btnReturn.TabIndex = 57;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@ namespace BalhamCollege
             // 
             // btnDeleteLecturer
             // 
-            this.btnDeleteLecturer.Location = new System.Drawing.Point(267, 275);
+            this.btnDeleteLecturer.Location = new System.Drawing.Point(226, 275);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
-            this.btnDeleteLecturer.Size = new System.Drawing.Size(188, 39);
+            this.btnDeleteLecturer.Size = new System.Drawing.Size(159, 39);
             this.btnDeleteLecturer.TabIndex = 56;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = true;
@@ -85,107 +85,119 @@ namespace BalhamCollege
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(380, 213);
+            this.txtCity.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Location = new System.Drawing.Point(322, 213);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(222, 27);
+            this.txtCity.ReadOnly = true;
+            this.txtCity.Size = new System.Drawing.Size(188, 35);
             this.txtCity.TabIndex = 55;
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(380, 183);
+            this.txtSuburb.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSuburb.Location = new System.Drawing.Point(322, 183);
             this.txtSuburb.Name = "txtSuburb";
-            this.txtSuburb.Size = new System.Drawing.Size(222, 27);
+            this.txtSuburb.ReadOnly = true;
+            this.txtSuburb.Size = new System.Drawing.Size(188, 35);
             this.txtSuburb.TabIndex = 54;
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(380, 153);
+            this.txtStreetAddress.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStreetAddress.Location = new System.Drawing.Point(322, 153);
             this.txtStreetAddress.Name = "txtStreetAddress";
-            this.txtStreetAddress.Size = new System.Drawing.Size(386, 27);
+            this.txtStreetAddress.ReadOnly = true;
+            this.txtStreetAddress.Size = new System.Drawing.Size(327, 35);
             this.txtStreetAddress.TabIndex = 53;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(380, 123);
+            this.txtFirstName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(322, 123);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(222, 27);
+            this.txtFirstName.ReadOnly = true;
+            this.txtFirstName.Size = new System.Drawing.Size(188, 35);
             this.txtFirstName.TabIndex = 52;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(380, 92);
+            this.txtLastName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(322, 92);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(222, 27);
+            this.txtLastName.ReadOnly = true;
+            this.txtLastName.Size = new System.Drawing.Size(188, 35);
             this.txtLastName.TabIndex = 51;
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Location = new System.Drawing.Point(380, 61);
+            this.txtLecturerID.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLecturerID.Location = new System.Drawing.Point(322, 61);
             this.txtLecturerID.Name = "txtLecturerID";
-            this.txtLecturerID.Size = new System.Drawing.Size(38, 27);
+            this.txtLecturerID.ReadOnly = true;
+            this.txtLecturerID.Size = new System.Drawing.Size(33, 35);
             this.txtLecturerID.TabIndex = 50;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(344, 216);
+            this.lblCity.Location = new System.Drawing.Point(291, 216);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(42, 19);
+            this.lblCity.Size = new System.Drawing.Size(50, 29);
             this.lblCity.TabIndex = 49;
             this.lblCity.Text = "City:";
             // 
             // lblSuburb
             // 
             this.lblSuburb.AutoSize = true;
-            this.lblSuburb.Location = new System.Drawing.Point(318, 186);
+            this.lblSuburb.Location = new System.Drawing.Point(269, 186);
             this.lblSuburb.Name = "lblSuburb";
-            this.lblSuburb.Size = new System.Drawing.Size(66, 19);
+            this.lblSuburb.Size = new System.Drawing.Size(82, 29);
             this.lblSuburb.TabIndex = 48;
             this.lblSuburb.Text = "Suburb:";
             // 
             // lblStreetAddress
             // 
             this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Location = new System.Drawing.Point(262, 156);
+            this.lblStreetAddress.Location = new System.Drawing.Point(222, 156);
             this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(118, 19);
+            this.lblStreetAddress.Size = new System.Drawing.Size(148, 29);
             this.lblStreetAddress.TabIndex = 47;
             this.lblStreetAddress.Text = "Street Address:";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(292, 126);
+            this.lblFirstName.Location = new System.Drawing.Point(247, 126);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(91, 19);
+            this.lblFirstName.Size = new System.Drawing.Size(113, 29);
             this.lblFirstName.TabIndex = 46;
             this.lblFirstName.Text = "First Name:";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(292, 95);
+            this.lblLastName.Location = new System.Drawing.Point(247, 95);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(89, 19);
+            this.lblLastName.Size = new System.Drawing.Size(112, 29);
             this.lblLastName.TabIndex = 45;
             this.lblLastName.Text = "Last Name:";
             // 
             // lblLecturerID
             // 
             this.lblLecturerID.AutoSize = true;
-            this.lblLecturerID.Location = new System.Drawing.Point(292, 64);
+            this.lblLecturerID.Location = new System.Drawing.Point(247, 64);
             this.lblLecturerID.Name = "lblLecturerID";
-            this.lblLecturerID.Size = new System.Drawing.Size(94, 19);
+            this.lblLecturerID.Size = new System.Drawing.Size(114, 29);
             this.lblLecturerID.TabIndex = 44;
             this.lblLecturerID.Text = "Lecturer ID:";
             // 
             // lstLecturers
             // 
             this.lstLecturers.FormattingEnabled = true;
-            this.lstLecturers.ItemHeight = 19;
-            this.lstLecturers.Location = new System.Drawing.Point(36, 61);
+            this.lstLecturers.ItemHeight = 29;
+            this.lstLecturers.Location = new System.Drawing.Point(30, 61);
             this.lstLecturers.Name = "lstLecturers";
-            this.lstLecturers.Size = new System.Drawing.Size(200, 194);
+            this.lstLecturers.Size = new System.Drawing.Size(170, 178);
             this.lstLecturers.TabIndex = 43;
             this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
@@ -222,9 +234,9 @@ namespace BalhamCollege
             // 
             // DeleteLecturerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(929, 403);
+            this.ClientSize = new System.Drawing.Size(786, 403);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeleteLecturer);
@@ -241,7 +253,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblLecturerID);
             this.Controls.Add(this.lstLecturers);
-            this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DeleteLecturerForm";
             this.Text = "DeleteLecturerForm";
             this.Load += new System.EventHandler(this.DeleteLecturerForm_Load);
