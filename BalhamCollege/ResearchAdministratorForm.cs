@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +17,8 @@ namespace BalhamCollege
         private LoginForm frmLogin;
         private DeleteResearchTopicForm frmDeleteResearchTopic; // reference to delete research topic form
         private UpdateResearchTopicForm frmUpdateResearchTopic; // reference to update research topic form
+        private AddResearchProject frmAddResearchProject; // reference to add research project form 
+        
 
         public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
@@ -27,6 +30,12 @@ namespace BalhamCollege
 
         private void btnAddResearchProject_Click(object sender, EventArgs e)
         {
+            //show Add Research Project form upon click
+            if (frmAddResearchProject == null)
+            {
+                frmAddResearchProject = new AddResearchProject(DC, this);
+            }
+            frmAddResearchProject.ShowDialog();
 
         }
 
