@@ -48,25 +48,25 @@ namespace BalhamCollege {
         
         private global::System.Data.DataRelation _relationASSESSMENT_COURSEASSESSMENT;
         
-        private global::System.Data.DataRelation _relationASSIGNMENT_COURSEASSIGNMENT;
-        
         private global::System.Data.DataRelation _relationASSIGNMENT_LECTURERASSIGNMENT;
+        
+        private global::System.Data.DataRelation _relationASSIGNMENT_COURSEASSIGNMENT;
         
         private global::System.Data.DataRelation _relationCOURSE_PROGRAMMECOURSE;
         
-        private global::System.Data.DataRelation _relationENROLMENT_COURSEENROLMENT;
-        
         private global::System.Data.DataRelation _relationENROLMENT_STUDENTENROLMENT;
+        
+        private global::System.Data.DataRelation _relationENROLMENT_COURSEENROLMENT;
         
         private global::System.Data.DataRelation _relationISSUE_ENROLMENTISSUE;
         
-        private global::System.Data.DataRelation _relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT;
-        
         private global::System.Data.DataRelation _relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT;
         
-        private global::System.Data.DataRelation relationFK_ASSESSMENT_RESULT;
+        private global::System.Data.DataRelation _relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT;
         
         private global::System.Data.DataRelation _relationRESULT_ENROLMENTRESULT;
+        
+        private global::System.Data.DataRelation relationFK_ASSESSMENT_RESULT;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -457,16 +457,16 @@ namespace BalhamCollege {
                 }
             }
             this._relationASSESSMENT_COURSEASSESSMENT = this.Relations["ASSESSMENT$COURSEASSESSMENT"];
-            this._relationASSIGNMENT_COURSEASSIGNMENT = this.Relations["ASSIGNMENT$COURSEASSIGNMENT"];
             this._relationASSIGNMENT_LECTURERASSIGNMENT = this.Relations["ASSIGNMENT$LECTURERASSIGNMENT"];
+            this._relationASSIGNMENT_COURSEASSIGNMENT = this.Relations["ASSIGNMENT$COURSEASSIGNMENT"];
             this._relationCOURSE_PROGRAMMECOURSE = this.Relations["COURSE$PROGRAMMECOURSE"];
-            this._relationENROLMENT_COURSEENROLMENT = this.Relations["ENROLMENT$COURSEENROLMENT"];
             this._relationENROLMENT_STUDENTENROLMENT = this.Relations["ENROLMENT$STUDENTENROLMENT"];
+            this._relationENROLMENT_COURSEENROLMENT = this.Relations["ENROLMENT$COURSEENROLMENT"];
             this._relationISSUE_ENROLMENTISSUE = this.Relations["ISSUE$ENROLMENTISSUE"];
-            this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT = this.Relations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"];
             this._relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT = this.Relations["RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT"];
-            this.relationFK_ASSESSMENT_RESULT = this.Relations["FK_ASSESSMENT_RESULT"];
+            this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT = this.Relations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"];
             this._relationRESULT_ENROLMENTRESULT = this.Relations["RESULT$ENROLMENTRESULT"];
+            this.relationFK_ASSESSMENT_RESULT = this.Relations["FK_ASSESSMENT_RESULT"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -507,16 +507,16 @@ namespace BalhamCollege {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("ASSIGNMENT$COURSEASSIGNMENT", new global::System.Data.DataColumn[] {
-                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableASSIGNMENT.CourseIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("ASSIGNMENT$LECTURERASSIGNMENT", new global::System.Data.DataColumn[] {
+                        this.tableLECTURER.LecturerIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableASSIGNMENT.LecturerIDColumn});
             this.tableASSIGNMENT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("ASSIGNMENT$LECTURERASSIGNMENT", new global::System.Data.DataColumn[] {
-                        this.tableLECTURER.LecturerIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableASSIGNMENT.LecturerIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("ASSIGNMENT$COURSEASSIGNMENT", new global::System.Data.DataColumn[] {
+                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableASSIGNMENT.CourseIDColumn});
             this.tableASSIGNMENT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -528,16 +528,16 @@ namespace BalhamCollege {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("ENROLMENT$COURSEENROLMENT", new global::System.Data.DataColumn[] {
-                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableENROLMENT.CourseIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("ENROLMENT$STUDENTENROLMENT", new global::System.Data.DataColumn[] {
+                        this.tableSTUDENT.StudentIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENROLMENT.StudentIDColumn});
             this.tableENROLMENT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("ENROLMENT$STUDENTENROLMENT", new global::System.Data.DataColumn[] {
-                        this.tableSTUDENT.StudentIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableENROLMENT.StudentIDColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("ENROLMENT$COURSEENROLMENT", new global::System.Data.DataColumn[] {
+                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENROLMENT.CourseIDColumn});
             this.tableENROLMENT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -546,6 +546,13 @@ namespace BalhamCollege {
                         this.tableENROLMENT.EnrolmentIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableISSUE.EnrolmentIDColumn});
             this.tableISSUE.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.None;
+            fkc = new global::System.Data.ForeignKeyConstraint("RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT", new global::System.Data.DataColumn[] {
+                        this.tableRESEARCHTOPIC.TopicIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRESEARCHPROJECT.TopicIDColumn});
+            this.tableRESEARCHPROJECT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
@@ -556,12 +563,12 @@ namespace BalhamCollege {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT", new global::System.Data.DataColumn[] {
-                        this.tableRESEARCHTOPIC.TopicIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRESEARCHPROJECT.TopicIDColumn});
-            this.tableRESEARCHPROJECT.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("RESULT$ENROLMENTRESULT", new global::System.Data.DataColumn[] {
+                        this.tableENROLMENT.EnrolmentIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRESULT.EnrolmentIDColumn});
+            this.tableRESULT.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.None;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_ASSESSMENT_RESULT", new global::System.Data.DataColumn[] {
                         this.tableASSESSMENT.AssessmentIDColumn}, new global::System.Data.DataColumn[] {
@@ -570,57 +577,50 @@ namespace BalhamCollege {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("RESULT$ENROLMENTRESULT", new global::System.Data.DataColumn[] {
-                        this.tableENROLMENT.EnrolmentIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRESULT.EnrolmentIDColumn});
-            this.tableRESULT.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.None;
-            fkc.UpdateRule = global::System.Data.Rule.None;
             this._relationASSESSMENT_COURSEASSESSMENT = new global::System.Data.DataRelation("ASSESSMENT$COURSEASSESSMENT", new global::System.Data.DataColumn[] {
                         this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableASSESSMENT.CourseIDColumn}, false);
             this.Relations.Add(this._relationASSESSMENT_COURSEASSESSMENT);
-            this._relationASSIGNMENT_COURSEASSIGNMENT = new global::System.Data.DataRelation("ASSIGNMENT$COURSEASSIGNMENT", new global::System.Data.DataColumn[] {
-                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableASSIGNMENT.CourseIDColumn}, false);
-            this.Relations.Add(this._relationASSIGNMENT_COURSEASSIGNMENT);
             this._relationASSIGNMENT_LECTURERASSIGNMENT = new global::System.Data.DataRelation("ASSIGNMENT$LECTURERASSIGNMENT", new global::System.Data.DataColumn[] {
                         this.tableLECTURER.LecturerIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableASSIGNMENT.LecturerIDColumn}, false);
             this.Relations.Add(this._relationASSIGNMENT_LECTURERASSIGNMENT);
+            this._relationASSIGNMENT_COURSEASSIGNMENT = new global::System.Data.DataRelation("ASSIGNMENT$COURSEASSIGNMENT", new global::System.Data.DataColumn[] {
+                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableASSIGNMENT.CourseIDColumn}, false);
+            this.Relations.Add(this._relationASSIGNMENT_COURSEASSIGNMENT);
             this._relationCOURSE_PROGRAMMECOURSE = new global::System.Data.DataRelation("COURSE$PROGRAMMECOURSE", new global::System.Data.DataColumn[] {
                         this.tablePROGRAMME.ProgrammeIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCOURSE.ProgrammeIDColumn}, false);
             this.Relations.Add(this._relationCOURSE_PROGRAMMECOURSE);
-            this._relationENROLMENT_COURSEENROLMENT = new global::System.Data.DataRelation("ENROLMENT$COURSEENROLMENT", new global::System.Data.DataColumn[] {
-                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableENROLMENT.CourseIDColumn}, false);
-            this.Relations.Add(this._relationENROLMENT_COURSEENROLMENT);
             this._relationENROLMENT_STUDENTENROLMENT = new global::System.Data.DataRelation("ENROLMENT$STUDENTENROLMENT", new global::System.Data.DataColumn[] {
                         this.tableSTUDENT.StudentIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableENROLMENT.StudentIDColumn}, false);
             this.Relations.Add(this._relationENROLMENT_STUDENTENROLMENT);
+            this._relationENROLMENT_COURSEENROLMENT = new global::System.Data.DataRelation("ENROLMENT$COURSEENROLMENT", new global::System.Data.DataColumn[] {
+                        this.tableCOURSE.CourseIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableENROLMENT.CourseIDColumn}, false);
+            this.Relations.Add(this._relationENROLMENT_COURSEENROLMENT);
             this._relationISSUE_ENROLMENTISSUE = new global::System.Data.DataRelation("ISSUE$ENROLMENTISSUE", new global::System.Data.DataColumn[] {
                         this.tableENROLMENT.EnrolmentIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableISSUE.EnrolmentIDColumn}, false);
             this.Relations.Add(this._relationISSUE_ENROLMENTISSUE);
-            this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT = new global::System.Data.DataRelation("RESEARCHPROJECT$LECTURERRESEARCHPROJECT", new global::System.Data.DataColumn[] {
-                        this.tableLECTURER.LecturerIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRESEARCHPROJECT.LecturerIDColumn}, false);
-            this.Relations.Add(this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT);
             this._relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT = new global::System.Data.DataRelation("RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT", new global::System.Data.DataColumn[] {
                         this.tableRESEARCHTOPIC.TopicIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRESEARCHPROJECT.TopicIDColumn}, false);
             this.Relations.Add(this._relationRESEARCHPROJECT_RESEARCHTOPICRESEARCHPROJECT);
-            this.relationFK_ASSESSMENT_RESULT = new global::System.Data.DataRelation("FK_ASSESSMENT_RESULT", new global::System.Data.DataColumn[] {
-                        this.tableASSESSMENT.AssessmentIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableRESULT.AssessmentIDColumn}, false);
-            this.Relations.Add(this.relationFK_ASSESSMENT_RESULT);
+            this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT = new global::System.Data.DataRelation("RESEARCHPROJECT$LECTURERRESEARCHPROJECT", new global::System.Data.DataColumn[] {
+                        this.tableLECTURER.LecturerIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRESEARCHPROJECT.LecturerIDColumn}, false);
+            this.Relations.Add(this._relationRESEARCHPROJECT_LECTURERRESEARCHPROJECT);
             this._relationRESULT_ENROLMENTRESULT = new global::System.Data.DataRelation("RESULT$ENROLMENTRESULT", new global::System.Data.DataColumn[] {
                         this.tableENROLMENT.EnrolmentIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableRESULT.EnrolmentIDColumn}, false);
             this.Relations.Add(this._relationRESULT_ENROLMENTRESULT);
+            this.relationFK_ASSESSMENT_RESULT = new global::System.Data.DataRelation("FK_ASSESSMENT_RESULT", new global::System.Data.DataColumn[] {
+                        this.tableASSESSMENT.AssessmentIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableRESULT.AssessmentIDColumn}, false);
+            this.Relations.Add(this.relationFK_ASSESSMENT_RESULT);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4647,23 +4647,23 @@ namespace BalhamCollege {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public COURSERow COURSERow {
-                get {
-                    return ((COURSERow)(this.GetParentRow(this.Table.ParentRelations["ASSIGNMENT$COURSEASSIGNMENT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public LECTURERRow LECTURERRow {
                 get {
                     return ((LECTURERRow)(this.GetParentRow(this.Table.ParentRelations["ASSIGNMENT$LECTURERASSIGNMENT"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["ASSIGNMENT$LECTURERASSIGNMENT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public COURSERow COURSERow {
+                get {
+                    return ((COURSERow)(this.GetParentRow(this.Table.ParentRelations["ASSIGNMENT$COURSEASSIGNMENT"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
                 }
             }
         }
@@ -4875,23 +4875,23 @@ namespace BalhamCollege {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public COURSERow COURSERow {
-                get {
-                    return ((COURSERow)(this.GetParentRow(this.Table.ParentRelations["ENROLMENT$COURSEENROLMENT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["ENROLMENT$COURSEENROLMENT"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public STUDENTRow STUDENTRow {
                 get {
                     return ((STUDENTRow)(this.GetParentRow(this.Table.ParentRelations["ENROLMENT$STUDENTENROLMENT"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["ENROLMENT$STUDENTENROLMENT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public COURSERow COURSERow {
+                get {
+                    return ((COURSERow)(this.GetParentRow(this.Table.ParentRelations["ENROLMENT$COURSEENROLMENT"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ENROLMENT$COURSEENROLMENT"]);
                 }
             }
             
@@ -5287,23 +5287,23 @@ namespace BalhamCollege {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LECTURERRow LECTURERRow {
-                get {
-                    return ((LECTURERRow)(this.GetParentRow(this.Table.ParentRelations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public RESEARCHTOPICRow RESEARCHTOPICRow {
                 get {
                     return ((RESEARCHTOPICRow)(this.GetParentRow(this.Table.ParentRelations["RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["RESEARCHPROJECT$RESEARCHTOPICRESEARCHPROJECT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LECTURERRow LECTURERRow {
+                get {
+                    return ((LECTURERRow)(this.GetParentRow(this.Table.ParentRelations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["RESEARCHPROJECT$LECTURERRESEARCHPROJECT"]);
                 }
             }
         }
@@ -5427,23 +5427,23 @@ namespace BalhamCollege {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ASSESSMENTRow ASSESSMENTRow {
-                get {
-                    return ((ASSESSMENTRow)(this.GetParentRow(this.Table.ParentRelations["FK_ASSESSMENT_RESULT"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_ASSESSMENT_RESULT"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ENROLMENTRow ENROLMENTRow {
                 get {
                     return ((ENROLMENTRow)(this.GetParentRow(this.Table.ParentRelations["RESULT$ENROLMENTRESULT"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["RESULT$ENROLMENTRESULT"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ASSESSMENTRow ASSESSMENTRow {
+                get {
+                    return ((ASSESSMENTRow)(this.GetParentRow(this.Table.ParentRelations["FK_ASSESSMENT_RESULT"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_ASSESSMENT_RESULT"]);
                 }
             }
         }
