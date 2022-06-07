@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblProgrammeName = new System.Windows.Forms.Label();
             this.lblProgrammeLevel = new System.Windows.Forms.Label();
             this.txtProgrammeName = new System.Windows.Forms.TextBox();
@@ -38,7 +39,13 @@ namespace BalhamCollege
             this.lblRequiredFields = new System.Windows.Forms.Label();
             this.lblAsterix1 = new System.Windows.Forms.Label();
             this.lblAsterix2 = new System.Windows.Forms.Label();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProgrammeName
@@ -97,6 +104,7 @@ namespace BalhamCollege
             this.btnAddProgramme.TabIndex = 4;
             this.btnAddProgramme.Text = "Add Programme";
             this.btnAddProgramme.UseVisualStyleBackColor = true;
+            this.btnAddProgramme.Click += new System.EventHandler(this.btnAddProgramme_Click);
             // 
             // btnReturn
             // 
@@ -106,6 +114,7 @@ namespace BalhamCollege
             this.btnReturn.TabIndex = 5;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lblRequiredFields
             // 
@@ -140,11 +149,42 @@ namespace BalhamCollege
             this.lblAsterix2.TabIndex = 30;
             this.lblAsterix2.Text = "*";
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROGRAMMEBindingSource
+            // 
+            this.pROGRAMMEBindingSource.DataMember = "PROGRAMME";
+            this.pROGRAMMEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // pROGRAMMETableAdapter
+            // 
+            this.pROGRAMMETableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = this.pROGRAMMETableAdapter;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // AddProgrammeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(701, 295);
+            this.ClientSize = new System.Drawing.Size(701, 309);
             this.Controls.Add(this.lblAsterix2);
             this.Controls.Add(this.lblAsterix1);
             this.Controls.Add(this.lblRequiredFields);
@@ -155,10 +195,13 @@ namespace BalhamCollege
             this.Controls.Add(this.lblProgrammeLevel);
             this.Controls.Add(this.lblProgrammeName);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProgrammeForm";
             this.Text = "Add Programme Form";
+            this.Load += new System.EventHandler(this.AddProgrammeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +218,9 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblRequiredFields;
         private System.Windows.Forms.Label lblAsterix1;
         private System.Windows.Forms.Label lblAsterix2;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource pROGRAMMEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter pROGRAMMETableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
