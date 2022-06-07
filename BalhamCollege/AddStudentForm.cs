@@ -75,7 +75,5 @@ namespace BalhamCollege
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
         }
-
-       
     }
 }
