@@ -44,14 +44,17 @@ namespace BalhamCollege
             this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtProgrammeName
             // 
             this.txtProgrammeName.Location = new System.Drawing.Point(268, 377);
-            this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
             this.txtProgrammeName.Size = new System.Drawing.Size(297, 35);
@@ -70,7 +73,7 @@ namespace BalhamCollege
             // btnReturn
             // 
             this.btnReturn.Location = new System.Drawing.Point(597, 497);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(192, 61);
             this.btnReturn.TabIndex = 150;
@@ -81,7 +84,7 @@ namespace BalhamCollege
             // btnDeleteProgramme
             // 
             this.btnDeleteProgramme.Location = new System.Drawing.Point(50, 497);
-            this.btnDeleteProgramme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteProgramme.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteProgramme.Name = "btnDeleteProgramme";
             this.btnDeleteProgramme.Size = new System.Drawing.Size(230, 61);
             this.btnDeleteProgramme.TabIndex = 149;
@@ -92,7 +95,7 @@ namespace BalhamCollege
             // txtLevel
             // 
             this.txtLevel.Location = new System.Drawing.Point(268, 423);
-            this.txtLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLevel.Margin = new System.Windows.Forms.Padding(4);
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
             this.txtLevel.Size = new System.Drawing.Size(81, 35);
@@ -101,7 +104,7 @@ namespace BalhamCollege
             // txtProgrammeID
             // 
             this.txtProgrammeID.Location = new System.Drawing.Point(268, 331);
-            this.txtProgrammeID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtProgrammeID.Margin = new System.Windows.Forms.Padding(4);
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
             this.txtProgrammeID.Size = new System.Drawing.Size(81, 35);
@@ -142,7 +145,7 @@ namespace BalhamCollege
             this.lstProgrammes.FormattingEnabled = true;
             this.lstProgrammes.ItemHeight = 29;
             this.lstProgrammes.Location = new System.Drawing.Point(47, 71);
-            this.lstProgrammes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstProgrammes.Margin = new System.Windows.Forms.Padding(4);
             this.lstProgrammes.Name = "lstProgrammes";
             this.lstProgrammes.ScrollAlwaysVisible = true;
             this.lstProgrammes.Size = new System.Drawing.Size(741, 236);
@@ -180,11 +183,20 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
             // DeleteProgrammeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 638);
+            this.ClientSize = new System.Drawing.Size(1067, 647);
             this.Controls.Add(this.txtProgrammeName);
             this.Controls.Add(this.lblProgrammeName);
             this.Controls.Add(this.btnReturn);
@@ -196,12 +208,13 @@ namespace BalhamCollege
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lstProgrammes);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteProgrammeForm";
             this.Text = "DeleteProgrammeForm";
             this.Load += new System.EventHandler(this.DeleteProgrammeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +236,7 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource pROGRAMMEBindingSource;
         private dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter pROGRAMMETableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
     }
 }

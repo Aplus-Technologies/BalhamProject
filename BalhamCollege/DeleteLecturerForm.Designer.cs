@@ -50,8 +50,11 @@ namespace BalhamCollege
             this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.aSSIGNMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aSSIGNMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -232,11 +235,20 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // aSSIGNMENTBindingSource
+            // 
+            this.aSSIGNMENTBindingSource.DataMember = "ASSIGNMENT";
+            this.aSSIGNMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // aSSIGNMENTTableAdapter
+            // 
+            this.aSSIGNMENTTableAdapter.ClearBeforeFill = true;
+            // 
             // DeleteLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 403);
+            this.ClientSize = new System.Drawing.Size(1014, 524);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeleteLecturer);
@@ -259,6 +271,7 @@ namespace BalhamCollege
             this.Load += new System.EventHandler(this.DeleteLecturerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +299,7 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource lECTURERBindingSource;
         private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource aSSIGNMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter aSSIGNMENTTableAdapter;
     }
 }
