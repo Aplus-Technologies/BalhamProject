@@ -34,7 +34,7 @@ namespace BalhamCollege
         }
 
         public void BindControls()
-        {
+        {// bind combo box for Programmes, text box for programme level and text box for programme ID to the Programme table
             txtProgrammeID.DataBindings.Add("Text", dsBalhamCollegeAzure, "Programme.ProgrammeID");
             txtLevel.DataBindings.Add("Text", dsBalhamCollegeAzure, "PROGRAMME.ProgrammeLevel");
             cboProgramme.DataSource = dsBalhamCollegeAzure;
@@ -133,7 +133,7 @@ namespace BalhamCollege
         
 
         private void txtCourseName_TextChanged(object sender, EventArgs e)
-        {
+        { // Reveal or hide txtPlaceholder and txtPlaceholder2
             if((txtCourseName.Text != ""))
             {
                 txtPlaceHolder.Visible = false;

@@ -17,6 +17,7 @@ namespace BalhamCollege
         private EnterResultForm frmEnterResult;
         private UpdateAssessmentForm frmUpdateAssessment; // the reference to the Update Assessment form
         private DeleteAssessmentForm frmDeleteAssessment; // reference to delete assessment form
+        private AddAssessmentForm frmAddAssessment; // reference to add assessment form
         public CourseAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -27,7 +28,12 @@ namespace BalhamCollege
 
         private void btnAddAssessment_Click(object sender, EventArgs e)
         {
-
+            // show Add Assessment form upon click
+            if (frmAddAssessment == null)
+            {
+                frmAddAssessment = new AddAssessmentForm(DC, this);
+            }
+            frmAddAssessment.ShowDialog();
         }
 
         private void btnUpdateAssessment_Click(object sender, EventArgs e)
