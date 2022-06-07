@@ -15,6 +15,8 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private DeleteResearchTopicForm frmDeleteResearchTopic; // reference to delete research topic form
+        private UpdateResearchTopicForm frmUpdateResearchTopic; // reference to update research topic form
+
         public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -49,6 +51,12 @@ namespace BalhamCollege
 
         private void btnUpdateResearchTopic_Click(object sender, EventArgs e)
         {
+            // show Update Research Topic form upon click
+            if (frmUpdateResearchTopic == null)
+            {
+                frmUpdateResearchTopic = new UpdateResearchTopicForm(DC, this);
+            }
+            frmUpdateResearchTopic.ShowDialog();
 
         }
 
