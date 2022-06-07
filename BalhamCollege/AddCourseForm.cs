@@ -15,8 +15,7 @@ namespace BalhamCollege
         //declare global variables
         private DataController DC;
         private ProgrammeAdministratorForm frmProgramAdmin;
-        private CurrencyManager cmProgramme;
-
+       
         private DataTable dtProgramme2; // reference to programme table
         private DataView programmeView2; // reference to dataview of programme table 
 
@@ -29,8 +28,22 @@ namespace BalhamCollege
             frmProgramAdmin = progAdmin;
             frmProgramAdmin.Hide();
             TableAndView(); // generate updated table and views
+            BindControls();
+           
            
         }
+
+        public void BindControls()
+        {
+            txtProgrammeID.DataBindings.Add("Text", dsBalhamCollegeAzure, "Programme.ProgrammeID");
+            txtLevel.DataBindings.Add("Text", dsBalhamCollegeAzure, "PROGRAMME.ProgrammeLevel");
+            cboProgramme.DataSource = dsBalhamCollegeAzure;
+            cboProgramme.DisplayMember = "PROGRAMME.ProgrammeName";
+            cboProgramme.ValueMember = "PROGRAMME.ProgrammeName";
+           
+        }
+
+      
 
         private void TableAndView()
         { // generate table and view instances of programme table 
@@ -45,22 +58,11 @@ namespace BalhamCollege
             nudCredits.Value = 5;
             nudFee.Value = 200;
             cboStatus.Text = "Current";
-            lstProgrammes.Items.Clear();
+          
             
         }
 
-        private void LoadProgrammes()
-        {
-            // To load all Programmes
-            string programmeText;
-            foreach (DataRow drProgramme in dtProgramme2.Rows)
-            {
-               programmeText = drProgramme["ProgrammeID"].ToString() + ", ";
-               programmeText += drProgramme["ProgrammeLevel"].ToString();
-              
-                lstProgrammes.Items.Add(programmeText);
-            }
-        }
+       
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -70,16 +72,7 @@ namespace BalhamCollege
             frmProgramAdmin.Show(); // show Program Administrator menu 
         }
 
-        private void CheckTextboxes()
-        { // checks if the following fields are filled 
-            while ((txtCourseName.Text == "") && (cboStatus.Text == "") )
-            {
-                txtPlaceHolder.Visible = true;
-            }
-            
-        }
-
-            
+       
 
         private void pROGRAMMEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -95,32 +88,24 @@ namespace BalhamCollege
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
-
+           
+            txtProgrammeID.Visible = false;
+            txtPlaceHolder2.Visible = true;
             txtPlaceHolder.Visible = true; 
             ClearFields(); 
-            lstProgrammes.Items.Clear();
-            LoadProgrammes();
+           
+          //  LoadProgrammes();
         }
 
         
 
-        private void lstProgrammes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(lstProgrammes.SelectedItem != null)
-            {
-                string programmeText;
-                programmeText = lstProgrammes.SelectedItem.ToString();
-                string[] parts = programmeText.Split(',');
-                programmeID = Convert.ToInt32(parts[0]); 
-
-            }
-            
-        }
-
+       
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
+            programmeID = Convert.ToInt32(txtProgrammeID.Text); 
+
             // check if required fields are blank 
-            if ((txtCourseName.Text == "") || (cboStatus.Text == "") || (lstProgrammes.SelectedItem == null))
+            if ((txtCourseName.Text == "") || (cboStatus.Text == "") || (cboProgramme.SelectedItem == null))
             {// error message
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -138,9 +123,26 @@ namespace BalhamCollege
                 // controls are reset to blank 
                
                 ClearFields();
-                txtPlaceHolder.Visible = true;        
+                txtPlaceHolder.Visible = true;
+                txtPlaceHolder2.Visible = true;
                
                 
+            }
+        }
+
+        
+
+        private void txtCourseName_TextChanged(object sender, EventArgs e)
+        {
+            if((txtCourseName.Text != ""))
+            {
+                txtPlaceHolder.Visible = false;
+                txtPlaceHolder2.Visible = false; 
+            }
+            else
+            {
+                txtPlaceHolder.Visible = true;
+                txtPlaceHolder2.Visible = true;
             }
         }
     }

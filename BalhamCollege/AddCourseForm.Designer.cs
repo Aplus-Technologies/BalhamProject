@@ -34,22 +34,32 @@ namespace BalhamCollege
             this.lblCredits = new System.Windows.Forms.Label();
             this.lblFee = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.lblProgramme = new System.Windows.Forms.Label();
             this.btnAddCourse = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
             this.txtCourseName = new System.Windows.Forms.TextBox();
             this.nudCredits = new System.Windows.Forms.NumericUpDown();
             this.nudFee = new System.Windows.Forms.NumericUpDown();
             this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.lstProgrammes = new System.Windows.Forms.ListBox();
             this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
             this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
-            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.txtPlaceHolder = new System.Windows.Forms.TextBox();
+            this.txtProgrammeID = new System.Windows.Forms.TextBox();
+            this.lblProgrammeName = new System.Windows.Forms.Label();
+            this.cboProgramme = new System.Windows.Forms.ComboBox();
+            this.txtLevel = new System.Windows.Forms.TextBox();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.txtPlaceHolder2 = new System.Windows.Forms.TextBox();
+            this.lblRequiredFields = new System.Windows.Forms.Label();
+            this.lblAsterix1 = new System.Windows.Forms.Label();
+            this.lblAsterix2 = new System.Windows.Forms.Label();
+            this.lblAsterix3 = new System.Windows.Forms.Label();
+            this.lblAsterix4 = new System.Windows.Forms.Label();
+            this.lblAsterix5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudCredits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
@@ -60,53 +70,44 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(74, 57);
+            this.lblCourseName.Location = new System.Drawing.Point(98, 54);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(117, 24);
+            this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 0;
             this.lblCourseName.Text = "Course Name:";
             // 
             // lblCredits
             // 
             this.lblCredits.AutoSize = true;
-            this.lblCredits.Location = new System.Drawing.Point(125, 121);
+            this.lblCredits.Location = new System.Drawing.Point(136, 121);
             this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(66, 24);
+            this.lblCredits.Size = new System.Drawing.Size(55, 20);
             this.lblCredits.TabIndex = 1;
             this.lblCredits.Text = "Credits:";
             // 
             // lblFee
             // 
             this.lblFee.AutoSize = true;
-            this.lblFee.Location = new System.Drawing.Point(148, 185);
+            this.lblFee.Location = new System.Drawing.Point(145, 187);
             this.lblFee.Name = "lblFee";
-            this.lblFee.Size = new System.Drawing.Size(43, 24);
+            this.lblFee.Size = new System.Drawing.Size(48, 20);
             this.lblFee.TabIndex = 2;
-            this.lblFee.Text = "Fee:";
+            this.lblFee.Text = "Fee: $";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(129, 245);
+            this.lblStatus.Location = new System.Drawing.Point(142, 245);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(62, 24);
+            this.lblStatus.Size = new System.Drawing.Size(49, 20);
             this.lblStatus.TabIndex = 3;
             this.lblStatus.Text = "Status:";
             // 
-            // lblProgramme
-            // 
-            this.lblProgramme.AutoSize = true;
-            this.lblProgramme.Location = new System.Drawing.Point(89, 332);
-            this.lblProgramme.Name = "lblProgramme";
-            this.lblProgramme.Size = new System.Drawing.Size(102, 24);
-            this.lblProgramme.TabIndex = 4;
-            this.lblProgramme.Text = "Programme:";
-            // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(179, 437);
+            this.btnAddCourse.Location = new System.Drawing.Point(189, 451);
             this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(148, 51);
+            this.btnAddCourse.Size = new System.Drawing.Size(115, 39);
             this.btnAddCourse.TabIndex = 5;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
@@ -114,9 +115,9 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(619, 437);
+            this.btnReturn.Location = new System.Drawing.Point(455, 451);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(148, 51);
+            this.btnReturn.Size = new System.Drawing.Size(115, 37);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -127,8 +128,9 @@ namespace BalhamCollege
             this.txtCourseName.Location = new System.Drawing.Point(197, 51);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
-            this.txtCourseName.Size = new System.Drawing.Size(373, 30);
+            this.txtCourseName.Size = new System.Drawing.Size(373, 26);
             this.txtCourseName.TabIndex = 7;
+            this.txtCourseName.TextChanged += new System.EventHandler(this.txtCourseName_TextChanged);
             // 
             // nudCredits
             // 
@@ -144,7 +146,7 @@ namespace BalhamCollege
             0,
             0});
             this.nudCredits.Name = "nudCredits";
-            this.nudCredits.Size = new System.Drawing.Size(107, 30);
+            this.nudCredits.Size = new System.Drawing.Size(107, 26);
             this.nudCredits.TabIndex = 8;
             this.nudCredits.Value = new decimal(new int[] {
             5,
@@ -167,7 +169,7 @@ namespace BalhamCollege
             0,
             0});
             this.nudFee.Name = "nudFee";
-            this.nudFee.Size = new System.Drawing.Size(107, 30);
+            this.nudFee.Size = new System.Drawing.Size(107, 26);
             this.nudFee.TabIndex = 9;
             this.nudFee.Value = new decimal(new int[] {
             200,
@@ -184,20 +186,9 @@ namespace BalhamCollege
             "Suspended"});
             this.cboStatus.Location = new System.Drawing.Point(197, 242);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(176, 32);
+            this.cboStatus.Size = new System.Drawing.Size(176, 28);
             this.cboStatus.TabIndex = 10;
             this.cboStatus.ValueMember = "Current";
-            // 
-            // lstProgrammes
-            // 
-            this.lstProgrammes.FormattingEnabled = true;
-            this.lstProgrammes.ItemHeight = 24;
-            this.lstProgrammes.Location = new System.Drawing.Point(197, 332);
-            this.lstProgrammes.Name = "lstProgrammes";
-            this.lstProgrammes.ScrollAlwaysVisible = true;
-            this.lstProgrammes.Size = new System.Drawing.Size(570, 76);
-            this.lstProgrammes.TabIndex = 11;
-            this.lstProgrammes.SelectedIndexChanged += new System.EventHandler(this.lstProgrammes_SelectedIndexChanged);
             // 
             // dsBalhamCollegeAzure
             // 
@@ -230,57 +221,185 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
             // cOURSEBindingSource
             // 
             this.cOURSEBindingSource.DataMember = "COURSE";
             this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
-            // cOURSETableAdapter
-            // 
-            this.cOURSETableAdapter.ClearBeforeFill = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 295);
+            this.label1.Location = new System.Drawing.Point(39, 298);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 24);
+            this.label1.Size = new System.Drawing.Size(367, 20);
             this.label1.TabIndex = 12;
             this.label1.Text = "Please complete required fields above to select a program:";
             // 
             // txtPlaceHolder
             // 
-            this.txtPlaceHolder.Location = new System.Drawing.Point(197, 332);
+            this.txtPlaceHolder.Location = new System.Drawing.Point(197, 333);
             this.txtPlaceHolder.MaxLength = 50;
             this.txtPlaceHolder.Multiline = true;
             this.txtPlaceHolder.Name = "txtPlaceHolder";
             this.txtPlaceHolder.ReadOnly = true;
             this.txtPlaceHolder.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlaceHolder.Size = new System.Drawing.Size(570, 76);
+            this.txtPlaceHolder.Size = new System.Drawing.Size(373, 27);
             this.txtPlaceHolder.TabIndex = 13;
-            this.txtPlaceHolder.Visible = false;
+            // 
+            // txtProgrammeID
+            // 
+            this.txtProgrammeID.Location = new System.Drawing.Point(500, 295);
+            this.txtProgrammeID.Name = "txtProgrammeID";
+            this.txtProgrammeID.ReadOnly = true;
+            this.txtProgrammeID.Size = new System.Drawing.Size(70, 26);
+            this.txtProgrammeID.TabIndex = 14;
+            // 
+            // lblProgrammeName
+            // 
+            this.lblProgrammeName.AutoSize = true;
+            this.lblProgrammeName.Location = new System.Drawing.Point(71, 332);
+            this.lblProgrammeName.Name = "lblProgrammeName";
+            this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
+            this.lblProgrammeName.TabIndex = 16;
+            this.lblProgrammeName.Text = "Programme Name:";
+            // 
+            // cboProgramme
+            // 
+            this.cboProgramme.FormattingEnabled = true;
+            this.cboProgramme.Location = new System.Drawing.Point(197, 332);
+            this.cboProgramme.Name = "cboProgramme";
+            this.cboProgramme.Size = new System.Drawing.Size(373, 28);
+            this.cboProgramme.TabIndex = 17;
+            // 
+            // txtLevel
+            // 
+            this.txtLevel.Location = new System.Drawing.Point(197, 366);
+            this.txtLevel.Name = "txtLevel";
+            this.txtLevel.ReadOnly = true;
+            this.txtLevel.Size = new System.Drawing.Size(100, 26);
+            this.txtLevel.TabIndex = 18;
+            // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(145, 372);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.TabIndex = 19;
+            this.lblLevel.Text = "Level:";
+            // 
+            // txtPlaceHolder2
+            // 
+            this.txtPlaceHolder2.Location = new System.Drawing.Point(197, 366);
+            this.txtPlaceHolder2.MaxLength = 50;
+            this.txtPlaceHolder2.Multiline = true;
+            this.txtPlaceHolder2.Name = "txtPlaceHolder2";
+            this.txtPlaceHolder2.ReadOnly = true;
+            this.txtPlaceHolder2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPlaceHolder2.Size = new System.Drawing.Size(100, 27);
+            this.txtPlaceHolder2.TabIndex = 20;
+            // 
+            // lblRequiredFields
+            // 
+            this.lblRequiredFields.AutoSize = true;
+            this.lblRequiredFields.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequiredFields.ForeColor = System.Drawing.Color.Red;
+            this.lblRequiredFields.Location = new System.Drawing.Point(452, 409);
+            this.lblRequiredFields.Name = "lblRequiredFields";
+            this.lblRequiredFields.Size = new System.Drawing.Size(125, 18);
+            this.lblRequiredFields.TabIndex = 27;
+            this.lblRequiredFields.Text = "*Required Fields";
+            // 
+            // lblAsterix1
+            // 
+            this.lblAsterix1.AutoSize = true;
+            this.lblAsterix1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix1.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterix1.Location = new System.Drawing.Point(87, 51);
+            this.lblAsterix1.Name = "lblAsterix1";
+            this.lblAsterix1.Size = new System.Drawing.Size(14, 18);
+            this.lblAsterix1.TabIndex = 28;
+            this.lblAsterix1.Text = "*";
+            // 
+            // lblAsterix2
+            // 
+            this.lblAsterix2.AutoSize = true;
+            this.lblAsterix2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix2.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterix2.Location = new System.Drawing.Point(130, 112);
+            this.lblAsterix2.Name = "lblAsterix2";
+            this.lblAsterix2.Size = new System.Drawing.Size(14, 18);
+            this.lblAsterix2.TabIndex = 29;
+            this.lblAsterix2.Text = "*";
+            // 
+            // lblAsterix3
+            // 
+            this.lblAsterix3.AutoSize = true;
+            this.lblAsterix3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix3.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterix3.Location = new System.Drawing.Point(130, 185);
+            this.lblAsterix3.Name = "lblAsterix3";
+            this.lblAsterix3.Size = new System.Drawing.Size(14, 18);
+            this.lblAsterix3.TabIndex = 30;
+            this.lblAsterix3.Text = "*";
+            // 
+            // lblAsterix4
+            // 
+            this.lblAsterix4.AutoSize = true;
+            this.lblAsterix4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix4.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterix4.Location = new System.Drawing.Point(130, 242);
+            this.lblAsterix4.Name = "lblAsterix4";
+            this.lblAsterix4.Size = new System.Drawing.Size(14, 18);
+            this.lblAsterix4.TabIndex = 31;
+            this.lblAsterix4.Text = "*";
+            // 
+            // lblAsterix5
+            // 
+            this.lblAsterix5.AutoSize = true;
+            this.lblAsterix5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix5.ForeColor = System.Drawing.Color.Red;
+            this.lblAsterix5.Location = new System.Drawing.Point(62, 332);
+            this.lblAsterix5.Name = "lblAsterix5";
+            this.lblAsterix5.Size = new System.Drawing.Size(14, 18);
+            this.lblAsterix5.TabIndex = 32;
+            this.lblAsterix5.Text = "*";
             // 
             // AddCourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 539);
+            this.ClientSize = new System.Drawing.Size(707, 536);
+            this.Controls.Add(this.lblCourseName);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblAsterix5);
+            this.Controls.Add(this.lblProgrammeName);
+            this.Controls.Add(this.lblCredits);
+            this.Controls.Add(this.lblFee);
+            this.Controls.Add(this.lblAsterix4);
+            this.Controls.Add(this.lblAsterix3);
+            this.Controls.Add(this.lblAsterix2);
+            this.Controls.Add(this.lblAsterix1);
+            this.Controls.Add(this.lblRequiredFields);
+            this.Controls.Add(this.txtPlaceHolder2);
             this.Controls.Add(this.txtPlaceHolder);
+            this.Controls.Add(this.lblLevel);
+            this.Controls.Add(this.txtLevel);
+            this.Controls.Add(this.cboProgramme);
+            this.Controls.Add(this.txtProgrammeID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstProgrammes);
             this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.nudFee);
             this.Controls.Add(this.nudCredits);
             this.Controls.Add(this.txtCourseName);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddCourse);
-            this.Controls.Add(this.lblProgramme);
-            this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.lblFee);
-            this.Controls.Add(this.lblCredits);
-            this.Controls.Add(this.lblCourseName);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddCourseForm";
             this.Text = "Add Course Form";
             this.Load += new System.EventHandler(this.AddCourseForm_Load);
@@ -300,14 +419,12 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblCredits;
         private System.Windows.Forms.Label lblFee;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblProgramme;
         private System.Windows.Forms.Button btnAddCourse;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.TextBox txtCourseName;
         private System.Windows.Forms.NumericUpDown nudCredits;
         private System.Windows.Forms.NumericUpDown nudFee;
         private System.Windows.Forms.ComboBox cboStatus;
-        private System.Windows.Forms.ListBox lstProgrammes;
         private dsBalhamCollegeAzure dsBalhamCollegeAzure;
         private System.Windows.Forms.BindingSource pROGRAMMEBindingSource;
         private dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter pROGRAMMETableAdapter;
@@ -316,5 +433,17 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource cOURSEBindingSource;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtPlaceHolder;
+        private System.Windows.Forms.TextBox txtProgrammeID;
+        private System.Windows.Forms.Label lblProgrammeName;
+        private System.Windows.Forms.ComboBox cboProgramme;
+        private System.Windows.Forms.TextBox txtLevel;
+        private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.TextBox txtPlaceHolder2;
+        private System.Windows.Forms.Label lblRequiredFields;
+        private System.Windows.Forms.Label lblAsterix1;
+        private System.Windows.Forms.Label lblAsterix2;
+        private System.Windows.Forms.Label lblAsterix3;
+        private System.Windows.Forms.Label lblAsterix4;
+        private System.Windows.Forms.Label lblAsterix5;
     }
 }
