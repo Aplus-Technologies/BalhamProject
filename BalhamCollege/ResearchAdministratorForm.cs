@@ -17,16 +17,10 @@ namespace BalhamCollege
         private LoginForm frmLogin;
         private DeleteResearchTopicForm frmDeleteResearchTopic; // reference to delete research topic form
         private UpdateResearchTopicForm frmUpdateResearchTopic; // reference to update research topic form
-
         private AddResearchProject frmAddResearchProject; // reference to add research project form
         private RemoveResearchProjectForm frmRemoveResearchProject; // reference to remove research project form                                                  
-
-
-        private AddResearchProject frmAddResearchProject; // reference to add research project form 
         private AddResearchTopicForm frmAddResearchTopic; // reference to add research topic form
         
-
-
         public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
