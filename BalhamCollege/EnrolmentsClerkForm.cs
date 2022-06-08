@@ -18,6 +18,7 @@ namespace BalhamCollege
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
         private UpdateStudentForm frmUpdateStudent; // the reference to the Update Student form
         private EnrolStudentForm frmEnrolStudent; //the reference to the Enrol Student form
+        private WithdrawStudentForm frmWithdrawStudent; //the reference to the Wuthdraw Student form
 
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
@@ -75,7 +76,12 @@ namespace BalhamCollege
 
         private void btnWithdrawStudent_Click(object sender, EventArgs e)
         {
-
+            // show Withdraw Student form upon click
+            if (frmWithdrawStudent == null)
+            {
+                frmWithdrawStudent = new WithdrawStudentForm(DC, this);
+            }
+            frmWithdrawStudent.ShowDialog();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

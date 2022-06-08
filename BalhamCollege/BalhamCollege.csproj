@@ -48,11 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAssessmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAssessmentForm.Designer.cs">
+      <DependentUpon>AddAssessmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourseForm.Designer.cs">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddLecturerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddLecturerForm.Designer.cs">
       <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProgrammeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProgrammeForm.Designer.cs">
+      <DependentUpon>AddProgrammeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddResearchProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResearchProject.Designer.cs">
+      <DependentUpon>AddResearchProject.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
@@ -181,8 +205,20 @@
     <Compile Include="WithdrawStudentForm.Designer.cs">
       <DependentUpon>WithdrawStudentForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAssessmentForm.resx">
+      <DependentUpon>AddAssessmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCourseForm.resx">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddLecturerForm.resx">
       <DependentUpon>AddLecturerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProgrammeForm.resx">
+      <DependentUpon>AddProgrammeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddResearchProject.resx">
+      <DependentUpon>AddResearchProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>
