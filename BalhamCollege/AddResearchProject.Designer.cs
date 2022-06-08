@@ -193,6 +193,7 @@ namespace BalhamCollege
             this.btnAddResearchProject.TabIndex = 14;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = true;
+            this.btnAddResearchProject.Click += new System.EventHandler(this.btnAddResearchProject_Click);
             // 
             // btnReturn
             // 
