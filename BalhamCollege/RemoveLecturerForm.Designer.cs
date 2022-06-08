@@ -106,6 +106,7 @@ namespace BalhamCollege
             this.txtRole.Location = new System.Drawing.Point(475, 516);
             this.txtRole.Margin = new System.Windows.Forms.Padding(4);
             this.txtRole.Name = "txtRole";
+            this.txtRole.ReadOnly = true;
             this.txtRole.Size = new System.Drawing.Size(103, 35);
             this.txtRole.TabIndex = 123;
             // 
@@ -114,6 +115,7 @@ namespace BalhamCollege
             this.txtFirstName.Location = new System.Drawing.Point(475, 470);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(242, 35);
             this.txtFirstName.TabIndex = 122;
             // 
@@ -122,6 +124,7 @@ namespace BalhamCollege
             this.txtLastName.Location = new System.Drawing.Point(475, 423);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(242, 35);
             this.txtLastName.TabIndex = 121;
             // 
@@ -130,6 +133,7 @@ namespace BalhamCollege
             this.txtLecturerID.Location = new System.Drawing.Point(475, 377);
             this.txtLecturerID.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecturerID.Name = "txtLecturerID";
+            this.txtLecturerID.ReadOnly = true;
             this.txtLecturerID.Size = new System.Drawing.Size(57, 35);
             this.txtLecturerID.TabIndex = 120;
             // 
@@ -199,6 +203,7 @@ namespace BalhamCollege
             this.txtStatus.Location = new System.Drawing.Point(475, 181);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(85, 35);
             this.txtStatus.TabIndex = 113;
             // 
@@ -207,6 +212,7 @@ namespace BalhamCollege
             this.txtProgrammeName.Location = new System.Drawing.Point(475, 228);
             this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProgrammeName.Name = "txtProgrammeName";
+            this.txtProgrammeName.ReadOnly = true;
             this.txtProgrammeName.Size = new System.Drawing.Size(471, 35);
             this.txtProgrammeName.TabIndex = 112;
             // 
@@ -215,6 +221,7 @@ namespace BalhamCollege
             this.txtCourseName.Location = new System.Drawing.Point(475, 135);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(242, 35);
             this.txtCourseName.TabIndex = 111;
             // 
@@ -223,6 +230,7 @@ namespace BalhamCollege
             this.txtCourseID.Location = new System.Drawing.Point(475, 88);
             this.txtCourseID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseID.Name = "txtCourseID";
+            this.txtCourseID.ReadOnly = true;
             this.txtCourseID.Size = new System.Drawing.Size(46, 35);
             this.txtCourseID.TabIndex = 110;
             // 

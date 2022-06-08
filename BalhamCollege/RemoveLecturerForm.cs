@@ -117,7 +117,7 @@ namespace BalhamCollege
                 deleteAssignmentRow.Delete();
                 DC.UpdateAssignment();
 
-                MessageBox.Show("Treatment removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
                 cmAssignment.EndCurrentEdit();
                 lstLecturers.Items.Clear();
                 ClearFields();
@@ -169,11 +169,9 @@ namespace BalhamCollege
             txtLecturerID.Text = drLecturer["LecturerID"].ToString();
             txtLastName.Text = drLecturer["LastName"].ToString();
             txtFirstName.Text = drLecturer["FirstName"].ToString();
-
+           
             //Find composite primary key for Assignment
             object[] primarykey = new object[2];
-
-
             int courseID = Convert.ToInt32(txtCourseID.Text);
             cmCourse.Position = DC.courseView.Find(courseID);
             DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
