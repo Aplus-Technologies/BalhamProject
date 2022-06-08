@@ -20,6 +20,8 @@ namespace BalhamCollege
         private DataTable dtLecturer2; // reference to lecturer table
         private DataView lecturerView2;  // reference to dataview of lecturer table 
 
+        private int topicID;
+
         public AddResearchProject(DataController dc, ResearchAdministratorForm resAdmin)
         {
             InitializeComponent();
@@ -94,6 +96,8 @@ namespace BalhamCollege
 
                 //show list of topics in data grid view for Research Topics 
                 dgvResearchTopics.DataSource = dsBalhamCollegeAzure.RESEARCHTOPIC; 
+
+
                 
 
             }
@@ -125,10 +129,23 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             
-
             // closes form
             this.Close();
             frmResearchAdminForm.Show(); // show Research Administrator menu 
+        }
+
+        private void dgvResearchTopics_SelectionChanged(object sender, EventArgs e)
+        { // get the research topic ID of the selected row 
+            dgvResearchTopics.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            if (dgvResearchTopics.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgvResearchTopics.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgvResearchTopics.Rows[selectedrowindex];
+                string cellValue = Convert.ToString(selectedRow.Cells["TopicID"].Value);
+                topicID = Convert.ToInt32(cellValue); 
+
+            }
         }
     }
 }
