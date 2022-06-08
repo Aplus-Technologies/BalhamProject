@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCourseName = new System.Windows.Forms.Label();
             this.lbl8 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
@@ -53,9 +54,18 @@ namespace BalhamCollege
             this.txtAssessmentName = new System.Windows.Forms.TextBox();
             this.nudNumber = new System.Windows.Forms.NumericUpDown();
             this.cboAssessments = new System.Windows.Forms.ComboBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aSSESSMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximumMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeighting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCourseName
@@ -325,11 +335,51 @@ namespace BalhamCollege
             this.cboAssessments.TabIndex = 72;
             this.cboAssessments.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboAssessments_Format);
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aSSESSMENTBindingSource
+            // 
+            this.aSSESSMENTBindingSource.DataMember = "ASSESSMENT";
+            this.aSSESSMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // aSSESSMENTTableAdapter
+            // 
+            this.aSSESSMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = this.aSSESSMENTTableAdapter;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = this.cOURSETableAdapter;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
             // UpdateAssessmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(602, 425);
+            this.ClientSize = new System.Drawing.Size(658, 425);
             this.Controls.Add(this.cboAssessments);
             this.Controls.Add(this.nudNumber);
             this.Controls.Add(this.txtAssessmentName);
@@ -355,12 +405,16 @@ namespace BalhamCollege
             this.Controls.Add(this.lblAssessmentID);
             this.Controls.Add(this.lblAssessments);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateAssessmentForm";
             this.Text = "Update Assessment";
+            this.Load += new System.EventHandler(this.UpdateAssessmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximumMark)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeighting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,5 +445,11 @@ namespace BalhamCollege
         private System.Windows.Forms.TextBox txtAssessmentName;
         private System.Windows.Forms.NumericUpDown nudNumber;
         private System.Windows.Forms.ComboBox cboAssessments;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
     }
 }

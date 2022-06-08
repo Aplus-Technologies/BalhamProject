@@ -88,5 +88,16 @@ namespace BalhamCollege
             DC.UpdateEnrolment();
             MessageBox.Show("Student withdrawn successfully", "Acknowledgement", MessageBoxButtons.OK);
         }
+
+        private void WithdrawStudentForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+            this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ENROLMENT' table. You can move, or remove it, as needed.
+            this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
+            this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+
+        }
     }
 }
