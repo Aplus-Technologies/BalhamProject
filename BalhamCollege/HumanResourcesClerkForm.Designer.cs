@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HumanResourcesClerkForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnLecturerReport = new System.Windows.Forms.Button();
@@ -36,7 +37,18 @@ namespace BalhamCollege
             this.btnUpdateLecturer = new System.Windows.Forms.Button();
             this.btnDeleteLecturer = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.aSSIGNMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aSSIGNMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter();
+            this.printLecturers = new System.Drawing.Printing.PrintDocument();
+            this.prvLecturers = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -45,10 +57,10 @@ namespace BalhamCollege
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(30, 621);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturn.Location = new System.Drawing.Point(40, 764);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(243, 73);
+            this.btnReturn.Size = new System.Drawing.Size(324, 90);
             this.btnReturn.TabIndex = 18;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -60,10 +72,10 @@ namespace BalhamCollege
             this.btnLecturerReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLecturerReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLecturerReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLecturerReport.Location = new System.Drawing.Point(30, 551);
-            this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLecturerReport.Location = new System.Drawing.Point(40, 678);
+            this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLecturerReport.Name = "btnLecturerReport";
-            this.btnLecturerReport.Size = new System.Drawing.Size(243, 66);
+            this.btnLecturerReport.Size = new System.Drawing.Size(324, 81);
             this.btnLecturerReport.TabIndex = 17;
             this.btnLecturerReport.Text = "Produce Students Report";
             this.btnLecturerReport.UseVisualStyleBackColor = false;
@@ -75,10 +87,10 @@ namespace BalhamCollege
             this.btnAddLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLecturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddLecturer.Location = new System.Drawing.Point(30, 306);
-            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddLecturer.Location = new System.Drawing.Point(40, 377);
+            this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddLecturer.Name = "btnAddLecturer";
-            this.btnAddLecturer.Size = new System.Drawing.Size(243, 79);
+            this.btnAddLecturer.Size = new System.Drawing.Size(324, 97);
             this.btnAddLecturer.TabIndex = 16;
             this.btnAddLecturer.Text = "Add Lecturer";
             this.btnAddLecturer.UseVisualStyleBackColor = false;
@@ -90,10 +102,10 @@ namespace BalhamCollege
             this.btnUpdateLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateLecturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateLecturer.Location = new System.Drawing.Point(30, 389);
-            this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateLecturer.Location = new System.Drawing.Point(40, 479);
+            this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateLecturer.Name = "btnUpdateLecturer";
-            this.btnUpdateLecturer.Size = new System.Drawing.Size(243, 79);
+            this.btnUpdateLecturer.Size = new System.Drawing.Size(324, 97);
             this.btnUpdateLecturer.TabIndex = 15;
             this.btnUpdateLecturer.Text = "Update Lecturer";
             this.btnUpdateLecturer.UseVisualStyleBackColor = false;
@@ -105,10 +117,10 @@ namespace BalhamCollege
             this.btnDeleteLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteLecturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteLecturer.Location = new System.Drawing.Point(30, 472);
-            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteLecturer.Location = new System.Drawing.Point(40, 581);
+            this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
-            this.btnDeleteLecturer.Size = new System.Drawing.Size(243, 75);
+            this.btnDeleteLecturer.Size = new System.Drawing.Size(324, 92);
             this.btnDeleteLecturer.TabIndex = 14;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = false;
@@ -118,17 +130,73 @@ namespace BalhamCollege
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.humanResourcesClerkPage;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1114, 708);
+            this.pictureBox1.Size = new System.Drawing.Size(1485, 871);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lECTURERBindingSource
+            // 
+            this.lECTURERBindingSource.DataMember = "LECTURER";
+            this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // lECTURERTableAdapter
+            // 
+            this.lECTURERTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = this.aSSIGNMENTTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = this.lECTURERTableAdapter;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // aSSIGNMENTBindingSource
+            // 
+            this.aSSIGNMENTBindingSource.DataMember = "ASSIGNMENT";
+            this.aSSIGNMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // aSSIGNMENTTableAdapter
+            // 
+            this.aSSIGNMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // printLecturers
+            // 
+            this.printLecturers.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printLecturers_PrintPage);
+            // 
+            // prvLecturers
+            // 
+            this.prvLecturers.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.prvLecturers.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.prvLecturers.ClientSize = new System.Drawing.Size(400, 300);
+            this.prvLecturers.Document = this.printLecturers;
+            this.prvLecturers.Enabled = true;
+            this.prvLecturers.Icon = ((System.Drawing.Icon)(resources.GetObject("prvLecturers.Icon")));
+            this.prvLecturers.Name = "prvLecturers";
+            this.prvLecturers.Visible = false;
+            // 
             // HumanResourcesClerkForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1109, 705);
+            this.ClientSize = new System.Drawing.Size(1505, 889);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnLecturerReport);
             this.Controls.Add(this.btnAddLecturer);
@@ -136,11 +204,15 @@ namespace BalhamCollege
             this.Controls.Add(this.btnDeleteLecturer);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HumanResourcesClerkForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Human Resources Clerk Menu";
+            this.Load += new System.EventHandler(this.HumanResourcesClerkForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +225,13 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnUpdateLecturer;
         private System.Windows.Forms.Button btnDeleteLecturer;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource lECTURERBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter aSSIGNMENTTableAdapter;
+        private System.Windows.Forms.BindingSource aSSIGNMENTBindingSource;
+        private System.Drawing.Printing.PrintDocument printLecturers;
+        private System.Windows.Forms.PrintPreviewDialog prvLecturers;
     }
 }
