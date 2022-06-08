@@ -12,8 +12,9 @@ namespace BalhamCollege
 {
     public partial class UpdateStudentForm : Form
     {
+        //declare global variables
         private DataController DC;
-        private EnrolmentsClerkForm frmEnrolmentsClerk;
+        private EnrolmentsClerkForm frmEnrolmentsClerk; // reference to Enrolment Clerk Form
         private CurrencyManager cmStudent;
 
         private DataTable dtStudent2;
@@ -30,7 +31,8 @@ namespace BalhamCollege
         }
 
         private void TableAndView()
-        { // create updated instances for Student table and dataview for student table 
+        {
+            // create updated instances for Student table and dataview for student table 
             dtStudent2 = dsBalhamCollegeAzure.STUDENT;
             studentView2 = new DataView(dtStudent2);
             studentView2.Sort = "StudentID"; 
@@ -38,28 +40,33 @@ namespace BalhamCollege
 
         public void BindControls()
         {
-          //  lstStudents.Items.Clear(); 
             // Set up Currency Manager
             cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Student"];
-
         }
 
         private void LoadStudents()
         {
             // To load all students
-            string studentText;
+            lstStudents.Items.Clear();
             foreach (DataRow drStudent in dtStudent2.Rows)
             {
-                studentText = drStudent["StudentID"].ToString() + ", ";
-                studentText += drStudent["LastName"].ToString() + ", ";
-                studentText += drStudent["FirstName"].ToString();
-                lstStudents.Items.Add(studentText);
-
+                lstStudents.Items.Add(drStudent);
             }
-
-
         }
 
+        private void ClearFields()
+        {
+            // Clear all fields
+            txtStudentID.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtStreetAddress.Text = string.Empty;
+            txtSuburb.Text = string.Empty;
+            txtCity.Text = string.Empty;
+            txtEmailAddress.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            cboStatus.Text = string.Empty;
+        }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -67,12 +74,12 @@ namespace BalhamCollege
             frmEnrolmentsClerk.Show();
         }
 
-      //  private void lstStudents_Format(object sender, ListControlConvertEventArgs e)
-      //  {
+        private void lstStudents_Format(object sender, ListControlConvertEventArgs e)
+        {
             // Convert database row into listitem text
-        //    DataRowView studentRow = (DataRowView)e.ListItem;
-        //    e.Value = studentRow.Row["StudentID"] + " " + studentRow.Row["LastName"] + ", " + studentRow.Row["FirstName"];
-      //  }
+            DataRow studentRow = (DataRow)e.ListItem;
+            e.Value = studentRow["StudentID"] + " " + studentRow["LastName"] + ", " + studentRow["FirstName"];
+        }
     
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
@@ -89,20 +96,58 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the student's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    
-                    this.sTUDENTTableAdapter.Update(txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, cboStatus.Text, Convert.ToInt32(updateStudentRow["StudentID"]), updateStudentRow["LastName"].ToString(), updateStudentRow["FirstName"].ToString(), updateStudentRow["StreetAddress"].ToString(), updateStudentRow["Suburb"].ToString(), updateStudentRow["City"].ToString(), updateStudentRow["EmailAddress"].ToString(), updateStudentRow["PhoneNumber"].ToString(), updateStudentRow["Status"].ToString());
+                    this.sTUDENTTableAdapter.Update(txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text,
+                        txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, cboStatus.Text,
+                        Convert.ToInt32(updateStudentRow["StudentID"]),
+                        updateStudentRow["LastName"].ToString(),
+                        updateStudentRow["FirstName"].ToString(),
+                        updateStudentRow["StreetAddress"].ToString(),
+                        updateStudentRow["Suburb"].ToString(),
+                        updateStudentRow["City"].ToString(),
+                        updateStudentRow["EmailAddress"].ToString(),
+                        updateStudentRow["PhoneNumber"].ToString(),
+                        updateStudentRow["Status"].ToString());
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
                     this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
-      
+
                     MessageBox.Show("Student updated successfully", "Success");
+                    LoadStudents();
+                    ClearFields();
                 }
                 else
                 {
                     // Cancel changes
-                    cmStudent.CancelCurrentEdit();
+                    LoadStudents();
+                    ClearFields();
                 }
             }
+        }
+
+        private void UpdateStudentForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
+            this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+
+            LoadStudents();
+            ClearFields();
+        }
+
+        private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRow drStudent = (DataRow)lstStudents.SelectedItem;
+            cmStudent.Position = studentView2.Find(drStudent["StudentID"]);
+
+            // To populate the following controls with their corresponding values; from Student Table 
+            txtStudentID.Text = drStudent["StudentID"].ToString();
+            txtLastName.Text = drStudent["LastName"].ToString();
+            txtFirstName.Text = drStudent["FirstName"].ToString();
+            txtStreetAddress.Text = drStudent["StreetAddress"].ToString();
+            txtSuburb.Text = drStudent["Suburb"].ToString();
+            txtCity.Text = drStudent["City"].ToString();
+            txtEmailAddress.Text = drStudent["EmailAddress"].ToString();
+            txtPhoneNumber.Text = drStudent["PhoneNumber"].ToString();
+            cboStatus.Text = drStudent["Status"].ToString();
         }
 
         private void sTUDENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -110,39 +155,6 @@ namespace BalhamCollege
             this.Validate();
             this.sTUDENTBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
-        }
-
-        private void UpdateStudentForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
-            this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
-           
-            lstStudents.Items.Clear();
-            LoadStudents(); 
-        }
-
-        private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string student;
-            // Converts the selected item in the Student listbox to a string
-            // using index 0 of the string, which is the StudentID to find the row it belongs to in the Student Table using Currency Manager
-            student = lstStudents.SelectedItem.ToString();
-            string[] parts = student.Split(',');
-            int studentID = Convert.ToInt32(parts[0]);
-            cmStudent.Position = studentView2.Find(studentID);
-            DataRow drStudent = dtStudent2.Rows[cmStudent.Position];
-
-            //To populate the following controls with their corresponding values; from Student Table 
-            txtLastName.Text = drStudent["LastName"].ToString();
-            txtFirstName.Text = drStudent["FirstName"].ToString();
-            txtStudentID.Text = drStudent["StudentID"].ToString();
-            txtStreetAddress.Text = drStudent["StreetAddress"].ToString();
-            txtSuburb.Text = drStudent["Suburb"].ToString();
-            txtCity.Text = drStudent["City"].ToString();
-            txtEmailAddress.Text = drStudent["EmailAddress"].ToString();
-            txtPhoneNumber.Text = drStudent["PhoneNumber"].ToString();
-            cboStatus.Text = drStudent["Status"].ToString(); 
         }
     }
 }
