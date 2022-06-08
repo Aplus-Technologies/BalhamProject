@@ -82,6 +82,7 @@ namespace BalhamCollege
             this.lstLecturers.Name = "lstLecturers";
             this.lstLecturers.Size = new System.Drawing.Size(304, 346);
             this.lstLecturers.TabIndex = 1;
+            this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             this.lstLecturers.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstLecturers_Format);
             // 
             // lblSelectLecturer
