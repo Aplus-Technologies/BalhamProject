@@ -111,5 +111,22 @@ namespace BalhamCollege
                 }
             }
         }
+
+        private void cOURSEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cOURSEBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void AssignLecturerForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+            this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+            this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+
+        }
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="AddResearchProject.Designer.cs">
       <DependentUpon>AddResearchProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddResearchTopicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResearchTopicForm.Designer.cs">
+      <DependentUpon>AddResearchTopicForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddResearchProject.resx">
       <DependentUpon>AddResearchProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddResearchTopicForm.resx">
+      <DependentUpon>AddResearchTopicForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStudentForm.resx">
       <DependentUpon>AddStudentForm.cs</DependentUpon>

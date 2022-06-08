@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nudLevel = new System.Windows.Forms.NumericUpDown();
             this.txtProgrammeName = new System.Windows.Forms.TextBox();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -42,7 +43,13 @@ namespace BalhamCollege
             this.label1 = new System.Windows.Forms.Label();
             this.lstProgrammes = new System.Windows.Forms.ListBox();
             this.txtProgrammeID = new System.Windows.Forms.TextBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nudLevel
@@ -182,11 +189,42 @@ namespace BalhamCollege
             this.txtProgrammeID.Size = new System.Drawing.Size(19, 27);
             this.txtProgrammeID.TabIndex = 99;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pROGRAMMEBindingSource
+            // 
+            this.pROGRAMMEBindingSource.DataMember = "PROGRAMME";
+            this.pROGRAMMEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // pROGRAMMETableAdapter
+            // 
+            this.pROGRAMMETableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = this.pROGRAMMETableAdapter;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // UpdateProgrammeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 425);
+            this.ClientSize = new System.Drawing.Size(639, 425);
             this.Controls.Add(this.txtProgrammeID);
             this.Controls.Add(this.lstProgrammes);
             this.Controls.Add(this.label1);
@@ -201,10 +239,13 @@ namespace BalhamCollege
             this.Controls.Add(this.lblProgrammeID);
             this.Controls.Add(this.lblSelectProgramme);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateProgrammeForm";
             this.Text = "Update Programme";
+            this.Load += new System.EventHandler(this.UpdateProgrammeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +265,9 @@ namespace BalhamCollege
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lstProgrammes;
         private System.Windows.Forms.TextBox txtProgrammeID;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource pROGRAMMEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter pROGRAMMETableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }

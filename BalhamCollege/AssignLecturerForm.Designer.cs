@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtCourseName = new System.Windows.Forms.TextBox();
             this.lblCredits = new System.Windows.Forms.Label();
             this.lblCourseName = new System.Windows.Forms.Label();
@@ -53,6 +54,15 @@ namespace BalhamCollege
             this.lblSelectLecturer = new System.Windows.Forms.Label();
             this.lstLecturers = new System.Windows.Forms.ListBox();
             this.txtRanking = new System.Windows.Forms.TextBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCourseName
@@ -287,6 +297,46 @@ namespace BalhamCollege
             this.txtRanking.Size = new System.Drawing.Size(18, 27);
             this.txtRanking.TabIndex = 76;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = this.cOURSETableAdapter;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = this.lECTURERTableAdapter;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // lECTURERBindingSource
+            // 
+            this.lECTURERBindingSource.DataMember = "LECTURER";
+            this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // lECTURERTableAdapter
+            // 
+            this.lECTURERTableAdapter.ClearBeforeFill = true;
+            // 
             // AssignLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -317,9 +367,13 @@ namespace BalhamCollege
             this.Controls.Add(this.lstCourses);
             this.Controls.Add(this.lblSelectCourse);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssignLecturerForm";
             this.Text = "Assign Lecturer";
+            this.Load += new System.EventHandler(this.AssignLecturerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +404,11 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblSelectLecturer;
         private System.Windows.Forms.ListBox lstLecturers;
         private System.Windows.Forms.TextBox txtRanking;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
+        private System.Windows.Forms.BindingSource lECTURERBindingSource;
     }
 }

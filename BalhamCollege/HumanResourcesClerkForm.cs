@@ -17,6 +17,9 @@ namespace BalhamCollege
         private UpdateLecturerForm frmUpdateLecturer; // the reference to the Update Lecturer form
         private DeleteLecturerForm frmDeleteLecturer; // reference to Delete Lecturer Form
         private AddLecturerForm frmAddLecturer; // reference to Add Lecturer Form 
+        private DataRow[] allLecturers;
+        private DataRow[] lecturersForPrint;
+        private int amountOfLecturersPrinted;
 
         public HumanResourcesClerkForm(DataController dc, LoginForm lgin)
         {
@@ -47,10 +50,7 @@ namespace BalhamCollege
             frmUpdateLecturer.ShowDialog();
         }
 
-        private void btnLecturerReport_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
@@ -66,6 +66,75 @@ namespace BalhamCollege
         {
             this.Hide();
             frmLogin.Show();
+        }
+
+        private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.lECTURERBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void HumanResourcesClerkForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+            this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+            this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+
+        }
+
+        private void btnLecturerReport_Click(object sender, EventArgs e)
+        {
+            amountOfLecturersPrinted = 0;
+            string strSort = "LastName";
+            string strFilter = null;/*
+            DataRow[] allLecturers = dsBalhamCollegeAzure.Tables["LECTURER"].Select(strFilter, strSort, DataViewRowState.CurrentRows);
+            string idsToPrint = "";
+            foreach (DataRow drAllVets in allLecturers)
+            {
+                DataRow[] drVisitTrtments = drAllVets.GetChildRows(DC.dtVeterinarian.ChildRelations["Veterinarian_VISIT"]);
+                if (drVisitTrtments.Length != 0)
+                {
+                    idsToPrint += Convert.ToString(drAllVets["VeterinarianID"]) + ", ";
+                }
+            }
+            string strFilter2 = "VeterinarianID IN (" + idsToPrint.Remove(idsToPrint.Length - 2, 1) + ")";
+            */
+            string strFilter2 = strFilter;
+            lecturersForPrint = dsBalhamCollegeAzure.Tables["LECTURER"].Select(strFilter2, strSort, DataViewRowState.CurrentRows);
+            //pagesAmountExpected = veterinariansForPrint.Length;
+            prvLecturers.Show();
+        }
+
+        private void printLecturers_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            int linesSoFar = 0;
+            Font textFont = new Font("Arial", 10, FontStyle.Regular);
+            Font titleFont = new Font("Arial", 18, FontStyle.Regular);
+            //DataRow drVeterinarian = lecturersForPrint[amountOfVeterinariansPrinted];
+            
+            Brush brush = new SolidBrush(Color.Black);
+            // Margins
+            int leftMargin = e.MarginBounds.Left;
+            int topMargin = e.MarginBounds.Top;
+            int topMarginDetails = topMargin + 70;
+            int rightMargin = e.MarginBounds.Right;
+            int subTitlesRightMargin = e.MarginBounds.Left + 500;
+            double veterinarianCost = 0;
+
+            using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromImage(new Bitmap(1, 1)))
+            {
+                SizeF title1Length = graphics.MeasureString("Lecturers Report", new Font("Arial", 18, FontStyle.Regular, GraphicsUnit.Point));
+                SizeF title2Length = graphics.MeasureString("Balhamc College", new Font("Arial", 18, FontStyle.Regular, GraphicsUnit.Point));
+
+                g.DrawString("Lecturers Report", titleFont, brush, (rightMargin + 100) / 2 - title1Length.Width / 2, topMargin);
+                linesSoFar++;
+                g.DrawString("Balhamc College", titleFont, brush, (rightMargin + 100) / 2 - title2Length.Width / 2, topMargin + (linesSoFar * titleFont.Height));
+                linesSoFar = linesSoFar + 4;
+            }
         }
     }
 }

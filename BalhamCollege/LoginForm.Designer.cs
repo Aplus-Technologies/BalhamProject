@@ -38,6 +38,10 @@ namespace BalhamCollege
             this.lblForgot = new System.Windows.Forms.Label();
             this.btnCourseAdmin = new System.Windows.Forms.Button();
             this.btnStudentSupport = new System.Windows.Forms.Button();
+            this.btnHumanResources = new System.Windows.Forms.Button();
+            this.btnProgrammeAdmin = new System.Windows.Forms.Button();
+            this.btnResearchAdmin = new System.Windows.Forms.Button();
+            this.btnEnrolmentsAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -123,12 +127,56 @@ namespace BalhamCollege
             this.btnStudentSupport.UseVisualStyleBackColor = true;
             this.btnStudentSupport.Click += new System.EventHandler(this.btnStudentSupport_Click);
             // 
+            // btnHumanResources
+            // 
+            this.btnHumanResources.Location = new System.Drawing.Point(873, 284);
+            this.btnHumanResources.Name = "btnHumanResources";
+            this.btnHumanResources.Size = new System.Drawing.Size(150, 40);
+            this.btnHumanResources.TabIndex = 22;
+            this.btnHumanResources.Text = "Human Resources";
+            this.btnHumanResources.UseVisualStyleBackColor = true;
+            this.btnHumanResources.Click += new System.EventHandler(this.btnHumanResources_Click);
+            // 
+            // btnProgrammeAdmin
+            // 
+            this.btnProgrammeAdmin.Location = new System.Drawing.Point(873, 330);
+            this.btnProgrammeAdmin.Name = "btnProgrammeAdmin";
+            this.btnProgrammeAdmin.Size = new System.Drawing.Size(150, 40);
+            this.btnProgrammeAdmin.TabIndex = 23;
+            this.btnProgrammeAdmin.Text = "Programme Admin";
+            this.btnProgrammeAdmin.UseVisualStyleBackColor = true;
+            this.btnProgrammeAdmin.Click += new System.EventHandler(this.btnProgrammeAdmin_Click);
+            // 
+            // btnResearchAdmin
+            // 
+            this.btnResearchAdmin.Location = new System.Drawing.Point(873, 377);
+            this.btnResearchAdmin.Name = "btnResearchAdmin";
+            this.btnResearchAdmin.Size = new System.Drawing.Size(150, 40);
+            this.btnResearchAdmin.TabIndex = 24;
+            this.btnResearchAdmin.Text = "Research Admin";
+            this.btnResearchAdmin.UseVisualStyleBackColor = true;
+            this.btnResearchAdmin.Click += new System.EventHandler(this.btnResearchAdmin_Click);
+            // 
+            // btnEnrolmentsAdmin
+            // 
+            this.btnEnrolmentsAdmin.Location = new System.Drawing.Point(873, 423);
+            this.btnEnrolmentsAdmin.Name = "btnEnrolmentsAdmin";
+            this.btnEnrolmentsAdmin.Size = new System.Drawing.Size(150, 40);
+            this.btnEnrolmentsAdmin.TabIndex = 25;
+            this.btnEnrolmentsAdmin.Text = "Enrolments Clerk";
+            this.btnEnrolmentsAdmin.UseVisualStyleBackColor = true;
+            this.btnEnrolmentsAdmin.Click += new System.EventHandler(this.btnEnrolmentsAdmin_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1094, 671);
+            this.Controls.Add(this.btnEnrolmentsAdmin);
+            this.Controls.Add(this.btnResearchAdmin);
+            this.Controls.Add(this.btnProgrammeAdmin);
+            this.Controls.Add(this.btnHumanResources);
             this.Controls.Add(this.btnStudentSupport);
             this.Controls.Add(this.btnCourseAdmin);
             this.Controls.Add(this.lblForgot);
@@ -160,6 +208,10 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblForgot;
         private System.Windows.Forms.Button btnCourseAdmin;
         private System.Windows.Forms.Button btnStudentSupport;
+        private System.Windows.Forms.Button btnHumanResources;
+        private System.Windows.Forms.Button btnProgrammeAdmin;
+        private System.Windows.Forms.Button btnResearchAdmin;
+        private System.Windows.Forms.Button btnEnrolmentsAdmin;
     }
 }
 

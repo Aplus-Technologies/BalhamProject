@@ -133,5 +133,45 @@ namespace BalhamCollege
             ClearFields();
             frmStudentsSupportClerk.ShowDialog();
         }
+
+        private void btnHumanResources_Click(object sender, EventArgs e)
+        {
+            if (frmHumanResourcesClerk == null)
+            {
+                frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
+            }
+            ClearFields();
+            frmHumanResourcesClerk.ShowDialog();
+        }
+
+        private void btnProgrammeAdmin_Click(object sender, EventArgs e)
+        {
+            if (frmProgramAdministrator == null)
+            {
+                frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
+            }
+            ClearFields();
+            frmProgramAdministrator.ShowDialog();
+        }
+
+        private void btnResearchAdmin_Click(object sender, EventArgs e)
+        {
+            if (frmResearchAdministrator == null)
+            {
+                frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
+            }
+            ClearFields();
+            frmResearchAdministrator.ShowDialog();
+        }
+
+        private void btnEnrolmentsAdmin_Click(object sender, EventArgs e)
+        {
+            if (frmEnrolmentClerk == null)
+            {
+                frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
+            }
+            ClearFields();
+            frmEnrolmentClerk.ShowDialog();
+        }
     }
 }

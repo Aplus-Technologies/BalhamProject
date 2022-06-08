@@ -103,5 +103,22 @@ namespace BalhamCollege
                 cmProgramme.Position = DC.programmeView.Find(drCourse["ProgrammeID"]);
             }
         }
+
+        private void cOURSEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cOURSEBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void UpdateCourseForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
+            this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+            this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+
+        }
     }
 }
