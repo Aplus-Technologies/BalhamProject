@@ -22,7 +22,6 @@ namespace BalhamCollege
         private RemoveResearchProjectForm frmRemoveResearchProject; // reference to remove research project form                                                  
 
 
-        private AddResearchProject frmAddResearchProject; // reference to add research project form 
         private AddResearchTopicForm frmAddResearchTopic; // reference to add research topic form
         
 
