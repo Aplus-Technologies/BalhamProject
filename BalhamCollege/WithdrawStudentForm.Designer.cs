@@ -47,19 +47,19 @@ namespace BalhamCollege
             this.lblSelectStudent = new System.Windows.Forms.Label();
             this.lstStudents = new System.Windows.Forms.ListBox();
             this.dgvEnrolments = new System.Windows.Forms.DataGridView();
-            this.enrolmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsBalhamCollegeAzureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
-            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
-            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.enrolmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
@@ -70,9 +70,9 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(759, 430);
+            this.btnReturn.Location = new System.Drawing.Point(705, 453);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(140, 33);
+            this.btnReturn.Size = new System.Drawing.Size(140, 35);
             this.btnReturn.TabIndex = 53;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@ namespace BalhamCollege
             // 
             // btnWithdrawStudent
             // 
-            this.btnWithdrawStudent.Location = new System.Drawing.Point(489, 430);
+            this.btnWithdrawStudent.Location = new System.Drawing.Point(483, 453);
             this.btnWithdrawStudent.Name = "btnWithdrawStudent";
-            this.btnWithdrawStudent.Size = new System.Drawing.Size(140, 33);
+            this.btnWithdrawStudent.Size = new System.Drawing.Size(140, 35);
             this.btnWithdrawStudent.TabIndex = 52;
             this.btnWithdrawStudent.Text = "Withdraw Student";
             this.btnWithdrawStudent.UseVisualStyleBackColor = true;
@@ -90,132 +90,132 @@ namespace BalhamCollege
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(489, 242);
+            this.txtCity.Location = new System.Drawing.Point(483, 255);
             this.txtCity.MaxLength = 30;
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(250, 27);
+            this.txtCity.Size = new System.Drawing.Size(218, 26);
             this.txtCity.TabIndex = 48;
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(489, 202);
+            this.txtSuburb.Location = new System.Drawing.Point(483, 213);
             this.txtSuburb.MaxLength = 30;
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
-            this.txtSuburb.Size = new System.Drawing.Size(250, 27);
+            this.txtSuburb.Size = new System.Drawing.Size(218, 26);
             this.txtSuburb.TabIndex = 47;
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(489, 162);
+            this.txtStreetAddress.Location = new System.Drawing.Point(483, 171);
             this.txtStreetAddress.MaxLength = 50;
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
-            this.txtStreetAddress.Size = new System.Drawing.Size(410, 27);
+            this.txtStreetAddress.Size = new System.Drawing.Size(362, 26);
             this.txtStreetAddress.TabIndex = 46;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(489, 122);
+            this.txtFirstName.Location = new System.Drawing.Point(483, 128);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(250, 27);
+            this.txtFirstName.Size = new System.Drawing.Size(218, 26);
             this.txtFirstName.TabIndex = 45;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(489, 82);
+            this.txtLastName.Location = new System.Drawing.Point(483, 86);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(250, 27);
+            this.txtLastName.Size = new System.Drawing.Size(218, 26);
             this.txtLastName.TabIndex = 44;
             // 
             // txtStudentID
             // 
             this.txtStudentID.Enabled = false;
-            this.txtStudentID.Location = new System.Drawing.Point(489, 42);
+            this.txtStudentID.Location = new System.Drawing.Point(483, 44);
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(75, 27);
+            this.txtStudentID.Size = new System.Drawing.Size(61, 26);
             this.txtStudentID.TabIndex = 43;
             // 
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(449, 245);
+            this.lblCity.Location = new System.Drawing.Point(443, 258);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(38, 19);
+            this.lblCity.Size = new System.Drawing.Size(35, 20);
             this.lblCity.TabIndex = 39;
             this.lblCity.Text = "City:";
             // 
             // lblSuburb
             // 
             this.lblSuburb.AutoSize = true;
-            this.lblSuburb.Location = new System.Drawing.Point(430, 205);
+            this.lblSuburb.Location = new System.Drawing.Point(424, 216);
             this.lblSuburb.Name = "lblSuburb";
-            this.lblSuburb.Size = new System.Drawing.Size(57, 19);
+            this.lblSuburb.Size = new System.Drawing.Size(56, 20);
             this.lblSuburb.TabIndex = 38;
             this.lblSuburb.Text = "Suburb:";
             // 
             // lblStreetAddress
             // 
             this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Location = new System.Drawing.Point(380, 165);
+            this.lblStreetAddress.Location = new System.Drawing.Point(374, 174);
             this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(107, 19);
+            this.lblStreetAddress.Size = new System.Drawing.Size(103, 20);
             this.lblStreetAddress.TabIndex = 37;
             this.lblStreetAddress.Text = "Street Address:";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(404, 125);
+            this.lblFirstName.Location = new System.Drawing.Point(398, 132);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(83, 19);
+            this.lblFirstName.Size = new System.Drawing.Size(77, 20);
             this.lblFirstName.TabIndex = 36;
             this.lblFirstName.Text = "First Name:";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(405, 85);
+            this.lblLastName.Location = new System.Drawing.Point(399, 89);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(82, 19);
+            this.lblLastName.Size = new System.Drawing.Size(76, 20);
             this.lblLastName.TabIndex = 35;
             this.lblLastName.Text = "Last Name:";
             // 
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(407, 45);
+            this.lblStudentID.Location = new System.Drawing.Point(401, 47);
             this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(80, 19);
+            this.lblStudentID.Size = new System.Drawing.Size(74, 20);
             this.lblStudentID.TabIndex = 34;
             this.lblStudentID.Text = "Student ID:";
             // 
             // lblSelectStudent
             // 
             this.lblSelectStudent.AutoSize = true;
-            this.lblSelectStudent.Location = new System.Drawing.Point(19, 22);
+            this.lblSelectStudent.Location = new System.Drawing.Point(19, 23);
             this.lblSelectStudent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSelectStudent.Name = "lblSelectStudent";
-            this.lblSelectStudent.Size = new System.Drawing.Size(164, 19);
+            this.lblSelectStudent.Size = new System.Drawing.Size(153, 20);
             this.lblSelectStudent.TabIndex = 33;
             this.lblSelectStudent.Text = "Please select a student:";
             // 
             // lstStudents
             // 
-            this.lstStudents.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstStudents.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstStudents.FormattingEnabled = true;
-            this.lstStudents.ItemHeight = 19;
-            this.lstStudents.Location = new System.Drawing.Point(23, 45);
+            this.lstStudents.ItemHeight = 20;
+            this.lstStudents.Location = new System.Drawing.Point(23, 47);
             this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(304, 346);
+            this.lstStudents.Size = new System.Drawing.Size(304, 344);
             this.lstStudents.TabIndex = 32;
             this.lstStudents.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstStudents_Format);
             // 
@@ -235,46 +235,15 @@ namespace BalhamCollege
             this.courseIDDataGridViewTextBoxColumn});
             this.dgvEnrolments.DataMember = "ENROLMENT";
             this.dgvEnrolments.DataSource = this.dsBalhamCollegeAzureBindingSource;
-            this.dgvEnrolments.Location = new System.Drawing.Point(384, 292);
+            this.dgvEnrolments.Location = new System.Drawing.Point(378, 307);
             this.dgvEnrolments.MultiSelect = false;
             this.dgvEnrolments.Name = "dgvEnrolments";
             this.dgvEnrolments.ReadOnly = true;
             this.dgvEnrolments.RowHeadersVisible = false;
             this.dgvEnrolments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEnrolments.Size = new System.Drawing.Size(515, 95);
+            this.dgvEnrolments.Size = new System.Drawing.Size(467, 95);
             this.dgvEnrolments.TabIndex = 60;
             this.dgvEnrolments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEnrolments_CellFormatting);
-            // 
-            // enrolmentIDDataGridViewTextBoxColumn
-            // 
-            this.enrolmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrolmentID";
-            this.enrolmentIDDataGridViewTextBoxColumn.HeaderText = "Enrolment ID";
-            this.enrolmentIDDataGridViewTextBoxColumn.Name = "enrolmentIDDataGridViewTextBoxColumn";
-            this.enrolmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course Name";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseIDDataGridViewTextBoxColumn.Width = 265;
             // 
             // dsBalhamCollegeAzureBindingSource
             // 
@@ -312,29 +281,60 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // eNROLMENTBindingSource
+            // cOURSETableAdapter
             // 
-            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
-            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            this.cOURSETableAdapter.ClearBeforeFill = true;
             // 
             // eNROLMENTTableAdapter
             // 
             this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
             // cOURSEBindingSource
             // 
             this.cOURSEBindingSource.DataMember = "COURSE";
             this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
-            // cOURSETableAdapter
+            // enrolmentIDDataGridViewTextBoxColumn
             // 
-            this.cOURSETableAdapter.ClearBeforeFill = true;
+            this.enrolmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrolmentID";
+            this.enrolmentIDDataGridViewTextBoxColumn.HeaderText = "Enrolment ID";
+            this.enrolmentIDDataGridViewTextBoxColumn.Name = "enrolmentIDDataGridViewTextBoxColumn";
+            this.enrolmentIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
+            this.yearDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // semesterDataGridViewTextBoxColumn
+            // 
+            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
+            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
+            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
+            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semesterDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // courseIDDataGridViewTextBoxColumn
+            // 
+            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
+            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course Name";
+            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
+            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.courseIDDataGridViewTextBoxColumn.Width = 234;
             // 
             // WithdrawStudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 484);
+            this.ClientSize = new System.Drawing.Size(864, 509);
             this.Controls.Add(this.dgvEnrolments);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnWithdrawStudent);
@@ -352,7 +352,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.lblSelectStudent);
             this.Controls.Add(this.lstStudents);
-            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WithdrawStudentForm";
             this.Text = "Withdraw Student";
@@ -388,10 +388,6 @@ namespace BalhamCollege
         private System.Windows.Forms.DataGridView dgvEnrolments;
         private System.Windows.Forms.BindingSource dsBalhamCollegeAzureBindingSource;
         private dsBalhamCollegeAzure dsBalhamCollegeAzure;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enrolmentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
@@ -399,5 +395,9 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
         private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enrolmentIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
     }
 }
