@@ -79,7 +79,7 @@ namespace BalhamCollege
             this.lstLecturers.Location = new System.Drawing.Point(46, 62);
             this.lstLecturers.Name = "lstLecturers";
             this.lstLecturers.ScrollAlwaysVisible = true;
-            this.lstLecturers.Size = new System.Drawing.Size(361, 292);
+            this.lstLecturers.Size = new System.Drawing.Size(559, 292);
             this.lstLecturers.TabIndex = 0;
             this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
@@ -104,7 +104,7 @@ namespace BalhamCollege
             // lblLecturerID
             // 
             this.lblLecturerID.AutoSize = true;
-            this.lblLecturerID.Location = new System.Drawing.Point(533, 34);
+            this.lblLecturerID.Location = new System.Drawing.Point(707, 34);
             this.lblLecturerID.Name = "lblLecturerID";
             this.lblLecturerID.Size = new System.Drawing.Size(96, 24);
             this.lblLecturerID.TabIndex = 4;
@@ -113,7 +113,7 @@ namespace BalhamCollege
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(533, 80);
+            this.lblLastName.Location = new System.Drawing.Point(707, 80);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(96, 24);
             this.lblLastName.TabIndex = 5;
@@ -122,7 +122,7 @@ namespace BalhamCollege
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(533, 127);
+            this.lblFirstName.Location = new System.Drawing.Point(707, 127);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(96, 24);
             this.lblFirstName.TabIndex = 6;
@@ -131,7 +131,7 @@ namespace BalhamCollege
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(577, 165);
+            this.lblType.Location = new System.Drawing.Point(751, 165);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(52, 24);
             this.lblType.TabIndex = 7;
@@ -140,7 +140,7 @@ namespace BalhamCollege
             // lblResearchProjects
             // 
             this.lblResearchProjects.AutoSize = true;
-            this.lblResearchProjects.Location = new System.Drawing.Point(482, 214);
+            this.lblResearchProjects.Location = new System.Drawing.Point(656, 214);
             this.lblResearchProjects.Name = "lblResearchProjects";
             this.lblResearchProjects.Size = new System.Drawing.Size(147, 24);
             this.lblResearchProjects.TabIndex = 8;
@@ -149,7 +149,7 @@ namespace BalhamCollege
             // lblOutput
             // 
             this.lblOutput.AutoSize = true;
-            this.lblOutput.Location = new System.Drawing.Point(564, 421);
+            this.lblOutput.Location = new System.Drawing.Point(738, 421);
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(65, 24);
             this.lblOutput.TabIndex = 10;
@@ -158,7 +158,7 @@ namespace BalhamCollege
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(539, 470);
+            this.lblStartDate.Location = new System.Drawing.Point(713, 470);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(90, 24);
             this.lblStartDate.TabIndex = 11;
@@ -167,7 +167,7 @@ namespace BalhamCollege
             // lblResearchProjectDescription
             // 
             this.lblResearchProjectDescription.AutoSize = true;
-            this.lblResearchProjectDescription.Location = new System.Drawing.Point(482, 515);
+            this.lblResearchProjectDescription.Location = new System.Drawing.Point(656, 515);
             this.lblResearchProjectDescription.Name = "lblResearchProjectDescription";
             this.lblResearchProjectDescription.Size = new System.Drawing.Size(219, 24);
             this.lblResearchProjectDescription.TabIndex = 12;
@@ -180,8 +180,10 @@ namespace BalhamCollege
             this.dgvResearchTopics.Name = "dgvResearchTopics";
             this.dgvResearchTopics.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvResearchTopics.RowTemplate.Height = 24;
-            this.dgvResearchTopics.Size = new System.Drawing.Size(361, 267);
+            this.dgvResearchTopics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResearchTopics.Size = new System.Drawing.Size(559, 267);
             this.dgvResearchTopics.TabIndex = 13;
+            this.dgvResearchTopics.SelectionChanged += new System.EventHandler(this.dgvResearchTopics_SelectionChanged);
             // 
             // btnAddResearchProject
             // 
@@ -191,10 +193,11 @@ namespace BalhamCollege
             this.btnAddResearchProject.TabIndex = 14;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = true;
+            this.btnAddResearchProject.Click += new System.EventHandler(this.btnAddResearchProject_Click);
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(910, 760);
+            this.btnReturn.Location = new System.Drawing.Point(1084, 760);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(193, 52);
             this.btnReturn.TabIndex = 15;
@@ -204,7 +207,7 @@ namespace BalhamCollege
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Location = new System.Drawing.Point(635, 28);
+            this.txtLecturerID.Location = new System.Drawing.Point(809, 28);
             this.txtLecturerID.MaxLength = 4;
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.ReadOnly = true;
@@ -214,7 +217,7 @@ namespace BalhamCollege
             // dgvResearchProjects
             // 
             this.dgvResearchProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResearchProjects.Location = new System.Drawing.Point(635, 223);
+            this.dgvResearchProjects.Location = new System.Drawing.Point(809, 223);
             this.dgvResearchProjects.Name = "dgvResearchProjects";
             this.dgvResearchProjects.RowHeadersWidth = 51;
             this.dgvResearchProjects.RowTemplate.Height = 24;
@@ -223,7 +226,7 @@ namespace BalhamCollege
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(635, 80);
+            this.txtLastName.Location = new System.Drawing.Point(809, 80);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
@@ -232,7 +235,7 @@ namespace BalhamCollege
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(635, 124);
+            this.txtFirstName.Location = new System.Drawing.Point(809, 124);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
@@ -241,7 +244,7 @@ namespace BalhamCollege
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(635, 165);
+            this.txtType.Location = new System.Drawing.Point(809, 165);
             this.txtType.MaxLength = 8;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
@@ -251,7 +254,7 @@ namespace BalhamCollege
             // dtpStartDate
             // 
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartDate.Location = new System.Drawing.Point(635, 464);
+            this.dtpStartDate.Location = new System.Drawing.Point(809, 464);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(156, 30);
             this.dtpStartDate.TabIndex = 21;
@@ -259,7 +262,7 @@ namespace BalhamCollege
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(635, 418);
+            this.txtOutput.Location = new System.Drawing.Point(809, 418);
             this.txtOutput.MaxLength = 30;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(245, 30);
@@ -267,7 +270,7 @@ namespace BalhamCollege
             // 
             // txtResearchPrjDesc
             // 
-            this.txtResearchPrjDesc.Location = new System.Drawing.Point(635, 542);
+            this.txtResearchPrjDesc.Location = new System.Drawing.Point(809, 542);
             this.txtResearchPrjDesc.MaxLength = 100;
             this.txtResearchPrjDesc.Multiline = true;
             this.txtResearchPrjDesc.Name = "txtResearchPrjDesc";
@@ -280,7 +283,7 @@ namespace BalhamCollege
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiredFields.ForeColor = System.Drawing.Color.Red;
-            this.lblRequiredFields.Location = new System.Drawing.Point(948, 711);
+            this.lblRequiredFields.Location = new System.Drawing.Point(1122, 711);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(155, 23);
             this.lblRequiredFields.TabIndex = 28;
@@ -291,7 +294,7 @@ namespace BalhamCollege
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix1.Location = new System.Drawing.Point(553, 409);
+            this.lblAsterix1.Location = new System.Drawing.Point(727, 409);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(18, 23);
             this.lblAsterix1.TabIndex = 29;
@@ -302,7 +305,7 @@ namespace BalhamCollege
             this.lblAsterix2.AutoSize = true;
             this.lblAsterix2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix2.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix2.Location = new System.Drawing.Point(522, 455);
+            this.lblAsterix2.Location = new System.Drawing.Point(696, 455);
             this.lblAsterix2.Name = "lblAsterix2";
             this.lblAsterix2.Size = new System.Drawing.Size(18, 23);
             this.lblAsterix2.TabIndex = 30;
@@ -313,7 +316,7 @@ namespace BalhamCollege
             this.lblAsterix3.AutoSize = true;
             this.lblAsterix3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix3.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix3.Location = new System.Drawing.Point(472, 506);
+            this.lblAsterix3.Location = new System.Drawing.Point(646, 506);
             this.lblAsterix3.Name = "lblAsterix3";
             this.lblAsterix3.Size = new System.Drawing.Size(18, 23);
             this.lblAsterix3.TabIndex = 31;
@@ -372,7 +375,7 @@ namespace BalhamCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1153, 832);
+            this.ClientSize = new System.Drawing.Size(1344, 832);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.lblStartDate);
             this.Controls.Add(this.lblResearchProjectDescription);
