@@ -94,5 +94,22 @@ namespace BalhamCollege
             }
 
         }
+
+        private void aSSESSMENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.aSSESSMENTBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void UpdateAssessmentForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+            this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSESSMENT' table. You can move, or remove it, as needed.
+            this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
+
+        }
     }
 }

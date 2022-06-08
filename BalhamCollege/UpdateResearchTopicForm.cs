@@ -82,5 +82,20 @@ namespace BalhamCollege
                 }
             }
         }
+
+        private void rESEARCHTOPICBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.rESEARCHTOPICBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void UpdateResearchTopicForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
+            this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
+
+        }
     }
 }

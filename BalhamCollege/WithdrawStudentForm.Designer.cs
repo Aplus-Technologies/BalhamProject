@@ -47,15 +47,25 @@ namespace BalhamCollege
             this.lblSelectStudent = new System.Windows.Forms.Label();
             this.lstStudents = new System.Windows.Forms.ListBox();
             this.dgvEnrolments = new System.Windows.Forms.DataGridView();
-            this.dsBalhamCollegeAzureBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
             this.enrolmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsBalhamCollegeAzureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -235,17 +245,6 @@ namespace BalhamCollege
             this.dgvEnrolments.TabIndex = 60;
             this.dgvEnrolments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEnrolments_CellFormatting);
             // 
-            // dsBalhamCollegeAzureBindingSource
-            // 
-            this.dsBalhamCollegeAzureBindingSource.DataSource = this.dsBalhamCollegeAzure;
-            this.dsBalhamCollegeAzureBindingSource.Position = 0;
-            // 
-            // dsBalhamCollegeAzure
-            // 
-            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
-            this.dsBalhamCollegeAzure.EnforceConstraints = false;
-            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // enrolmentIDDataGridViewTextBoxColumn
             // 
             this.enrolmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrolmentID";
@@ -277,6 +276,60 @@ namespace BalhamCollege
             this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.courseIDDataGridViewTextBoxColumn.Width = 265;
             // 
+            // dsBalhamCollegeAzureBindingSource
+            // 
+            this.dsBalhamCollegeAzureBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            this.dsBalhamCollegeAzureBindingSource.Position = 0;
+            // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = this.cOURSETableAdapter;
+            this.tableAdapterManager.ENROLMENTTableAdapter = this.eNROLMENTTableAdapter;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // eNROLMENTTableAdapter
+            // 
+            this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
             // WithdrawStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -303,9 +356,13 @@ namespace BalhamCollege
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WithdrawStudentForm";
             this.Text = "Withdraw Student";
+            this.Load += new System.EventHandler(this.WithdrawStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzureBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +392,12 @@ namespace BalhamCollege
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
+        private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
     }
 }

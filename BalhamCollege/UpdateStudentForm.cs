@@ -67,13 +67,13 @@ namespace BalhamCollege
             frmEnrolmentsClerk.Show();
         }
 
-        private void lstStudents_Format(object sender, ListControlConvertEventArgs e)
-        {
+      //  private void lstStudents_Format(object sender, ListControlConvertEventArgs e)
+      //  {
             // Convert database row into listitem text
-            DataRowView studentRow = (DataRowView)e.ListItem;
-            e.Value = studentRow.Row["StudentID"] + " " + studentRow.Row["LastName"] + ", " + studentRow.Row["FirstName"];
-        }
-
+        //    DataRowView studentRow = (DataRowView)e.ListItem;
+        //    e.Value = studentRow.Row["StudentID"] + " " + studentRow.Row["LastName"] + ", " + studentRow.Row["FirstName"];
+      //  }
+    
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
             DataRow updateStudentRow = dtStudent2.Rows[cmStudent.Position];

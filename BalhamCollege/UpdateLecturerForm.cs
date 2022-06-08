@@ -100,5 +100,20 @@ namespace BalhamCollege
                 }
             }
         }
+
+        private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.lECTURERBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+
+        }
+
+        private void UpdateLecturerForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+            this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+
+        }
     }
 }

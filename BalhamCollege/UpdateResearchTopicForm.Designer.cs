@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtTopicID = new System.Windows.Forms.TextBox();
             this.lstResearchTopics = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +43,12 @@ namespace BalhamCollege
             this.lblTopicID = new System.Windows.Forms.Label();
             this.lblSelectResearchTopic = new System.Windows.Forms.Label();
             this.cboImpact = new System.Windows.Forms.ComboBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTopicID
@@ -173,11 +180,42 @@ namespace BalhamCollege
             this.cboImpact.Size = new System.Drawing.Size(71, 27);
             this.cboImpact.TabIndex = 113;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rESEARCHTOPICBindingSource
+            // 
+            this.rESEARCHTOPICBindingSource.DataMember = "RESEARCHTOPIC";
+            this.rESEARCHTOPICBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESEARCHTOPICTableAdapter
+            // 
+            this.rESEARCHTOPICTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = this.rESEARCHTOPICTableAdapter;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
             // UpdateResearchTopicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 452);
+            this.ClientSize = new System.Drawing.Size(645, 468);
             this.Controls.Add(this.cboImpact);
             this.Controls.Add(this.txtTopicID);
             this.Controls.Add(this.lstResearchTopics);
@@ -195,6 +233,9 @@ namespace BalhamCollege
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateResearchTopicForm";
             this.Text = "Update Research Topic";
+            this.Load += new System.EventHandler(this.UpdateResearchTopicForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +256,9 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblTopicID;
         private System.Windows.Forms.Label lblSelectResearchTopic;
         private System.Windows.Forms.ComboBox cboImpact;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource rESEARCHTOPICBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter rESEARCHTOPICTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
