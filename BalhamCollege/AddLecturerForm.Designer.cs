@@ -64,8 +64,10 @@ namespace BalhamCollege
             this.lblAsterix7 = new System.Windows.Forms.Label();
             this.lblAsterix8 = new System.Windows.Forms.Label();
             this.lblAsterix9 = new System.Windows.Forms.Label();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLastName
@@ -225,6 +227,7 @@ namespace BalhamCollege
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(400, 30);
             this.txtEmailAddress.TabIndex = 16;
+            this.txtEmailAddress.Leave += new System.EventHandler(this.txtEmailAddress_Leave);
             // 
             // txtPhoneNumber
             // 
@@ -398,6 +401,10 @@ namespace BalhamCollege
             this.lblAsterix9.TabIndex = 36;
             this.lblAsterix9.Text = "*";
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // AddLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -434,12 +441,13 @@ namespace BalhamCollege
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblLastName);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddLecturerForm";
             this.Text = "Add Lecturer Form";
             this.Load += new System.EventHandler(this.AddLecturerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,5 +489,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblAsterix7;
         private System.Windows.Forms.Label lblAsterix8;
         private System.Windows.Forms.Label lblAsterix9;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

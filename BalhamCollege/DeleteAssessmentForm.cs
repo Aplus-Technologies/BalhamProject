@@ -117,7 +117,12 @@ namespace BalhamCollege
                 {
                     // deleteAssessmentRow.Delete();
 
+
+                   
                     aSSESSMENTTableAdapter.Delete(Convert.ToInt32(txtAssessmentID.Text), Convert.ToInt32(txtAssessmentNumber.Text), txtAssessmentName.Text, deleteAssessmentRow["Type"].ToString(), Convert.ToInt32(deleteAssessmentRow["Weighting"]), Convert.ToInt32(deleteAssessmentRow["MaximumMark"]), Convert.ToInt32(deleteAssessmentRow["CourseID"]));
+                    this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
+
+
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESULT' table. You can move, or remove it, as needed.
                     this.rESULTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESULT);

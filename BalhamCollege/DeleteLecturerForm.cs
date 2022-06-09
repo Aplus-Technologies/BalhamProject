@@ -74,11 +74,15 @@ namespace BalhamCollege
         {
             if (lstLecturers.SelectedItem != null)
             {
+
                 DataRow deleteLecturerRow = dtLecturer2.Rows[cmLecturer.Position];
                 if (MessageBox.Show("Are you sure you want to delete this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
+                    
                     // deleteLecturerRow.Delete();
                     lECTURERTableAdapter.Delete(Convert.ToInt32(txtLecturerID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, deleteLecturerRow["EmailAddress"].ToString(), deleteLecturerRow["PhoneNumber"].ToString(), deleteLecturerRow["Ranking"].ToString(), deleteLecturerRow["Type"].ToString());
+                    this.dsBalhamCollegeAzure.AcceptChanges(); 
+
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
                     this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);

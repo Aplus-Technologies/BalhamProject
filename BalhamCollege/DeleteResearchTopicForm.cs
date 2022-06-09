@@ -70,11 +70,13 @@ namespace BalhamCollege
         {
             if (lstResearchTopics.SelectedItem != null)
             {
+
                 DataRow deleteResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
                 if (MessageBox.Show("Are you sure you want to delete this Research Topic?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    rESEARCHTOPICTableAdapter.Delete(Convert.ToInt32(txtResearchTopicID.Text), txtTopicDescription.Text, txtImpact.Text);
-
+                    
+                    this.rESEARCHTOPICTableAdapter.Delete(Convert.ToInt32(txtResearchTopicID.Text), txtTopicDescription.Text, txtImpact.Text);
+             
                     this.dsBalhamCollegeAzure.AcceptChanges();
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.

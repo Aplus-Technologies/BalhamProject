@@ -97,12 +97,14 @@ namespace BalhamCollege
         {
             if (lstStudents.SelectedItem != null)
             {
+
                 DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
 
                 if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    studentTableAdapter1.Delete(Convert.ToInt32(txtStudentID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, txtStatus.Text);
-                    dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
+                    
+                    this.studentTableAdapter1.Delete(Convert.ToInt32(txtStudentID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, txtStatus.Text);
+                    this.dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.ENROLMENT' table. You can move, or remove it, as needed.
                     this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.ENROLMENT);
