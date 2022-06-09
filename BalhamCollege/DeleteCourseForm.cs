@@ -107,7 +107,8 @@ namespace BalhamCollege
             if (MessageBox.Show("Are you sure you want to delete this Course?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 // deleteCourseRow.Delete();
-                cOURSETableAdapter.Delete(Convert.ToInt32(txtCourseID.Text), txtCourseName.Text, Convert.ToInt32(txtCredits.Text), Convert.ToDecimal(deleteCourseRow["Fee"]), txtStatus.Text, Convert.ToInt32(deleteCourseRow["ProgrammeID"])); 
+                cOURSETableAdapter.Delete(Convert.ToInt32(txtCourseID.Text), txtCourseName.Text, Convert.ToInt32(txtCredits.Text), Convert.ToDecimal(deleteCourseRow["Fee"]), txtStatus.Text, Convert.ToInt32(deleteCourseRow["ProgrammeID"]));
+                dsBalhamCollegeAzure.AcceptChanges(); //prevent system exception error 
 
                 // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
                 this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);

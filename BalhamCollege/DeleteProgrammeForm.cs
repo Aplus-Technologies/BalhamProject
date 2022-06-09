@@ -96,7 +96,8 @@ namespace BalhamCollege
             if (MessageBox.Show("Are you sure you want to delete this Programme?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 //deleteProgrammeRow.Delete();
-                pROGRAMMETableAdapter.Delete(Convert.ToInt32(txtProgrammeID.Text), txtProgrammeName.Text, Convert.ToInt32(txtLevel.Text)); 
+                pROGRAMMETableAdapter.Delete(Convert.ToInt32(txtProgrammeID.Text), txtProgrammeName.Text, Convert.ToInt32(txtLevel.Text));
+                this.dsBalhamCollegeAzure.AcceptChanges(); 
 
                 // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
                 this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);

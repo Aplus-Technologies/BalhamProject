@@ -19,7 +19,18 @@ namespace BalhamCollege
         private CurrencyManager cmAssignment;
         private CurrencyManager cmProgramme;
 
+        private DataTable dtCourse2;
+        private DataTable dtAssignment2;
+        private DataTable dtProgramme2;
+        private DataTable dtLecturer2;
 
+        private DataView courseView2;
+        private DataView assignmentView2;
+        private DataView programmeView2;
+        private DataView lecturerView2;
+
+        private int courseID;
+        private int aLecturerID; 
 
         string courseText;
         string lecturerText;
@@ -29,6 +40,7 @@ namespace BalhamCollege
             DC = dc;
             frmProgMnu = progmnu;
             frmProgMnu.Hide();
+            TableAndView(); 
 
             cmAssignment = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "ASSIGNMENT"];
             cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "COURSE"];
@@ -37,6 +49,26 @@ namespace BalhamCollege
 
             ClearFields();
 
+        }
+
+        private void TableAndView()
+        {
+            dtCourse2 = dsBalhamCollegeAzure.COURSE;
+            dtAssignment2 = dsBalhamCollegeAzure.ASSIGNMENT;
+            dtProgramme2 = dsBalhamCollegeAzure.PROGRAMME;
+            dtLecturer2 = dsBalhamCollegeAzure.LECTURER;
+
+            courseView2 = new DataView(dtCourse2);
+            courseView2.Sort = "CourseID";
+
+            assignmentView2 = new DataView(dtAssignment2);
+            assignmentView2.Sort = "CourseID,LecturerID";
+
+            programmeView2 = new DataView(dtProgramme2);
+            programmeView2.Sort = "ProgrammeID";
+
+            lecturerView2 = new DataView(dtLecturer2);
+            lecturerView2.Sort = "LecturerID"; 
         }
     
         private void ClearFields()
@@ -76,9 +108,9 @@ namespace BalhamCollege
 
         private void LoadCourses()
         {
-            foreach (DataRow drCourse in DC.dtCourse.Rows)
+            foreach (DataRow drCourse in dtCourse2.Rows)
             {
-                DataRow[] drAssignments = drCourse.GetChildRows(DC.dtCourse.ChildRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
+                DataRow[] drAssignments = drCourse.GetChildRows(dtCourse2.ChildRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
                 if (drAssignments.Length != 0)
                 {
                     courseText = "";
@@ -98,30 +130,43 @@ namespace BalhamCollege
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            DataRow deleteAssignmentRow = DC.dtAssignment.Rows[cmAssignment.Position];
+            DataRow deleteAssignmentRow = dtAssignment2.Rows[cmAssignment.Position];
             if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 string lecturer;
                 lecturer = lstLecturers.SelectedItem.ToString();
                 string[] parts = lecturer.Split(',');
                 string[] IDstring = parts[0].Split(' ');
-                int aLecturerID = Convert.ToInt32(IDstring[2]);
+                aLecturerID = Convert.ToInt32(IDstring[2]);
                 object[] primaryKey = new object[2];
-                int courseID = Convert.ToInt32(txtCourseID.Text);
-                cmCourse.Position = DC.courseView.Find(courseID);
-                DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
+                courseID = Convert.ToInt32(txtCourseID.Text);
+                cmCourse.Position = courseView2.Find(courseID);
+                DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
                 primaryKey[0] = courseID;
                 primaryKey[1] = aLecturerID;
-                cmAssignment.Position = DC.assignmentView.Find(primaryKey);
+                cmAssignment.Position = assignmentView2.Find(primaryKey);
 
-                deleteAssignmentRow.Delete();
+                this.aSSIGNMENTTableAdapter.Delete(courseID, aLecturerID, txtRole.Text);
+                this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
+
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
+                this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+                this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+                this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+
+
                 DC.UpdateAssignment();
 
                 MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
-                cmAssignment.EndCurrentEdit();
+             
                 lstLecturers.Items.Clear();
                 ClearFields();
             }
+           
         }
 
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
@@ -134,23 +179,23 @@ namespace BalhamCollege
                 course = lstCourses.SelectedItem.ToString();
                 string[] parts = course.Split(',');
                 int courseID = Convert.ToInt32(parts[0]);
-                cmCourse.Position = DC.courseView.Find(courseID);
-                DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
+                cmCourse.Position = courseView2.Find(courseID);
+                DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
                 txtCourseID.Text = drCourse["CourseID"].ToString();
                 txtCourseName.Text = drCourse["CourseName"].ToString();
                 txtStatus.Text = drCourse["Status"].ToString();
 
                 int programmeID = Convert.ToInt32(parts[0]);
-                cmProgramme.Position = DC.programmeView.Find(programmeID);
-                DataRow drProgramme = DC.dtProgramme.Rows[cmProgramme.Position];
+                cmProgramme.Position = programmeView2.Find(programmeID);
+                DataRow drProgramme =dtProgramme2.Rows[cmProgramme.Position];
                 txtProgrammeName.Text = drProgramme["ProgrammeName"].ToString();
 
-                DataRow[] drAssignments = drCourse.GetChildRows(DC.dtCourse.ChildRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
+                DataRow[] drAssignments = drCourse.GetChildRows(dtCourse2.ChildRelations["ASSIGNMENT$COURSEASSIGNMENT"]);
                 foreach (DataRow drAssignment in drAssignments)
                 {
                     int aLecturerID = Convert.ToInt32(drAssignment["LecturerID"].ToString());
-                    cmLecturer.Position = DC.lecturerView.Find(aLecturerID);
-                    DataRow drLecturer = DC.dtLecturer.Rows[cmLecturer.Position];
+                    cmLecturer.Position = lecturerView2.Find(aLecturerID);
+                    DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
                     lecturerText = "Lecturer ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
                     lstLecturers.Items.Add(lecturerText);
                 }
@@ -164,8 +209,8 @@ namespace BalhamCollege
             string[] parts = lecturer.Split(',');
             string[] IDstring = parts[0].Split(' ');
             int aLecturerID = Convert.ToInt32(IDstring[2]);
-            cmLecturer.Position = DC.lecturerView.Find(aLecturerID);
-            DataRow drLecturer = DC.dtLecturer.Rows[cmLecturer.Position];
+            cmLecturer.Position = lecturerView2.Find(aLecturerID);
+            DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
             txtLecturerID.Text = drLecturer["LecturerID"].ToString();
             txtLastName.Text = drLecturer["LastName"].ToString();
             txtFirstName.Text = drLecturer["FirstName"].ToString();
@@ -173,13 +218,13 @@ namespace BalhamCollege
             //Find composite primary key for Assignment
             object[] primarykey = new object[2];
             int courseID = Convert.ToInt32(txtCourseID.Text);
-            cmCourse.Position = DC.courseView.Find(courseID);
-            DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
+            cmCourse.Position = courseView2.Find(courseID);
+            DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
             primarykey[0] = courseID;
             primarykey[1] = aLecturerID;
-            cmAssignment.Position = DC.assignmentView.Find(primarykey);
+            cmAssignment.Position = assignmentView2.Find(primarykey);
 
-            DataRow drAssignment = DC.dtAssignment.Rows[cmAssignment.Position];
+            DataRow drAssignment = dtAssignment2.Rows[cmAssignment.Position];
             txtRole.Text = drAssignment["Role"].ToString();
         }
     }
