@@ -37,6 +37,7 @@ namespace BalhamCollege
             txtCity.Text = "";
             txtEmailAddress.Text = "";
             txtPhoneNumber.Text = "";
+            errorProvider1.Clear(); 
 
            
         }
@@ -84,7 +85,7 @@ namespace BalhamCollege
         private void txtEmailAddress_Leave(object sender, EventArgs e)
         { // flash error symbol beside Email address text box if pattern does not match 
             string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
-
+            resultMatch = false; 
            
             if (Regex.IsMatch(txtEmailAddress.Text, pattern))
             {
