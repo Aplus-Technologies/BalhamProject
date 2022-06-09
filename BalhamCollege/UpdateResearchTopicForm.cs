@@ -12,9 +12,13 @@ namespace BalhamCollege
 {
     public partial class UpdateResearchTopicForm : Form
     {
+        //declare global variables
         private DataController DC;
         private ResearchAdministratorForm frmResearchAdministrator;
         private CurrencyManager cmResearchTopic;
+
+        private DataTable dtResearchTopic2;
+        private DataView researchTopicView2;
 
         public UpdateResearchTopicForm(DataController dc, ResearchAdministratorForm researchAdministrator)
         {
@@ -23,23 +27,38 @@ namespace BalhamCollege
             frmResearchAdministrator = researchAdministrator;
             researchAdministrator.Hide();
             BindControls();
+            TableAndView(); // generate updated table and views
+        }
+        private void TableAndView()
+        {
+            // create updated instances for ResearchTopic table and dataview for researchTopic table 
+            dtResearchTopic2 = dsBalhamCollegeAzure.RESEARCHTOPIC;
+            researchTopicView2 = new DataView(dtResearchTopic2);
+            researchTopicView2.Sort = "TopicID";
         }
 
         public void BindControls()
         {
             // Set up Currency Manager
-            cmResearchTopic = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "ResearchTopic"];
-
-            // Bind list of courses
-            lstResearchTopics.DataSource = DC.dsBalhamCollegeAzure;
-            lstResearchTopics.DisplayMember = "ResearchTopic.TopicID";
-            lstResearchTopics.ValueMember = "ResearchTopic.TopicID";
-
-            // Bind controls
-            txtTopicID.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "ResearchTopic.TopicID");
-            txtTopicDescription.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "ResearchTopic.TopicDescription");
-            cboImpact.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "ResearchTopic.Impact");
+            cmResearchTopic = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "ResearchTopic"];
         }
+        private void LoadResearchTopics()
+        {
+            // To load all research topics
+            lstResearchTopics.Items.Clear();
+            foreach (DataRow drResearchTopic in dtResearchTopic2.Rows)
+            {
+                lstResearchTopics.Items.Add(drResearchTopic);
+            }
+        }
+        private void ClearFields()
+        {
+            // Clear all fields
+            txtTopicID.Text = string.Empty;
+            txtTopicDescription.Text = string.Empty;
+            cboImpact.Text = string.Empty;
+        }
+
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -50,13 +69,14 @@ namespace BalhamCollege
         private void lstResearchTopics_Format(object sender, ListControlConvertEventArgs e)
         {
             // Convert database row into listitem text
-            DataRowView researchTopicRow = (DataRowView)e.ListItem;
-            e.Value = researchTopicRow.Row["TopicID"] + " " + researchTopicRow.Row["TopicDescription"];
+
+            DataRow researchTopicRow = (DataRow)e.ListItem;
+            e.Value = researchTopicRow["TopicID"] + " " + researchTopicRow["TopicDescription"];
         }
 
         private void btnUpdateTopic_Click(object sender, EventArgs e)
         {
-            DataRow updateResearchTopicRow = DC.dtResearchTopic.Rows[cmResearchTopic.Position];
+            DataRow updateResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
 
             // Validate the entries in the fields
             if ((txtTopicDescription.Text == "") || (cboImpact.Text == ""))
@@ -68,27 +88,25 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the research topic's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    updateResearchTopicRow["TopicDescription"] = txtTopicDescription.Text;
-                    updateResearchTopicRow["Impact"] = cboImpact.Text;
+                    this.rESEARCHTOPICTableAdapter.Update(txtTopicDescription.Text, cboImpact.Text,
+                        Convert.ToInt32(updateResearchTopicRow["TopicID"]),
+                        updateResearchTopicRow["TopicDescription"].ToString(),
+                        updateResearchTopicRow["Impact"].ToString());
 
-                    cmResearchTopic.EndCurrentEdit();
-                    DC.UpdateResearchTopic();
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
+                    this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
+
                     MessageBox.Show("Research topic updated successfully", "Success");
+                    LoadResearchTopics();
+                    ClearFields();
                 }
                 else
                 {
                     // Cancel changes
-                    cmResearchTopic.CancelCurrentEdit();
+                    LoadResearchTopics();
+                    ClearFields();
                 }
             }
-        }
-
-        private void rESEARCHTOPICBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.rESEARCHTOPICBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void UpdateResearchTopicForm_Load(object sender, EventArgs e)
@@ -96,6 +114,26 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
             this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
 
+            LoadResearchTopics();
+            ClearFields();
+        }
+
+        private void lstResearchTopics_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRow drResearchTopic = (DataRow)lstResearchTopics.SelectedItem;
+            cmResearchTopic.Position = researchTopicView2.Find(drResearchTopic["TopicID"]);
+
+            // To populate the following controls with their corresponding values; from ResearchTopic Table 
+            txtTopicID.Text = drResearchTopic["TopicID"].ToString();
+            txtTopicDescription.Text = drResearchTopic["TopicDescription"].ToString();
+            cboImpact.Text = drResearchTopic["Impact"].ToString();
+        }
+
+        private void rESEARCHTOPICBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.rESEARCHTOPICBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
         }
     }
 }
