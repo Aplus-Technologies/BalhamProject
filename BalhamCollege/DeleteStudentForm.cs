@@ -21,7 +21,6 @@ namespace BalhamCollege
         private DataTable dtStudent2; // reference to student table
         private DataView studentView2; // reference to dataview of student table 
 
-
         public DeleteStudentForm(DataController dc, EnrolmentsClerkForm enrlmnu)
         {
             InitializeComponent();
@@ -44,11 +43,6 @@ namespace BalhamCollege
              studentView2 = new DataView(dtStudent2);
              studentView2.Sort = "StudentID"; 
         }
-
-
-
-
-
         private void LoadStudents()
         { // Load students that have no enrollments
             foreach (DataRow drStudent in dtStudent2.Rows)
@@ -101,24 +95,27 @@ namespace BalhamCollege
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
-
-            if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (lstStudents.SelectedItem != null)
             {
-                studentTableAdapter1.Delete(Convert.ToInt32(txtStudentID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, txtStatus.Text);
-                dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
+                DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.ENROLMENT' table. You can move, or remove it, as needed.
-                this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.ENROLMENT);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.STUDENT' table. You can move, or remove it, as needed.
-                this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.STUDENT);
+                if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    studentTableAdapter1.Delete(Convert.ToInt32(txtStudentID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, txtStatus.Text);
+                    dsBalhamCollegeAzure1.AcceptChanges(); // prevent system exception error 
 
-                DC.UpdateStudent();
-                lstStudents.Items.Clear();
-                LoadStudents();
-                MessageBox.Show("Student deleted successfully", "Success", MessageBoxButtons.OK);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.ENROLMENT' table. You can move, or remove it, as needed.
+                    this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.ENROLMENT);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure1.STUDENT' table. You can move, or remove it, as needed.
+                    this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure1.STUDENT);
 
-                ClearFields();
+                    DC.UpdateStudent();
+                    lstStudents.Items.Clear();
+                    LoadStudents();
+                    MessageBox.Show("Student deleted successfully", "Success", MessageBoxButtons.OK);
+
+                    ClearFields();
+                }            
             }
         }
 

@@ -72,24 +72,24 @@ namespace BalhamCollege
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-            DataRow deleteLecturerRow = dtLecturer2.Rows[cmLecturer.Position];
-
-
-
-            if (MessageBox.Show("Are you sure you want to delete this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (lstLecturers.SelectedItem != null)
             {
-                // deleteLecturerRow.Delete();
-                lECTURERTableAdapter.Delete(Convert.ToInt32(txtLecturerID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, deleteLecturerRow["EmailAddress"].ToString(), deleteLecturerRow["PhoneNumber"].ToString(), deleteLecturerRow["Ranking"].ToString(), deleteLecturerRow["Type"].ToString());
+                DataRow deleteLecturerRow = dtLecturer2.Rows[cmLecturer.Position];
+                if (MessageBox.Show("Are you sure you want to delete this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    // deleteLecturerRow.Delete();
+                    lECTURERTableAdapter.Delete(Convert.ToInt32(txtLecturerID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, deleteLecturerRow["EmailAddress"].ToString(), deleteLecturerRow["PhoneNumber"].ToString(), deleteLecturerRow["Ranking"].ToString(), deleteLecturerRow["Type"].ToString());
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
-                this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+                    this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
-                DC.UpdateLecturer();
-                lstLecturers.Items.Clear();
-                LoadLecturers();
-                MessageBox.Show("Lecturer deleted successfully", "Success", MessageBoxButtons.OK);
+                    DC.UpdateLecturer();
+                    lstLecturers.Items.Clear();
+                    LoadLecturers();
+                    MessageBox.Show("Lecturer deleted successfully", "Success", MessageBoxButtons.OK);
 
-                ClearFields();
+                    ClearFields();
+                }              
             }
         }
 
@@ -97,7 +97,6 @@ namespace BalhamCollege
         {
             if (lstLecturers.SelectedItem != null)
             {
-
                 string lecturer = "";
                 lecturer = lstLecturers.SelectedItem.ToString();
                 string[] parts = lecturer.Split(',');

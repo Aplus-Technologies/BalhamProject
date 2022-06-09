@@ -103,23 +103,26 @@ namespace BalhamCollege
 
         private void btnDeleteCourse_Click(object sender, EventArgs e)
         {
-            DataRow deleteCourseRow = dtCourse2.Rows[cmCourse.Position];
-            if (MessageBox.Show("Are you sure you want to delete this Course?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (lstCourses.SelectedItem != null)
             {
-                // deleteCourseRow.Delete();
-                cOURSETableAdapter.Delete(Convert.ToInt32(txtCourseID.Text), txtCourseName.Text, Convert.ToInt32(txtCredits.Text), Convert.ToDecimal(deleteCourseRow["Fee"]), txtStatus.Text, Convert.ToInt32(deleteCourseRow["ProgrammeID"])); 
+                DataRow deleteCourseRow = dtCourse2.Rows[cmCourse.Position];
+                if (MessageBox.Show("Are you sure you want to delete this Course?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    // deleteCourseRow.Delete();
+                    cOURSETableAdapter.Delete(Convert.ToInt32(txtCourseID.Text), txtCourseName.Text, Convert.ToInt32(txtCredits.Text), Convert.ToDecimal(deleteCourseRow["Fee"]), txtStatus.Text, Convert.ToInt32(deleteCourseRow["ProgrammeID"]));
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
-                this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSESSMENT' table. You can move, or remove it, as needed.
-                this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                    this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSESSMENT' table. You can move, or remove it, as needed.
+                    this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
 
-                DC.UpdateCourse();
-                lstCourses.Items.Clear();
-                LoadCourses();
-                MessageBox.Show("Course deleted successfully", "Success", MessageBoxButtons.OK);
+                    DC.UpdateCourse();
+                    lstCourses.Items.Clear();
+                    LoadCourses();
+                    MessageBox.Show("Course deleted successfully", "Success", MessageBoxButtons.OK);
 
-                ClearFields();
+                    ClearFields();
+                }              
             }
         }
 
@@ -132,9 +135,9 @@ namespace BalhamCollege
         }
 
         private void DeleteCourseForm_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
-            this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
+        {            
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+                this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ENROLMENT' table. You can move, or remove it, as needed.
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.

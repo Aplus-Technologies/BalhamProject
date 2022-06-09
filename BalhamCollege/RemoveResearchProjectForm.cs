@@ -119,43 +119,94 @@ namespace BalhamCollege
 
         private void lstResearchProjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string researchProject = "";
-            researchProject = lstResearchProjects.SelectedItem.ToString();
-            string[] parts = researchProject.Split(',');
-            string[] ResearchPIDstring = parts[0].Split(' ');
-            int aResearchProjectID = Convert.ToInt32(ResearchPIDstring[1]);
-            cmResearchProject.Position = DC.researchProjectview.Find(aResearchProjectID);
-            DataRow drResearchProject = DC.dtResearchProject.Rows[cmResearchProject.Position];
-            txtResearchProjectID.Text = drResearchProject["ResearchProjectID"].ToString();
-            txtOutput.Text = drResearchProject["Output"].ToString();
-            txtProjectDescription.Text = drResearchProject["ProjectDescription"].ToString();
+            if (lstResearchProjects.SelectedItem != null)
+            {
+                string researchProject = "";
+                researchProject = lstResearchProjects.SelectedItem.ToString();
+                string[] parts = researchProject.Split(',');
+                string[] ResearchPIDstring = parts[0].Split(' ');
+                int aResearchProjectID = Convert.ToInt32(ResearchPIDstring[1]);
+                cmResearchProject.Position = DC.researchProjectview.Find(aResearchProjectID);
+                DataRow drResearchProject = DC.dtResearchProject.Rows[cmResearchProject.Position];
+                txtResearchProjectID.Text = drResearchProject["ResearchProjectID"].ToString();
+                txtOutput.Text = drResearchProject["Output"].ToString();
+                txtProjectDescription.Text = drResearchProject["ProjectDescription"].ToString();
 
-            int aResearchTopicID = Convert.ToInt32(drResearchProject["TopicID"].ToString());
-            cmResearchTopic.Position = DC.researchTopicView.Find(aResearchTopicID);
-            DataRow drResearchTopic = DC.dtResearchTopic.Rows[cmResearchTopic.Position];
-            txtTopicDescription.Text = drResearchTopic["TopicDescription"].ToString();
+                int aResearchTopicID = Convert.ToInt32(drResearchProject["TopicID"].ToString());
+                cmResearchTopic.Position = DC.researchTopicView.Find(aResearchTopicID);
+                DataRow drResearchTopic = DC.dtResearchTopic.Rows[cmResearchTopic.Position];
+                txtTopicDescription.Text = drResearchTopic["TopicDescription"].ToString();
+            }
         }
 
         private void btnRemoveResearchProject_Click(object sender, EventArgs e)
         {
-            DataRow deleteResearchProjectRow = DC.dtResearchProject.Rows[cmResearchProject.Position];
-            if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (lstResearchProjects.SelectedItem != null)
             {
-                string researchProject;
-                researchProject = lstResearchProjects.SelectedItem.ToString();
-                string[] parts = researchProject.Split(',');
-                string[] IDstring = parts[0].Split(' ');
-                int aResearchProjectID = Convert.ToInt32(IDstring[1]);
-                cmResearchProject.Position = DC.researchProjectview.Find(aResearchProjectID);
+                DataRow deleteResearchProjectRow = DC.dtResearchProject.Rows[cmResearchProject.Position];
+                if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string researchProject;
+                    researchProject = lstResearchProjects.SelectedItem.ToString();
+                    string[] parts = researchProject.Split(',');
+                    string[] IDstring = parts[0].Split(' ');
+                    int aResearchProjectID = Convert.ToInt32(IDstring[1]);
+                    cmResearchProject.Position = DC.researchProjectview.Find(aResearchProjectID);
 
-                deleteResearchProjectRow.Delete();
-                DC.UpdateResearchProject();
+                    deleteResearchProjectRow.Delete();
+                    DC.UpdateResearchProject();
 
-                MessageBox.Show("Research Project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
-                cmResearchProject.EndCurrentEdit();
-                lstResearchProjects.Items.Clear();
-                ClearFields();
+                    MessageBox.Show("Research Project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                    cmResearchProject.EndCurrentEdit();
+                    lstResearchProjects.Items.Clear();
+                    ClearFields();
+                }           
             }
+        }
+
+        private void lblOutput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLecturerID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFirstName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLastName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLecturerID_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

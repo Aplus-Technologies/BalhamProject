@@ -52,119 +52,121 @@ namespace BalhamCollege
             this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
             this.aSSIGNMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aSSIGNMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 37);
+            this.label1.Location = new System.Drawing.Point(16, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 29);
+            this.label1.Size = new System.Drawing.Size(151, 20);
             this.label1.TabIndex = 70;
             this.label1.Text = "Please select a course:";
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(443, 251);
+            this.btnReturn.Location = new System.Drawing.Point(339, 337);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(134, 39);
-            this.btnReturn.TabIndex = 69;
+            this.btnReturn.Size = new System.Drawing.Size(134, 40);
+            this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnDeleteCourse
             // 
-            this.btnDeleteCourse.Location = new System.Drawing.Point(237, 251);
+            this.btnDeleteCourse.Location = new System.Drawing.Point(16, 337);
             this.btnDeleteCourse.Name = "btnDeleteCourse";
-            this.btnDeleteCourse.Size = new System.Drawing.Size(159, 39);
-            this.btnDeleteCourse.TabIndex = 68;
+            this.btnDeleteCourse.Size = new System.Drawing.Size(159, 40);
+            this.btnDeleteCourse.TabIndex = 2;
             this.btnDeleteCourse.Text = "Delete Course";
             this.btnDeleteCourse.UseVisualStyleBackColor = true;
             this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(349, 167);
+            this.txtStatus.Location = new System.Drawing.Point(111, 298);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(60, 35);
+            this.txtStatus.Size = new System.Drawing.Size(60, 26);
             this.txtStatus.TabIndex = 67;
             // 
             // txtCredits
             // 
-            this.txtCredits.Location = new System.Drawing.Point(349, 136);
+            this.txtCredits.Location = new System.Drawing.Point(111, 267);
             this.txtCredits.Name = "txtCredits";
             this.txtCredits.ReadOnly = true;
-            this.txtCredits.Size = new System.Drawing.Size(38, 35);
+            this.txtCredits.Size = new System.Drawing.Size(38, 26);
             this.txtCredits.TabIndex = 66;
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(349, 105);
+            this.txtCourseName.Location = new System.Drawing.Point(111, 236);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(226, 35);
+            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
             this.txtCourseName.TabIndex = 65;
             // 
             // txtCourseID
             // 
-            this.txtCourseID.Location = new System.Drawing.Point(349, 75);
+            this.txtCourseID.Location = new System.Drawing.Point(111, 206);
             this.txtCourseID.Name = "txtCourseID";
             this.txtCourseID.ReadOnly = true;
-            this.txtCourseID.Size = new System.Drawing.Size(38, 35);
+            this.txtCourseID.Size = new System.Drawing.Size(38, 26);
             this.txtCourseID.TabIndex = 64;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(302, 170);
+            this.lblStatus.Location = new System.Drawing.Point(66, 301);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(73, 29);
+            this.lblStatus.Size = new System.Drawing.Size(49, 20);
             this.lblStatus.TabIndex = 63;
             this.lblStatus.Text = "Status:";
             // 
             // lblCredits
             // 
             this.lblCredits.AutoSize = true;
-            this.lblCredits.Location = new System.Drawing.Point(300, 139);
+            this.lblCredits.Location = new System.Drawing.Point(60, 270);
             this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(80, 29);
+            this.lblCredits.Size = new System.Drawing.Size(55, 20);
             this.lblCredits.TabIndex = 62;
             this.lblCredits.Text = "Credits:";
             // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(261, 108);
+            this.lblCourseName.Location = new System.Drawing.Point(20, 239);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(139, 29);
+            this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 61;
             this.lblCourseName.Text = "Course Name:";
             // 
             // lblCourseID
             // 
             this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(281, 77);
+            this.lblCourseID.Location = new System.Drawing.Point(43, 208);
             this.lblCourseID.Name = "lblCourseID";
-            this.lblCourseID.Size = new System.Drawing.Size(105, 29);
+            this.lblCourseID.Size = new System.Drawing.Size(72, 20);
             this.lblCourseID.TabIndex = 60;
             this.lblCourseID.Text = "Course ID:";
             // 
             // lstCourses
             // 
             this.lstCourses.FormattingEnabled = true;
-            this.lstCourses.ItemHeight = 29;
-            this.lstCourses.Location = new System.Drawing.Point(42, 57);
+            this.lstCourses.ItemHeight = 20;
+            this.lstCourses.Location = new System.Drawing.Point(16, 55);
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.ScrollAlwaysVisible = true;
-            this.lstCourses.Size = new System.Drawing.Size(201, 149);
-            this.lstCourses.TabIndex = 59;
+            this.lstCourses.Size = new System.Drawing.Size(457, 144);
+            this.lstCourses.TabIndex = 1;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
             // dsBalhamCollegeAzure
@@ -225,11 +227,20 @@ namespace BalhamCollege
             // 
             this.aSSIGNMENTTableAdapter.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(409, -4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
             // DeleteCourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 341);
+            this.ClientSize = new System.Drawing.Size(491, 390);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeleteCourse);
@@ -242,6 +253,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblCourseName);
             this.Controls.Add(this.lblCourseID);
             this.Controls.Add(this.lstCourses);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "DeleteCourseForm";
             this.Text = "DeleteCourseForm";
@@ -251,6 +263,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,5 +293,6 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
         private System.Windows.Forms.BindingSource aSSIGNMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter aSSIGNMENTTableAdapter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

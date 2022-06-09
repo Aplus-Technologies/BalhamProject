@@ -98,29 +98,32 @@ namespace BalhamCollege
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            DataRow deleteAssignmentRow = DC.dtAssignment.Rows[cmAssignment.Position];
-            if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (lstLecturers.SelectedItem != null)
             {
-                string lecturer;
-                lecturer = lstLecturers.SelectedItem.ToString();
-                string[] parts = lecturer.Split(',');
-                string[] IDstring = parts[0].Split(' ');
-                int aLecturerID = Convert.ToInt32(IDstring[2]);
-                object[] primaryKey = new object[2];
-                int courseID = Convert.ToInt32(txtCourseID.Text);
-                cmCourse.Position = DC.courseView.Find(courseID);
-                DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
-                primaryKey[0] = courseID;
-                primaryKey[1] = aLecturerID;
-                cmAssignment.Position = DC.assignmentView.Find(primaryKey);
+                DataRow deleteAssignmentRow = DC.dtAssignment.Rows[cmAssignment.Position];
+                if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string lecturer;
+                    lecturer = lstLecturers.SelectedItem.ToString();
+                    string[] parts = lecturer.Split(',');
+                    string[] IDstring = parts[0].Split(' ');
+                    int aLecturerID = Convert.ToInt32(IDstring[2]);
+                    object[] primaryKey = new object[2];
+                    int courseID = Convert.ToInt32(txtCourseID.Text);
+                    cmCourse.Position = DC.courseView.Find(courseID);
+                    DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
+                    primaryKey[0] = courseID;
+                    primaryKey[1] = aLecturerID;
+                    cmAssignment.Position = DC.assignmentView.Find(primaryKey);
 
-                deleteAssignmentRow.Delete();
-                DC.UpdateAssignment();
+                    deleteAssignmentRow.Delete();
+                    DC.UpdateAssignment();
 
-                MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
-                cmAssignment.EndCurrentEdit();
-                lstLecturers.Items.Clear();
-                ClearFields();
+                    MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                    cmAssignment.EndCurrentEdit();
+                    lstLecturers.Items.Clear();
+                    ClearFields();
+                }           
             }
         }
 
@@ -151,7 +154,7 @@ namespace BalhamCollege
                     int aLecturerID = Convert.ToInt32(drAssignment["LecturerID"].ToString());
                     cmLecturer.Position = DC.lecturerView.Find(aLecturerID);
                     DataRow drLecturer = DC.dtLecturer.Rows[cmLecturer.Position];
-                    lecturerText = "Lecturer ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
+                    lecturerText = "ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
                     lstLecturers.Items.Add(lecturerText);
                 }
             }
@@ -159,28 +162,31 @@ namespace BalhamCollege
 
         private void lstLecturers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string lecturer = "";
-            lecturer = lstLecturers.SelectedItem.ToString();
-            string[] parts = lecturer.Split(',');
-            string[] IDstring = parts[0].Split(' ');
-            int aLecturerID = Convert.ToInt32(IDstring[2]);
-            cmLecturer.Position = DC.lecturerView.Find(aLecturerID);
-            DataRow drLecturer = DC.dtLecturer.Rows[cmLecturer.Position];
-            txtLecturerID.Text = drLecturer["LecturerID"].ToString();
-            txtLastName.Text = drLecturer["LastName"].ToString();
-            txtFirstName.Text = drLecturer["FirstName"].ToString();
-           
-            //Find composite primary key for Assignment
-            object[] primarykey = new object[2];
-            int courseID = Convert.ToInt32(txtCourseID.Text);
-            cmCourse.Position = DC.courseView.Find(courseID);
-            DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
-            primarykey[0] = courseID;
-            primarykey[1] = aLecturerID;
-            cmAssignment.Position = DC.assignmentView.Find(primarykey);
+            if (lstLecturers.SelectedItem != null)
+            {
+                string lecturer = "";
+                lecturer = lstLecturers.SelectedItem.ToString();
+                string[] parts = lecturer.Split(',');
+                string[] IDstring = parts[0].Split(' ');
+                int aLecturerID = Convert.ToInt32(IDstring[1]);
+                cmLecturer.Position = DC.lecturerView.Find(aLecturerID);
+                DataRow drLecturer = DC.dtLecturer.Rows[cmLecturer.Position];
+                txtLecturerID.Text = drLecturer["LecturerID"].ToString();
+                txtLastName.Text = drLecturer["LastName"].ToString();
+                txtFirstName.Text = drLecturer["FirstName"].ToString();
 
-            DataRow drAssignment = DC.dtAssignment.Rows[cmAssignment.Position];
-            txtRole.Text = drAssignment["Role"].ToString();
-        }
+                //Find composite primary key for Assignment
+                object[] primarykey = new object[2];
+                int courseID = Convert.ToInt32(txtCourseID.Text);
+                cmCourse.Position = DC.courseView.Find(courseID);
+                DataRow drCourse = DC.dtCourse.Rows[cmCourse.Position];
+                primarykey[0] = courseID;
+                primarykey[1] = aLecturerID;
+                cmAssignment.Position = DC.assignmentView.Find(primarykey);
+
+                DataRow drAssignment = DC.dtAssignment.Rows[cmAssignment.Position];
+                txtRole.Text = drAssignment["Role"].ToString();
+            }
+        }       
     }
 }

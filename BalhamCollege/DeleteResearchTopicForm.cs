@@ -67,27 +67,29 @@ namespace BalhamCollege
         }
 
         private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
-        { 
-            DataRow deleteResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
-            if (MessageBox.Show("Are you sure you want to delete this Research Topic?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+        {
+            if (lstResearchTopics.SelectedItem != null)
             {
-                rESEARCHTOPICTableAdapter.Delete(Convert.ToInt32(txtResearchTopicID.Text), txtTopicDescription.Text, txtImpact.Text);
-              
-               this.dsBalhamCollegeAzure.AcceptChanges();
+                DataRow deleteResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
+                if (MessageBox.Show("Are you sure you want to delete this Research Topic?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    rESEARCHTOPICTableAdapter.Delete(Convert.ToInt32(txtResearchTopicID.Text), txtTopicDescription.Text, txtImpact.Text);
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.
-                this.rESEARCHPROJECTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHPROJECT);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
-                this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
+                    this.dsBalhamCollegeAzure.AcceptChanges();
 
-                DC.UpdateResearchTopic();
-                lstResearchTopics.Items.Clear();
-                LoadResearchTopics();
-                MessageBox.Show("Research Topic deleted successfully", "Success", MessageBoxButtons.OK);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.
+                    this.rESEARCHPROJECTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHPROJECT);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
+                    this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
 
-                ClearFields();
+                    DC.UpdateResearchTopic();
+                    lstResearchTopics.Items.Clear();
+                    LoadResearchTopics();
+                    MessageBox.Show("Research Topic deleted successfully", "Success", MessageBoxButtons.OK);
+
+                    ClearFields();
+                }          
             }
-
         }
 
         private void lstResearchTopics_SelectedIndexChanged(object sender, EventArgs e)
