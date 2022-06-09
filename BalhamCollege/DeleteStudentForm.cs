@@ -58,7 +58,7 @@ namespace BalhamCollege
                 {
                     studentText = "";
                     studentText += drStudent["StudentID"] + ", ";
-                    studentText += drStudent["LastName"] + "\r\n";
+                    studentText += drStudent["LastName"] + ", ";
                     studentText += drStudent["FirstName"] + "\r\n";
                     lstStudents.Items.Add(studentText);
                 }
