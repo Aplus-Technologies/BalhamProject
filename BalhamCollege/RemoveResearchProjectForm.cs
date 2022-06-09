@@ -144,54 +144,109 @@ namespace BalhamCollege
 
         private void lstResearchProjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string researchProject = "";
-            researchProject = lstResearchProjects.SelectedItem.ToString();
-            string[] parts = researchProject.Split(',');
-            string[] ResearchPIDstring = parts[0].Split(' ');
-            int aResearchProjectID = Convert.ToInt32(ResearchPIDstring[1]);
-            cmResearchProject.Position = researchProjectView2.Find(aResearchProjectID);
-            DataRow drResearchProject = dtResearchProject2.Rows[cmResearchProject.Position];
-            txtResearchProjectID.Text = drResearchProject["ResearchProjectID"].ToString();
-            txtOutput.Text = drResearchProject["Output"].ToString();
-            txtProjectDescription.Text = drResearchProject["ProjectDescription"].ToString();
 
-            int aResearchTopicID = Convert.ToInt32(drResearchProject["TopicID"].ToString());
-            cmResearchTopic.Position = researchTopicView2.Find(aResearchTopicID);
-            DataRow drResearchTopic = dtResearchTopic2.Rows[cmResearchTopic.Position];
-            txtTopicDescription.Text = drResearchTopic["TopicDescription"].ToString();
+            if (lstResearchProjects.SelectedItem != null)
+            {
+                string researchProject = "";
+                researchProject = lstResearchProjects.SelectedItem.ToString();
+                string[] parts = researchProject.Split(',');
+                string[] ResearchPIDstring = parts[0].Split(' ');
+                int aResearchProjectID = Convert.ToInt32(ResearchPIDstring[1]);
+                cmResearchProject.Position = researchProjectView2.Find(aResearchProjectID);
+                DataRow drResearchProject = dtResearchProject2.Rows[cmResearchProject.Position];
+                txtResearchProjectID.Text = drResearchProject["ResearchProjectID"].ToString();
+                txtOutput.Text = drResearchProject["Output"].ToString();
+                txtProjectDescription.Text = drResearchProject["ProjectDescription"].ToString();
+
+                int aResearchTopicID = Convert.ToInt32(drResearchProject["TopicID"].ToString());
+                cmResearchTopic.Position = researchTopicView2.Find(aResearchTopicID);
+                DataRow drResearchTopic = dtResearchTopic2.Rows[cmResearchTopic.Position];
+                txtTopicDescription.Text = drResearchTopic["TopicDescription"].ToString();
+            }
+
         }
 
         private void btnRemoveResearchProject_Click(object sender, EventArgs e)
         {
-            DataRow deleteResearchProjectRow = dtResearchProject2.Rows[cmResearchProject.Position];
-            if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            if (lstResearchProjects.SelectedItem != null)
             {
-                string researchProject;
-                researchProject = lstResearchProjects.SelectedItem.ToString();
-                string[] parts = researchProject.Split(',');
-                string[] IDstring = parts[0].Split(' ');
-                int aResearchProjectID = Convert.ToInt32(IDstring[1]);
-                cmResearchProject.Position = researchProjectView2.Find(aResearchProjectID);
+                DataRow deleteResearchProjectRow = dtResearchProject2.Rows[cmResearchProject.Position];
+                if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string researchProject;
+                    researchProject = lstResearchProjects.SelectedItem.ToString();
+                    string[] parts = researchProject.Split(',');
+                    string[] IDstring = parts[0].Split(' ');
+                    int aResearchProjectID = Convert.ToInt32(IDstring[1]);
+                    cmResearchProject.Position = researchProjectView2.Find(aResearchProjectID);
 
                
-                this.rESEARCHPROJECTTableAdapter.Delete(Convert.ToInt32(deleteResearchProjectRow["ResearchProjectID"]), deleteResearchProjectRow["ProjectDescription"].ToString(), deleteResearchProjectRow["StartDate"].ToString(), deleteResearchProjectRow["Output"].ToString(), Convert.ToInt32(deleteResearchProjectRow["LecturerID"]), Convert.ToInt32(deleteResearchProjectRow["TopicID"]));
-                this.dsBalhamCollegeAzure.AcceptChanges();
+                    this.rESEARCHPROJECTTableAdapter.Delete(Convert.ToInt32(deleteResearchProjectRow["ResearchProjectID"]), deleteResearchProjectRow["ProjectDescription"].ToString(), deleteResearchProjectRow["StartDate"].ToString(), deleteResearchProjectRow["Output"].ToString(), Convert.ToInt32(deleteResearchProjectRow["LecturerID"]), Convert.ToInt32(deleteResearchProjectRow["TopicID"]));
+                    this.dsBalhamCollegeAzure.AcceptChanges();
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
-                this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.
-                this.rESEARCHPROJECTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHPROJECT);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
-                this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
+                    this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.
+                    this.rESEARCHPROJECTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHPROJECT);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+                    this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
-                DC.UpdateResearchProject();
+                    DC.UpdateResearchProject();
 
-                MessageBox.Show("Research Project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
-                lstLecturers.Items.Clear();
-                LoadLecturers(); // refresh lecturer list, in case a lecturer has zero assigned research projects
-                lstResearchProjects.Items.Clear();
-                ClearFields();
+                    MessageBox.Show("Research Project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                    lstLecturers.Items.Clear();
+                    LoadLecturers(); // refresh lecturer list, in case a lecturer has zero assigned research projects
+                    lstResearchProjects.Items.Clear();
+                    ClearFields();
+                }           
             }
+        }
+
+        private void lblOutput_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLecturerID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblType_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFirstName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLastName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLecturerID_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

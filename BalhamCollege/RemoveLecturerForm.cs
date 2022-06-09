@@ -130,41 +130,46 @@ namespace BalhamCollege
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            DataRow deleteAssignmentRow = dtAssignment2.Rows[cmAssignment.Position];
-            if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+
+            if (lstLecturers.SelectedItem != null)
             {
-                string lecturer;
-                lecturer = lstLecturers.SelectedItem.ToString();
-                string[] parts = lecturer.Split(',');
-                string[] IDstring = parts[0].Split(' ');
-                aLecturerID = Convert.ToInt32(IDstring[2]);
-                object[] primaryKey = new object[2];
-                courseID = Convert.ToInt32(txtCourseID.Text);
-                cmCourse.Position = courseView2.Find(courseID);
-                DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
-                primaryKey[0] = courseID;
-                primaryKey[1] = aLecturerID;
-                cmAssignment.Position = assignmentView2.Find(primaryKey);
+                DataRow deleteAssignmentRow = dtAssignment2.Rows[cmAssignment.Position];
+                if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    string lecturer;
+                    lecturer = lstLecturers.SelectedItem.ToString();
+                    string[] parts = lecturer.Split(',');
+                    string[] IDstring = parts[0].Split(' ');
+                    aLecturerID = Convert.ToInt32(IDstring[2]);
+                    object[] primaryKey = new object[2];
+                    courseID = Convert.ToInt32(txtCourseID.Text);
+                    cmCourse.Position = courseView2.Find(courseID);
+                    DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
+                    primaryKey[0] = courseID;
+                    primaryKey[1] = aLecturerID;
+                    cmAssignment.Position = assignmentView2.Find(primaryKey);
 
-                this.aSSIGNMENTTableAdapter.Delete(courseID, aLecturerID, txtRole.Text);
-                this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
+                    this.aSSIGNMENTTableAdapter.Delete(courseID, aLecturerID, txtRole.Text);
+                    this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
-                this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
-                this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
-                this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
-                this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
+                    this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+                    this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+                    this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                    this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
 
-                DC.UpdateAssignment();
+                    DC.UpdateAssignment();
 
-                MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                    MessageBox.Show("Lecturer removed successfully", "Acknowledgement", MessageBoxButtons.OK);
              
-                lstLecturers.Items.Clear();
-                ClearFields();
+                    lstLecturers.Items.Clear();
+                    ClearFields();
+                    }           
+
             }
            
         }
@@ -194,9 +199,11 @@ namespace BalhamCollege
                 foreach (DataRow drAssignment in drAssignments)
                 {
                     int aLecturerID = Convert.ToInt32(drAssignment["LecturerID"].ToString());
+
                     cmLecturer.Position = lecturerView2.Find(aLecturerID);
                     DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
                     lecturerText = "Lecturer ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
+
                     lstLecturers.Items.Add(lecturerText);
                 }
             }
@@ -204,28 +211,33 @@ namespace BalhamCollege
 
         private void lstLecturers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string lecturer = "";
-            lecturer = lstLecturers.SelectedItem.ToString();
-            string[] parts = lecturer.Split(',');
-            string[] IDstring = parts[0].Split(' ');
-            int aLecturerID = Convert.ToInt32(IDstring[2]);
-            cmLecturer.Position = lecturerView2.Find(aLecturerID);
-            DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
-            txtLecturerID.Text = drLecturer["LecturerID"].ToString();
-            txtLastName.Text = drLecturer["LastName"].ToString();
-            txtFirstName.Text = drLecturer["FirstName"].ToString();
-           
-            //Find composite primary key for Assignment
-            object[] primarykey = new object[2];
-            int courseID = Convert.ToInt32(txtCourseID.Text);
-            cmCourse.Position = courseView2.Find(courseID);
-            DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
-            primarykey[0] = courseID;
-            primarykey[1] = aLecturerID;
-            cmAssignment.Position = assignmentView2.Find(primarykey);
 
-            DataRow drAssignment = dtAssignment2.Rows[cmAssignment.Position];
-            txtRole.Text = drAssignment["Role"].ToString();
-        }
+            if (lstLecturers.SelectedItem != null)
+            {
+                string lecturer = "";
+                lecturer = lstLecturers.SelectedItem.ToString();
+                string[] parts = lecturer.Split(',');
+                string[] IDstring = parts[0].Split(' ');
+                int aLecturerID = Convert.ToInt32(IDstring[2]);
+                cmLecturer.Position = lecturerView2.Find(aLecturerID);
+                DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
+                txtLecturerID.Text = drLecturer["LecturerID"].ToString();
+                txtLastName.Text = drLecturer["LastName"].ToString();
+                txtFirstName.Text = drLecturer["FirstName"].ToString();
+           
+                //Find composite primary key for Assignment
+                object[] primarykey = new object[2];
+                int courseID = Convert.ToInt32(txtCourseID.Text);
+                cmCourse.Position = courseView2.Find(courseID);
+                DataRow drCourse = dtCourse2.Rows[cmCourse.Position];
+                primarykey[0] = courseID;
+                primarykey[1] = aLecturerID;
+                cmAssignment.Position = assignmentView2.Find(primarykey);
+
+                DataRow drAssignment = dtAssignment2.Rows[cmAssignment.Position];
+                txtRole.Text = drAssignment["Role"].ToString();
+            }
+        }       
+
     }
 }

@@ -92,22 +92,28 @@ namespace BalhamCollege
 
         private void btnDeleteProgramme_Click(object sender, EventArgs e)
         {
-            DataRow deleteProgrammeRow = dtProgramme2.Rows[cmProgramme.Position];
-            if (MessageBox.Show("Are you sure you want to delete this Programme?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if(lstProgrammes.SelectedItem != null)
             {
-                //deleteProgrammeRow.Delete();
-                pROGRAMMETableAdapter.Delete(Convert.ToInt32(txtProgrammeID.Text), txtProgrammeName.Text, Convert.ToInt32(txtLevel.Text));
-                this.dsBalhamCollegeAzure.AcceptChanges(); 
 
-                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
-                this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+                DataRow deleteProgrammeRow = dtProgramme2.Rows[cmProgramme.Position];
+                if (MessageBox.Show("Are you sure you want to delete this Programme?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    
+                    //deleteProgrammeRow.Delete();
+                    pROGRAMMETableAdapter.Delete(Convert.ToInt32(txtProgrammeID.Text), txtProgrammeName.Text, Convert.ToInt32(txtLevel.Text));
+                    this.dsBalhamCollegeAzure.AcceptChanges(); 
 
-                DC.UpdateProgramme();
-                lstProgrammes.Items.Clear();
-                LoadProgrammes();
-                MessageBox.Show("Programme deleted successfully", "Success", MessageBoxButtons.OK);
 
-                ClearFields();
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
+                    this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+
+                    DC.UpdateProgramme();
+                    lstProgrammes.Items.Clear();
+                    LoadProgrammes();
+                    MessageBox.Show("Programme deleted successfully", "Success", MessageBoxButtons.OK);
+
+                    ClearFields();
+                }           
             }
         }
 
