@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions; // class to check for  regular expression pattern 
 
 namespace BalhamCollege
 {
@@ -15,6 +16,8 @@ namespace BalhamCollege
         //declare global variables
         private DataController DC;
         private EnrolmentsClerkForm frmEnrolMenu;
+
+        private bool resultMatch; // boolean to check if email pattern is valid 
 
         public AddStudentForm(DataController dc, EnrolmentsClerkForm enrolmnu)
         { // call the following functions upon form initialization 
@@ -47,7 +50,7 @@ namespace BalhamCollege
         
         private void btnAddStudent_Click(object sender, EventArgs e)
         {// check if required fields are blank 
-            if ((txtLastName.Text == "")|| (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") || (txtCity.Text == "") || (txtEmailAddress.Text == "") || (txtPhoneNumber.Text == "") || (cboStatus.Text == ""))
+            if ((txtLastName.Text == "")|| (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") || (txtCity.Text == "") || (resultMatch == false)|| (txtPhoneNumber.Text == "") || (cboStatus.Text == ""))
             {// error message
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -74,6 +77,27 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
+            ClearFields(); 
+        }
+
+        
+        private void txtEmailAddress_Leave(object sender, EventArgs e)
+        { // flash error symbol beside Email address text box if pattern does not match 
+            string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+
+           
+            if (Regex.IsMatch(txtEmailAddress.Text, pattern))
+            {
+                errorProvider1.Clear();
+                resultMatch = true;
+                
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtEmailAddress, "Please fill in all fields correctly");
+                resultMatch = false;
+                return;
+            }
         }
     }
 }
