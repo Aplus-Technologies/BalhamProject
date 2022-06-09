@@ -68,6 +68,7 @@ namespace BalhamCollege
             this.lstResearchTopics.Name = "lstResearchTopics";
             this.lstResearchTopics.Size = new System.Drawing.Size(489, 144);
             this.lstResearchTopics.TabIndex = 111;
+            this.lstResearchTopics.SelectedIndexChanged += new System.EventHandler(this.lstResearchTopics_SelectedIndexChanged);
             this.lstResearchTopics.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstResearchTopics_Format);
             // 
             // label1
