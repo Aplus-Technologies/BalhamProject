@@ -75,6 +75,7 @@ namespace BalhamCollege
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
            
             lstLecturers.Items.Clear();
+            lstResearchProjects.Items.Clear();
             LoadLecturers(); 
             ClearFields();
 

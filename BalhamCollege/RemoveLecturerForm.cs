@@ -102,6 +102,8 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
+            lstCourses.Items.Clear();
+            lstLecturers.Items.Clear();
             ClearFields();
             LoadCourses();
         }

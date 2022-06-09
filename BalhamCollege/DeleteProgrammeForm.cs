@@ -79,7 +79,9 @@ namespace BalhamCollege
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
-            lstProgrammes.Items.Clear(); 
+
+            lstProgrammes.Items.Clear();
+            ClearFields();
             LoadProgrammes(); 
 
         }
