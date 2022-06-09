@@ -58,15 +58,17 @@
             this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
             this.studentTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 42);
+            this.label1.Location = new System.Drawing.Point(37, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(219, 29);
@@ -75,8 +77,8 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(744, 551);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReturn.Location = new System.Drawing.Point(719, 391);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(192, 61);
             this.btnReturn.TabIndex = 42;
@@ -86,8 +88,8 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(328, 551);
-            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(39, 391);
+            this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(230, 61);
             this.btnDeleteStudent.TabIndex = 41;
@@ -97,8 +99,8 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(446, 441);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStatus.Location = new System.Drawing.Point(440, 321);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(92, 35);
@@ -106,8 +108,8 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(446, 397);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(440, 288);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.ReadOnly = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(121, 35);
@@ -115,8 +117,8 @@
             // 
             // txtEmailAddress
             // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(446, 348);
-            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmailAddress.Location = new System.Drawing.Point(440, 255);
+            this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.ReadOnly = true;
             this.txtEmailAddress.Size = new System.Drawing.Size(471, 35);
@@ -124,8 +126,8 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(446, 304);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCity.Location = new System.Drawing.Point(440, 222);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
             this.txtCity.Size = new System.Drawing.Size(269, 35);
@@ -133,8 +135,8 @@
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(446, 258);
-            this.txtSuburb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSuburb.Location = new System.Drawing.Point(440, 187);
+            this.txtSuburb.Margin = new System.Windows.Forms.Padding(4);
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
             this.txtSuburb.Size = new System.Drawing.Size(269, 35);
@@ -142,8 +144,8 @@
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(446, 209);
-            this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStreetAddress.Location = new System.Drawing.Point(440, 153);
+            this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
             this.txtStreetAddress.Size = new System.Drawing.Size(471, 35);
@@ -151,8 +153,8 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(446, 165);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFirstName.Location = new System.Drawing.Point(440, 120);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(269, 35);
@@ -160,8 +162,8 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(446, 116);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLastName.Location = new System.Drawing.Point(440, 85);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(269, 35);
@@ -169,8 +171,8 @@
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(446, 72);
-            this.txtStudentID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStudentID.Location = new System.Drawing.Point(440, 52);
+            this.txtStudentID.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
             this.txtStudentID.Size = new System.Drawing.Size(50, 35);
@@ -179,7 +181,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(395, 447);
+            this.lblStatus.Location = new System.Drawing.Point(395, 324);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(73, 29);
@@ -189,7 +191,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(329, 398);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(341, 290);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(150, 29);
@@ -199,7 +201,7 @@
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.Location = new System.Drawing.Point(329, 354);
+            this.lblEmailAddress.Location = new System.Drawing.Point(343, 258);
             this.lblEmailAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailAddress.Name = "lblEmailAddress";
             this.lblEmailAddress.Size = new System.Drawing.Size(144, 29);
@@ -209,7 +211,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(422, 307);
+            this.lblCity.Location = new System.Drawing.Point(409, 224);
             this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(50, 29);
@@ -219,7 +221,7 @@
             // lblSuburb
             // 
             this.lblSuburb.AutoSize = true;
-            this.lblSuburb.Location = new System.Drawing.Point(390, 261);
+            this.lblSuburb.Location = new System.Drawing.Point(387, 190);
             this.lblSuburb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSuburb.Name = "lblSuburb";
             this.lblSuburb.Size = new System.Drawing.Size(82, 29);
@@ -229,7 +231,7 @@
             // lblStreetAddress
             // 
             this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Location = new System.Drawing.Point(323, 215);
+            this.lblStreetAddress.Location = new System.Drawing.Point(340, 156);
             this.lblStreetAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStreetAddress.Name = "lblStreetAddress";
             this.lblStreetAddress.Size = new System.Drawing.Size(148, 29);
@@ -239,7 +241,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(358, 168);
+            this.lblFirstName.Location = new System.Drawing.Point(366, 122);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(113, 29);
@@ -249,7 +251,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(359, 122);
+            this.lblLastName.Location = new System.Drawing.Point(367, 88);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(112, 29);
@@ -259,7 +261,7 @@
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(358, 75);
+            this.lblStudentID.Location = new System.Drawing.Point(370, 54);
             this.lblStudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(108, 29);
@@ -270,10 +272,10 @@
             // 
             this.lstStudents.FormattingEnabled = true;
             this.lstStudents.ItemHeight = 29;
-            this.lstStudents.Location = new System.Drawing.Point(45, 71);
-            this.lstStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstStudents.Location = new System.Drawing.Point(39, 47);
+            this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(244, 410);
+            this.lstStudents.Size = new System.Drawing.Size(244, 323);
             this.lstStudents.TabIndex = 22;
             this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
             // 
@@ -322,11 +324,21 @@
             // 
             this.studentTableAdapter1.ClearBeforeFill = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(853, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 44;
+            this.pictureBox1.TabStop = false;
+            // 
             // DeleteStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 914);
+            this.ClientSize = new System.Drawing.Size(941, 478);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnDeleteStudent);
@@ -350,13 +362,14 @@
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.lstStudents);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteStudentForm";
             this.Text = "DeleteStudentForm";
             this.Load += new System.EventHandler(this.DeleteStudentForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +406,6 @@
         private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

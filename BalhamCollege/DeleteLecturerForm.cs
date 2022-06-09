@@ -52,7 +52,7 @@ namespace BalhamCollege
                 {
                     lecturerText = "";
                     lecturerText += drLecturer["LecturerID"] + ", ";
-                    lecturerText += drLecturer["LastName"] + "\r\n";
+                    lecturerText += drLecturer["LastName"] + ", ";
                     lecturerText += drLecturer["FirstName"] + "\r\n";
                     lstLecturers.Items.Add(lecturerText);
                 }
