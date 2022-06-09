@@ -12,9 +12,13 @@ namespace BalhamCollege
 {
     public partial class UpdateProgrammeForm : Form
     {
+        //declare global variables
         private DataController DC;
-        private ProgrammeAdministratorForm frmProgrammeAdministrator;
+        private ProgrammeAdministratorForm frmProgrammeAdministrator; // reference to Enrolment Clerk Form
         private CurrencyManager cmProgramme;
+
+        private DataTable dtProgramme2;
+        private DataView programmeView2;
 
         public UpdateProgrammeForm(DataController dc, ProgrammeAdministratorForm programmeAdministrator)
         {
@@ -23,22 +27,39 @@ namespace BalhamCollege
             frmProgrammeAdministrator = programmeAdministrator;
             programmeAdministrator.Hide();
             BindControls();
+            TableAndView(); // generate updated table and views
+        }
+
+        private void TableAndView()
+        {
+            // create updated instances for Student table and dataview for student table 
+            dtProgramme2 = dsBalhamCollegeAzure.PROGRAMME;
+            programmeView2 = new DataView(dtProgramme2);
+            programmeView2.Sort = "ProgrammeID";
         }
 
         public void BindControls()
         {
             // Set up Currency Manager
-            cmProgramme = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Programme"];
+            cmProgramme = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Programme"];
+        }
 
-            // Bind list of programmes
-            lstProgrammes.DataSource = DC.dsBalhamCollegeAzure;
-            lstProgrammes.DisplayMember = "Programme.ProgrammeID";
-            lstProgrammes.ValueMember = "Programme.ProgrammeID";
+        private void LoadProgrammes()
+        {
+            // To load all students
+            lstProgrammes.Items.Clear();
+            foreach (DataRow drProgramme in dtProgramme2.Rows)
+            {
+                lstProgrammes.Items.Add(drProgramme);
+            }
+        }
 
-            // Bind controls
-            txtProgrammeID.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Programme.ProgrammeID");
-            txtProgrammeName.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Programme.ProgrammeName");
-            nudLevel.DataBindings.Add("Value", DC.dsBalhamCollegeAzure, "Programme.ProgrammeLevel");
+        private void ClearFields()
+        {
+            // Clear all fields
+            txtProgrammeID.Text = string.Empty;
+            txtProgrammeName.Text = string.Empty;
+            nudLevel.Text = string.Empty;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -50,13 +71,14 @@ namespace BalhamCollege
         private void lstProgrammes_Format(object sender, ListControlConvertEventArgs e)
         {
             // Convert database row into listitem text
-            DataRowView programmeRow = (DataRowView)e.ListItem;
-            e.Value = programmeRow.Row["ProgrammeID"] + " " + programmeRow.Row["ProgrammeName"];
+            DataRow programmeRow = (DataRow)e.ListItem;
+            e.Value = programmeRow["ProgrammeID"] + " " + programmeRow["ProgrammeName"];
         }
 
         private void btnUpdateProgramme_Click(object sender, EventArgs e)
         {
-            DataRow updateProgrammeRow = DC.dtProgramme.Rows[cmProgramme.Position];
+            DataRow updateProgrammeRow = dtProgramme2.Rows[cmProgramme.Position];
+
 
             // Validate the entries in the fields
             if ((txtProgrammeName.Text == "") || (nudLevel.Text == ""))
@@ -68,35 +90,53 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the programme's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    updateProgrammeRow["ProgrammeName"] = txtProgrammeName.Text;
-                    updateProgrammeRow["ProgrammeLevel"] = nudLevel.Value;
+                    this.pROGRAMMETableAdapter.Update(txtProgrammeName.Text, Convert.ToInt32(nudLevel.Value),
+                        Convert.ToInt32(updateProgrammeRow["ProgrammeID"]),
+                        updateProgrammeRow["ProgrammeName"].ToString(),
+                        Convert.ToInt32(updateProgrammeRow["ProgrammeLevel"]));
 
-                    cmProgramme.EndCurrentEdit();
-                    DC.UpdateProgramme();
+
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.pROGRAMME' table. You can move, or remove it, as needed.
+                    this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
+
                     MessageBox.Show("Programme updated successfully", "Success");
+                    LoadProgrammes();
+                    ClearFields();
                 }
                 else
                 {
                     // Cancel changes
-                    cmProgramme.CancelCurrentEdit();
+                    LoadProgrammes();
+                    ClearFields();
                 }
             }
-
         }
 
-        private void pROGRAMMEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pROGRAMMEBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
-        }
 
         private void UpdateProgrammeForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
 
+            LoadProgrammes();
+            ClearFields();
+        }
+
+        private void lstProgrammes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRow drProgramme = (DataRow)lstProgrammes.SelectedItem;
+            cmProgramme.Position = programmeView2.Find(drProgramme["ProgrammeID"]);
+
+            // To populate the following controls with their corresponding values; from Programme Table 
+            txtProgrammeID.Text = drProgramme["ProgrammeID"].ToString();
+            txtProgrammeName.Text = drProgramme["ProgrammeName"].ToString();
+            nudLevel.Text = drProgramme["ProgrammeLevel"].ToString();
+        }
+        private void pROGRAMMEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.pROGRAMMEBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
         }
     }
 }

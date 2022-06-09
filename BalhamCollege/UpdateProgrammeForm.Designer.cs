@@ -178,6 +178,7 @@ namespace BalhamCollege
             this.lstProgrammes.Name = "lstProgrammes";
             this.lstProgrammes.Size = new System.Drawing.Size(489, 144);
             this.lstProgrammes.TabIndex = 98;
+            this.lstProgrammes.SelectedIndexChanged += new System.EventHandler(this.lstProgrammes_SelectedIndexChanged);
             this.lstProgrammes.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstProgrammes_Format);
             // 
             // txtProgrammeID
