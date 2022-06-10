@@ -88,16 +88,16 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the research topic's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    this.rESEARCHTOPICTableAdapter.Update(txtTopicDescription.Text, cboImpact.Text,
-                        Convert.ToInt32(updateResearchTopicRow["TopicID"]),
-                        updateResearchTopicRow["TopicDescription"].ToString(),
-                        updateResearchTopicRow["Impact"].ToString());
+                    updateResearchTopicRow["TopicDescription"] = txtTopicDescription.Text;
+                    updateResearchTopicRow["Impact"] = cboImpact.Text;
+
+                    this.rESEARCHTOPICTableAdapter.Update(updateResearchTopicRow);
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHTOPIC' table. You can move, or remove it, as needed.
                     this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
 
-                    MessageBox.Show("Research topic updated successfully", "Success");
                     LoadResearchTopics();
+                    MessageBox.Show("Research topic updated successfully", "Success");
                     ClearFields();
                 }
                 else

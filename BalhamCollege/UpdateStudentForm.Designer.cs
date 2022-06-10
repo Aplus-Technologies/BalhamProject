@@ -65,8 +65,10 @@ namespace BalhamCollege
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lstStudents
@@ -399,11 +401,21 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(790, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
+            // 
             // UpdateStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 509);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl7);
             this.Controls.Add(this.lbl6);
@@ -442,6 +454,7 @@ namespace BalhamCollege
             this.Load += new System.EventHandler(this.UpdateStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,5 +496,6 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource sTUDENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

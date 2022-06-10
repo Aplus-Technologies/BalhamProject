@@ -52,8 +52,8 @@ namespace BalhamCollege
         public void BindControls()
         {
             // Set up Currency Manager
-            cmCourse = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Course"];
-            cmProgramme = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Programme"];
+            cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Course"];
+            cmProgramme = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Programme"];
         }
         private void LoadCourses()
         {
@@ -113,8 +113,8 @@ namespace BalhamCollege
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
                     this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
-                    MessageBox.Show("Course updated successfully", "Success");
                     LoadCourses();
+                    MessageBox.Show("Course updated successfully", "Success");
                     ClearFields();
                 }
                 else

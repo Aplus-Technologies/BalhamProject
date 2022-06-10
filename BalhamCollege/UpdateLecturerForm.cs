@@ -97,24 +97,23 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the lecturer's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    this.lECTURERTableAdapter.Update(txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text,
-                        txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, cboRanking.Text, cboType.Text,
-                        Convert.ToInt32(updateLecturerRow["LecturerID"]),
-                        updateLecturerRow["LastName"].ToString(),
-                        updateLecturerRow["FirstName"].ToString(),
-                        updateLecturerRow["StreetAddress"].ToString(),
-                        updateLecturerRow["Suburb"].ToString(),
-                        updateLecturerRow["City"].ToString(),
-                        updateLecturerRow["EmailAddress"].ToString(),
-                        updateLecturerRow["PhoneNumber"].ToString(),
-                        updateLecturerRow["Ranking"].ToString(),
-                        updateLecturerRow["Type"].ToString());
+                    updateLecturerRow["LastName"] = txtLastName.Text;
+                    updateLecturerRow["FirstName"] = txtFirstName.Text;
+                    updateLecturerRow["StreetAddress"] = txtStreetAddress.Text;
+                    updateLecturerRow["Suburb"] = txtSuburb.Text;
+                    updateLecturerRow["City"] = txtCity.Text;
+                    updateLecturerRow["PhoneNumber"] = txtPhoneNumber.Text;
+                    updateLecturerRow["EmailAddress"] = txtEmailAddress.Text;
+                    updateLecturerRow["Ranking"] = cboRanking.Text;
+                    updateLecturerRow["Type"] = cboType.Text;
+
+                    this.lECTURERTableAdapter.Update(updateLecturerRow);
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
                     this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
-                    MessageBox.Show("Lecturer updated successfully", "Success");
                     LoadLecturers();
+                    MessageBox.Show("Lecturer updated successfully", "Success");
                     ClearFields();
                 }
                 else
