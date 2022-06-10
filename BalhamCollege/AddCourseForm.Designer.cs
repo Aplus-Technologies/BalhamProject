@@ -242,7 +242,7 @@ namespace BalhamCollege
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 213);
+            this.label1.Location = new System.Drawing.Point(28, 213);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 20);
             this.label1.TabIndex = 12;
@@ -250,7 +250,7 @@ namespace BalhamCollege
             // 
             // txtPlaceHolder
             // 
-            this.txtPlaceHolder.Location = new System.Drawing.Point(186, 252);
+            this.txtPlaceHolder.Location = new System.Drawing.Point(167, 249);
             this.txtPlaceHolder.MaxLength = 50;
             this.txtPlaceHolder.Multiline = true;
             this.txtPlaceHolder.Name = "txtPlaceHolder";
@@ -261,7 +261,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeID
             // 
-            this.txtProgrammeID.Location = new System.Drawing.Point(489, 213);
+            this.txtProgrammeID.Location = new System.Drawing.Point(470, 211);
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
             this.txtProgrammeID.Size = new System.Drawing.Size(70, 26);
@@ -271,7 +271,7 @@ namespace BalhamCollege
             // 
             this.lblProgrammeName.AutoSize = true;
             this.lblProgrammeName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProgrammeName.Location = new System.Drawing.Point(56, 255);
+            this.lblProgrammeName.Location = new System.Drawing.Point(41, 257);
             this.lblProgrammeName.Name = "lblProgrammeName";
             this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
             this.lblProgrammeName.TabIndex = 16;
@@ -280,14 +280,14 @@ namespace BalhamCollege
             // cboProgramme
             // 
             this.cboProgramme.FormattingEnabled = true;
-            this.cboProgramme.Location = new System.Drawing.Point(186, 251);
+            this.cboProgramme.Location = new System.Drawing.Point(167, 249);
             this.cboProgramme.Name = "cboProgramme";
             this.cboProgramme.Size = new System.Drawing.Size(373, 28);
             this.cboProgramme.TabIndex = 17;
             // 
             // txtLevel
             // 
-            this.txtLevel.Location = new System.Drawing.Point(186, 285);
+            this.txtLevel.Location = new System.Drawing.Point(167, 283);
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
             this.txtLevel.Size = new System.Drawing.Size(100, 26);
@@ -297,7 +297,7 @@ namespace BalhamCollege
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(134, 291);
+            this.lblLevel.Location = new System.Drawing.Point(115, 291);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(46, 20);
             this.lblLevel.TabIndex = 19;
@@ -305,7 +305,7 @@ namespace BalhamCollege
             // 
             // txtPlaceHolder2
             // 
-            this.txtPlaceHolder2.Location = new System.Drawing.Point(186, 285);
+            this.txtPlaceHolder2.Location = new System.Drawing.Point(167, 283);
             this.txtPlaceHolder2.MaxLength = 50;
             this.txtPlaceHolder2.Multiline = true;
             this.txtPlaceHolder2.Name = "txtPlaceHolder2";
@@ -374,7 +374,7 @@ namespace BalhamCollege
             this.lblAsterix5.AutoSize = true;
             this.lblAsterix5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix5.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix5.Location = new System.Drawing.Point(46, 251);
+            this.lblAsterix5.Location = new System.Drawing.Point(29, 249);
             this.lblAsterix5.Name = "lblAsterix5";
             this.lblAsterix5.Size = new System.Drawing.Size(14, 18);
             this.lblAsterix5.TabIndex = 32;
@@ -385,7 +385,7 @@ namespace BalhamCollege
             this.lblAsterix6.AutoSize = true;
             this.lblAsterix6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix6.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix6.Location = new System.Drawing.Point(125, 285);
+            this.lblAsterix6.Location = new System.Drawing.Point(106, 285);
             this.lblAsterix6.Name = "lblAsterix6";
             this.lblAsterix6.Size = new System.Drawing.Size(14, 18);
             this.lblAsterix6.TabIndex = 33;
