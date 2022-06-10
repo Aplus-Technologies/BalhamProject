@@ -78,6 +78,7 @@ namespace BalhamCollege
             // lstLecturers
             // 
             this.lstLecturers.FormattingEnabled = true;
+            this.lstLecturers.HorizontalScrollbar = true;
             this.lstLecturers.ItemHeight = 20;
             this.lstLecturers.Location = new System.Drawing.Point(46, 62);
             this.lstLecturers.Name = "lstLecturers";

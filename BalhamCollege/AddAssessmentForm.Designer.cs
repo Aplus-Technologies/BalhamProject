@@ -70,6 +70,7 @@ namespace BalhamCollege
             // lstCourses
             // 
             this.lstCourses.FormattingEnabled = true;
+            this.lstCourses.HorizontalScrollbar = true;
             this.lstCourses.ItemHeight = 20;
             this.lstCourses.Location = new System.Drawing.Point(30, 43);
             this.lstCourses.Margin = new System.Windows.Forms.Padding(4);
