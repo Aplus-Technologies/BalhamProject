@@ -64,6 +64,7 @@ namespace BalhamCollege
                 lstCourses.Items.Add(drCourse);
             }
         }
+
         private void ClearFields()
         {
             // Clear all fields
@@ -74,7 +75,6 @@ namespace BalhamCollege
             nudFee.Text = string.Empty;
             txtProgrammeName.Text = string.Empty;
         }
-
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -153,7 +153,6 @@ namespace BalhamCollege
             this.Validate();
             this.cOURSEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void UpdateCourseForm_Load(object sender, EventArgs e)
