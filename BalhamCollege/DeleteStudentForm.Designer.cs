@@ -373,6 +373,7 @@
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteStudentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteStudentForm";
             this.Load += new System.EventHandler(this.DeleteStudentForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure1)).EndInit();
