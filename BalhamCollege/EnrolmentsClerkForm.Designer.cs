@@ -38,6 +38,7 @@ namespace BalhamCollege
             this.btnEnrolStudent = new System.Windows.Forms.Button();
             this.btnWithdrawStudent = new System.Windows.Forms.Button();
             this.pbEnrolmentsClerk = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbEnrolmentsClerk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,10 +48,10 @@ namespace BalhamCollege
             this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteStudent.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(31, 382);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(31, 365);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(242, 59);
+            this.btnDeleteStudent.Size = new System.Drawing.Size(242, 50);
             this.btnDeleteStudent.TabIndex = 0;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
@@ -62,10 +63,10 @@ namespace BalhamCollege
             this.btnUpdateStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStudent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStudent.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateStudent.Location = new System.Drawing.Point(31, 319);
+            this.btnUpdateStudent.Location = new System.Drawing.Point(31, 311);
             this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
-            this.btnUpdateStudent.Size = new System.Drawing.Size(242, 59);
+            this.btnUpdateStudent.Size = new System.Drawing.Size(242, 50);
             this.btnUpdateStudent.TabIndex = 2;
             this.btnUpdateStudent.Text = "Update Student";
             this.btnUpdateStudent.UseVisualStyleBackColor = false;
@@ -80,7 +81,7 @@ namespace BalhamCollege
             this.btnAddStudent.Location = new System.Drawing.Point(31, 257);
             this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(242, 58);
+            this.btnAddStudent.Size = new System.Drawing.Size(242, 50);
             this.btnAddStudent.TabIndex = 4;
             this.btnAddStudent.Text = "Add a Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -92,12 +93,12 @@ namespace BalhamCollege
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(31, 627);
+            this.btnReturn.Location = new System.Drawing.Point(31, 581);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(242, 56);
+            this.btnReturn.Size = new System.Drawing.Size(242, 50);
             this.btnReturn.TabIndex = 10;
-            this.btnReturn.Text = "Return";
+            this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -107,10 +108,10 @@ namespace BalhamCollege
             this.btnStudentsReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentsReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentsReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnStudentsReport.Location = new System.Drawing.Point(31, 561);
+            this.btnStudentsReport.Location = new System.Drawing.Point(31, 527);
             this.btnStudentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnStudentsReport.Name = "btnStudentsReport";
-            this.btnStudentsReport.Size = new System.Drawing.Size(242, 62);
+            this.btnStudentsReport.Size = new System.Drawing.Size(242, 50);
             this.btnStudentsReport.TabIndex = 9;
             this.btnStudentsReport.Text = "Produce Students Report";
             this.btnStudentsReport.UseVisualStyleBackColor = false;
@@ -122,10 +123,10 @@ namespace BalhamCollege
             this.btnEnrolStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnrolStudent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnrolStudent.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEnrolStudent.Location = new System.Drawing.Point(31, 445);
+            this.btnEnrolStudent.Location = new System.Drawing.Point(31, 419);
             this.btnEnrolStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnrolStudent.Name = "btnEnrolStudent";
-            this.btnEnrolStudent.Size = new System.Drawing.Size(242, 49);
+            this.btnEnrolStudent.Size = new System.Drawing.Size(242, 50);
             this.btnEnrolStudent.TabIndex = 8;
             this.btnEnrolStudent.Text = "Enrol Student";
             this.btnEnrolStudent.UseVisualStyleBackColor = false;
@@ -137,10 +138,10 @@ namespace BalhamCollege
             this.btnWithdrawStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWithdrawStudent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWithdrawStudent.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnWithdrawStudent.Location = new System.Drawing.Point(31, 498);
+            this.btnWithdrawStudent.Location = new System.Drawing.Point(31, 473);
             this.btnWithdrawStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnWithdrawStudent.Name = "btnWithdrawStudent";
-            this.btnWithdrawStudent.Size = new System.Drawing.Size(242, 59);
+            this.btnWithdrawStudent.Size = new System.Drawing.Size(242, 50);
             this.btnWithdrawStudent.TabIndex = 7;
             this.btnWithdrawStudent.Text = "Withdraw Student";
             this.btnWithdrawStudent.UseVisualStyleBackColor = false;
@@ -155,12 +156,28 @@ namespace BalhamCollege
             this.pbEnrolmentsClerk.TabIndex = 11;
             this.pbEnrolmentsClerk.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Location = new System.Drawing.Point(31, 635);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(242, 50);
+            this.btnExit.TabIndex = 12;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // EnrolmentsClerkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1095, 706);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnStudentsReport);
             this.Controls.Add(this.btnEnrolStudent);
@@ -190,5 +207,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnEnrolStudent;
         private System.Windows.Forms.Button btnWithdrawStudent;
         private System.Windows.Forms.PictureBox pbEnrolmentsClerk;
+        private System.Windows.Forms.Button btnExit;
     }
 }

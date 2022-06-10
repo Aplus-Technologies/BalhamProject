@@ -126,9 +126,16 @@ namespace BalhamCollege
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        {
+        { // returns user back to login menu 
             this.Close();
             frmLogin.Show();
+        }
+
+        
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            // closes application
         }
     }
 }

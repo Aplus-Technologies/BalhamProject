@@ -52,7 +52,7 @@ namespace BalhamCollege
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
-        {
+        { // show Delete Student form 
             if (frmDeleteStudent == null)
             {
                 frmDeleteStudent = new DeleteStudentForm(DC, this);
@@ -85,7 +85,7 @@ namespace BalhamCollege
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        {
+        { // returns user to login menu 
             this.Close();
             frmLogin.Show();
         }
@@ -93,6 +93,14 @@ namespace BalhamCollege
         private void EnrolmentsClerkForm_Load(object sender, EventArgs e)
         {
             DC = new DataController(); // create the data controller and load the dataset
+        }
+
+       
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            // exit application 
         }
     }
 }

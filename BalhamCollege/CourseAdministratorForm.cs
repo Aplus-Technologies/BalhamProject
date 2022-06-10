@@ -62,7 +62,7 @@ namespace BalhamCollege
         }
 
         private void btnEnterResult_Click(object sender, EventArgs e)
-        {
+        {// show enter result form 
             if (frmEnterResult == null)
             {
                 frmEnterResult = new EnterResultForm(DC, this);
@@ -71,9 +71,15 @@ namespace BalhamCollege
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        {
+        { // return to login menu 
             this.Close();
             frmLogin.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            // exit application 
         }
     }
 }
