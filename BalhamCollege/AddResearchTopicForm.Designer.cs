@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddResearchTopicForm));
             this.lblResTopicDesc = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtResearchTopicDesc = new System.Windows.Forms.TextBox();
@@ -43,36 +44,38 @@ namespace BalhamCollege
             this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblResTopicDesc
             // 
             this.lblResTopicDesc.AutoSize = true;
-            this.lblResTopicDesc.Location = new System.Drawing.Point(79, 75);
+            this.lblResTopicDesc.Location = new System.Drawing.Point(46, 88);
             this.lblResTopicDesc.Name = "lblResTopicDesc";
-            this.lblResTopicDesc.Size = new System.Drawing.Size(256, 23);
+            this.lblResTopicDesc.Size = new System.Drawing.Size(178, 20);
             this.lblResTopicDesc.TabIndex = 0;
             this.lblResTopicDesc.Text = "Research Topic Description:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(259, 179);
+            this.label1.Location = new System.Drawing.Point(178, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Impact:";
             // 
             // txtResearchTopicDesc
             // 
-            this.txtResearchTopicDesc.Location = new System.Drawing.Point(331, 75);
+            this.txtResearchTopicDesc.Location = new System.Drawing.Point(230, 88);
             this.txtResearchTopicDesc.MaxLength = 100;
             this.txtResearchTopicDesc.Multiline = true;
             this.txtResearchTopicDesc.Name = "txtResearchTopicDesc";
             this.txtResearchTopicDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtResearchTopicDesc.Size = new System.Drawing.Size(542, 82);
+            this.txtResearchTopicDesc.Size = new System.Drawing.Size(364, 91);
             this.txtResearchTopicDesc.TabIndex = 2;
             // 
             // cboImpact
@@ -82,61 +85,65 @@ namespace BalhamCollege
             "High",
             "Medium",
             "Low"});
-            this.cboImpact.Location = new System.Drawing.Point(331, 176);
+            this.cboImpact.Location = new System.Drawing.Point(230, 208);
             this.cboImpact.Name = "cboImpact";
-            this.cboImpact.Size = new System.Drawing.Size(152, 31);
+            this.cboImpact.Size = new System.Drawing.Size(136, 28);
             this.cboImpact.TabIndex = 3;
             // 
             // btnAddResearchTopic
             // 
-            this.btnAddResearchTopic.Location = new System.Drawing.Point(73, 282);
+            this.btnAddResearchTopic.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnAddResearchTopic.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAddResearchTopic.Location = new System.Drawing.Point(69, 327);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
-            this.btnAddResearchTopic.Size = new System.Drawing.Size(213, 48);
+            this.btnAddResearchTopic.Size = new System.Drawing.Size(189, 36);
             this.btnAddResearchTopic.TabIndex = 4;
             this.btnAddResearchTopic.Text = "Add Research Topic";
-            this.btnAddResearchTopic.UseVisualStyleBackColor = true;
+            this.btnAddResearchTopic.UseVisualStyleBackColor = false;
             this.btnAddResearchTopic.Click += new System.EventHandler(this.btnAddResearchTopic_Click);
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(660, 282);
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReturn.Location = new System.Drawing.Point(426, 327);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(213, 48);
+            this.btnReturn.Size = new System.Drawing.Size(189, 36);
             this.btnReturn.TabIndex = 5;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lblRequiredFields
             // 
             this.lblRequiredFields.AutoSize = true;
-            this.lblRequiredFields.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequiredFields.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiredFields.ForeColor = System.Drawing.Color.Red;
-            this.lblRequiredFields.Location = new System.Drawing.Point(716, 220);
+            this.lblRequiredFields.Location = new System.Drawing.Point(505, 282);
             this.lblRequiredFields.Name = "lblRequiredFields";
-            this.lblRequiredFields.Size = new System.Drawing.Size(157, 24);
+            this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
             this.lblRequiredFields.TabIndex = 28;
             this.lblRequiredFields.Text = "*Required Fields";
             // 
             // lblAsterix1
             // 
             this.lblAsterix1.AutoSize = true;
-            this.lblAsterix1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix1.Location = new System.Drawing.Point(69, 61);
+            this.lblAsterix1.Location = new System.Drawing.Point(35, 77);
             this.lblAsterix1.Name = "lblAsterix1";
-            this.lblAsterix1.Size = new System.Drawing.Size(21, 24);
+            this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix1.TabIndex = 29;
             this.lblAsterix1.Text = "*";
             // 
             // lblAsterix2
             // 
             this.lblAsterix2.AutoSize = true;
-            this.lblAsterix2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsterix2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix2.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix2.Location = new System.Drawing.Point(247, 165);
+            this.lblAsterix2.Location = new System.Drawing.Point(168, 208);
             this.lblAsterix2.Name = "lblAsterix2";
-            this.lblAsterix2.Size = new System.Drawing.Size(21, 24);
+            this.lblAsterix2.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix2.TabIndex = 30;
             this.lblAsterix2.Text = "*";
             // 
@@ -171,11 +178,22 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(632, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 89);
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddResearchTopicForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 412);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(703, 392);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAsterix2);
             this.Controls.Add(this.lblAsterix1);
@@ -185,13 +203,16 @@ namespace BalhamCollege
             this.Controls.Add(this.cboImpact);
             this.Controls.Add(this.txtResearchTopicDesc);
             this.Controls.Add(this.lblResTopicDesc);
-            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddResearchTopicForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddResearchTopicForm";
             this.Load += new System.EventHandler(this.AddResearchTopicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +233,6 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource rESEARCHTOPICBindingSource;
         private dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter rESEARCHTOPICTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
