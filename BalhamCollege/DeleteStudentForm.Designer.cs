@@ -99,17 +99,19 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(499, 321);
+            this.txtStatus.Location = new System.Drawing.Point(540, 321);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(92, 26);
+            this.txtStatus.Size = new System.Drawing.Size(87, 26);
             this.txtStatus.TabIndex = 40;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(499, 288);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(540, 288);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumber.MaxLength = 16;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.ReadOnly = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(121, 26);
@@ -117,71 +119,78 @@
             // 
             // txtEmailAddress
             // 
-            this.txtEmailAddress.Location = new System.Drawing.Point(499, 255);
+            this.txtEmailAddress.Location = new System.Drawing.Point(540, 255);
             this.txtEmailAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmailAddress.MaxLength = 50;
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.ReadOnly = true;
-            this.txtEmailAddress.Size = new System.Drawing.Size(471, 26);
+            this.txtEmailAddress.Size = new System.Drawing.Size(371, 26);
             this.txtEmailAddress.TabIndex = 38;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(499, 222);
+            this.txtCity.Location = new System.Drawing.Point(540, 222);
             this.txtCity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCity.MaxLength = 30;
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(269, 26);
+            this.txtCity.Size = new System.Drawing.Size(214, 26);
             this.txtCity.TabIndex = 37;
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(499, 187);
+            this.txtSuburb.Location = new System.Drawing.Point(540, 187);
             this.txtSuburb.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSuburb.MaxLength = 30;
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
-            this.txtSuburb.Size = new System.Drawing.Size(269, 26);
+            this.txtSuburb.Size = new System.Drawing.Size(214, 26);
             this.txtSuburb.TabIndex = 36;
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(499, 153);
+            this.txtStreetAddress.Location = new System.Drawing.Point(540, 153);
             this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStreetAddress.MaxLength = 50;
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
-            this.txtStreetAddress.Size = new System.Drawing.Size(471, 26);
+            this.txtStreetAddress.Size = new System.Drawing.Size(371, 26);
             this.txtStreetAddress.TabIndex = 35;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(499, 120);
+            this.txtFirstName.Location = new System.Drawing.Point(540, 120);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(269, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(214, 26);
             this.txtFirstName.TabIndex = 34;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(499, 85);
+            this.txtLastName.Location = new System.Drawing.Point(540, 85);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(269, 26);
+            this.txtLastName.Size = new System.Drawing.Size(214, 26);
             this.txtLastName.TabIndex = 33;
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(499, 52);
+            this.txtStudentID.Location = new System.Drawing.Point(540, 52);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(50, 26);
+            this.txtStudentID.Size = new System.Drawing.Size(64, 26);
             this.txtStudentID.TabIndex = 32;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(454, 324);
+            this.lblStatus.Location = new System.Drawing.Point(495, 324);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(49, 20);
@@ -191,7 +200,7 @@
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(400, 291);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(441, 291);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(103, 20);
@@ -201,7 +210,7 @@
             // lblEmailAddress
             // 
             this.lblEmailAddress.AutoSize = true;
-            this.lblEmailAddress.Location = new System.Drawing.Point(402, 258);
+            this.lblEmailAddress.Location = new System.Drawing.Point(443, 258);
             this.lblEmailAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailAddress.Name = "lblEmailAddress";
             this.lblEmailAddress.Size = new System.Drawing.Size(101, 20);
@@ -211,7 +220,7 @@
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(468, 225);
+            this.lblCity.Location = new System.Drawing.Point(509, 225);
             this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(35, 20);
@@ -221,7 +230,7 @@
             // lblSuburb
             // 
             this.lblSuburb.AutoSize = true;
-            this.lblSuburb.Location = new System.Drawing.Point(446, 190);
+            this.lblSuburb.Location = new System.Drawing.Point(487, 190);
             this.lblSuburb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSuburb.Name = "lblSuburb";
             this.lblSuburb.Size = new System.Drawing.Size(56, 20);
@@ -231,7 +240,7 @@
             // lblStreetAddress
             // 
             this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Location = new System.Drawing.Point(399, 156);
+            this.lblStreetAddress.Location = new System.Drawing.Point(440, 156);
             this.lblStreetAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStreetAddress.Name = "lblStreetAddress";
             this.lblStreetAddress.Size = new System.Drawing.Size(103, 20);
@@ -241,7 +250,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(425, 123);
+            this.lblFirstName.Location = new System.Drawing.Point(466, 123);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(77, 20);
@@ -251,7 +260,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(426, 88);
+            this.lblLastName.Location = new System.Drawing.Point(467, 88);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 20);
@@ -261,7 +270,7 @@
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(429, 54);
+            this.lblStudentID.Location = new System.Drawing.Point(470, 54);
             this.lblStudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(74, 20);
@@ -275,7 +284,7 @@
             this.lstStudents.Location = new System.Drawing.Point(29, 47);
             this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(365, 304);
+            this.lstStudents.Size = new System.Drawing.Size(408, 304);
             this.lstStudents.TabIndex = 1;
             this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
             // 

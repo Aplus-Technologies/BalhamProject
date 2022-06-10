@@ -57,6 +57,7 @@ namespace BalhamCollege
             // 
             this.txtProgrammeName.Location = new System.Drawing.Point(143, 328);
             this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
             this.txtProgrammeName.Size = new System.Drawing.Size(361, 26);
@@ -98,18 +99,20 @@ namespace BalhamCollege
             // 
             this.txtLevel.Location = new System.Drawing.Point(143, 361);
             this.txtLevel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLevel.MaxLength = 2;
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
-            this.txtLevel.Size = new System.Drawing.Size(81, 26);
+            this.txtLevel.Size = new System.Drawing.Size(29, 26);
             this.txtLevel.TabIndex = 148;
             // 
             // txtProgrammeID
             // 
             this.txtProgrammeID.Location = new System.Drawing.Point(143, 295);
             this.txtProgrammeID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtProgrammeID.MaxLength = 2;
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
-            this.txtProgrammeID.Size = new System.Drawing.Size(81, 26);
+            this.txtProgrammeID.Size = new System.Drawing.Size(29, 26);
             this.txtProgrammeID.TabIndex = 147;
             // 
             // lblLevel
