@@ -90,17 +90,16 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the programme's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    this.pROGRAMMETableAdapter.Update(txtProgrammeName.Text, Convert.ToInt32(nudLevel.Value),
-                        Convert.ToInt32(updateProgrammeRow["ProgrammeID"]),
-                        updateProgrammeRow["ProgrammeName"].ToString(),
-                        Convert.ToInt32(updateProgrammeRow["ProgrammeLevel"]));
+                    updateProgrammeRow["ProgrammeName"] = txtProgrammeName.Text;
+                    updateProgrammeRow["ProgrammeLevel"] = nudLevel.Value;
+                    
+                    this.pROGRAMMETableAdapter.Update(updateProgrammeRow);
 
-
-                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.pROGRAMME' table. You can move, or remove it, as needed.
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
                     this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
 
-                    MessageBox.Show("Programme updated successfully", "Success");
                     LoadProgrammes();
+                    MessageBox.Show("Programme updated successfully", "Success");
                     ClearFields();
                 }
                 else

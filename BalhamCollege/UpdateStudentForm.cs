@@ -96,23 +96,22 @@ namespace BalhamCollege
                 if (MessageBox.Show("Are you sure you want to change the student's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
-                    this.sTUDENTTableAdapter.Update(txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text,
-                        txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, cboStatus.Text,
-                        Convert.ToInt32(updateStudentRow["StudentID"]),
-                        updateStudentRow["LastName"].ToString(),
-                        updateStudentRow["FirstName"].ToString(),
-                        updateStudentRow["StreetAddress"].ToString(),
-                        updateStudentRow["Suburb"].ToString(),
-                        updateStudentRow["City"].ToString(),
-                        updateStudentRow["EmailAddress"].ToString(),
-                        updateStudentRow["PhoneNumber"].ToString(),
-                        updateStudentRow["Status"].ToString());
+                    updateStudentRow["LastName"] = txtLastName.Text;
+                    updateStudentRow["FirstName"] = txtFirstName.Text;
+                    updateStudentRow["StreetAddress"] = txtStreetAddress.Text;
+                    updateStudentRow["Suburb"] = txtSuburb.Text;
+                    updateStudentRow["City"] = txtCity.Text;
+                    updateStudentRow["EmailAddress"] = txtEmailAddress.Text;
+                    updateStudentRow["PhoneNumber"] = txtPhoneNumber.Text;
+                    updateStudentRow["Status"] = cboStatus.Text;
+
+                    this.sTUDENTTableAdapter.Update(updateStudentRow);
 
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
                     this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
-                    MessageBox.Show("Student updated successfully", "Success");
                     LoadStudents();
+                    MessageBox.Show("Student updated successfully", "Success");
                     ClearFields();
                 }
                 else

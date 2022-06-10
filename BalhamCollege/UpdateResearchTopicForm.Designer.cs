@@ -47,16 +47,18 @@ namespace BalhamCollege
             this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTopicID
             // 
-            this.txtTopicID.Enabled = false;
             this.txtTopicID.Location = new System.Drawing.Point(157, 238);
             this.txtTopicID.MaxLength = 2;
             this.txtTopicID.Name = "txtTopicID";
+            this.txtTopicID.ReadOnly = true;
             this.txtTopicID.Size = new System.Drawing.Size(19, 26);
             this.txtTopicID.TabIndex = 112;
             // 
@@ -89,7 +91,7 @@ namespace BalhamCollege
             this.txtTopicDescription.Multiline = true;
             this.txtTopicDescription.Name = "txtTopicDescription";
             this.txtTopicDescription.Size = new System.Drawing.Size(362, 57);
-            this.txtTopicDescription.TabIndex = 108;
+            this.txtTopicDescription.TabIndex = 113;
             // 
             // lblImpact
             // 
@@ -126,7 +128,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(372, 417);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(147, 35);
-            this.btnReturn.TabIndex = 104;
+            this.btnReturn.TabIndex = 116;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -136,7 +138,7 @@ namespace BalhamCollege
             this.btnUpdateTopic.Location = new System.Drawing.Point(157, 417);
             this.btnUpdateTopic.Name = "btnUpdateTopic";
             this.btnUpdateTopic.Size = new System.Drawing.Size(147, 35);
-            this.btnUpdateTopic.TabIndex = 103;
+            this.btnUpdateTopic.TabIndex = 115;
             this.btnUpdateTopic.Text = "Update Topic";
             this.btnUpdateTopic.UseVisualStyleBackColor = true;
             this.btnUpdateTopic.Click += new System.EventHandler(this.btnUpdateTopic_Click);
@@ -179,7 +181,7 @@ namespace BalhamCollege
             this.cboImpact.MaxLength = 6;
             this.cboImpact.Name = "cboImpact";
             this.cboImpact.Size = new System.Drawing.Size(71, 28);
-            this.cboImpact.TabIndex = 113;
+            this.cboImpact.TabIndex = 114;
             // 
             // dsBalhamCollegeAzure
             // 
@@ -212,6 +214,15 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(473, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 114;
+            this.pictureBox1.TabStop = false;
+            // 
             // UpdateResearchTopicForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -230,6 +241,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblTopicDescription);
             this.Controls.Add(this.lblTopicID);
             this.Controls.Add(this.lblSelectResearchTopic);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateResearchTopicForm";
@@ -237,6 +249,7 @@ namespace BalhamCollege
             this.Load += new System.EventHandler(this.UpdateResearchTopicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +274,6 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource rESEARCHTOPICBindingSource;
         private dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter rESEARCHTOPICTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

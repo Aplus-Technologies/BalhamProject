@@ -60,17 +60,19 @@ namespace BalhamCollege
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
             this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Enabled = false;
             this.txtCourseName.Location = new System.Drawing.Point(483, 87);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
+            this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(362, 26);
             this.txtCourseName.TabIndex = 40;
             // 
@@ -94,10 +96,10 @@ namespace BalhamCollege
             // 
             // txtCourseID
             // 
-            this.txtCourseID.Enabled = false;
             this.txtCourseID.Location = new System.Drawing.Point(483, 45);
             this.txtCourseID.MaxLength = 4;
             this.txtCourseID.Name = "txtCourseID";
+            this.txtCourseID.ReadOnly = true;
             this.txtCourseID.Size = new System.Drawing.Size(31, 26);
             this.txtCourseID.TabIndex = 34;
             // 
@@ -134,10 +136,10 @@ namespace BalhamCollege
             // 
             // txtCredits
             // 
-            this.txtCredits.Enabled = false;
             this.txtCredits.Location = new System.Drawing.Point(483, 129);
             this.txtCredits.MaxLength = 3;
             this.txtCredits.Name = "txtCredits";
+            this.txtCredits.ReadOnly = true;
             this.txtCredits.Size = new System.Drawing.Size(28, 26);
             this.txtCredits.TabIndex = 41;
             // 
@@ -205,28 +207,28 @@ namespace BalhamCollege
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Enabled = false;
             this.txtFirstName.Location = new System.Drawing.Point(483, 299);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(218, 26);
             this.txtFirstName.TabIndex = 55;
             // 
             // txtLastName
             // 
-            this.txtLastName.Enabled = false;
             this.txtLastName.Location = new System.Drawing.Point(483, 257);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(218, 26);
             this.txtLastName.TabIndex = 54;
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Enabled = false;
             this.txtLecturerID.Location = new System.Drawing.Point(483, 215);
             this.txtLecturerID.MaxLength = 4;
             this.txtLecturerID.Name = "txtLecturerID";
+            this.txtLecturerID.ReadOnly = true;
             this.txtLecturerID.Size = new System.Drawing.Size(31, 26);
             this.txtLecturerID.TabIndex = 53;
             // 
@@ -290,12 +292,12 @@ namespace BalhamCollege
             // 
             // txtRanking
             // 
-            this.txtRanking.Enabled = false;
             this.txtRanking.Location = new System.Drawing.Point(483, 341);
             this.txtRanking.MaxLength = 1;
             this.txtRanking.Name = "txtRanking";
+            this.txtRanking.ReadOnly = true;
             this.txtRanking.Size = new System.Drawing.Size(16, 26);
-            this.txtRanking.TabIndex = 76;
+            this.txtRanking.TabIndex = 56;
             // 
             // dsBalhamCollegeAzure
             // 
@@ -337,11 +339,21 @@ namespace BalhamCollege
             this.lECTURERBindingSource.DataMember = "LECTURER";
             this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(790, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 76;
+            this.pictureBox1.TabStop = false;
+            // 
             // AssignLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 512);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtRanking);
             this.Controls.Add(this.cboRole);
             this.Controls.Add(this.lbl9);
@@ -374,6 +386,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -410,5 +423,6 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
         private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
         private System.Windows.Forms.BindingSource lECTURERBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
