@@ -62,7 +62,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close(); // prevents 'cannot accessed disposed object error' upon producing report 
             frmResearchAdministrator.Show();
         }
 
