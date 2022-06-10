@@ -57,6 +57,7 @@ namespace BalhamCollege
             // 
             this.txtTopicDescription.Location = new System.Drawing.Point(146, 321);
             this.txtTopicDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTopicDescription.MaxLength = 100;
             this.txtTopicDescription.Multiline = true;
             this.txtTopicDescription.Name = "txtTopicDescription";
             this.txtTopicDescription.ReadOnly = true;
@@ -99,19 +100,21 @@ namespace BalhamCollege
             // 
             this.txtImpact.Location = new System.Drawing.Point(146, 374);
             this.txtImpact.Margin = new System.Windows.Forms.Padding(4);
+            this.txtImpact.MaxLength = 6;
             this.txtImpact.Name = "txtImpact";
             this.txtImpact.ReadOnly = true;
-            this.txtImpact.Size = new System.Drawing.Size(118, 26);
+            this.txtImpact.Size = new System.Drawing.Size(73, 26);
             this.txtImpact.TabIndex = 158;
             // 
             // txtResearchTopicID
             // 
             this.txtResearchTopicID.Location = new System.Drawing.Point(146, 288);
             this.txtResearchTopicID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtResearchTopicID.MaxLength = 2;
             this.txtResearchTopicID.Name = "txtResearchTopicID";
             this.txtResearchTopicID.ReadOnly = true;
-            this.txtResearchTopicID.Size = new System.Drawing.Size(77, 26);
-            this.txtResearchTopicID.TabIndex = 157;
+            this.txtResearchTopicID.Size = new System.Drawing.Size(26, 26);
+            this.txtResearchTopicID.TabIndex = 100;
             // 
             // lblImpact
             // 

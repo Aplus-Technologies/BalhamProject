@@ -204,7 +204,7 @@ namespace BalhamCollege
 
                     cmLecturer.Position = lecturerView2.Find(aLecturerID);
                     DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
-                    lecturerText = "Lecturer ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
+                    lecturerText = "ID: " + drAssignment["LecturerID"] + ", " + drLecturer["LastName"] + ", " + drLecturer["FirstName"];
 
                     lstLecturers.Items.Add(lecturerText);
                 }
@@ -220,7 +220,7 @@ namespace BalhamCollege
                 lecturer = lstLecturers.SelectedItem.ToString();
                 string[] parts = lecturer.Split(',');
                 string[] IDstring = parts[0].Split(' ');
-                int aLecturerID = Convert.ToInt32(IDstring[2]);
+                int aLecturerID = Convert.ToInt32(IDstring[1]);
                 cmLecturer.Position = lecturerView2.Find(aLecturerID);
                 DataRow drLecturer = dtLecturer2.Rows[cmLecturer.Position];
                 txtLecturerID.Text = drLecturer["LecturerID"].ToString();

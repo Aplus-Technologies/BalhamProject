@@ -63,6 +63,7 @@ namespace BalhamCollege
             // txtAssessmentName
             // 
             this.txtAssessmentName.Location = new System.Drawing.Point(163, 272);
+            this.txtAssessmentName.MaxLength = 50;
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
             this.txtAssessmentName.Size = new System.Drawing.Size(361, 26);
@@ -100,6 +101,7 @@ namespace BalhamCollege
             // txtType
             // 
             this.txtType.Location = new System.Drawing.Point(163, 303);
+            this.txtType.MaxLength = 14;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
             this.txtType.Size = new System.Drawing.Size(106, 26);
@@ -108,6 +110,7 @@ namespace BalhamCollege
             // txtAssessmentNumber
             // 
             this.txtAssessmentNumber.Location = new System.Drawing.Point(163, 242);
+            this.txtAssessmentNumber.MaxLength = 1;
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
             this.txtAssessmentNumber.Size = new System.Drawing.Size(19, 26);
@@ -116,6 +119,7 @@ namespace BalhamCollege
             // txtCourseName
             // 
             this.txtCourseName.Location = new System.Drawing.Point(163, 334);
+            this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(361, 26);
@@ -124,6 +128,7 @@ namespace BalhamCollege
             // txtAssessmentID
             // 
             this.txtAssessmentID.Location = new System.Drawing.Point(163, 212);
+            this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
             this.txtAssessmentID.Size = new System.Drawing.Size(33, 26);

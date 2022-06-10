@@ -93,22 +93,25 @@ namespace BalhamCollege
             // txtStatus
             // 
             this.txtStatus.Location = new System.Drawing.Point(111, 298);
+            this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(60, 26);
+            this.txtStatus.Size = new System.Drawing.Size(80, 26);
             this.txtStatus.TabIndex = 67;
             // 
             // txtCredits
             // 
             this.txtCredits.Location = new System.Drawing.Point(111, 267);
+            this.txtCredits.MaxLength = 3;
             this.txtCredits.Name = "txtCredits";
             this.txtCredits.ReadOnly = true;
-            this.txtCredits.Size = new System.Drawing.Size(38, 26);
+            this.txtCredits.Size = new System.Drawing.Size(27, 26);
             this.txtCredits.TabIndex = 66;
             // 
             // txtCourseName
             // 
             this.txtCourseName.Location = new System.Drawing.Point(111, 236);
+            this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(361, 26);
@@ -117,6 +120,7 @@ namespace BalhamCollege
             // txtCourseID
             // 
             this.txtCourseID.Location = new System.Drawing.Point(111, 206);
+            this.txtCourseID.MaxLength = 4;
             this.txtCourseID.Name = "txtCourseID";
             this.txtCourseID.ReadOnly = true;
             this.txtCourseID.Size = new System.Drawing.Size(38, 26);
