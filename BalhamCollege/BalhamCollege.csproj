@@ -96,6 +96,18 @@
     <Compile Include="AssignLecturerForm.Designer.cs">
       <DependentUpon>AssignLecturerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CourseBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseBackgroundForm.Designer.cs">
+      <DependentUpon>CourseBackgroundForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnrolBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnrolBackgroundForm.Designer.cs">
+      <DependentUpon>EnrolBackgroundForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeleteAssessmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +179,12 @@
     <Compile Include="EnterResultForm.Designer.cs">
       <DependentUpon>EnterResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HumanBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HumanBackgroundForm.Designer.cs">
+      <DependentUpon>HumanBackgroundForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HumanResourcesClerkForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +204,12 @@
     <Compile Include="ProgrammeAdministratorForm.Designer.cs">
       <DependentUpon>ProgrammeAdministratorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgrammeBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgrammeBackgroundForm.Designer.cs">
+      <DependentUpon>ProgrammeBackgroundForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordIssueForm.cs">
       <SubType>Form</SubType>
@@ -204,6 +228,12 @@
     </Compile>
     <Compile Include="RemoveResearchProjectForm.Designer.cs">
       <DependentUpon>RemoveResearchProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResearchBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResearchBackgroundForm.Designer.cs">
+      <DependentUpon>ResearchBackgroundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="WithdrawStudentForm.cs">
       <SubType>Form</SubType>
@@ -271,6 +301,12 @@
     <EmbeddedResource Include="AssignLecturerForm.resx">
       <DependentUpon>AssignLecturerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CourseBackgroundForm.resx">
+      <DependentUpon>CourseBackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnrolBackgroundForm.resx">
+      <DependentUpon>EnrolBackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeleteAssessmentForm.resx">
       <DependentUpon>DeleteAssessmentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +352,9 @@
     <EmbeddedResource Include="EnterResultForm.resx">
       <DependentUpon>EnterResultForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HumanBackgroundForm.resx">
+      <DependentUpon>HumanBackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HumanResourcesClerkForm.resx">
       <DependentUpon>HumanResourcesClerkForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -324,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProgrammeAdministratorForm.resx">
       <DependentUpon>ProgrammeAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammeBackgroundForm.resx">
+      <DependentUpon>ProgrammeBackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -346,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResearchAdministratorForm.resx">
       <DependentUpon>ResearchAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResearchBackgroundForm.resx">
+      <DependentUpon>ResearchBackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsSupportClerkForm.resx">
       <DependentUpon>StudentsSupportClerkForm.cs</DependentUpon>

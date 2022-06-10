@@ -20,6 +20,7 @@ namespace BalhamCollege
         private AddResearchProject frmAddResearchProject; // reference to add research project form
         private RemoveResearchProjectForm frmRemoveResearchProject; // reference to remove research project form                                                  
         private AddResearchTopicForm frmAddResearchTopic; // reference to add research topic form
+        private ResearchBackgroundForm frmResearch; //reference to research background form
         
         public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
@@ -42,7 +43,9 @@ namespace BalhamCollege
 
         private void btnRemoveResearchProject_Click(object sender, EventArgs e)
         {
-            //show Remove Research Project form upon click
+            //show Remove Research Project form and background form upon click
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
             if (frmRemoveResearchProject == null)
             {
                 frmRemoveResearchProject = new RemoveResearchProjectForm(DC, this);
@@ -61,7 +64,9 @@ namespace BalhamCollege
         }
 
         private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
-        { //show Delete Research Topic form upon click
+        { //show Delete Research Topic form and background form upon click
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
             if (frmDeleteResearchTopic == null)
             {
                 frmDeleteResearchTopic = new DeleteResearchTopicForm(DC, this);

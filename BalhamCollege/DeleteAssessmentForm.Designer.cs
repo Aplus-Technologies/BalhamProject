@@ -62,7 +62,7 @@ namespace BalhamCollege
             // 
             // txtAssessmentName
             // 
-            this.txtAssessmentName.Location = new System.Drawing.Point(163, 272);
+            this.txtAssessmentName.Location = new System.Drawing.Point(149, 272);
             this.txtAssessmentName.MaxLength = 50;
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
@@ -72,7 +72,7 @@ namespace BalhamCollege
             // lblAssessmentName
             // 
             this.lblAssessmentName.AutoSize = true;
-            this.lblAssessmentName.Location = new System.Drawing.Point(40, 275);
+            this.lblAssessmentName.Location = new System.Drawing.Point(26, 275);
             this.lblAssessmentName.Name = "lblAssessmentName";
             this.lblAssessmentName.Size = new System.Drawing.Size(126, 20);
             this.lblAssessmentName.TabIndex = 141;
@@ -80,27 +80,29 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(403, 394);
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(199)))), ((int)(((byte)(238)))));
+            this.btnReturn.Location = new System.Drawing.Point(376, 394);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(134, 39);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnDeleteAssessment
             // 
-            this.btnDeleteAssessment.Location = new System.Drawing.Point(23, 394);
+            this.btnDeleteAssessment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(199)))), ((int)(((byte)(238)))));
+            this.btnDeleteAssessment.Location = new System.Drawing.Point(9, 394);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
             this.btnDeleteAssessment.Size = new System.Drawing.Size(159, 39);
             this.btnDeleteAssessment.TabIndex = 2;
             this.btnDeleteAssessment.Text = "Delete Assessment";
-            this.btnDeleteAssessment.UseVisualStyleBackColor = true;
+            this.btnDeleteAssessment.UseVisualStyleBackColor = false;
             this.btnDeleteAssessment.Click += new System.EventHandler(this.btnDeleteAssessment_Click);
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(163, 303);
+            this.txtType.Location = new System.Drawing.Point(149, 303);
             this.txtType.MaxLength = 14;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
@@ -109,7 +111,7 @@ namespace BalhamCollege
             // 
             // txtAssessmentNumber
             // 
-            this.txtAssessmentNumber.Location = new System.Drawing.Point(163, 242);
+            this.txtAssessmentNumber.Location = new System.Drawing.Point(149, 242);
             this.txtAssessmentNumber.MaxLength = 1;
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
@@ -118,7 +120,7 @@ namespace BalhamCollege
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(163, 334);
+            this.txtCourseName.Location = new System.Drawing.Point(149, 334);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
@@ -127,7 +129,7 @@ namespace BalhamCollege
             // 
             // txtAssessmentID
             // 
-            this.txtAssessmentID.Location = new System.Drawing.Point(163, 212);
+            this.txtAssessmentID.Location = new System.Drawing.Point(149, 212);
             this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
@@ -137,7 +139,7 @@ namespace BalhamCollege
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(123, 306);
+            this.lblType.Location = new System.Drawing.Point(109, 306);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(43, 20);
             this.lblType.TabIndex = 134;
@@ -146,7 +148,7 @@ namespace BalhamCollege
             // lblAssessmentNumber
             // 
             this.lblAssessmentNumber.AutoSize = true;
-            this.lblAssessmentNumber.Location = new System.Drawing.Point(28, 245);
+            this.lblAssessmentNumber.Location = new System.Drawing.Point(14, 245);
             this.lblAssessmentNumber.Name = "lblAssessmentNumber";
             this.lblAssessmentNumber.Size = new System.Drawing.Size(138, 20);
             this.lblAssessmentNumber.TabIndex = 133;
@@ -155,7 +157,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(71, 337);
+            this.lblCourseName.Location = new System.Drawing.Point(57, 337);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 132;
@@ -164,7 +166,7 @@ namespace BalhamCollege
             // lblAssessmentID
             // 
             this.lblAssessmentID.AutoSize = true;
-            this.lblAssessmentID.Location = new System.Drawing.Point(64, 215);
+            this.lblAssessmentID.Location = new System.Drawing.Point(50, 215);
             this.lblAssessmentID.Name = "lblAssessmentID";
             this.lblAssessmentID.Size = new System.Drawing.Size(103, 20);
             this.lblAssessmentID.TabIndex = 131;
@@ -173,7 +175,7 @@ namespace BalhamCollege
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 28);
+            this.label1.Location = new System.Drawing.Point(20, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 130;
@@ -183,10 +185,10 @@ namespace BalhamCollege
             // 
             this.lstAssessments.FormattingEnabled = true;
             this.lstAssessments.ItemHeight = 20;
-            this.lstAssessments.Location = new System.Drawing.Point(23, 56);
+            this.lstAssessments.Location = new System.Drawing.Point(18, 56);
             this.lstAssessments.Name = "lstAssessments";
             this.lstAssessments.ScrollAlwaysVisible = true;
-            this.lstAssessments.Size = new System.Drawing.Size(514, 144);
+            this.lstAssessments.Size = new System.Drawing.Size(492, 144);
             this.lstAssessments.TabIndex = 1;
             this.lstAssessments.SelectedIndexChanged += new System.EventHandler(this.lstAssessments_SelectedIndexChanged);
             // 
@@ -242,7 +244,7 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(474, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(446, -3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.TabIndex = 143;
@@ -254,7 +256,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(561, 449);
+            this.ClientSize = new System.Drawing.Size(527, 449);
             this.Controls.Add(this.txtAssessmentName);
             this.Controls.Add(this.lblAssessmentName);
             this.Controls.Add(this.btnReturn);

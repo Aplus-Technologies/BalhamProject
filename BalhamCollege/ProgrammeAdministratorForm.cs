@@ -24,6 +24,7 @@ namespace BalhamCollege
 
         private AddCourseForm frmAddCourse; // reference to Add Course Form
         private AddProgrammeForm frmAddProgramme; // reference to Add Programme Form
+        private ProgrammeBackgroundForm frmProg; // reference to Background Form
 
 
 
@@ -59,7 +60,9 @@ namespace BalhamCollege
 
         private void btnDeleteCourse_Click(object sender, EventArgs e)
         {
-            // show Delete Course form upon click
+            // show Delete Course form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
             if (frmDeleteCourse == null)
             {
                 frmDeleteCourse = new DeleteCourseForm(DC, this);
@@ -85,7 +88,9 @@ namespace BalhamCollege
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            // show Remove Lecturer form upon click
+            // show Remove Lecturer form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
             if (frmRemoveLecturer == null)
             {
                 frmRemoveLecturer = new RemoveLecturerForm(DC, this);
@@ -116,7 +121,9 @@ namespace BalhamCollege
 
         private void btnDeleteProgramme_Click(object sender, EventArgs e)
         {
-            // show Assign Lecturer form upon click
+            // show Delete Programme form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
             if (frmDeleteProgramme == null)
             {
                 frmDeleteProgramme = new DeleteProgrammeForm (DC, this);

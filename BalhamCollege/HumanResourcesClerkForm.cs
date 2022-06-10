@@ -20,6 +20,7 @@ namespace BalhamCollege
         private DataRow[] allLecturers;
         private DataRow[] lecturersForPrint;
         private int amountOfLecturersPrinted;
+        private HumanBackgroundForm frmHuman;
 
         public HumanResourcesClerkForm(DataController dc, LoginForm lgin)
         {
@@ -55,7 +56,9 @@ namespace BalhamCollege
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-            // show Delete Lecturer form upon click
+            // show Delete Lecturer form and background upon click
+            frmHuman = new HumanBackgroundForm(this);
+            frmHuman.Show();
             if (frmDeleteLecturer == null)
             {
                 frmDeleteLecturer = new DeleteLecturerForm(DC, this);

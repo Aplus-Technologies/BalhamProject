@@ -18,8 +18,8 @@ namespace BalhamCollege
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
         private UpdateStudentForm frmUpdateStudent; // the reference to the Update Student form
         private EnrolStudentForm frmEnrolStudent; //the reference to the Enrol Student form
-        private WithdrawStudentForm frmWithdrawStudent; //the reference to the Wuthdraw Student form
-
+        private WithdrawStudentForm frmWithdrawStudent; //the reference to the Withdraw Student form
+        private EnrolBackgroundForm frmBackground; //the reference to the Background form
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
@@ -33,6 +33,8 @@ namespace BalhamCollege
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
             //show Add Student form upon click
             if (frmAddStudent == null)
             {
@@ -52,7 +54,10 @@ namespace BalhamCollege
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
-        { // show Delete Student form 
+        { // show Delete Student form and Background Form
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
+
             if (frmDeleteStudent == null)
             {
                 frmDeleteStudent = new DeleteStudentForm(DC, this);

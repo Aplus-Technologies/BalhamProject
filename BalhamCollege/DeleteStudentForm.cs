@@ -123,7 +123,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            this.Close(); // prevents exception 'cannot access a disposed object' being thrown upon clicking Print Veterinarians Report option on the Main Menu
+            Application.OpenForms["BackgroundForm"].Close();
+            this.Close(); // prevents exception 'cannot access a disposed object' being thrown upon clicking Print Veterinarians Report option on the Main Menu        
             frmEnrolmnu.Show();
         }
 
