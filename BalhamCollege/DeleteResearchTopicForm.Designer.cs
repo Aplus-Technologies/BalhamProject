@@ -149,6 +149,7 @@ namespace BalhamCollege
             // lstResearchTopics
             // 
             this.lstResearchTopics.FormattingEnabled = true;
+            this.lstResearchTopics.HorizontalScrollbar = true;
             this.lstResearchTopics.ItemHeight = 20;
             this.lstResearchTopics.Location = new System.Drawing.Point(25, 52);
             this.lstResearchTopics.Margin = new System.Windows.Forms.Padding(4);
@@ -200,8 +201,8 @@ namespace BalhamCollege
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(442, -5);
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.BalhamCollegeLogo80x80;
+            this.pictureBox1.Location = new System.Drawing.Point(444, -5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.TabIndex = 163;
