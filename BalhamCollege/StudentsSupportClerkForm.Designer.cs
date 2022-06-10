@@ -34,6 +34,7 @@ namespace BalhamCollege
             this.btnProduceIssuesReport = new System.Windows.Forms.Button();
             this.btnRecordIssue = new System.Windows.Forms.Button();
             this.pbStudentSupportClerk = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentSupportClerk)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,12 +44,12 @@ namespace BalhamCollege
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(31, 621);
+            this.btnReturn.Location = new System.Drawing.Point(31, 545);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(241, 72);
             this.btnReturn.TabIndex = 35;
-            this.btnReturn.Text = "Return";
+            this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
@@ -91,12 +92,28 @@ namespace BalhamCollege
             this.pbStudentSupportClerk.TabIndex = 36;
             this.pbStudentSupportClerk.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Location = new System.Drawing.Point(31, 621);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(241, 72);
+            this.btnExit.TabIndex = 37;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // StudentsSupportClerkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1111, 704);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnProduceIssuesReport);
             this.Controls.Add(this.btnRecordIssue);
@@ -117,5 +134,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnProduceIssuesReport;
         private System.Windows.Forms.Button btnRecordIssue;
         private System.Windows.Forms.PictureBox pbStudentSupportClerk;
+        private System.Windows.Forms.Button btnExit;
     }
 }

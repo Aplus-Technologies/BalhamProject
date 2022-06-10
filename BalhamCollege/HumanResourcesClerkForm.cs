@@ -28,6 +28,7 @@ namespace BalhamCollege
             frmLogin = lgin;
             frmLogin.Hide();
         }
+       
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
@@ -63,9 +64,15 @@ namespace BalhamCollege
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        {
+        { // return user to login page 
             this.Close();
             frmLogin.Show();
+        }
+        
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            // exit application 
         }
 
         private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -136,5 +143,7 @@ namespace BalhamCollege
                 linesSoFar = linesSoFar + 4;
             }
         }
+
+        
     }
 }
