@@ -14,10 +14,7 @@ namespace BalhamCollege
     {
         private DataController DC;
         private CourseAdministratorForm frmCourseAdministrator;
-        private CurrencyManager cmAssessment;
-        private CurrencyManager cmCourse;
-        private CurrencyManager cmEnrolment;
-        private CurrencyManager cmStudent;
+
         private int initCount = 0;
         public DataTable assessments = new DataTable();
         
@@ -30,7 +27,6 @@ namespace BalhamCollege
             DC = dc;
             frmCourseAdministrator = couadm;
             frmCourseAdministrator.Hide();
-            BindControls();
             assessments.Columns.Add("ID", typeof(int));
             assessments.Columns.Add("Number", typeof(string));
             assessments.Columns.Add("Name", typeof(string));
@@ -39,13 +35,7 @@ namespace BalhamCollege
             assessments.Columns.Add("CourseID", typeof(int));
             GetAssessments();
             LoadAssessments();
-        }
-        public void BindControls()
-        {
-            cmAssessment = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Assessment"];
-            cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Course"];
-            cmEnrolment = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Enrolment"];
-            cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Student"];
+
         }
 
         private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -84,7 +74,7 @@ namespace BalhamCollege
         private void LoadAssessments()
         {
             dgvAssessments.ClearSelection();
-            
+
             dgvAssessments.DataSource = assessments;
             dgvAssessments.Columns[0].Width = 70;
             dgvAssessments.Columns[1].Width = 70;
@@ -95,8 +85,11 @@ namespace BalhamCollege
             dgvAssessments.RowHeadersVisible = false;
             dgvAssessments.DefaultCellStyle.SelectionBackColor = Color.White;
             dgvAssessments.DefaultCellStyle.SelectionForeColor = Color.Black;
-            dgvAssessments.Columns["Number"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; 
+            dgvAssessments.Columns["Number"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvAssessments.Columns["Number"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvAssessments.Columns["ID"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvAssessments.Columns["ID"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
 
         private void EnterResultForm_Load(object sender, EventArgs e)
@@ -130,8 +123,8 @@ namespace BalhamCollege
             dgvAssessments.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgvAssessments.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            //dgvTreatments.DefaultCellStyle.SelectionBackColor = Color.White;
-            //dgvTreatments.DefaultCellStyle.SelectionForeColor = Color.Black;
+            int selectedrowIndex = dgvAssessments.SelectedCells[0].RowIndex;
+            dgvAssessments.Rows[selectedrowIndex].Selected = true;
 
             if (initCount == 0)
             {
@@ -147,7 +140,7 @@ namespace BalhamCollege
                 selectedAssessmentID = Convert.ToInt32(selectedRow.Cells["ID"].Value);
             }
             LoadEnrolments();
-            
+
         }
 
         private void LoadEnrolments()
@@ -155,7 +148,7 @@ namespace BalhamCollege
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             this.studentTableAdapter1.Fill(this.dsBalhamCollegeAzure.STUDENT);
             DataTable enrolments = new DataTable();
-            
+
             enrolments.Columns.Add("Student Name", typeof(string));
             enrolments.Columns.Add("Year", typeof(string));
             enrolments.Columns.Add("Semester", typeof(string));
@@ -180,10 +173,10 @@ namespace BalhamCollege
                     {
                         if (drStudent[0].ToString() == drEnrol[4].ToString())
                         {
-                            drEnrolToAdd[0] = drStudent[1].ToString()+ ", " + drStudent[2].ToString();
+                            drEnrolToAdd[0] = drStudent[1].ToString() + ", " + drStudent[2].ToString();
                         }
                     }
-                }                    
+                }
             }
 
             dgvEnrolments.DataSource = enrolments;
@@ -213,13 +206,13 @@ namespace BalhamCollege
             txtAssessmentName.DataBindings.Add("Text", assessments, "Name");
         }
         private void UnBindIt()
-        {            
+        {
             txtAssessmentNumber.DataBindings.Clear();
             txtCourseName.DataBindings.Clear();
             txtMaximumMark.DataBindings.Clear();
             txtAssessmentName.DataBindings.Clear();
         }
-         private void ClearFields()
+        private void ClearFields()
         {
             dgvEnrolments.DataSource = null;
             dgvAssessments.DataSource = null;
@@ -233,51 +226,65 @@ namespace BalhamCollege
         private void dgvEnrolments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvEnrolments.DefaultCellStyle.SelectionBackColor = Color.Blue;
+
             dgvEnrolments.DefaultCellStyle.SelectionForeColor = Color.White;
+
             int selectedrowindex = dgvEnrolments.SelectedCells[0].RowIndex;
-            DataGridViewRow selectedRow = dgvEnrolments.Rows[selectedrowindex];            
-            selectedEnrolmentID = Convert.ToInt32(selectedRow.Cells["EnrolmentID"].Value);            
+            DataGridViewRow selectedRow = dgvEnrolments.Rows[selectedrowindex];
+            selectedEnrolmentID = Convert.ToInt32(selectedRow.Cells["EnrolmentID"].Value);
+            dgvEnrolments.Rows[selectedrowindex].Selected = true;
         }
 
         private void btnEnterResult_Click(object sender, EventArgs e)
         {
-            if ((dtpDate.Text == "") || (numMark.Text == "") ||  (selectedAssessmentID == 0) || (selectedEnrolmentID == 0))
+
+            if ((dtpDate.Text == "") || (numMark.Text == "") || (selectedAssessmentID == 0) || (selectedEnrolmentID == 0))
             {
                 MessageBox.Show("Please enter all the required information", "Error");
                 return;
             }
-            else
-            {                                
-                try
-                {
-                    this.rESULTTableAdapter.Insert(selectedAssessmentID, selectedEnrolmentID, Convert.ToDateTime(dtpDate.Text).ToString("yyyy-MM-dd"), Convert.ToInt32(numMark.Text));
-                    this.rESULTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESULT);
 
-                    LoadEnrolments();
-                    DialogResult dialogResult = MessageBox.Show("Result entered successfully!\n\nDo you want to enter another result?", "Balham College", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
+            else
+            {
+                if (numMark.Value > (Convert.ToInt32(txtMaximumMark.Text)))
+                {
+                    MessageBox.Show("Please enter a valid mark", "Error");
+                    return;
+                }
+                else
+                {
+                    try
                     {
-                        UnBindIt();
-                        ClearFields();
-                        initCount = 0;
-                        GetAssessments();
-                        LoadAssessments();
-                        initCount = 0;
+                        this.rESULTTableAdapter.Insert(selectedAssessmentID, selectedEnrolmentID, Convert.ToDateTime(dtpDate.Text).ToString("yyyy-MM-dd"), Convert.ToInt32(numMark.Text));
+                        this.rESULTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESULT);
+
+                        LoadEnrolments();
+                        DialogResult dialogResult = MessageBox.Show("Result entered successfully!\n\nDo you want to enter another result?", "Balham College", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            UnBindIt();
+                            ClearFields();
+                            initCount = 0;
+                            GetAssessments();
+                            LoadAssessments();
+                            initCount = 0;
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            this.Close();
+                            UnBindIt();
+                            ClearFields();
+                            LoadAssessments();
+                            initCount = 0;
+                            frmCourseAdministrator.Show();
+                        }
                     }
-                    else if (dialogResult == DialogResult.No)
+                    catch (System.Data.OleDb.OleDbException)
                     {
-                        this.Close();
-                        UnBindIt();
-                        ClearFields();
-                        LoadAssessments();
-                        initCount = 0;
-                        frmCourseAdministrator.Show();
+                        MessageBox.Show("This result has already been entered", "Error");
                     }
                 }
-                catch (System.Data.OleDb.OleDbException)
-                {
-                    MessageBox.Show("This result has already been entered", "Error");
-                }                
+
             }
         }
     }
