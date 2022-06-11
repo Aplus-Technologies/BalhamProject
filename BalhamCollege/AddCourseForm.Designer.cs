@@ -242,7 +242,7 @@ namespace BalhamCollege
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 213);
+            this.label1.Location = new System.Drawing.Point(41, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 20);
             this.label1.TabIndex = 12;
@@ -261,7 +261,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeID
             // 
-            this.txtProgrammeID.Location = new System.Drawing.Point(470, 211);
+            this.txtProgrammeID.Location = new System.Drawing.Point(491, 348);
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
             this.txtProgrammeID.Size = new System.Drawing.Size(70, 26);
@@ -425,13 +425,13 @@ namespace BalhamCollege
             this.Controls.Add(this.lblLevel);
             this.Controls.Add(this.txtLevel);
             this.Controls.Add(this.cboProgramme);
-            this.Controls.Add(this.txtProgrammeID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.nudFee);
             this.Controls.Add(this.nudCredits);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddCourse);
+            this.Controls.Add(this.txtProgrammeID);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
