@@ -143,6 +143,26 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BalhamLogin800x450 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamLogin800x450", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BalhamLogin800x450V2 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamLogin800x450V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnLogin {
             get {
                 object obj = ResourceManager.GetObject("btnLogin", resourceCulture);
@@ -226,6 +246,36 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap humanResourcesClerkPage {
             get {
                 object obj = ResourceManager.GetObject("humanResourcesClerkPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x35 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x35V2 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x35V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x45 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

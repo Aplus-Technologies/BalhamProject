@@ -506,5 +506,20 @@
   <ItemGroup>
     <None Include="Resources\BalhamCollegeLogo80x80v2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin800x450.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login212x45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login212x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login212x35V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamLogin800x450V2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
