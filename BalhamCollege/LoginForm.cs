@@ -23,7 +23,7 @@ namespace BalhamCollege
         
         private Rectangle txtUserNameOriginalRect;
         private Rectangle txtPasswordOriginalRect;
-        private Rectangle pbLoginButtonOriginalRect;
+        private Rectangle btnLoginOriginalRect;
         private Rectangle lblForgotOriginalRect;
         private Rectangle chkBox_LoginOriginalRect;
         
@@ -53,7 +53,7 @@ namespace BalhamCollege
             formOriginalSize = this.Size;
             txtUserNameOriginalRect = new Rectangle(txtUsername.Location.X, txtUsername.Location.Y, txtUsername.Width, txtUsername.Height);
             txtPasswordOriginalRect = new Rectangle(txtPassword.Location.X, txtPassword.Location.Y, txtPassword.Width, txtPassword.Height);
-            pbLoginButtonOriginalRect = new Rectangle(pbLoginButton.Location.X, pbLoginButton.Location.Y, pbLoginButton.Width, pbLoginButton.Height);
+            btnLoginOriginalRect = new Rectangle(btnLogin.Location.X, btnLogin.Location.Y, btnLogin.Width, btnLogin.Height);
             lblForgotOriginalRect = new Rectangle(lblForgot.Location.X, lblForgot.Location.Y, lblForgot.Width, lblForgot.Height);
             chkBox_LoginOriginalRect = new Rectangle(chkBox_login.Location.X, chkBox_login.Location.Y, chkBox_login.Width, chkBox_login.Height);
 
@@ -71,7 +71,7 @@ namespace BalhamCollege
         {
             resizeControl(txtUserNameOriginalRect, txtUsername);
             resizeControl(txtPasswordOriginalRect, txtPassword);
-            resizeControl(pbLoginButtonOriginalRect, pbLoginButton);
+            resizeControl(btnLoginOriginalRect, btnLogin);
             resizeControl(lblForgotOriginalRect, lblForgot);
             resizeControl(chkBox_LoginOriginalRect, chkBox_login);
             // delete line 78-83 after testing 
@@ -103,7 +103,7 @@ namespace BalhamCollege
         }
 
         private void LoginForm_Resize(object sender, EventArgs e)
-        {
+        { // autosize form controls upon window size change 
             resizeChildrenControls();
         }
 
@@ -112,71 +112,6 @@ namespace BalhamCollege
             txtPassword.Text = "";
             txtUsername.Text = "";
             chkBox_login.Checked = false;
-        }
-
-
-      // system checks username and password combination and takes user to matching page
-        private void pbLoginButton_Click(object sender, EventArgs e)
-        {
-            if (txtUsername.Text == "enrol" && txtPassword.Text == "enrol123")
-            {
-                if (frmEnrolmentClerk == null)
-                {
-                    frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
-                }
-                ClearFields();
-                frmEnrolmentClerk.ShowDialog();
-            }
-            else if (txtUsername.Text == "course" && txtPassword.Text == "course123")
-            {
-                if (frmCourseAdministrator == null)
-                {
-                    frmCourseAdministrator = new CourseAdministratorForm(DC, this);
-                }
-                ClearFields();
-                frmCourseAdministrator.ShowDialog();
-            }
-            else if (txtUsername.Text == "human" && txtPassword.Text == "human123")
-            {
-                if (frmHumanResourcesClerk == null)
-                {
-                    frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
-                }
-                ClearFields();
-                frmHumanResourcesClerk.ShowDialog();
-            }
-            else if (txtUsername.Text == "programme" && txtPassword.Text == "programme123")
-            {
-                if (frmProgramAdministrator == null)
-                {
-                    frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
-                }
-                ClearFields();
-                frmProgramAdministrator.ShowDialog();
-            }
-            else if (txtUsername.Text == "research" && txtPassword.Text == "research123")
-            {
-                if (frmResearchAdministrator == null)
-                {
-                    frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
-                }
-                ClearFields();
-                frmResearchAdministrator.ShowDialog();
-            }
-            else if (txtUsername.Text == "student" && txtPassword.Text == "student123")
-            {
-                if (frmStudentsSupportClerk == null)
-                {
-                    frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
-                }
-                ClearFields();
-                frmStudentsSupportClerk.ShowDialog();
-            }
-            else
-            {  // error message if username and password combination are invalid
-                MessageBox.Show("Username or Password invalid, please re-enter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
         }
 
 
@@ -244,6 +179,69 @@ namespace BalhamCollege
             }
             ClearFields();
             frmEnrolmentClerk.ShowDialog();
+        }
+
+        // system checks username and password combination and takes user to matching page
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "enrol" && txtPassword.Text == "enrol123")
+            {
+                if (frmEnrolmentClerk == null)
+                {
+                    frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
+                }
+                ClearFields();
+                frmEnrolmentClerk.ShowDialog();
+            }
+            else if (txtUsername.Text == "course" && txtPassword.Text == "course123")
+            {
+                if (frmCourseAdministrator == null)
+                {
+                    frmCourseAdministrator = new CourseAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmCourseAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "human" && txtPassword.Text == "human123")
+            {
+                if (frmHumanResourcesClerk == null)
+                {
+                    frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
+                }
+                ClearFields();
+                frmHumanResourcesClerk.ShowDialog();
+            }
+            else if (txtUsername.Text == "programme" && txtPassword.Text == "programme123")
+            {
+                if (frmProgramAdministrator == null)
+                {
+                    frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmProgramAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "research" && txtPassword.Text == "research123")
+            {
+                if (frmResearchAdministrator == null)
+                {
+                    frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
+                }
+                ClearFields();
+                frmResearchAdministrator.ShowDialog();
+            }
+            else if (txtUsername.Text == "student" && txtPassword.Text == "student123")
+            {
+                if (frmStudentsSupportClerk == null)
+                {
+                    frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
+                }
+                ClearFields();
+                frmStudentsSupportClerk.ShowDialog();
+            }
+            else
+            {  // error message if username and password combination are invalid
+                MessageBox.Show("Username or Password invalid, please re-enter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
