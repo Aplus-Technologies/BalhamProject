@@ -59,10 +59,7 @@ namespace BalhamCollege
             // show Delete Lecturer form and background upon click
             frmHuman = new HumanBackgroundForm(this);
             frmHuman.Show();
-            if (frmDeleteLecturer == null)
-            {
-                frmDeleteLecturer = new DeleteLecturerForm(DC, this);
-            }
+            frmDeleteLecturer = new DeleteLecturerForm(DC, this);
             frmDeleteLecturer.ShowDialog();
         }
 

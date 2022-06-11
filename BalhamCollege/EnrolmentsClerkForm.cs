@@ -33,13 +33,11 @@ namespace BalhamCollege
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            //show Background form on click
             frmBackground = new EnrolBackgroundForm(this);
             frmBackground.Show();
             //show Add Student form upon click
-            if (frmAddStudent == null)
-            {
-                frmAddStudent = new AddStudentForm(DC, this);
-            }
+            frmAddStudent = new AddStudentForm(DC, this);
             frmAddStudent.ShowDialog();
         }
 
@@ -54,14 +52,11 @@ namespace BalhamCollege
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
-        { // show Delete Student form and Background Form
+        { 
+            // show Delete Student form and Background Form
             frmBackground = new EnrolBackgroundForm(this);
             frmBackground.Show();
-
-            if (frmDeleteStudent == null)
-            {
-                frmDeleteStudent = new DeleteStudentForm(DC, this);
-            }
+            frmDeleteStudent = new DeleteStudentForm(DC, this);
             frmDeleteStudent.ShowDialog();
         }
 

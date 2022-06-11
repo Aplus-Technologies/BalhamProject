@@ -49,13 +49,11 @@ namespace BalhamCollege
         }
 
         private void btnDeleteAssessment_Click(object sender, EventArgs e)
-        { // show delete assessment form 
+        { // show delete assessment form
+
             frmCourse = new CourseBackgroundForm(this);
             frmCourse.Show();
-            if (frmDeleteAssessment == null)
-            {
-               frmDeleteAssessment = new DeleteAssessmentForm(DC, this);
-            }
+            frmDeleteAssessment = new DeleteAssessmentForm(DC, this);
             frmDeleteAssessment.ShowDialog();
         }
 

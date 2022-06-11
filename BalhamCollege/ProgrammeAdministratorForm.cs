@@ -63,10 +63,10 @@ namespace BalhamCollege
             // show Delete Course form and background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
-            if (frmDeleteCourse == null)
-            {
-                frmDeleteCourse = new DeleteCourseForm(DC, this);
-            }
+            
+            
+            frmDeleteCourse = new DeleteCourseForm(DC, this);
+            
             frmDeleteCourse.ShowDialog();
 
         }
@@ -91,10 +91,7 @@ namespace BalhamCollege
             // show Remove Lecturer form and background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
-            if (frmRemoveLecturer == null)
-            {
-                frmRemoveLecturer = new RemoveLecturerForm(DC, this);
-            }
+            frmRemoveLecturer = new RemoveLecturerForm(DC, this);           
             frmRemoveLecturer.ShowDialog();
         }
 
@@ -124,10 +121,10 @@ namespace BalhamCollege
             // show Delete Programme form and background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
-            if (frmDeleteProgramme == null)
-            {
-                frmDeleteProgramme = new DeleteProgrammeForm (DC, this);
-            }
+           
+            
+            frmDeleteProgramme = new DeleteProgrammeForm (DC, this);
+            
             frmDeleteProgramme.ShowDialog();
 
         }

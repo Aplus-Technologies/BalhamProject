@@ -46,10 +46,7 @@ namespace BalhamCollege
             //show Remove Research Project form and background form upon click
             frmResearch = new ResearchBackgroundForm(this);
             frmResearch.Show();
-            if (frmRemoveResearchProject == null)
-            {
-                frmRemoveResearchProject = new RemoveResearchProjectForm(DC, this);
-            }
+            frmRemoveResearchProject = new RemoveResearchProjectForm(DC, this);
             frmRemoveResearchProject.ShowDialog();
         }
 
@@ -64,13 +61,11 @@ namespace BalhamCollege
         }
 
         private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
-        { //show Delete Research Topic form and background form upon click
+        { 
+            //show Delete Research Topic form and background form upon click
             frmResearch = new ResearchBackgroundForm(this);
             frmResearch.Show();
-            if (frmDeleteResearchTopic == null)
-            {
-                frmDeleteResearchTopic = new DeleteResearchTopicForm(DC, this);
-            }
+            frmDeleteResearchTopic = new DeleteResearchTopicForm(DC, this);
             frmDeleteResearchTopic.ShowDialog();
         }
 
