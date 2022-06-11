@@ -46,32 +46,34 @@ namespace BalhamCollege
             this.lblAssessmentName = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.lblAssessmentID = new System.Windows.Forms.Label();
-            this.lblAssessments = new System.Windows.Forms.Label();
+            this.lblSelectAssessments = new System.Windows.Forms.Label();
             this.txtCourseName = new System.Windows.Forms.TextBox();
             this.nudMaximumMark = new System.Windows.Forms.NumericUpDown();
             this.nudWeighting = new System.Windows.Forms.NumericUpDown();
             this.cboType = new System.Windows.Forms.ComboBox();
             this.txtAssessmentName = new System.Windows.Forms.TextBox();
             this.nudNumber = new System.Windows.Forms.NumericUpDown();
-            this.cboAssessments = new System.Windows.Forms.ComboBox();
             this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
             this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aSSESSMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
             this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lstAssessments = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximumMark)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeighting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(58, 319);
+            this.lblCourseName.Location = new System.Drawing.Point(58, 440);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 64;
@@ -82,7 +84,7 @@ namespace BalhamCollege
             this.lbl8.AutoSize = true;
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl8.Location = new System.Drawing.Point(31, 277);
+            this.lbl8.Location = new System.Drawing.Point(31, 398);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(14, 20);
             this.lbl8.TabIndex = 63;
@@ -93,7 +95,7 @@ namespace BalhamCollege
             this.lbl7.AutoSize = true;
             this.lbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl7.Location = new System.Drawing.Point(66, 235);
+            this.lbl7.Location = new System.Drawing.Point(66, 356);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(14, 20);
             this.lbl7.TabIndex = 62;
@@ -104,7 +106,7 @@ namespace BalhamCollege
             this.lbl6.AutoSize = true;
             this.lbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl6.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl6.Location = new System.Drawing.Point(102, 193);
+            this.lbl6.Location = new System.Drawing.Point(102, 314);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(14, 20);
             this.lbl6.TabIndex = 61;
@@ -115,7 +117,7 @@ namespace BalhamCollege
             this.lbl5.AutoSize = true;
             this.lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl5.Location = new System.Drawing.Point(12, 151);
+            this.lbl5.Location = new System.Drawing.Point(12, 272);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(14, 20);
             this.lbl5.TabIndex = 60;
@@ -126,7 +128,7 @@ namespace BalhamCollege
             this.lbl4.AutoSize = true;
             this.lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl4.Location = new System.Drawing.Point(81, 108);
+            this.lbl4.Location = new System.Drawing.Point(81, 229);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(14, 20);
             this.lbl4.TabIndex = 59;
@@ -136,7 +138,7 @@ namespace BalhamCollege
             // 
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(396, 354);
+            this.lblRequiredFields.Location = new System.Drawing.Point(396, 475);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(105, 20);
             this.lblRequiredFields.TabIndex = 55;
@@ -144,37 +146,37 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(375, 382);
+            this.btnReturn.Location = new System.Drawing.Point(375, 503);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(147, 35);
-            this.btnReturn.TabIndex = 54;
+            this.btnReturn.TabIndex = 81;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnUpdateAssessment
             // 
-            this.btnUpdateAssessment.Location = new System.Drawing.Point(160, 382);
+            this.btnUpdateAssessment.Location = new System.Drawing.Point(160, 503);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
             this.btnUpdateAssessment.Size = new System.Drawing.Size(147, 35);
-            this.btnUpdateAssessment.TabIndex = 53;
+            this.btnUpdateAssessment.TabIndex = 80;
             this.btnUpdateAssessment.Text = "Update Assessment";
             this.btnUpdateAssessment.UseVisualStyleBackColor = true;
             this.btnUpdateAssessment.Click += new System.EventHandler(this.btnUpdateAssessment_Click);
             // 
             // txtAssessmentID
             // 
-            this.txtAssessmentID.Location = new System.Drawing.Point(160, 63);
+            this.txtAssessmentID.Location = new System.Drawing.Point(160, 184);
             this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
             this.txtAssessmentID.Size = new System.Drawing.Size(28, 26);
-            this.txtAssessmentID.TabIndex = 46;
+            this.txtAssessmentID.TabIndex = 73;
             // 
             // lblMaximumMark
             // 
             this.lblMaximumMark.AutoSize = true;
-            this.lblMaximumMark.Location = new System.Drawing.Point(44, 277);
+            this.lblMaximumMark.Location = new System.Drawing.Point(44, 398);
             this.lblMaximumMark.Name = "lblMaximumMark";
             this.lblMaximumMark.Size = new System.Drawing.Size(103, 20);
             this.lblMaximumMark.TabIndex = 42;
@@ -183,7 +185,7 @@ namespace BalhamCollege
             // lblWeighting
             // 
             this.lblWeighting.AutoSize = true;
-            this.lblWeighting.Location = new System.Drawing.Point(79, 235);
+            this.lblWeighting.Location = new System.Drawing.Point(79, 356);
             this.lblWeighting.Name = "lblWeighting";
             this.lblWeighting.Size = new System.Drawing.Size(72, 20);
             this.lblWeighting.TabIndex = 41;
@@ -192,7 +194,7 @@ namespace BalhamCollege
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(115, 193);
+            this.lblType.Location = new System.Drawing.Point(115, 314);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(43, 20);
             this.lblType.TabIndex = 40;
@@ -201,7 +203,7 @@ namespace BalhamCollege
             // lblAssessmentName
             // 
             this.lblAssessmentName.AutoSize = true;
-            this.lblAssessmentName.Location = new System.Drawing.Point(25, 151);
+            this.lblAssessmentName.Location = new System.Drawing.Point(25, 272);
             this.lblAssessmentName.Name = "lblAssessmentName";
             this.lblAssessmentName.Size = new System.Drawing.Size(126, 20);
             this.lblAssessmentName.TabIndex = 39;
@@ -210,7 +212,7 @@ namespace BalhamCollege
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(94, 108);
+            this.lblNumber.Location = new System.Drawing.Point(94, 229);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Size = new System.Drawing.Size(60, 20);
             this.lblNumber.TabIndex = 38;
@@ -219,33 +221,33 @@ namespace BalhamCollege
             // lblAssessmentID
             // 
             this.lblAssessmentID.AutoSize = true;
-            this.lblAssessmentID.Location = new System.Drawing.Point(49, 66);
+            this.lblAssessmentID.Location = new System.Drawing.Point(49, 187);
             this.lblAssessmentID.Name = "lblAssessmentID";
             this.lblAssessmentID.Size = new System.Drawing.Size(103, 20);
             this.lblAssessmentID.TabIndex = 37;
             this.lblAssessmentID.Text = "Assessment ID:";
             // 
-            // lblAssessments
+            // lblSelectAssessments
             // 
-            this.lblAssessments.AutoSize = true;
-            this.lblAssessments.Location = new System.Drawing.Point(60, 24);
-            this.lblAssessments.Name = "lblAssessments";
-            this.lblAssessments.Size = new System.Drawing.Size(94, 20);
-            this.lblAssessments.TabIndex = 34;
-            this.lblAssessments.Text = "Assessments:";
+            this.lblSelectAssessments.AutoSize = true;
+            this.lblSelectAssessments.Location = new System.Drawing.Point(31, 33);
+            this.lblSelectAssessments.Name = "lblSelectAssessments";
+            this.lblSelectAssessments.Size = new System.Drawing.Size(189, 20);
+            this.lblSelectAssessments.TabIndex = 34;
+            this.lblSelectAssessments.Text = "Please select an assessment:";
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(160, 316);
+            this.txtCourseName.Location = new System.Drawing.Point(160, 437);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(362, 26);
-            this.txtCourseName.TabIndex = 66;
+            this.txtCourseName.TabIndex = 79;
             // 
             // nudMaximumMark
             // 
-            this.nudMaximumMark.Location = new System.Drawing.Point(160, 274);
+            this.nudMaximumMark.Location = new System.Drawing.Point(160, 395);
             this.nudMaximumMark.Maximum = new decimal(new int[] {
             200,
             0,
@@ -258,7 +260,7 @@ namespace BalhamCollege
             0});
             this.nudMaximumMark.Name = "nudMaximumMark";
             this.nudMaximumMark.Size = new System.Drawing.Size(45, 26);
-            this.nudMaximumMark.TabIndex = 67;
+            this.nudMaximumMark.TabIndex = 78;
             this.nudMaximumMark.Value = new decimal(new int[] {
             50,
             0,
@@ -267,7 +269,7 @@ namespace BalhamCollege
             // 
             // nudWeighting
             // 
-            this.nudWeighting.Location = new System.Drawing.Point(160, 232);
+            this.nudWeighting.Location = new System.Drawing.Point(160, 353);
             this.nudWeighting.Minimum = new decimal(new int[] {
             10,
             0,
@@ -275,7 +277,7 @@ namespace BalhamCollege
             0});
             this.nudWeighting.Name = "nudWeighting";
             this.nudWeighting.Size = new System.Drawing.Size(45, 26);
-            this.nudWeighting.TabIndex = 68;
+            this.nudWeighting.TabIndex = 77;
             this.nudWeighting.Value = new decimal(new int[] {
             10,
             0,
@@ -290,23 +292,23 @@ namespace BalhamCollege
             "Written Test",
             "Practical Test",
             "Final Exam"});
-            this.cboType.Location = new System.Drawing.Point(160, 189);
+            this.cboType.Location = new System.Drawing.Point(160, 310);
             this.cboType.MaxLength = 14;
             this.cboType.Name = "cboType";
             this.cboType.Size = new System.Drawing.Size(107, 28);
-            this.cboType.TabIndex = 69;
+            this.cboType.TabIndex = 76;
             // 
             // txtAssessmentName
             // 
-            this.txtAssessmentName.Location = new System.Drawing.Point(160, 147);
+            this.txtAssessmentName.Location = new System.Drawing.Point(160, 268);
             this.txtAssessmentName.MaxLength = 50;
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.Size = new System.Drawing.Size(362, 26);
-            this.txtAssessmentName.TabIndex = 70;
+            this.txtAssessmentName.TabIndex = 75;
             // 
             // nudNumber
             // 
-            this.nudNumber.Location = new System.Drawing.Point(160, 106);
+            this.nudNumber.Location = new System.Drawing.Point(160, 227);
             this.nudNumber.Maximum = new decimal(new int[] {
             5,
             0,
@@ -319,21 +321,12 @@ namespace BalhamCollege
             0});
             this.nudNumber.Name = "nudNumber";
             this.nudNumber.Size = new System.Drawing.Size(35, 26);
-            this.nudNumber.TabIndex = 71;
+            this.nudNumber.TabIndex = 74;
             this.nudNumber.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            // 
-            // cboAssessments
-            // 
-            this.cboAssessments.FormattingEnabled = true;
-            this.cboAssessments.Location = new System.Drawing.Point(160, 21);
-            this.cboAssessments.Name = "cboAssessments";
-            this.cboAssessments.Size = new System.Drawing.Size(362, 28);
-            this.cboAssessments.TabIndex = 72;
-            this.cboAssessments.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.cboAssessments_Format);
             // 
             // dsBalhamCollegeAzure
             // 
@@ -375,12 +368,32 @@ namespace BalhamCollege
             this.cOURSEBindingSource.DataMember = "COURSE";
             this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(473, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lstAssessments
+            // 
+            this.lstAssessments.FormattingEnabled = true;
+            this.lstAssessments.ItemHeight = 20;
+            this.lstAssessments.Location = new System.Drawing.Point(29, 55);
+            this.lstAssessments.Name = "lstAssessments";
+            this.lstAssessments.Size = new System.Drawing.Size(493, 104);
+            this.lstAssessments.TabIndex = 72;
+            this.lstAssessments.SelectedIndexChanged += new System.EventHandler(this.lstAssessments_SelectedIndexChanged);
+            this.lstAssessments.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstAssessments_Format);
+            // 
             // UpdateAssessmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 447);
-            this.Controls.Add(this.cboAssessments);
+            this.ClientSize = new System.Drawing.Size(547, 561);
+            this.Controls.Add(this.lstAssessments);
             this.Controls.Add(this.nudNumber);
             this.Controls.Add(this.txtAssessmentName);
             this.Controls.Add(this.cboType);
@@ -403,7 +416,8 @@ namespace BalhamCollege
             this.Controls.Add(this.lblAssessmentName);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.lblAssessmentID);
-            this.Controls.Add(this.lblAssessments);
+            this.Controls.Add(this.lblSelectAssessments);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateAssessmentForm";
@@ -415,6 +429,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,19 +452,20 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblAssessmentName;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.Label lblAssessmentID;
-        private System.Windows.Forms.Label lblAssessments;
+        private System.Windows.Forms.Label lblSelectAssessments;
         private System.Windows.Forms.TextBox txtCourseName;
         private System.Windows.Forms.NumericUpDown nudMaximumMark;
         private System.Windows.Forms.NumericUpDown nudWeighting;
         private System.Windows.Forms.ComboBox cboType;
         private System.Windows.Forms.TextBox txtAssessmentName;
         private System.Windows.Forms.NumericUpDown nudNumber;
-        private System.Windows.Forms.ComboBox cboAssessments;
         private dsBalhamCollegeAzure dsBalhamCollegeAzure;
         private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
         private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
         private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListBox lstAssessments;
     }
 }

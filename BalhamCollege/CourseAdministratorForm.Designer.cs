@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseAdministratorForm));
             this.btnUpdateAssessment = new System.Windows.Forms.Button();
             this.btnDeleteAssessment = new System.Windows.Forms.Button();
@@ -37,12 +38,28 @@ namespace BalhamCollege
             this.btnProduceAssessmentsReport = new System.Windows.Forms.Button();
             this.btnEnterResult = new System.Windows.Forms.Button();
             this.pbCourseAdmin = new System.Windows.Forms.PictureBox();
-            this.courseTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
-            this.assessmentTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
-            this.resultTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter();
-            this.studentTableAdapter1 = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.aSSESSMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.aSSESSMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter();
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
+            this.rESULTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter();
+            this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESULTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.printAssessments = new System.Drawing.Printing.PrintDocument();
+            this.prvAssessments = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESULTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUpdateAssessment
@@ -52,10 +69,10 @@ namespace BalhamCollege
             this.btnUpdateAssessment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateAssessment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateAssessment.Location = new System.Drawing.Point(25, 318);
-            this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateAssessment.Location = new System.Drawing.Point(33, 391);
+            this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
-            this.btnUpdateAssessment.Size = new System.Drawing.Size(242, 59);
+            this.btnUpdateAssessment.Size = new System.Drawing.Size(323, 73);
             this.btnUpdateAssessment.TabIndex = 36;
             this.btnUpdateAssessment.Text = "Update Assessment";
             this.btnUpdateAssessment.UseVisualStyleBackColor = false;
@@ -67,10 +84,10 @@ namespace BalhamCollege
             this.btnDeleteAssessment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteAssessment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteAssessment.Location = new System.Drawing.Point(25, 381);
-            this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteAssessment.Location = new System.Drawing.Point(33, 469);
+            this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
-            this.btnDeleteAssessment.Size = new System.Drawing.Size(242, 59);
+            this.btnDeleteAssessment.Size = new System.Drawing.Size(323, 73);
             this.btnDeleteAssessment.TabIndex = 35;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = false;
@@ -82,10 +99,10 @@ namespace BalhamCollege
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(25, 570);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturn.Location = new System.Drawing.Point(33, 702);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(242, 59);
+            this.btnReturn.Size = new System.Drawing.Size(323, 73);
             this.btnReturn.TabIndex = 34;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -97,10 +114,10 @@ namespace BalhamCollege
             this.btnAddAssessment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAssessment.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAssessment.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddAssessment.Location = new System.Drawing.Point(25, 255);
-            this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAssessment.Location = new System.Drawing.Point(33, 314);
+            this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddAssessment.Name = "btnAddAssessment";
-            this.btnAddAssessment.Size = new System.Drawing.Size(242, 59);
+            this.btnAddAssessment.Size = new System.Drawing.Size(323, 73);
             this.btnAddAssessment.TabIndex = 33;
             this.btnAddAssessment.Text = "Add Assessment";
             this.btnAddAssessment.UseVisualStyleBackColor = false;
@@ -112,10 +129,10 @@ namespace BalhamCollege
             this.btnProduceAssessmentsReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduceAssessmentsReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduceAssessmentsReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnProduceAssessmentsReport.Location = new System.Drawing.Point(25, 507);
-            this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProduceAssessmentsReport.Location = new System.Drawing.Point(33, 624);
+            this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProduceAssessmentsReport.Name = "btnProduceAssessmentsReport";
-            this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(242, 59);
+            this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(323, 73);
             this.btnProduceAssessmentsReport.TabIndex = 32;
             this.btnProduceAssessmentsReport.Text = "Produce Assessments Report";
             this.btnProduceAssessmentsReport.UseVisualStyleBackColor = false;
@@ -127,10 +144,10 @@ namespace BalhamCollege
             this.btnEnterResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnterResult.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnterResult.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEnterResult.Location = new System.Drawing.Point(25, 444);
-            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnterResult.Location = new System.Drawing.Point(33, 546);
+            this.btnEnterResult.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnterResult.Name = "btnEnterResult";
-            this.btnEnterResult.Size = new System.Drawing.Size(242, 59);
+            this.btnEnterResult.Size = new System.Drawing.Size(323, 73);
             this.btnEnterResult.TabIndex = 31;
             this.btnEnterResult.Text = "Enter Result";
             this.btnEnterResult.UseVisualStyleBackColor = false;
@@ -139,27 +156,12 @@ namespace BalhamCollege
             // pbCourseAdmin
             // 
             this.pbCourseAdmin.Image = global::BalhamCollege.Properties.Resources.courseAdminPage;
-            this.pbCourseAdmin.Location = new System.Drawing.Point(-6, -4);
+            this.pbCourseAdmin.Location = new System.Drawing.Point(-8, -5);
+            this.pbCourseAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbCourseAdmin.Name = "pbCourseAdmin";
-            this.pbCourseAdmin.Size = new System.Drawing.Size(1116, 710);
+            this.pbCourseAdmin.Size = new System.Drawing.Size(1488, 874);
             this.pbCourseAdmin.TabIndex = 37;
             this.pbCourseAdmin.TabStop = false;
-            // 
-            // courseTableAdapter1
-            // 
-            this.courseTableAdapter1.ClearBeforeFill = true;
-            // 
-            // assessmentTableAdapter1
-            // 
-            this.assessmentTableAdapter1.ClearBeforeFill = true;
-            // 
-            // resultTableAdapter1
-            // 
-            this.resultTableAdapter1.ClearBeforeFill = true;
-            // 
-            // studentTableAdapter1
-            // 
-            this.studentTableAdapter1.ClearBeforeFill = true;
             // 
             // btnExit
             // 
@@ -167,21 +169,103 @@ namespace BalhamCollege
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Location = new System.Drawing.Point(25, 633);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(33, 779);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(242, 59);
+            this.btnExit.Size = new System.Drawing.Size(323, 73);
             this.btnExit.TabIndex = 38;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // aSSESSMENTBindingSource
+            // 
+            this.aSSESSMENTBindingSource.DataMember = "ASSESSMENT";
+            this.aSSESSMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = this.aSSESSMENTTableAdapter;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = this.cOURSETableAdapter;
+            this.tableAdapterManager.ENROLMENTTableAdapter = this.eNROLMENTTableAdapter;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = this.rESULTTableAdapter;
+            this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // aSSESSMENTTableAdapter
+            // 
+            this.aSSESSMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
+            // eNROLMENTTableAdapter
+            // 
+            this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // rESULTTableAdapter
+            // 
+            this.rESULTTableAdapter.ClearBeforeFill = true;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESULTBindingSource
+            // 
+            this.rESULTBindingSource.DataMember = "RESULT";
+            this.rESULTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // printAssessments
+            // 
+            this.printAssessments.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printAssessments_PrintPage);
+            // 
+            // prvAssessments
+            // 
+            this.prvAssessments.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.prvAssessments.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.prvAssessments.ClientSize = new System.Drawing.Size(400, 300);
+            this.prvAssessments.Document = this.printAssessments;
+            this.prvAssessments.Enabled = true;
+            this.prvAssessments.Icon = ((System.Drawing.Icon)(resources.GetObject("prvAssessments.Icon")));
+            this.prvAssessments.Name = "prvAssessments";
+            this.prvAssessments.Visible = false;
+            // 
             // CourseAdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1104, 703);
+            this.ClientSize = new System.Drawing.Size(1472, 865);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnUpdateAssessment);
             this.Controls.Add(this.btnDeleteAssessment);
@@ -191,11 +275,18 @@ namespace BalhamCollege
             this.Controls.Add(this.btnEnterResult);
             this.Controls.Add(this.pbCourseAdmin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CourseAdministratorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Course Administrator Menu";
+            this.Load += new System.EventHandler(this.CourseAdministratorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESULTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,10 +301,20 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnProduceAssessmentsReport;
         private System.Windows.Forms.Button btnEnterResult;
         private System.Windows.Forms.PictureBox pbCourseAdmin;
-        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter courseTableAdapter1;
-        private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter assessmentTableAdapter1;
-        private dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter resultTableAdapter1;
-        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter studentTableAdapter1;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource aSSESSMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private System.Windows.Forms.BindingSource rESULTBindingSource;
+        private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private System.Drawing.Printing.PrintDocument printAssessments;
+        private System.Windows.Forms.PrintPreviewDialog prvAssessments;
+        private dsBalhamCollegeAzureTableAdapters.ASSESSMENTTableAdapter aSSESSMENTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter rESULTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private System.Windows.Forms.Button btnExit;
     }
 }

@@ -47,9 +47,11 @@ namespace BalhamCollege
             this.pROGRAMMEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pROGRAMMETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nudLevel
@@ -117,7 +119,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(372, 386);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(147, 35);
-            this.btnReturn.TabIndex = 82;
+            this.btnReturn.TabIndex = 93;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -127,7 +129,7 @@ namespace BalhamCollege
             this.btnUpdateProgramme.Location = new System.Drawing.Point(157, 386);
             this.btnUpdateProgramme.Name = "btnUpdateProgramme";
             this.btnUpdateProgramme.Size = new System.Drawing.Size(147, 35);
-            this.btnUpdateProgramme.TabIndex = 81;
+            this.btnUpdateProgramme.TabIndex = 92;
             this.btnUpdateProgramme.Text = "Update Programme";
             this.btnUpdateProgramme.UseVisualStyleBackColor = true;
             this.btnUpdateProgramme.Click += new System.EventHandler(this.btnUpdateProgramme_Click);
@@ -177,7 +179,7 @@ namespace BalhamCollege
             this.lstProgrammes.Location = new System.Drawing.Point(30, 51);
             this.lstProgrammes.Name = "lstProgrammes";
             this.lstProgrammes.Size = new System.Drawing.Size(489, 144);
-            this.lstProgrammes.TabIndex = 98;
+            this.lstProgrammes.TabIndex = 88;
             this.lstProgrammes.SelectedIndexChanged += new System.EventHandler(this.lstProgrammes_SelectedIndexChanged);
             this.lstProgrammes.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstProgrammes_Format);
             // 
@@ -188,7 +190,7 @@ namespace BalhamCollege
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
             this.txtProgrammeID.Size = new System.Drawing.Size(19, 26);
-            this.txtProgrammeID.TabIndex = 99;
+            this.txtProgrammeID.TabIndex = 89;
             // 
             // dsBalhamCollegeAzure
             // 
@@ -221,6 +223,15 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(473, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.TabIndex = 100;
+            this.pictureBox1.TabStop = false;
+            // 
             // UpdateProgrammeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -239,6 +250,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblProgrammeName);
             this.Controls.Add(this.lblProgrammeID);
             this.Controls.Add(this.lblSelectProgramme);
+            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateProgrammeForm";
@@ -247,6 +259,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pROGRAMMEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,5 +283,6 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource pROGRAMMEBindingSource;
         private dsBalhamCollegeAzureTableAdapters.PROGRAMMETableAdapter pROGRAMMETableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -29,13 +29,31 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentsSupportClerkForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnProduceIssuesReport = new System.Windows.Forms.Button();
             this.btnRecordIssue = new System.Windows.Forms.Button();
             this.pbStudentSupportClerk = new System.Windows.Forms.PictureBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.iSSUEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iSSUETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ISSUETableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eNROLMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter();
+            this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOURSETableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.COURSETableAdapter();
+            this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTUDENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter();
+            this.printIssues = new System.Drawing.Printing.PrintDocument();
+            this.prvIssues = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentSupportClerk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iSSUEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -92,6 +110,79 @@ namespace BalhamCollege
             this.pbStudentSupportClerk.TabIndex = 36;
             this.pbStudentSupportClerk.TabStop = false;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // iSSUEBindingSource
+            // 
+            this.iSSUEBindingSource.DataMember = "ISSUE";
+            this.iSSUEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // iSSUETableAdapter
+            // 
+            this.iSSUETableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = this.cOURSETableAdapter;
+            this.tableAdapterManager.ENROLMENTTableAdapter = this.eNROLMENTTableAdapter;
+            this.tableAdapterManager.ISSUETableAdapter = this.iSSUETableAdapter;
+            this.tableAdapterManager.LECTURERTableAdapter = null;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = null;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = null;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = this.sTUDENTTableAdapter;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // eNROLMENTBindingSource
+            // 
+            this.eNROLMENTBindingSource.DataMember = "ENROLMENT";
+            this.eNROLMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // eNROLMENTTableAdapter
+            // 
+            this.eNROLMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOURSEBindingSource
+            // 
+            this.cOURSEBindingSource.DataMember = "COURSE";
+            this.cOURSEBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // cOURSETableAdapter
+            // 
+            this.cOURSETableAdapter.ClearBeforeFill = true;
+            // 
+            // sTUDENTBindingSource
+            // 
+            this.sTUDENTBindingSource.DataMember = "STUDENT";
+            this.sTUDENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // sTUDENTTableAdapter
+            // 
+            this.sTUDENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // printIssues
+            // 
+            this.printIssues.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printIssues_PrintPage);
+            // 
+            // prvIssues
+            // 
+            this.prvIssues.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.prvIssues.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.prvIssues.ClientSize = new System.Drawing.Size(400, 300);
+            this.prvIssues.Document = this.printIssues;
+            this.prvIssues.Enabled = true;
+            this.prvIssues.Icon = ((System.Drawing.Icon)(resources.GetObject("prvIssues.Icon")));
+            this.prvIssues.Name = "prvIssues";
+            this.prvIssues.Visible = false;
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
@@ -123,7 +214,13 @@ namespace BalhamCollege
             this.Name = "StudentsSupportClerkForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Support Clerk Menu";
+            this.Load += new System.EventHandler(this.StudentsSupportClerkForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbStudentSupportClerk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iSSUEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,6 +231,18 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnProduceIssuesReport;
         private System.Windows.Forms.Button btnRecordIssue;
         private System.Windows.Forms.PictureBox pbStudentSupportClerk;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource iSSUEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.ISSUETableAdapter iSSUETableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.ENROLMENTTableAdapter eNROLMENTTableAdapter;
+        private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
+        private System.Windows.Forms.BindingSource cOURSEBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
+        private System.Windows.Forms.BindingSource sTUDENTBindingSource;
+        private System.Drawing.Printing.PrintDocument printIssues;
+        private System.Windows.Forms.PrintPreviewDialog prvIssues;
         private System.Windows.Forms.Button btnExit;
     }
 }

@@ -52,8 +52,8 @@ namespace BalhamCollege
         public void BindControls()
         {
             // Set up Currency Manager
-            cmCourse = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Course"];
-            cmProgramme = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Programme"];
+            cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Course"];
+            cmProgramme = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Programme"];
         }
         private void LoadCourses()
         {
@@ -64,6 +64,7 @@ namespace BalhamCollege
                 lstCourses.Items.Add(drCourse);
             }
         }
+
         private void ClearFields()
         {
             // Clear all fields
@@ -74,7 +75,6 @@ namespace BalhamCollege
             nudFee.Text = string.Empty;
             txtProgrammeName.Text = string.Empty;
         }
-
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -113,8 +113,8 @@ namespace BalhamCollege
                     // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
                     this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
-                    MessageBox.Show("Course updated successfully", "Success");
                     LoadCourses();
+                    MessageBox.Show("Course updated successfully", "Success");
                     ClearFields();
                 }
                 else
@@ -153,7 +153,6 @@ namespace BalhamCollege
             this.Validate();
             this.cOURSEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void UpdateCourseForm_Load(object sender, EventArgs e)
