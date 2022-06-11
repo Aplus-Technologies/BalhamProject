@@ -21,11 +21,16 @@ namespace BalhamCollege
         private RemoveResearchProjectForm frmRemoveResearchProject; // reference to remove research project form                                                  
         private AddResearchTopicForm frmAddResearchTopic; // reference to add research topic form
 
+        private ResearchBackgroundForm frmResearch; //reference to research background form
+        
+
+
         //Produce report variables
         private DataRow[] researchProjectsForPrint;
         private int researchProjectForNextPage;
         private int countOfProjects;
         private int PagePrinted;
+
 
         public ResearchAdministratorForm(DataController dc, LoginForm lgin)
         {
@@ -48,11 +53,10 @@ namespace BalhamCollege
 
         private void btnRemoveResearchProject_Click(object sender, EventArgs e)
         {
-            //show Remove Research Project form upon click
-            if (frmRemoveResearchProject == null)
-            {
-                frmRemoveResearchProject = new RemoveResearchProjectForm(DC, this);
-            }
+            //show Remove Research Project form and background form upon click
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
+            frmRemoveResearchProject = new RemoveResearchProjectForm(DC, this);
             frmRemoveResearchProject.ShowDialog();
         }
 
@@ -67,11 +71,11 @@ namespace BalhamCollege
         }
 
         private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
-        { //show Delete Research Topic form upon click
-            if (frmDeleteResearchTopic == null)
-            {
-                frmDeleteResearchTopic = new DeleteResearchTopicForm(DC, this);
-            }
+        { 
+            //show Delete Research Topic form and background form upon click
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
+            frmDeleteResearchTopic = new DeleteResearchTopicForm(DC, this);
             frmDeleteResearchTopic.ShowDialog();
         }
 

@@ -126,6 +126,7 @@ namespace BalhamCollege
         }
         private void Return_Click(object sender, EventArgs e)
         {
+            Application.OpenForms["ProgrammeBackgroundForm"].Close();
             this.Close();
             frmProgMnu.Show();
         }
@@ -142,7 +143,7 @@ namespace BalhamCollege
                     lecturer = lstLecturers.SelectedItem.ToString();
                     string[] parts = lecturer.Split(',');
                     string[] IDstring = parts[0].Split(' ');
-                    aLecturerID = Convert.ToInt32(IDstring[2]);
+                    aLecturerID = Convert.ToInt32(IDstring[1]);
                     object[] primaryKey = new object[2];
                     courseID = Convert.ToInt32(txtCourseID.Text);
                     cmCourse.Position = courseView2.Find(courseID);

@@ -112,6 +112,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            Application.OpenForms["ResearchBackgroundForm"].Close();
             this.Close();
             frmResearchMnu.Show();
         }

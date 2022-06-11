@@ -18,12 +18,15 @@ namespace BalhamCollege
         private AddStudentForm frmAddStudent; // the reference to the Add Student form
         private UpdateStudentForm frmUpdateStudent; // the reference to the Update Student form
         private EnrolStudentForm frmEnrolStudent; //the reference to the Enrol Student form
-        private WithdrawStudentForm frmWithdrawStudent; //the reference to the Wuthdraw Student form
+
+        private WithdrawStudentForm frmWithdrawStudent; //the reference to the Withdraw Student form
+        private EnrolBackgroundForm frmBackground; //the reference to the Background form
         // Variables to produce Report
         private DataRow[] studentssForPrint;
         private int studentForNextPage;
         private int countOfStudents;
         private int PagePrinted;
+
 
         public EnrolmentsClerkForm(DataController dc, LoginForm lgin)
         {
@@ -35,11 +38,11 @@ namespace BalhamCollege
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            //show Background form on click
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
             //show Add Student form upon click
-            if (frmAddStudent == null)
-            {
-                frmAddStudent = new AddStudentForm(DC, this);
-            }
+            frmAddStudent = new AddStudentForm(DC, this);
             frmAddStudent.ShowDialog();
         }
 
@@ -54,11 +57,11 @@ namespace BalhamCollege
         }
 
         private void btnDeleteStudent_Click(object sender, EventArgs e)
-        { // show Delete Student form 
-            if (frmDeleteStudent == null)
-            {
-                frmDeleteStudent = new DeleteStudentForm(DC, this);
-            }
+        { 
+            // show Delete Student form and Background Form
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
+            frmDeleteStudent = new DeleteStudentForm(DC, this);
             frmDeleteStudent.ShowDialog();
         }
         

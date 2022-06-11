@@ -19,6 +19,10 @@ namespace BalhamCollege
         private AddLecturerForm frmAddLecturer; // reference to Add Lecturer Form 
         //variables for producing the report
         private DataRow[] lecturersForPrint;
+
+        private int amountOfLecturersPrinted;
+        private HumanBackgroundForm frmHuman;
+
         private int lecturerForNextPage;
         private int countOfLecturers;
         private int PagePrinted;
@@ -57,11 +61,10 @@ namespace BalhamCollege
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-            // show Delete Lecturer form upon click
-            if (frmDeleteLecturer == null)
-            {
-                frmDeleteLecturer = new DeleteLecturerForm(DC, this);
-            }
+            // show Delete Lecturer form and background upon click
+            frmHuman = new HumanBackgroundForm(this);
+            frmHuman.Show();
+            frmDeleteLecturer = new DeleteLecturerForm(DC, this);
             frmDeleteLecturer.ShowDialog();
         }
 

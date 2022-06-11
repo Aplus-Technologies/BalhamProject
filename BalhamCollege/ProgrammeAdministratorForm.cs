@@ -24,12 +24,18 @@ namespace BalhamCollege
 
         private AddCourseForm frmAddCourse; // reference to Add Course Form
         private AddProgrammeForm frmAddProgramme; // reference to Add Programme Form
+
+        private ProgrammeBackgroundForm frmProg; // reference to Background Form
+
+
+
         //Produce report variables
         private DataRow[] coursesForPrint;
         private int courseForNextPage;
         private int countOfCourses;
         private int PagePrinted;
         private DataTable dtlecturersForPrint = new DataTable();
+
 
         public ProgrammeAdministratorForm(DataController dc, LoginForm lgin)
         {
@@ -63,11 +69,13 @@ namespace BalhamCollege
 
         private void btnDeleteCourse_Click(object sender, EventArgs e)
         {
-            // show Delete Course form upon click
-            if (frmDeleteCourse == null)
-            {
-                frmDeleteCourse = new DeleteCourseForm(DC, this);
-            }
+            // show Delete Course form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            
+            
+            frmDeleteCourse = new DeleteCourseForm(DC, this);
+            
             frmDeleteCourse.ShowDialog();
 
         }
@@ -242,11 +250,10 @@ namespace BalhamCollege
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            // show Remove Lecturer form upon click
-            if (frmRemoveLecturer == null)
-            {
-                frmRemoveLecturer = new RemoveLecturerForm(DC, this);
-            }
+            // show Remove Lecturer form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmRemoveLecturer = new RemoveLecturerForm(DC, this);           
             frmRemoveLecturer.ShowDialog();
         }
 
@@ -273,11 +280,13 @@ namespace BalhamCollege
 
         private void btnDeleteProgramme_Click(object sender, EventArgs e)
         {
-            // show Assign Lecturer form upon click
-            if (frmDeleteProgramme == null)
-            {
-                frmDeleteProgramme = new DeleteProgrammeForm (DC, this);
-            }
+            // show Delete Programme form and background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+           
+            
+            frmDeleteProgramme = new DeleteProgrammeForm (DC, this);
+            
             frmDeleteProgramme.ShowDialog();
 
         }
