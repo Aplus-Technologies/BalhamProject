@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResearchAdministratorForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnUpdateResearchTopic = new System.Windows.Forms.Button();
@@ -38,8 +39,22 @@ namespace BalhamCollege
             this.btnProduceResearchReport = new System.Windows.Forms.Button();
             this.btnRemoveResearchProject = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
+            this.rESEARCHPROJECTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESEARCHPROJECTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHPROJECTTableAdapter();
+            this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
+            this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
+            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
+            this.printResearch = new System.Drawing.Printing.PrintDocument();
+            this.prvResearches = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReturn
@@ -156,6 +171,70 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
+            // dsBalhamCollegeAzure
+            // 
+            this.dsBalhamCollegeAzure.DataSetName = "dsBalhamCollegeAzure";
+            this.dsBalhamCollegeAzure.EnforceConstraints = false;
+            this.dsBalhamCollegeAzure.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rESEARCHPROJECTBindingSource
+            // 
+            this.rESEARCHPROJECTBindingSource.DataMember = "RESEARCHPROJECT";
+            this.rESEARCHPROJECTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESEARCHPROJECTTableAdapter
+            // 
+            this.rESEARCHPROJECTTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.ASSESSMENTTableAdapter = null;
+            this.tableAdapterManager.ASSIGNMENTTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.COURSETableAdapter = null;
+            this.tableAdapterManager.ENROLMENTTableAdapter = null;
+            this.tableAdapterManager.ISSUETableAdapter = null;
+            this.tableAdapterManager.LECTURERTableAdapter = this.lECTURERTableAdapter;
+            this.tableAdapterManager.PROGRAMMETableAdapter = null;
+            this.tableAdapterManager.RESEARCHPROJECTTableAdapter = this.rESEARCHPROJECTTableAdapter;
+            this.tableAdapterManager.RESEARCHTOPICTableAdapter = this.rESEARCHTOPICTableAdapter;
+            this.tableAdapterManager.RESULTTableAdapter = null;
+            this.tableAdapterManager.STUDENTTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // rESEARCHTOPICBindingSource
+            // 
+            this.rESEARCHTOPICBindingSource.DataMember = "RESEARCHTOPIC";
+            this.rESEARCHTOPICBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // rESEARCHTOPICTableAdapter
+            // 
+            this.rESEARCHTOPICTableAdapter.ClearBeforeFill = true;
+            // 
+            // lECTURERBindingSource
+            // 
+            this.lECTURERBindingSource.DataMember = "LECTURER";
+            this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // lECTURERTableAdapter
+            // 
+            this.lECTURERTableAdapter.ClearBeforeFill = true;
+            // 
+            // printResearch
+            // 
+            this.printResearch.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printResearch_PrintPage);
+            // 
+            // prvResearches
+            // 
+            this.prvResearches.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.prvResearches.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.prvResearches.ClientSize = new System.Drawing.Size(400, 300);
+            this.prvResearches.Document = this.printResearch;
+            this.prvResearches.Enabled = true;
+            this.prvResearches.Icon = ((System.Drawing.Icon)(resources.GetObject("prvResearches.Icon")));
+            this.prvResearches.Name = "prvResearches";
+            this.prvResearches.Visible = false;
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
@@ -191,7 +270,12 @@ namespace BalhamCollege
             this.Name = "ResearchAdministratorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Research Administrator Menu";
+            this.Load += new System.EventHandler(this.ResearchAdministratorForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,6 +290,16 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnProduceResearchReport;
         private System.Windows.Forms.Button btnRemoveResearchProject;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private dsBalhamCollegeAzure dsBalhamCollegeAzure;
+        private System.Windows.Forms.BindingSource rESEARCHPROJECTBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.RESEARCHPROJECTTableAdapter rESEARCHPROJECTTableAdapter;
+        private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
+        private dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter rESEARCHTOPICTableAdapter;
+        private System.Windows.Forms.BindingSource rESEARCHTOPICBindingSource;
+        private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
+        private System.Windows.Forms.BindingSource lECTURERBindingSource;
+        private System.Drawing.Printing.PrintDocument printResearch;
+        private System.Windows.Forms.PrintPreviewDialog prvResearches;
         private System.Windows.Forms.Button btnExit;
     }
 }
