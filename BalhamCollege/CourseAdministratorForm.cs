@@ -67,7 +67,6 @@ namespace BalhamCollege
             this.Validate();
             this.aSSESSMENTBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void CourseAdministratorForm_Load(object sender, EventArgs e)
@@ -78,8 +77,6 @@ namespace BalhamCollege
             this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
             this.rESULTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESULT);
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
-
-
         }
 
         private void btnProduceAssessmentsReport_Click(object sender, EventArgs e)
@@ -156,12 +153,11 @@ namespace BalhamCollege
             int rightLabelsMargin = e.MarginBounds.Right - 520;
             int rightInfoMargin = e.MarginBounds.Left + 110;
             int subTitlesRightMargin = e.MarginBounds.Left + 500;
-            int position = 50;
             string markTit = "  Mark  ";
-            //string semesterTit = "Semester";
+
             string resultDateTit = "   Result Date   ";
             string nameTit = "Student Name";
-            //string progTit = "Student First Name";
+
 
             float bar = GetLength("|") / 2;
             float margin0 = leftMargin - 20;
@@ -171,20 +167,8 @@ namespace BalhamCollege
             float margin12 = margin1 + (margin2 - margin1) / 2 + bar;
             float margin3 = rightMargin + 20; ;
             float margin23 = margin2 + (margin3 - margin2) / 2 + bar;
-            //float margin4 = rightMargin + 10;
-            //float margin34 = margin3 + (margin4 - margin3) / 2 + bar;
-
-
-            //float margin5 = rightMargin + 10;
-            //float margin35 = margin3 + (margin5 - margin3) / 2 + bar;
-
-
             float yearMargin = rightLabelsMargin - GetLength(markTit) / 2 - 60;
             float semesterMa = yearMargin + GetLength(markTit);
-            //float statusMa = semesterMa + GetLength(semesterTit);
-            //float courseNameMa = statusMa + GetLength(resultDateTit);
-            //float progNameMa = courseNameMa + GetLength(courseTit);
-
 
             using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromImage(new Bitmap(1, 1)))
             {
@@ -211,7 +195,6 @@ namespace BalhamCollege
                     g.DrawString(drAssessment["AssessmentNumber"].ToString(), textFont, brush, rightInfoMargin + 220, topMargin + (linesSoFar * textFont.Height));
                     g.DrawString("Type: ", labelsFont, brush, rightLabelsMargin - GetLength("Type: ") + 350, topMargin + (linesSoFar * labelsFont.Height));
                     g.DrawString(drAssessment["Type"].ToString(), textFont, brush, rightInfoMargin + 350, topMargin + (linesSoFar * textFont.Height));
-
                     linesSoFar++;
                     assessmentInitialLines = linesSoFar;
 
@@ -230,15 +213,9 @@ namespace BalhamCollege
                     g.DrawString(Convert.ToString(drAssessment["Weighting"]), textFont, brush, rightInfoMargin, topMargin + 12 + (linesSoFar * textFont.Height));
                     g.DrawString("Maximum Mark: ", labelsFont, brush, rightLabelsMargin - GetLength("Maximum Mark: ") + 220, 12 + topMargin + (linesSoFar * labelsFont.Height));
                     g.DrawString(Convert.ToString(drAssessment["MaximumMark"]), textFont, brush, rightInfoMargin + 220, 12 + topMargin + (linesSoFar * textFont.Height));
-
-                    //LINE 5
-
-
                     linesSoFar++;
 
-
-
-
+                    //LINE 5
                     string strSort = "";
                     string strFilter = "AssessmentID=" + drAssessment["AssessmentID"].ToString();
                     DataRow[] results = dsBalhamCollegeAzure.Tables["RESULT"].Select(strFilter, strSort, DataViewRowState.CurrentRows);
@@ -284,13 +261,10 @@ namespace BalhamCollege
                         g.DrawString(nameTit, labelsFont, brush, margin23 - GetLength(nameTit) / 2, 24 + topMargin + (linesSoFar * labelsFont.Height));
                         g.DrawString("|", labelsFont, brush, margin3, 24 + topMargin + (linesSoFar * labelsFont.Height));
 
-                        //g.DrawString(progTit, labelsFont, brush, margin35 - GetLength(progTit) / 2, 24 + topMargin + (linesSoFar * labelsFont.Height));
-                        //g.DrawString("|", labelsFont, brush, margin5, 24 + topMargin + (linesSoFar * labelsFont.Height));
                         g.DrawString("_____________________________________________________________________________________", textFont, brush, leftMargin - 19, topMargin + (linesSoFar * textFont.Height) + 26);
                         linesSoFar++;
 
                         //LINE 7
-
                         foreach (DataRow drResults in resultsForTable.Rows)
                         {
                             g.DrawString("|", labelsFont, brush, margin0, 28 + topMargin + (linesSoFar * labelsFont.Height));
@@ -336,10 +310,6 @@ namespace BalhamCollege
                 e.HasMorePages = true;
             }
         }
-
-
-
-
 
         private void btnEnterResult_Click(object sender, EventArgs e)
         {// show enter result form 
