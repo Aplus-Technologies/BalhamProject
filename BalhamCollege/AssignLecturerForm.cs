@@ -85,6 +85,7 @@ namespace BalhamCollege
         private void ClearFields()
         {
             // Clear all fields
+            lstLecturers.Items.Clear();
             txtCourseID.Text = string.Empty;
             txtCourseName.Text = string.Empty;
             txtCredits.Text = string.Empty;
@@ -141,7 +142,6 @@ namespace BalhamCollege
                     this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
 
                     LoadCourses();
-                    LoadLecturers();
                     MessageBox.Show("Lecturer assigned successfully", "Acknowledgment", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
@@ -150,7 +150,6 @@ namespace BalhamCollege
                     // If an exception happened, then this lecturer is already assigned
                     MessageBox.Show("Lecturer already assigned to the course.", "Error");
                     LoadCourses();
-                    LoadLecturers();
                     ClearFields();
                 }
             }
@@ -166,7 +165,6 @@ namespace BalhamCollege
             this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
 
             LoadCourses();
-            LoadLecturers();
             ClearFields();
         }
 
@@ -179,6 +177,8 @@ namespace BalhamCollege
             txtCourseID.Text = drCourse["CourseID"].ToString();
             txtCourseName.Text = drCourse["CourseName"].ToString();
             txtCredits.Text = drCourse["Credits"].ToString();
+
+            LoadLecturers();
         }
 
         private void lstLecturers_SelectedIndexChanged(object sender, EventArgs e)
