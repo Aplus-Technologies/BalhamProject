@@ -18,7 +18,7 @@ namespace BalhamCollege
         public DataTable students = new DataTable();
         string selectedStudentID;
         int selectedEnrolmentID;
-        public RecordIssueForm(DataController dc,StudentsSupportClerkForm stusup)
+        public RecordIssueForm(DataController dc, StudentsSupportClerkForm stusup)
         {
             InitializeComponent();
             DC = dc;
@@ -32,7 +32,6 @@ namespace BalhamCollege
             students.Columns.Add("City", typeof(string));
             GetStudents();
             LoadStudents();
-
         }
 
         private void sTUDENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -40,7 +39,6 @@ namespace BalhamCollege
             this.Validate();
             this.sTUDENTBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void RecordIssueForm_Load(object sender, EventArgs e)
@@ -51,7 +49,6 @@ namespace BalhamCollege
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
-
         }
 
         private void GetStudents()
@@ -66,19 +63,10 @@ namespace BalhamCollege
                 if (!studentsEnroledIDs.Contains(id))
                 {
                     studentsEnroledIDs.Add(id);
-                }                
+                }
             }
             studentsEnroledIDs.Sort();
-
-            /*
-            TableToConvert.DefaultView.Sort = "EVENT_ID";
-            DataView TableView = TableToConvert.DefaultView;
-            DataTable NewTable = TableView.ToTable();
-            */
-
-
             students.Rows.Clear();
-
 
             foreach (DataRow drStudent in dsBalhamCollegeAzure.STUDENT.Rows)
             {
@@ -92,8 +80,8 @@ namespace BalhamCollege
                     drStudentToAdd[2] = drStudent[2].ToString();
                     drStudentToAdd[3] = drStudent[3].ToString();
                     drStudentToAdd[4] = drStudent[4].ToString();
-                    drStudentToAdd[5] = drStudent[5].ToString();         
-                }                
+                    drStudentToAdd[5] = drStudent[5].ToString();
+                }
             }
         }
         private void LoadStudents()
@@ -104,7 +92,7 @@ namespace BalhamCollege
             dgvStudents.Columns[0].Width = 70;
             dgvStudents.Columns[1].Width = 235;
             dgvStudents.Columns[2].Width = 235;
-            
+
             dgvStudents.Columns[3].Visible = false;
             dgvStudents.Columns[4].Visible = false;
             dgvStudents.Columns[5].Visible = false;
@@ -121,17 +109,14 @@ namespace BalhamCollege
             dgvStudents.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
-        
-
-
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvEnrolments.ClearSelection();
             dgvStudents.DefaultCellStyle.SelectionBackColor = Color.Blue;
             dgvStudents.DefaultCellStyle.SelectionForeColor = Color.White;
 
-            //dgvTreatments.DefaultCellStyle.SelectionBackColor = Color.White;
-            //dgvTreatments.DefaultCellStyle.SelectionForeColor = Color.Black;
+            int selectedrowIndex = dgvStudents.SelectedCells[0].RowIndex;
+            dgvStudents.Rows[selectedrowIndex].Selected = true;
 
             if (initCount == 0)
             {
@@ -148,7 +133,6 @@ namespace BalhamCollege
             }
             LoadEnrolments();
         }
-
         private void LoadEnrolments()
         {
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
@@ -161,7 +145,7 @@ namespace BalhamCollege
             enrolments.Columns.Add("Semester", typeof(string));
             enrolments.Columns.Add("Course Name", typeof(string));
             enrolments.Columns.Add("Course ID", typeof(string));
-            
+
 
             foreach (DataRow drEnrol in dsBalhamCollegeAzure.ENROLMENT.Rows)
             {
@@ -174,7 +158,7 @@ namespace BalhamCollege
                     drEnrolToAdd[1] = drEnrol[1].ToString();
                     drEnrolToAdd[2] = drEnrol[2].ToString();
                     drEnrolToAdd[4] = drEnrol[5].ToString();
-                    
+
 
                     foreach (DataRow drCourse in dsBalhamCollegeAzure.COURSE.Rows)
                     {
@@ -192,7 +176,7 @@ namespace BalhamCollege
             dgvEnrolments.Columns[2].Width = 70;
             dgvEnrolments.Columns[3].Width = 227;
             dgvEnrolments.Columns["Course ID"].Visible = false;
-            
+
             dgvEnrolments.RowHeadersVisible = false;
             dgvEnrolments.DefaultCellStyle.SelectionBackColor = Color.White;
             dgvEnrolments.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -217,7 +201,6 @@ namespace BalhamCollege
             initCount = 0;
             frmStudentSupport.Show();
         }
-
         private void BindFields()
         {
             txtStudentID.DataBindings.Add("Text", students, "ID");
@@ -246,7 +229,6 @@ namespace BalhamCollege
             txtStreetAddress.Text = "";
             txtSuburb.Text = "";
             txtcity.Text = "";
-
             txtActionTaken.Text = "";
             txtIssueDescription.Text = "";
             dtpIssueDate.Text = "";
@@ -259,6 +241,7 @@ namespace BalhamCollege
             int selectedrowindex = dgvEnrolments.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dgvEnrolments.Rows[selectedrowindex];
             selectedEnrolmentID = Convert.ToInt32(selectedRow.Cells["ID"].Value);
+            dgvEnrolments.Rows[selectedrowindex].Selected = true;
         }
 
         private void btnRecordIssue_Click(object sender, EventArgs e)
