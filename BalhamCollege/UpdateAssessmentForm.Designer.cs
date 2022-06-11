@@ -421,6 +421,7 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateAssessmentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Assessment";
             this.Load += new System.EventHandler(this.UpdateAssessmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudMaximumMark)).EndInit();

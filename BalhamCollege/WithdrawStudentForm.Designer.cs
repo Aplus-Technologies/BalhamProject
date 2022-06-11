@@ -47,10 +47,6 @@ namespace BalhamCollege
             this.lblSelectStudent = new System.Windows.Forms.Label();
             this.lstStudents = new System.Windows.Forms.ListBox();
             this.dgvEnrolments = new System.Windows.Forms.DataGridView();
-            this.enrolmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.semesterDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsBalhamCollegeAzureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsBalhamCollegeAzure = new BalhamCollege.dsBalhamCollegeAzure();
             this.sTUDENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -61,6 +57,7 @@ namespace BalhamCollege
             this.eNROLMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cOURSEBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSelectEnrolment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
@@ -216,27 +213,21 @@ namespace BalhamCollege
             this.lstStudents.Location = new System.Drawing.Point(23, 47);
             this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(304, 344);
+            this.lstStudents.Size = new System.Drawing.Size(304, 364);
             this.lstStudents.TabIndex = 32;
+            this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
             this.lstStudents.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstStudents_Format);
             // 
             // dgvEnrolments
             // 
             this.dgvEnrolments.AllowUserToAddRows = false;
             this.dgvEnrolments.AllowUserToDeleteRows = false;
-            this.dgvEnrolments.AllowUserToOrderColumns = true;
-            this.dgvEnrolments.AutoGenerateColumns = false;
+            this.dgvEnrolments.AllowUserToResizeColumns = false;
+            this.dgvEnrolments.AllowUserToResizeRows = false;
             this.dgvEnrolments.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEnrolments.ColumnHeadersHeight = 27;
             this.dgvEnrolments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvEnrolments.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.enrolmentIDDataGridViewTextBoxColumn,
-            this.yearDataGridViewTextBoxColumn,
-            this.semesterDataGridViewTextBoxColumn,
-            this.courseIDDataGridViewTextBoxColumn});
-            this.dgvEnrolments.DataMember = "ENROLMENT";
-            this.dgvEnrolments.DataSource = this.dsBalhamCollegeAzureBindingSource;
-            this.dgvEnrolments.Location = new System.Drawing.Point(378, 307);
+            this.dgvEnrolments.Location = new System.Drawing.Point(378, 318);
             this.dgvEnrolments.MultiSelect = false;
             this.dgvEnrolments.Name = "dgvEnrolments";
             this.dgvEnrolments.ReadOnly = true;
@@ -244,38 +235,6 @@ namespace BalhamCollege
             this.dgvEnrolments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEnrolments.Size = new System.Drawing.Size(467, 95);
             this.dgvEnrolments.TabIndex = 49;
-            this.dgvEnrolments.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEnrolments_CellFormatting);
-            // 
-            // enrolmentIDDataGridViewTextBoxColumn
-            // 
-            this.enrolmentIDDataGridViewTextBoxColumn.DataPropertyName = "EnrolmentID";
-            this.enrolmentIDDataGridViewTextBoxColumn.HeaderText = "Enrolment ID";
-            this.enrolmentIDDataGridViewTextBoxColumn.Name = "enrolmentIDDataGridViewTextBoxColumn";
-            this.enrolmentIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // yearDataGridViewTextBoxColumn
-            // 
-            this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
-            this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
-            this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
-            this.yearDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // semesterDataGridViewTextBoxColumn
-            // 
-            this.semesterDataGridViewTextBoxColumn.DataPropertyName = "Semester";
-            this.semesterDataGridViewTextBoxColumn.HeaderText = "Semester";
-            this.semesterDataGridViewTextBoxColumn.Name = "semesterDataGridViewTextBoxColumn";
-            this.semesterDataGridViewTextBoxColumn.ReadOnly = true;
-            this.semesterDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // courseIDDataGridViewTextBoxColumn
-            // 
-            this.courseIDDataGridViewTextBoxColumn.DataPropertyName = "CourseID";
-            this.courseIDDataGridViewTextBoxColumn.HeaderText = "Course Name";
-            this.courseIDDataGridViewTextBoxColumn.Name = "courseIDDataGridViewTextBoxColumn";
-            this.courseIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.courseIDDataGridViewTextBoxColumn.Width = 234;
             // 
             // dsBalhamCollegeAzureBindingSource
             // 
@@ -340,11 +299,22 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 54;
             this.pictureBox1.TabStop = false;
             // 
+            // lblSelectEnrolment
+            // 
+            this.lblSelectEnrolment.AutoSize = true;
+            this.lblSelectEnrolment.Location = new System.Drawing.Point(374, 295);
+            this.lblSelectEnrolment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSelectEnrolment.Name = "lblSelectEnrolment";
+            this.lblSelectEnrolment.Size = new System.Drawing.Size(176, 20);
+            this.lblSelectEnrolment.TabIndex = 55;
+            this.lblSelectEnrolment.Text = "Please select an enrolment:";
+            // 
             // WithdrawStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 509);
+            this.Controls.Add(this.lblSelectEnrolment);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvEnrolments);
             this.Controls.Add(this.btnReturn);
@@ -366,6 +336,7 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WithdrawStudentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Withdraw Student";
             this.Load += new System.EventHandler(this.WithdrawStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).EndInit();
@@ -407,10 +378,7 @@ namespace BalhamCollege
         private System.Windows.Forms.BindingSource eNROLMENTBindingSource;
         private dsBalhamCollegeAzureTableAdapters.COURSETableAdapter cOURSETableAdapter;
         private System.Windows.Forms.BindingSource cOURSEBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn enrolmentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn semesterDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn courseIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblSelectEnrolment;
     }
 }
