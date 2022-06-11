@@ -12,11 +12,20 @@ namespace BalhamCollege
 {
     public partial class AssignLecturerForm : Form
     {
+        //declare global variables
         private DataController DC;
         private ProgrammeAdministratorForm frmProgrammeAdministrator;
         private CurrencyManager cmCourse;
         private CurrencyManager cmLecturer;
 
+        private DataTable dtCourse2;
+        private DataView courseView2;
+
+        private DataTable dtLecturer2;
+        private DataView lecturerView2;
+
+        private DataTable dtAssignment2;
+        private DataView assignmentView2;
 
         public AssignLecturerForm(DataController dc, ProgrammeAdministratorForm programmeAdministrator)
         {
@@ -25,34 +34,65 @@ namespace BalhamCollege
             frmProgrammeAdministrator = programmeAdministrator;
             programmeAdministrator.Hide();
             BindControls();
+            TableAndView(); // generate updated table and views
+        }
+
+        private void TableAndView()
+        {
+            // create updated instances for Course table and dataview for Course table 
+            dtCourse2 = dsBalhamCollegeAzure.COURSE;
+            courseView2 = new DataView(dtCourse2);
+            courseView2.Sort = "CourseID";
+
+            // create updated instances for Lecturer table and dataview for Lecturer table 
+            dtLecturer2 = dsBalhamCollegeAzure.LECTURER;
+            lecturerView2 = new DataView(dtLecturer2);
+            lecturerView2.Sort = "LecturerID";
+
+            // create updated instances for Assignment table and dataview for Assignment table 
+            dtAssignment2 = dsBalhamCollegeAzure.ASSIGNMENT;
+            assignmentView2 = new DataView(dtAssignment2);
+            assignmentView2.Sort = "CourseID, LecturerID";
         }
 
         public void BindControls()
         {
             // Set up Currency Manager
-            cmCourse = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Course"];
-            cmLecturer = (CurrencyManager)this.BindingContext[DC.dsBalhamCollegeAzure, "Lecturer"];
+            cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Course"];
+            cmLecturer = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "Lecturer"];
+        }
 
-            // Bind list of courses
-            lstCourses.DataSource = DC.dsBalhamCollegeAzure;
-            lstCourses.DisplayMember = "Course.CourseID";
-            lstCourses.ValueMember = "Course.CourseID";
+        private void LoadCourses()
+        {
+            // To load all courses
+            lstCourses.Items.Clear();
+            foreach (DataRow drCourse in dtCourse2.Rows)
+            {
+                lstCourses.Items.Add(drCourse);
+            }
+        }
 
-            // Bind controls at right (for courses)
-            txtCourseID.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Course.CourseID");
-            txtCourseName.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Course.CourseName");
-            txtCredits.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Course.Credits");
+        private void LoadLecturers()
+        {
+            // To load all lecturers
+            lstLecturers.Items.Clear();
+            foreach (DataRow drLecturer in dtLecturer2.Rows)
+            {
+                lstLecturers.Items.Add(drLecturer);
+            }
+        }
 
-            // Bind list of lecturers
-            lstLecturers.DataSource = DC.dsBalhamCollegeAzure;
-            lstLecturers.DisplayMember = "Lecturer.LecturerID";
-            lstLecturers.ValueMember = "Lecturer.LecturerID";
-
-            // Bind controls at right (for lecturers)
-            txtLecturerID.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Lecturer.LecturerID");
-            txtLastName.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Lecturer.LastName");
-            txtFirstName.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Lecturer.FirstName");
-            txtRanking.DataBindings.Add("Text", DC.dsBalhamCollegeAzure, "Lecturer.Ranking");
+        private void ClearFields()
+        {
+            // Clear all fields
+            txtCourseID.Text = string.Empty;
+            txtCourseName.Text = string.Empty;
+            txtCredits.Text = string.Empty;
+            txtLecturerID.Text = string.Empty;
+            txtLastName.Text = string.Empty;
+            txtFirstName.Text = string.Empty;
+            txtRanking.Text = string.Empty;
+            cboRole.Text = string.Empty;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
@@ -64,21 +104,21 @@ namespace BalhamCollege
         private void lstCourses_Format(object sender, ListControlConvertEventArgs e)
         {
             // Convert database row into listitem text (for courses)
-            DataRowView courseRow = (DataRowView)e.ListItem;
-            e.Value = courseRow.Row["CourseID"] + " " + courseRow.Row["CourseName"];
+            DataRow courseRow = (DataRow)e.ListItem;
+            e.Value = courseRow["CourseID"] + " " + courseRow["CourseName"];
         }
 
         private void lstLecturers_Format(object sender, ListControlConvertEventArgs e)
         {
             // Convert database row into listitem text (for lecturers)
-            DataRowView lecturerRow = (DataRowView)e.ListItem;
-            e.Value = lecturerRow.Row["LecturerID"] + " " + lecturerRow.Row["LastName"] + ", " + lecturerRow.Row["FirstName"];
+            DataRow lecturerRow = (DataRow)e.ListItem;
+            e.Value = lecturerRow["LecturerID"] + " " + lecturerRow["LastName"] + ", " + lecturerRow["FirstName"];
         }
 
         private void btnAssignLecturer_Click(object sender, EventArgs e)
         {
             // Validate the entries in the fields
-            if (cboRole.Text == "")
+            if (lstCourses.SelectedItem == null || lstLecturers.SelectedItem == null || cboRole.Text == "")
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error");
             }
@@ -86,38 +126,34 @@ namespace BalhamCollege
             {
                 try
                 {
-                    // Create new row in the "ASSIGNMENT" table
-                    DataRow newAssignmentRow = DC.dtAssignment.NewRow();
-
                     // Get selected rows from the "COURSE" and "LECTURER" tables
-                    DataRow courseRow = DC.dtCourse.Rows[cmCourse.Position];
-                    DataRow lecturerRow = DC.dtLecturer.Rows[cmLecturer.Position];
+                    DataRow courseRow = dtCourse2.Rows[cmCourse.Position];
+                    DataRow lecturerRow = dtLecturer2.Rows[cmLecturer.Position];
 
-                    // Set values of the new row
-                    newAssignmentRow["CourseID"] = courseRow["CourseID"];
-                    newAssignmentRow["LecturerID"] = lecturerRow["LecturerID"];
-                    newAssignmentRow["Role"] = cboRole.Text;
+                    // Create new row in the "ASSIGNMENT" table
+                    this.aSSIGNMENTTableAdapter.Insert(Convert.ToInt32(courseRow["CourseID"]), Convert.ToInt32(lecturerRow["LecturerID"]), cboRole.Text);
 
-                    // Save new row in the "ASSIGNMENT" table
-                    DC.dtAssignment.Rows.Add(newAssignmentRow);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
+                    this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                    this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+                    // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+                    this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
 
-                    DC.UpdateAssignment();
+                    LoadCourses();
+                    LoadLecturers();
                     MessageBox.Show("Lecturer assigned successfully", "Acknowledgment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFields();
                 }
-                catch (System.Data.ConstraintException)
+                catch (System.Data.OleDb.OleDbException)
                 {
                     // If an exception happened, then this lecturer is already assigned
                     MessageBox.Show("Lecturer already assigned to the course.", "Error");
+                    LoadCourses();
+                    LoadLecturers();
+                    ClearFields();
                 }
             }
-        }
-
-        private void cOURSEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.cOURSEBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
-
         }
 
         private void AssignLecturerForm_Load(object sender, EventArgs e)
@@ -126,7 +162,42 @@ namespace BalhamCollege
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ASSIGNMENT' table. You can move, or remove it, as needed.
+            this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
 
+            LoadCourses();
+            LoadLecturers();
+            ClearFields();
+        }
+
+        private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRow drCourse = (DataRow)lstCourses.SelectedItem;
+            cmCourse.Position = courseView2.Find(drCourse["CourseID"]);
+
+            // To populate the following controls with their corresponding values; from Course Table 
+            txtCourseID.Text = drCourse["CourseID"].ToString();
+            txtCourseName.Text = drCourse["CourseName"].ToString();
+            txtCredits.Text = drCourse["Credits"].ToString();
+        }
+
+        private void lstLecturers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRow drLecturer = (DataRow)lstLecturers.SelectedItem;
+            cmLecturer.Position = lecturerView2.Find(drLecturer["LecturerID"]);
+
+            // To populate the following controls with their corresponding values; from Lecturer Table 
+            txtLecturerID.Text = drLecturer["LecturerID"].ToString();
+            txtLastName.Text = drLecturer["LastName"].ToString();
+            txtFirstName.Text = drLecturer["FirstName"].ToString();
+            txtRanking.Text = drLecturer["Ranking"].ToString();
+        }
+
+        private void cOURSEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.cOURSEBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
         }
     }
 }
