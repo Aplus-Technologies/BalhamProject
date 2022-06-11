@@ -61,10 +61,13 @@ namespace BalhamCollege
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
             this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aSSIGNMENTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter();
+            this.aSSIGNMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCourseName
@@ -122,6 +125,7 @@ namespace BalhamCollege
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.Size = new System.Drawing.Size(304, 124);
             this.lstCourses.TabIndex = 32;
+            this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             this.lstCourses.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstCourses_Format);
             // 
             // lblSelectCourse
@@ -288,6 +292,7 @@ namespace BalhamCollege
             this.lstLecturers.Name = "lstLecturers";
             this.lstLecturers.Size = new System.Drawing.Size(304, 204);
             this.lstLecturers.TabIndex = 42;
+            this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             this.lstLecturers.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstLecturers_Format);
             // 
             // txtRanking
@@ -348,6 +353,15 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
+            // aSSIGNMENTTableAdapter
+            // 
+            this.aSSIGNMENTTableAdapter.ClearBeforeFill = true;
+            // 
+            // aSSIGNMENTBindingSource
+            // 
+            this.aSSIGNMENTBindingSource.DataMember = "ASSIGNMENT";
+            this.aSSIGNMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
             // AssignLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -381,12 +395,14 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AssignLecturerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Assign Lecturer";
             this.Load += new System.EventHandler(this.AssignLecturerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aSSIGNMENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +440,7 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
         private System.Windows.Forms.BindingSource lECTURERBindingSource;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private dsBalhamCollegeAzureTableAdapters.ASSIGNMENTTableAdapter aSSIGNMENTTableAdapter;
+        private System.Windows.Forms.BindingSource aSSIGNMENTBindingSource;
     }
 }
