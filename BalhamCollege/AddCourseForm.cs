@@ -89,20 +89,21 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
            
-            txtProgrammeID.Visible = false;
+            
+           // txtProgrammeID.Visible = false;
             txtPlaceHolder2.Visible = true;
             txtPlaceHolder.Visible = true; 
             ClearFields(); 
            
-          //  LoadProgrammes();
+        
         }
 
         
 
        
         private void btnAddCourse_Click(object sender, EventArgs e)
-        {
-            programmeID = Convert.ToInt32(txtProgrammeID.Text); 
+        {    
+             programmeID = Convert.ToInt32(txtProgrammeID.Text); 
 
             // check if required fields are blank 
             if ((txtCourseName.Text == "") || (cboStatus.Text == "") || (cboProgramme.SelectedItem == null))
