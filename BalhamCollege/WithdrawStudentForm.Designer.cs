@@ -144,7 +144,7 @@ namespace BalhamCollege
             // lblCity
             // 
             this.lblCity.AutoSize = true;
-            this.lblCity.Location = new System.Drawing.Point(443, 258);
+            this.lblCity.Location = new System.Drawing.Point(446, 258);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(35, 20);
             this.lblCity.TabIndex = 39;
@@ -153,7 +153,7 @@ namespace BalhamCollege
             // lblSuburb
             // 
             this.lblSuburb.AutoSize = true;
-            this.lblSuburb.Location = new System.Drawing.Point(424, 216);
+            this.lblSuburb.Location = new System.Drawing.Point(425, 216);
             this.lblSuburb.Name = "lblSuburb";
             this.lblSuburb.Size = new System.Drawing.Size(56, 20);
             this.lblSuburb.TabIndex = 38;
@@ -162,7 +162,7 @@ namespace BalhamCollege
             // lblStreetAddress
             // 
             this.lblStreetAddress.AutoSize = true;
-            this.lblStreetAddress.Location = new System.Drawing.Point(374, 174);
+            this.lblStreetAddress.Location = new System.Drawing.Point(378, 174);
             this.lblStreetAddress.Name = "lblStreetAddress";
             this.lblStreetAddress.Size = new System.Drawing.Size(103, 20);
             this.lblStreetAddress.TabIndex = 37;
@@ -171,7 +171,7 @@ namespace BalhamCollege
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(398, 132);
+            this.lblFirstName.Location = new System.Drawing.Point(404, 132);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(77, 20);
             this.lblFirstName.TabIndex = 36;
@@ -180,7 +180,7 @@ namespace BalhamCollege
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(399, 89);
+            this.lblLastName.Location = new System.Drawing.Point(405, 89);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 20);
             this.lblLastName.TabIndex = 35;
@@ -189,7 +189,7 @@ namespace BalhamCollege
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(401, 47);
+            this.lblStudentID.Location = new System.Drawing.Point(407, 47);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(74, 20);
             this.lblStudentID.TabIndex = 34;
