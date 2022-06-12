@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteCourseForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteCourse = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
+            this.label1.Size = new System.Drawing.Size(215, 29);
             this.label1.TabIndex = 70;
             this.label1.Text = "Please select a course:";
             // 
@@ -96,7 +97,7 @@ namespace BalhamCollege
             this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(80, 26);
+            this.txtStatus.Size = new System.Drawing.Size(80, 35);
             this.txtStatus.TabIndex = 67;
             // 
             // txtCredits
@@ -105,7 +106,7 @@ namespace BalhamCollege
             this.txtCredits.MaxLength = 3;
             this.txtCredits.Name = "txtCredits";
             this.txtCredits.ReadOnly = true;
-            this.txtCredits.Size = new System.Drawing.Size(27, 26);
+            this.txtCredits.Size = new System.Drawing.Size(27, 35);
             this.txtCredits.TabIndex = 66;
             // 
             // txtCourseName
@@ -114,7 +115,7 @@ namespace BalhamCollege
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(361, 35);
             this.txtCourseName.TabIndex = 65;
             // 
             // txtCourseID
@@ -123,7 +124,7 @@ namespace BalhamCollege
             this.txtCourseID.MaxLength = 4;
             this.txtCourseID.Name = "txtCourseID";
             this.txtCourseID.ReadOnly = true;
-            this.txtCourseID.Size = new System.Drawing.Size(38, 26);
+            this.txtCourseID.Size = new System.Drawing.Size(38, 35);
             this.txtCourseID.TabIndex = 64;
             // 
             // lblStatus
@@ -131,7 +132,7 @@ namespace BalhamCollege
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(66, 301);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(49, 20);
+            this.lblStatus.Size = new System.Drawing.Size(73, 29);
             this.lblStatus.TabIndex = 63;
             this.lblStatus.Text = "Status:";
             // 
@@ -140,7 +141,7 @@ namespace BalhamCollege
             this.lblCredits.AutoSize = true;
             this.lblCredits.Location = new System.Drawing.Point(60, 270);
             this.lblCredits.Name = "lblCredits";
-            this.lblCredits.Size = new System.Drawing.Size(55, 20);
+            this.lblCredits.Size = new System.Drawing.Size(80, 29);
             this.lblCredits.TabIndex = 62;
             this.lblCredits.Text = "Credits:";
             // 
@@ -149,7 +150,7 @@ namespace BalhamCollege
             this.lblCourseName.AutoSize = true;
             this.lblCourseName.Location = new System.Drawing.Point(20, 239);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(95, 20);
+            this.lblCourseName.Size = new System.Drawing.Size(139, 29);
             this.lblCourseName.TabIndex = 61;
             this.lblCourseName.Text = "Course Name:";
             // 
@@ -158,18 +159,18 @@ namespace BalhamCollege
             this.lblCourseID.AutoSize = true;
             this.lblCourseID.Location = new System.Drawing.Point(43, 208);
             this.lblCourseID.Name = "lblCourseID";
-            this.lblCourseID.Size = new System.Drawing.Size(72, 20);
+            this.lblCourseID.Size = new System.Drawing.Size(105, 29);
             this.lblCourseID.TabIndex = 60;
             this.lblCourseID.Text = "Course ID:";
             // 
             // lstCourses
             // 
             this.lstCourses.FormattingEnabled = true;
-            this.lstCourses.ItemHeight = 20;
+            this.lstCourses.ItemHeight = 29;
             this.lstCourses.Location = new System.Drawing.Point(16, 55);
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.ScrollAlwaysVisible = true;
-            this.lstCourses.Size = new System.Drawing.Size(457, 144);
+            this.lstCourses.Size = new System.Drawing.Size(457, 120);
             this.lstCourses.TabIndex = 1;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
@@ -242,7 +243,7 @@ namespace BalhamCollege
             // 
             // DeleteCourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 390);
             this.Controls.Add(this.label1);
@@ -259,6 +260,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lstCourses);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteCourseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteCourseForm";

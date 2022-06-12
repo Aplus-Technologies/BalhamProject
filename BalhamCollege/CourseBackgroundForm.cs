@@ -20,5 +20,10 @@ namespace BalhamCollege
             frmCourse.Hide();
 
         }
+
+        private void CourseBackgroundForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
