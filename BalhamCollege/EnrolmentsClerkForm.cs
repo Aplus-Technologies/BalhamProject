@@ -122,14 +122,14 @@ namespace BalhamCollege
 
             if (this.WindowState == FormWindowState.Maximized)
             { // button font size upon maximize
-                btnAddStudent.Font = new Font("Arial", 12);
-                btnUpdateStudent.Font = new Font("Arial", 12);
-                btnDeleteStudent.Font = new Font("Arial", 12);
-                btnEnrolStudent.Font = new Font("Arial", 12);
-                btnWithdrawStudent.Font = new Font("Arial", 12);
-                btnStudentsReport.Font = new Font("Arial", 12);
-                btnReturn.Font = new Font("Arial", 12);
-                btnExit.Font = new Font("Arial", 12);
+                btnAddStudent.Font = new Font("Arial", 10);
+                btnUpdateStudent.Font = new Font("Arial", 10);
+                btnDeleteStudent.Font = new Font("Arial", 10);
+                btnEnrolStudent.Font = new Font("Arial", 10);
+                btnWithdrawStudent.Font = new Font("Arial", 10);
+                btnStudentsReport.Font = new Font("Arial", 10);
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
             }
             else
             {// button font size when not maximized
