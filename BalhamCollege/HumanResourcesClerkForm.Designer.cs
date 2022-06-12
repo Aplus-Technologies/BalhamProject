@@ -65,7 +65,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(30, 454);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(172, 48);
+            this.btnReturn.Size = new System.Drawing.Size(172, 52);
             this.btnReturn.TabIndex = 18;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -80,10 +80,10 @@ namespace BalhamCollege
             this.btnLecturerReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLecturerReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLecturerReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLecturerReport.Location = new System.Drawing.Point(30, 400);
+            this.btnLecturerReport.Location = new System.Drawing.Point(30, 396);
             this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnLecturerReport.Name = "btnLecturerReport";
-            this.btnLecturerReport.Size = new System.Drawing.Size(172, 48);
+            this.btnLecturerReport.Size = new System.Drawing.Size(172, 54);
             this.btnLecturerReport.TabIndex = 17;
             this.btnLecturerReport.Text = "Produce Lecturers Report";
             this.btnLecturerReport.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@ namespace BalhamCollege
             this.btnAddLecturer.Location = new System.Drawing.Point(30, 228);
             this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddLecturer.Name = "btnAddLecturer";
-            this.btnAddLecturer.Size = new System.Drawing.Size(172, 48);
+            this.btnAddLecturer.Size = new System.Drawing.Size(172, 53);
             this.btnAddLecturer.TabIndex = 16;
             this.btnAddLecturer.Text = "Add Lecturer";
             this.btnAddLecturer.UseVisualStyleBackColor = false;
@@ -119,7 +119,7 @@ namespace BalhamCollege
             this.btnUpdateLecturer.Location = new System.Drawing.Point(30, 285);
             this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateLecturer.Name = "btnUpdateLecturer";
-            this.btnUpdateLecturer.Size = new System.Drawing.Size(172, 48);
+            this.btnUpdateLecturer.Size = new System.Drawing.Size(172, 55);
             this.btnUpdateLecturer.TabIndex = 15;
             this.btnUpdateLecturer.Text = "Update Lecturer";
             this.btnUpdateLecturer.UseVisualStyleBackColor = false;
