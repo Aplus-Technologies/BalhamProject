@@ -73,6 +73,36 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BalhamCollege7_1106x712 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamCollege7_1106x712", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BalhamCollege7_1106x712v2 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamCollege7_1106x712v2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BalhamCollege7_1106x712v3 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamCollege7_1106x712v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BalhamCollegeLogo60x60 {
             get {
                 object obj = ResourceManager.GetObject("BalhamCollegeLogo60x60", resourceCulture);
@@ -136,6 +166,26 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap BalhamLogin6 {
             get {
                 object obj = ResourceManager.GetObject("BalhamLogin6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BalhamLogin800x450 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamLogin800x450", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BalhamLogin800x450V2 {
+            get {
+                object obj = ResourceManager.GetObject("BalhamLogin800x450V2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +276,36 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap humanResourcesClerkPage {
             get {
                 object obj = ResourceManager.GetObject("humanResourcesClerkPage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x35 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x35V2 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x35V2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login212x45 {
+            get {
+                object obj = ResourceManager.GetObject("Login212x45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

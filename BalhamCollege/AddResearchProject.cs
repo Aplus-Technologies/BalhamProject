@@ -98,7 +98,6 @@ namespace BalhamCollege
             projectsA.Columns.Add("Research Topic Description", typeof(string));
 
             foreach (DataRow drPT in this.dsBalhamCollegeAzure.RESEARCHPROJECT.Rows)
-            //foreach (DataRow drVT in DC.dtVisitTreatment.Rows)
             {
                 if (txtLecturerID.Text == drPT[4].ToString())
                 {

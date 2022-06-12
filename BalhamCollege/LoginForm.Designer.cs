@@ -32,156 +32,193 @@ namespace BalhamCollege
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.chkBox_login = new System.Windows.Forms.CheckBox();
-            this.pbLoginButton = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblForgot = new System.Windows.Forms.Label();
             this.btnCourseAdmin = new System.Windows.Forms.Button();
             this.btnStudentSupport = new System.Windows.Forms.Button();
             this.btnHumanResources = new System.Windows.Forms.Button();
             this.btnProgrammeAdmin = new System.Windows.Forms.Button();
             this.btnResearchAdmin = new System.Windows.Forms.Button();
             this.btnEnrolmentsAdmin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).BeginInit();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnForgot = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPassword
             // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(448, 386);
+            this.txtPassword.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(416, 310);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(266, 20);
-            this.txtPassword.TabIndex = 9;
+            this.txtPassword.Size = new System.Drawing.Size(144, 13);
+            this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.BackColor = System.Drawing.SystemColors.Window;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(448, 282);
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(416, 253);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(266, 20);
-            this.txtUsername.TabIndex = 6;
-            // 
-            // chkBox_login
-            // 
-            this.chkBox_login.AutoSize = true;
-            this.chkBox_login.Location = new System.Drawing.Point(425, 461);
-            this.chkBox_login.Name = "chkBox_login";
-            this.chkBox_login.Size = new System.Drawing.Size(18, 17);
-            this.chkBox_login.TabIndex = 14;
-            this.chkBox_login.UseVisualStyleBackColor = true;
-            // 
-            // pbLoginButton
-            // 
-            this.pbLoginButton.Image = global::BalhamCollege.Properties.Resources.loginBtn;
-            this.pbLoginButton.Location = new System.Drawing.Point(422, 521);
-            this.pbLoginButton.Name = "pbLoginButton";
-            this.pbLoginButton.Size = new System.Drawing.Size(319, 50);
-            this.pbLoginButton.TabIndex = 15;
-            this.pbLoginButton.TabStop = false;
-            this.pbLoginButton.Click += new System.EventHandler(this.pbLoginButton_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.BalhamLogin6;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1103, 713);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lblForgot
-            // 
-            this.lblForgot.AutoSize = true;
-            this.lblForgot.BackColor = System.Drawing.Color.White;
-            this.lblForgot.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgot.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblForgot.Location = new System.Drawing.Point(468, 490);
-            this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(289, 17);
-            this.lblForgot.TabIndex = 19;
-            this.lblForgot.Text = "Forgot your username or password, click here";
-            this.lblForgot.Click += new System.EventHandler(this.lblForgot_Click);
+            this.txtUsername.Size = new System.Drawing.Size(144, 13);
+            this.txtUsername.TabIndex = 1;
             // 
             // btnCourseAdmin
             // 
-            this.btnCourseAdmin.Location = new System.Drawing.Point(873, 192);
+            this.btnCourseAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCourseAdmin.Location = new System.Drawing.Point(725, 50);
             this.btnCourseAdmin.Name = "btnCourseAdmin";
-            this.btnCourseAdmin.Size = new System.Drawing.Size(150, 40);
-            this.btnCourseAdmin.TabIndex = 20;
+            this.btnCourseAdmin.Size = new System.Drawing.Size(164, 44);
+            this.btnCourseAdmin.TabIndex = 4;
             this.btnCourseAdmin.Text = "Course Admin";
             this.btnCourseAdmin.UseVisualStyleBackColor = true;
             this.btnCourseAdmin.Click += new System.EventHandler(this.btnCourseAdmin_Click);
             // 
             // btnStudentSupport
             // 
-            this.btnStudentSupport.Location = new System.Drawing.Point(873, 238);
+            this.btnStudentSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStudentSupport.Location = new System.Drawing.Point(725, 154);
             this.btnStudentSupport.Name = "btnStudentSupport";
-            this.btnStudentSupport.Size = new System.Drawing.Size(150, 40);
-            this.btnStudentSupport.TabIndex = 21;
+            this.btnStudentSupport.Size = new System.Drawing.Size(164, 40);
+            this.btnStudentSupport.TabIndex = 6;
             this.btnStudentSupport.Text = "Student Support";
             this.btnStudentSupport.UseVisualStyleBackColor = true;
             this.btnStudentSupport.Click += new System.EventHandler(this.btnStudentSupport_Click);
             // 
             // btnHumanResources
             // 
-            this.btnHumanResources.Location = new System.Drawing.Point(873, 284);
+            this.btnHumanResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHumanResources.Location = new System.Drawing.Point(725, 100);
             this.btnHumanResources.Name = "btnHumanResources";
-            this.btnHumanResources.Size = new System.Drawing.Size(150, 40);
-            this.btnHumanResources.TabIndex = 22;
+            this.btnHumanResources.Size = new System.Drawing.Size(164, 45);
+            this.btnHumanResources.TabIndex = 5;
             this.btnHumanResources.Text = "Human Resources";
             this.btnHumanResources.UseVisualStyleBackColor = true;
             this.btnHumanResources.Click += new System.EventHandler(this.btnHumanResources_Click);
             // 
             // btnProgrammeAdmin
             // 
-            this.btnProgrammeAdmin.Location = new System.Drawing.Point(873, 330);
+            this.btnProgrammeAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProgrammeAdmin.Location = new System.Drawing.Point(725, 200);
             this.btnProgrammeAdmin.Name = "btnProgrammeAdmin";
-            this.btnProgrammeAdmin.Size = new System.Drawing.Size(150, 40);
-            this.btnProgrammeAdmin.TabIndex = 23;
+            this.btnProgrammeAdmin.Size = new System.Drawing.Size(164, 45);
+            this.btnProgrammeAdmin.TabIndex = 7;
             this.btnProgrammeAdmin.Text = "Programme Admin";
             this.btnProgrammeAdmin.UseVisualStyleBackColor = true;
             this.btnProgrammeAdmin.Click += new System.EventHandler(this.btnProgrammeAdmin_Click);
             // 
             // btnResearchAdmin
             // 
-            this.btnResearchAdmin.Location = new System.Drawing.Point(873, 377);
+            this.btnResearchAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResearchAdmin.Location = new System.Drawing.Point(725, 251);
             this.btnResearchAdmin.Name = "btnResearchAdmin";
-            this.btnResearchAdmin.Size = new System.Drawing.Size(150, 40);
-            this.btnResearchAdmin.TabIndex = 24;
+            this.btnResearchAdmin.Size = new System.Drawing.Size(164, 47);
+            this.btnResearchAdmin.TabIndex = 8;
             this.btnResearchAdmin.Text = "Research Admin";
             this.btnResearchAdmin.UseVisualStyleBackColor = true;
             this.btnResearchAdmin.Click += new System.EventHandler(this.btnResearchAdmin_Click);
             // 
             // btnEnrolmentsAdmin
             // 
-            this.btnEnrolmentsAdmin.Location = new System.Drawing.Point(873, 423);
+            this.btnEnrolmentsAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEnrolmentsAdmin.Location = new System.Drawing.Point(725, 304);
             this.btnEnrolmentsAdmin.Name = "btnEnrolmentsAdmin";
-            this.btnEnrolmentsAdmin.Size = new System.Drawing.Size(150, 40);
-            this.btnEnrolmentsAdmin.TabIndex = 25;
+            this.btnEnrolmentsAdmin.Size = new System.Drawing.Size(164, 47);
+            this.btnEnrolmentsAdmin.TabIndex = 9;
             this.btnEnrolmentsAdmin.Text = "Enrolments Clerk";
             this.btnEnrolmentsAdmin.UseVisualStyleBackColor = true;
             this.btnEnrolmentsAdmin.Click += new System.EventHandler(this.btnEnrolmentsAdmin_Click);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(118)))), ((int)(((byte)(168)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogin.Location = new System.Drawing.Point(378, 406);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(207, 30);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "LOG IN";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnForgot
+            // 
+            this.btnForgot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnForgot.AutoSize = true;
+            this.btnForgot.BackColor = System.Drawing.Color.White;
+            this.btnForgot.FlatAppearance.BorderSize = 0;
+            this.btnForgot.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnForgot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForgot.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgot.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnForgot.Location = new System.Drawing.Point(378, 377);
+            this.btnForgot.Name = "btnForgot";
+            this.btnForgot.Size = new System.Drawing.Size(207, 23);
+            this.btnForgot.TabIndex = 27;
+            this.btnForgot.Text = "Forgot your username or password, click here";
+            this.btnForgot.UseVisualStyleBackColor = false;
+            this.btnForgot.Click += new System.EventHandler(this.btnForgot_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = global::BalhamCollege.Properties.Resources.BalhamCollege7_1106x712;
+            this.pictureBox1.Location = new System.Drawing.Point(-5, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(970, 545);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1094, 671);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.ClientSize = new System.Drawing.Size(963, 537);
+            this.Controls.Add(this.btnForgot);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnEnrolmentsAdmin);
             this.Controls.Add(this.btnResearchAdmin);
             this.Controls.Add(this.btnProgrammeAdmin);
             this.Controls.Add(this.btnHumanResources);
             this.Controls.Add(this.btnStudentSupport);
             this.Controls.Add(this.btnCourseAdmin);
-            this.Controls.Add(this.lblForgot);
-            this.Controls.Add(this.pbLoginButton);
-            this.Controls.Add(this.chkBox_login);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
@@ -192,7 +229,7 @@ namespace BalhamCollege
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLoginButton)).EndInit();
+            this.Resize += new System.EventHandler(this.LoginForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -203,15 +240,14 @@ namespace BalhamCollege
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.CheckBox chkBox_login;
-        private System.Windows.Forms.PictureBox pbLoginButton;
-        private System.Windows.Forms.Label lblForgot;
         private System.Windows.Forms.Button btnCourseAdmin;
         private System.Windows.Forms.Button btnStudentSupport;
         private System.Windows.Forms.Button btnHumanResources;
         private System.Windows.Forms.Button btnProgrammeAdmin;
         private System.Windows.Forms.Button btnResearchAdmin;
         private System.Windows.Forms.Button btnEnrolmentsAdmin;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnForgot;
     }
 }
 
