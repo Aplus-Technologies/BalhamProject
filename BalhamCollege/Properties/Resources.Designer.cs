@@ -73,16 +73,6 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackgroundBalham1199w692h {
-            get {
-                object obj = ResourceManager.GetObject("BackgroundBalham1199w692h", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BackgroundBalham1980x {
             get {
                 object obj = ResourceManager.GetObject("BackgroundBalham1980x", resourceCulture);
@@ -336,6 +326,16 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap Group_3 {
             get {
                 object obj = ResourceManager.GetObject("Group 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HumanResClerk1980x1080 {
+            get {
+                object obj = ResourceManager.GetObject("HumanResClerk1980x1080", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

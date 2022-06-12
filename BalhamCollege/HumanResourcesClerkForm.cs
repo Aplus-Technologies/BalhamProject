@@ -17,6 +17,17 @@ namespace BalhamCollege
         private UpdateLecturerForm frmUpdateLecturer; // the reference to the Update Lecturer form
         private DeleteLecturerForm frmDeleteLecturer; // reference to Delete Lecturer Form
         private AddLecturerForm frmAddLecturer; // reference to Add Lecturer Form 
+
+        // variables to store control location and size    
+        private Rectangle btnAddLecturerOriginalRect;
+        private Rectangle btnUpdateLecturerOriginalRect;
+        private Rectangle btnDeleteLecturerOriginalRect;
+        private Rectangle btnProduceLecturersReportOriginalRect;
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
+
         //variables for producing the report
         private DataRow[] lecturersForPrint;
 
@@ -33,8 +44,88 @@ namespace BalhamCollege
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnAddLecturerOriginalRect = new Rectangle(btnAddLecturer.Location.X, btnAddLecturer.Location.Y, btnAddLecturer.Width, btnAddLecturer.Height);
+            btnUpdateLecturerOriginalRect = new Rectangle(btnUpdateLecturer.Location.X, btnUpdateLecturer.Location.Y, btnUpdateLecturer.Width, btnUpdateLecturer.Height);
+            btnDeleteLecturerOriginalRect = new Rectangle(btnDeleteLecturer.Location.X, btnDeleteLecturer.Location.Y, btnDeleteLecturer.Width, btnDeleteLecturer.Height);
+            btnProduceLecturersReportOriginalRect = new Rectangle(btnLecturerReport.Location.X, btnLecturerReport.Location.Y, btnLecturerReport.Width, btnLecturerReport.Height);           
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+
         }
-       
+
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnAddLecturerOriginalRect, btnAddLecturer);
+            resizeControl(btnUpdateLecturerOriginalRect, btnUpdateLecturer);
+            resizeControl(btnDeleteLecturerOriginalRect, btnDeleteLecturer);
+            resizeControl(btnProduceLecturersReportOriginalRect, btnLecturerReport);
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 8;
+            }
+            else
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 10;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        } 
+        private void HumanResourcesClerkForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnAddLecturer.Font = new Font("Arial", 10);
+                btnUpdateLecturer.Font = new Font("Arial", 10);
+                btnDeleteLecturer.Font = new Font("Arial", 10);
+                btnLecturerReport.Font = new Font("Arial", 10);
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
+            }
+            else
+            {// button font size when not maximized
+                btnAddLecturer.Font = new Font("Arial", 8);
+                btnUpdateLecturer.Font = new Font("Arial", 8);
+                btnDeleteLecturer.Font = new Font("Arial", 8);
+                btnLecturerReport.Font = new Font("Arial", 8);
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+            }
+        }
+
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
@@ -94,6 +185,13 @@ namespace BalhamCollege
             this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
+
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
 
         }
 
@@ -223,6 +321,6 @@ namespace BalhamCollege
             }
         }
 
-        
+       
     }
 }

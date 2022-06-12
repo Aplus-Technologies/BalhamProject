@@ -59,12 +59,7 @@ namespace BalhamCollege
             btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
             btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
 
-            //open form to maximize 
-            if (this.WindowState == FormWindowState.Normal)
-            {  // open form to maximize after 1 sec interval 
-                timer1.Interval = 1000;
-                this.WindowState = FormWindowState.Maximized;
-            }
+           
         }
 
         private void resizeChildrenControls()
@@ -503,6 +498,14 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
             DC = new DataController(); // create the data controller and load the dataset
+
+
+            //open form to maximize 
+            if (this.WindowState == FormWindowState.Normal)
+            {  // open form to maximize after 1 sec interval 
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
        
