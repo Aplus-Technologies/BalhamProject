@@ -127,9 +127,6 @@
   <data name="BalhamLogin3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BalhamLogin3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BalhamLogin800x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BalhamLogin800x450.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Group 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,9 +135,6 @@
   </data>
   <data name="Login212x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login212x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EnrolmentsClerk1980x1080v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EnrolmentsClerk1980x1080v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enrolmentsClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enrolmentsClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +154,8 @@
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BalhamCollegeLogo80x80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BalhamCollegeLogo80x80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EnrolmentsClerk1980x1080v2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EnrolmentsClerk1980x1080v2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Login212x35V2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Login212x35V2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +190,9 @@
   <data name="btnLogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnLogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BalhamCollegeLogo80x80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BalhamCollegeLogo80x80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BalhamCollege7_1106x712" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BalhamCollege7_1106x712.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,18 +211,22 @@
   <data name="BalhamCollege7_1106x712v3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BalhamCollege7_1106x712v3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="studentSupportClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\studentSupportClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BalhamLogin4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BalhamLogin4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="studentSupportClerkPage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\studentSupportClerkPage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BalhamLogin800x450" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BalhamLogin800x450.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="crossButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crossButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-
   <data name="EnrolmentsClerk1980x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EnrolmentsClerk1980x1080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-
+  </data>
+  <data name="HumanResClerk1980x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HumanResClerk1980x1080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
