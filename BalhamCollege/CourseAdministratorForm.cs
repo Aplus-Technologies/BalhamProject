@@ -21,6 +21,17 @@ namespace BalhamCollege
 
         private CourseBackgroundForm frmCourse; // reference to background form
 
+        // variables to store control location and size    
+        private Rectangle btnAddAssessmentOriginalRect;
+        private Rectangle btnUpdateAssessmentOriginalRect;
+        private Rectangle btnDeleteAssessmentOriginalRect;
+        private Rectangle btnEnterResultOriginalRect;
+        private Rectangle btnProduceAssessmentsReportOriginalRect;
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
+
         // Variables to produce Report
         private DataTable assessmentsForPrint;
         private DataRow[] assessmentsForPrintVAR;
@@ -34,9 +45,94 @@ namespace BalhamCollege
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnAddAssessmentOriginalRect = new Rectangle(btnAddAssessment.Location.X, btnAddAssessment.Location.Y, btnAddAssessment.Width, btnAddAssessment.Height);
+            btnUpdateAssessmentOriginalRect = new Rectangle(btnUpdateAssessment.Location.X, btnUpdateAssessment.Location.Y, btnUpdateAssessment.Width, btnUpdateAssessment.Height);
+            btnDeleteAssessmentOriginalRect = new Rectangle(btnDeleteAssessment.Location.X, btnDeleteAssessment.Location.Y, btnDeleteAssessment.Width, btnDeleteAssessment.Height);
+            btnEnterResultOriginalRect = new Rectangle(btnEnterResult.Location.X, btnEnterResult.Location.Y, btnEnterResult.Width, btnEnterResult.Height);
+            btnProduceAssessmentsReportOriginalRect = new Rectangle(btnProduceAssessmentsReport.Location.X, btnProduceAssessmentsReport.Location.Y, btnProduceAssessmentsReport.Width, btnProduceAssessmentsReport.Height);
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
         }
 
-        private void btnAddAssessment_Click(object sender, EventArgs e)
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnAddAssessmentOriginalRect, btnAddAssessment);
+            resizeControl(btnUpdateAssessmentOriginalRect, btnUpdateAssessment);
+            resizeControl(btnDeleteAssessmentOriginalRect, btnDeleteAssessment);
+            resizeControl(btnEnterResultOriginalRect, btnEnterResult);
+            resizeControl(btnProduceAssessmentsReportOriginalRect, btnProduceAssessmentsReport);
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 10;
+            }
+            else 
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 15;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        } 
+        private void CourseAdministratorForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnAddAssessment.Font = new Font("Arial", 12);
+                btnUpdateAssessment.Font = new Font("Arial", 12);
+                btnDeleteAssessment.Font = new Font("Arial", 12);
+                btnEnterResult.Font = new Font("Arial", 12);
+                btnProduceAssessmentsReport.Font = new Font("Arial", 12);
+                btnReturn.Font = new Font("Arial", 12);
+                btnExit.Font = new Font("Arial", 12); 
+            }
+            else
+            {// button font size when not maximized
+                btnAddAssessment.Font = new Font("Arial", 8);
+                btnUpdateAssessment.Font = new Font("Arial", 8);
+                btnDeleteAssessment.Font = new Font("Arial", 8);
+                btnEnterResult.Font = new Font("Arial", 8);
+                btnProduceAssessmentsReport.Font = new Font("Arial", 8);
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+            }
+        }
+
+       
+
+            private void btnAddAssessment_Click(object sender, EventArgs e)
         {
             // show Add Assessment form upon click
             if (frmAddAssessment == null)
@@ -335,5 +431,7 @@ namespace BalhamCollege
             Application.Exit();
             // exit application 
         }
+
+       
     }
 }
