@@ -89,7 +89,7 @@
             // 
             // btnDeleteStudent
             // 
-            this.btnDeleteStudent.Location = new System.Drawing.Point(29, 397);
+            this.btnDeleteStudent.Location = new System.Drawing.Point(375, 397);
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(159, 41);

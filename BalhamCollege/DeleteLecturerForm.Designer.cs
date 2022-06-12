@@ -85,7 +85,7 @@ namespace BalhamCollege
             // 
             this.btnDeleteLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(209)))));
             this.btnDeleteLecturer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeleteLecturer.Location = new System.Drawing.Point(14, 303);
+            this.btnDeleteLecturer.Location = new System.Drawing.Point(346, 303);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
             this.btnDeleteLecturer.Size = new System.Drawing.Size(159, 39);
             this.btnDeleteLecturer.TabIndex = 2;
