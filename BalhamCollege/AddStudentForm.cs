@@ -44,7 +44,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {// closes form
-            Application.OpenForms["BackgroundForm"].Close();
+            Application.OpenForms["EnrolBackgroundForm"].Close();
             this.Close();
             frmEnrolMenu.Show(); // show enrolments clerk menu 
         } 
