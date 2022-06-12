@@ -19,5 +19,10 @@ namespace BalhamCollege
             frmProg = prg;
             frmProg.Hide();
         }
+
+        private void ProgrammeBackgroundForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

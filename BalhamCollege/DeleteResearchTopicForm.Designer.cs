@@ -56,7 +56,7 @@ namespace BalhamCollege
             // 
             // txtTopicDescription
             // 
-            this.txtTopicDescription.Location = new System.Drawing.Point(136, 321);
+            this.txtTopicDescription.Location = new System.Drawing.Point(136, 314);
             this.txtTopicDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtTopicDescription.MaxLength = 100;
             this.txtTopicDescription.Multiline = true;
@@ -68,10 +68,10 @@ namespace BalhamCollege
             // lblTopicDescription
             // 
             this.lblTopicDescription.AutoSize = true;
-            this.lblTopicDescription.Location = new System.Drawing.Point(23, 323);
+            this.lblTopicDescription.Location = new System.Drawing.Point(23, 316);
             this.lblTopicDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTopicDescription.Name = "lblTopicDescription";
-            this.lblTopicDescription.Size = new System.Drawing.Size(169, 29);
+            this.lblTopicDescription.Size = new System.Drawing.Size(117, 20);
             this.lblTopicDescription.TabIndex = 161;
             this.lblTopicDescription.Text = "Topic Description:";
             // 
@@ -99,51 +99,51 @@ namespace BalhamCollege
             // 
             // txtImpact
             // 
-            this.txtImpact.Location = new System.Drawing.Point(136, 374);
+            this.txtImpact.Location = new System.Drawing.Point(136, 370);
             this.txtImpact.Margin = new System.Windows.Forms.Padding(4);
             this.txtImpact.MaxLength = 6;
             this.txtImpact.Name = "txtImpact";
             this.txtImpact.ReadOnly = true;
-            this.txtImpact.Size = new System.Drawing.Size(73, 35);
+            this.txtImpact.Size = new System.Drawing.Size(73, 26);
             this.txtImpact.TabIndex = 158;
             // 
             // txtResearchTopicID
             // 
-            this.txtResearchTopicID.Location = new System.Drawing.Point(136, 288);
+            this.txtResearchTopicID.Location = new System.Drawing.Point(136, 279);
             this.txtResearchTopicID.Margin = new System.Windows.Forms.Padding(4);
             this.txtResearchTopicID.MaxLength = 2;
             this.txtResearchTopicID.Name = "txtResearchTopicID";
             this.txtResearchTopicID.ReadOnly = true;
-            this.txtResearchTopicID.Size = new System.Drawing.Size(26, 35);
+            this.txtResearchTopicID.Size = new System.Drawing.Size(26, 26);
             this.txtResearchTopicID.TabIndex = 100;
             // 
             // lblImpact
             // 
             this.lblImpact.AutoSize = true;
-            this.lblImpact.Location = new System.Drawing.Point(88, 377);
+            this.lblImpact.Location = new System.Drawing.Point(88, 373);
             this.lblImpact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblImpact.Name = "lblImpact";
-            this.lblImpact.Size = new System.Drawing.Size(75, 29);
+            this.lblImpact.Size = new System.Drawing.Size(52, 20);
             this.lblImpact.TabIndex = 156;
             this.lblImpact.Text = "Impact:";
             // 
             // lblResearchTopicID
             // 
             this.lblResearchTopicID.AutoSize = true;
-            this.lblResearchTopicID.Location = new System.Drawing.Point(17, 291);
+            this.lblResearchTopicID.Location = new System.Drawing.Point(17, 282);
             this.lblResearchTopicID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResearchTopicID.Name = "lblResearchTopicID";
-            this.lblResearchTopicID.Size = new System.Drawing.Size(179, 29);
+            this.lblResearchTopicID.Size = new System.Drawing.Size(123, 20);
             this.lblResearchTopicID.TabIndex = 155;
             this.lblResearchTopicID.Text = "Research Topic ID:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 25);
+            this.label1.Location = new System.Drawing.Point(14, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 29);
+            this.label1.Size = new System.Drawing.Size(195, 20);
             this.label1.TabIndex = 154;
             this.label1.Text = "Please select a research topic:";
             // 
@@ -151,12 +151,12 @@ namespace BalhamCollege
             // 
             this.lstResearchTopics.FormattingEnabled = true;
             this.lstResearchTopics.HorizontalScrollbar = true;
-            this.lstResearchTopics.ItemHeight = 29;
-            this.lstResearchTopics.Location = new System.Drawing.Point(15, 52);
+            this.lstResearchTopics.ItemHeight = 20;
+            this.lstResearchTopics.Location = new System.Drawing.Point(15, 54);
             this.lstResearchTopics.Margin = new System.Windows.Forms.Padding(4);
             this.lstResearchTopics.Name = "lstResearchTopics";
             this.lstResearchTopics.ScrollAlwaysVisible = true;
-            this.lstResearchTopics.Size = new System.Drawing.Size(482, 207);
+            this.lstResearchTopics.Size = new System.Drawing.Size(482, 204);
             this.lstResearchTopics.TabIndex = 1;
             this.lstResearchTopics.SelectedIndexChanged += new System.EventHandler(this.lstResearchTopics_SelectedIndexChanged);
             // 
@@ -203,15 +203,15 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(434, -5);
+            this.pictureBox1.Location = new System.Drawing.Point(449, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(68, 80);
             this.pictureBox1.TabIndex = 163;
             this.pictureBox1.TabStop = false;
             // 
             // DeleteResearchTopicForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 471);
             this.Controls.Add(this.txtTopicDescription);
