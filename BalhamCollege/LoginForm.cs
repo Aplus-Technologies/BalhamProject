@@ -24,8 +24,8 @@ namespace BalhamCollege
         private Rectangle txtUserNameOriginalRect;
         private Rectangle txtPasswordOriginalRect;
         private Rectangle btnLoginOriginalRect;
-        private Rectangle lblForgotOriginalRect;
-        private Rectangle chkBox_LoginOriginalRect;
+        private Rectangle btnForgotOriginalRect;
+        
         
         // will delete line 31-36 when testing is finished
         private Rectangle btnCourseAdminOriginalRect;
@@ -44,7 +44,6 @@ namespace BalhamCollege
         }
 
       
-       
         private void LoginForm_Load(object sender, EventArgs e)
         {
             DC = new DataController();
@@ -54,9 +53,8 @@ namespace BalhamCollege
             txtUserNameOriginalRect = new Rectangle(txtUsername.Location.X, txtUsername.Location.Y, txtUsername.Width, txtUsername.Height);
             txtPasswordOriginalRect = new Rectangle(txtPassword.Location.X, txtPassword.Location.Y, txtPassword.Width, txtPassword.Height);
             btnLoginOriginalRect = new Rectangle(btnLogin.Location.X, btnLogin.Location.Y, btnLogin.Width, btnLogin.Height);
-            lblForgotOriginalRect = new Rectangle(lblForgot.Location.X, lblForgot.Location.Y, lblForgot.Width, lblForgot.Height);
-            chkBox_LoginOriginalRect = new Rectangle(chkBox_login.Location.X, chkBox_login.Location.Y, chkBox_login.Width, chkBox_login.Height);
-
+            btnForgotOriginalRect = new Rectangle(btnForgot.Location.X, btnForgot.Location.Y, btnForgot.Width, btnForgot.Height);
+          
             // delete line 59-65 after testing is over (for autoresizing of buttons, original button location and size)
             btnCourseAdminOriginalRect = new Rectangle(btnCourseAdmin.Location.X, btnCourseAdmin.Location.Y, btnCourseAdmin.Width, btnCourseAdmin.Height);
             btnStudentSupportOriginalRect = new Rectangle(btnStudentSupport.Location.X, btnStudentSupport.Location.Y, btnStudentSupport.Width, btnStudentSupport.Height);
@@ -72,9 +70,9 @@ namespace BalhamCollege
             resizeControl(txtUserNameOriginalRect, txtUsername);
             resizeControl(txtPasswordOriginalRect, txtPassword);
             resizeControl(btnLoginOriginalRect, btnLogin);
-            resizeControl(lblForgotOriginalRect, lblForgot);
-            resizeControl(chkBox_LoginOriginalRect, chkBox_login);
-            // delete line 78-83 after testing 
+            resizeControl(btnForgotOriginalRect, btnForgot);
+           
+            // delete line 77-82 after testing 
             resizeControl(btnCourseAdminOriginalRect, btnCourseAdmin);
             resizeControl(btnStudentSupportOriginalRect, btnStudentSupport);
             resizeControl(btnHumanResOriginalRect, btnHumanResources);
@@ -85,7 +83,7 @@ namespace BalhamCollege
         }
 
         private void resizeControl(Rectangle OriginalControlRect, Control control)
-        {
+        {// auto adjust control based on original location, height and width
             float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
             float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
 
@@ -99,7 +97,6 @@ namespace BalhamCollege
             control.Location = new Point(newX, newY);
             control.Size = new Size(newWidth, newHeight);
 
-
         }
 
         private void LoginForm_Resize(object sender, EventArgs e)
@@ -111,15 +108,10 @@ namespace BalhamCollege
         { // clear textboxes and check box
             txtPassword.Text = "";
             txtUsername.Text = "";
-            chkBox_login.Checked = false;
+            
         }
 
 
-        private void lblForgot_Click(object sender, EventArgs e)
-        {// error message that appears when user forgets username and password
-            MessageBox.Show("Usernames and Passwords:\n\nCourse Administrator\nUser: course, Password: course123\n\nEnrolments Clerk\nUser: enrol, Password: enrol123\n\nHuman Resources Clerk\nUser: human, Password: human123\n\nProgramme Admin\nUser: programme, Password: programme123\n\nResearch Administrator\nUser: research, Password: research123\n\nStudent Support Clerk\nUser: student, Password: student123", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-        }
 
         private void btnCourseAdmin_Click(object sender, EventArgs e)
         {
@@ -242,6 +234,14 @@ namespace BalhamCollege
             {  // error message if username and password combination are invalid
                 MessageBox.Show("Username or Password invalid, please re-enter", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        
+        private void btnForgot_Click(object sender, EventArgs e)
+        {
+            // error message that appears when user forgets username and password
+            MessageBox.Show("Usernames and Passwords:\n\nCourse Administrator\nUser: course, Password: course123\n\nEnrolments Clerk\nUser: enrol, Password: enrol123\n\nHuman Resources Clerk\nUser: human, Password: human123\n\nProgramme Admin\nUser: programme, Password: programme123\n\nResearch Administrator\nUser: research, Password: research123\n\nStudent Support Clerk\nUser: student, Password: student123", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

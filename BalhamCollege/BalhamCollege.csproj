@@ -524,5 +524,11 @@
   <ItemGroup>
     <None Include="Resources\BalhamCollege7_1106x712.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamCollege7_1106x712v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BalhamCollege7_1106x712v3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
