@@ -181,7 +181,7 @@ namespace BalhamCollege
             this.btnForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForgot.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnForgot.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnForgot.Location = new System.Drawing.Point(376, 368);
+            this.btnForgot.Location = new System.Drawing.Point(376, 377);
             this.btnForgot.Name = "btnForgot";
             this.btnForgot.Size = new System.Drawing.Size(207, 23);
             this.btnForgot.TabIndex = 27;
