@@ -149,8 +149,12 @@ namespace BalhamCollege
                 {
                     // If an exception happened, then this lecturer is already assigned
                     MessageBox.Show("Lecturer already assigned to the course.", "Error");
-                    LoadCourses();
-                    ClearFields();
+                    LoadLecturers();
+                    txtLecturerID.Text = string.Empty;
+                    txtLastName.Text = string.Empty;
+                    txtFirstName.Text = string.Empty;
+                    txtRanking.Text = string.Empty;
+                    cboRole.Text = string.Empty;
                 }
             }
         }
