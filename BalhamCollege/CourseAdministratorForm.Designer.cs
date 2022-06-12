@@ -53,6 +53,7 @@ namespace BalhamCollege
             this.printAssessments = new System.Drawing.Printing.PrintDocument();
             this.prvAssessments = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbCourseAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).BeginInit();
@@ -284,6 +285,10 @@ namespace BalhamCollege
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // CourseAdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,5 +346,6 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.RESULTTableAdapter rESULTTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.STUDENTTableAdapter sTUDENTTableAdapter;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Timer timer1;
     }
 }

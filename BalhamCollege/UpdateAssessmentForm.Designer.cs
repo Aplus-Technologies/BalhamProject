@@ -73,7 +73,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(58, 440);
+            this.lblCourseName.Location = new System.Drawing.Point(63, 439);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 64;
@@ -84,7 +84,7 @@ namespace BalhamCollege
             this.lbl8.AutoSize = true;
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl8.Location = new System.Drawing.Point(31, 398);
+            this.lbl8.Location = new System.Drawing.Point(42, 397);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(14, 20);
             this.lbl8.TabIndex = 63;
@@ -95,7 +95,7 @@ namespace BalhamCollege
             this.lbl7.AutoSize = true;
             this.lbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl7.Location = new System.Drawing.Point(66, 356);
+            this.lbl7.Location = new System.Drawing.Point(73, 355);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(14, 20);
             this.lbl7.TabIndex = 62;
@@ -117,7 +117,7 @@ namespace BalhamCollege
             this.lbl5.AutoSize = true;
             this.lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl5.Location = new System.Drawing.Point(12, 272);
+            this.lbl5.Location = new System.Drawing.Point(19, 271);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(14, 20);
             this.lbl5.TabIndex = 60;
@@ -128,7 +128,7 @@ namespace BalhamCollege
             this.lbl4.AutoSize = true;
             this.lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl4.Location = new System.Drawing.Point(81, 229);
+            this.lbl4.Location = new System.Drawing.Point(7, 229);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(14, 20);
             this.lbl4.TabIndex = 59;
@@ -176,7 +176,7 @@ namespace BalhamCollege
             // lblMaximumMark
             // 
             this.lblMaximumMark.AutoSize = true;
-            this.lblMaximumMark.Location = new System.Drawing.Point(44, 398);
+            this.lblMaximumMark.Location = new System.Drawing.Point(55, 397);
             this.lblMaximumMark.Name = "lblMaximumMark";
             this.lblMaximumMark.Size = new System.Drawing.Size(103, 20);
             this.lblMaximumMark.TabIndex = 42;
@@ -185,7 +185,7 @@ namespace BalhamCollege
             // lblWeighting
             // 
             this.lblWeighting.AutoSize = true;
-            this.lblWeighting.Location = new System.Drawing.Point(79, 356);
+            this.lblWeighting.Location = new System.Drawing.Point(86, 355);
             this.lblWeighting.Name = "lblWeighting";
             this.lblWeighting.Size = new System.Drawing.Size(72, 20);
             this.lblWeighting.TabIndex = 41;
@@ -203,7 +203,7 @@ namespace BalhamCollege
             // lblAssessmentName
             // 
             this.lblAssessmentName.AutoSize = true;
-            this.lblAssessmentName.Location = new System.Drawing.Point(25, 272);
+            this.lblAssessmentName.Location = new System.Drawing.Point(32, 271);
             this.lblAssessmentName.Name = "lblAssessmentName";
             this.lblAssessmentName.Size = new System.Drawing.Size(126, 20);
             this.lblAssessmentName.TabIndex = 39;
@@ -212,16 +212,16 @@ namespace BalhamCollege
             // lblNumber
             // 
             this.lblNumber.AutoSize = true;
-            this.lblNumber.Location = new System.Drawing.Point(94, 229);
+            this.lblNumber.Location = new System.Drawing.Point(20, 229);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(60, 20);
+            this.lblNumber.Size = new System.Drawing.Size(138, 20);
             this.lblNumber.TabIndex = 38;
-            this.lblNumber.Text = "Number:";
+            this.lblNumber.Text = "Assessment Number:";
             // 
             // lblAssessmentID
             // 
             this.lblAssessmentID.AutoSize = true;
-            this.lblAssessmentID.Location = new System.Drawing.Point(49, 187);
+            this.lblAssessmentID.Location = new System.Drawing.Point(55, 187);
             this.lblAssessmentID.Name = "lblAssessmentID";
             this.lblAssessmentID.Size = new System.Drawing.Size(103, 20);
             this.lblAssessmentID.TabIndex = 37;
@@ -238,7 +238,7 @@ namespace BalhamCollege
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(160, 437);
+            this.txtCourseName.Location = new System.Drawing.Point(160, 436);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
@@ -247,7 +247,7 @@ namespace BalhamCollege
             // 
             // nudMaximumMark
             // 
-            this.nudMaximumMark.Location = new System.Drawing.Point(160, 395);
+            this.nudMaximumMark.Location = new System.Drawing.Point(160, 394);
             this.nudMaximumMark.Maximum = new decimal(new int[] {
             200,
             0,
@@ -269,7 +269,7 @@ namespace BalhamCollege
             // 
             // nudWeighting
             // 
-            this.nudWeighting.Location = new System.Drawing.Point(160, 353);
+            this.nudWeighting.Location = new System.Drawing.Point(160, 352);
             this.nudWeighting.Minimum = new decimal(new int[] {
             10,
             0,
@@ -308,7 +308,7 @@ namespace BalhamCollege
             // 
             // nudNumber
             // 
-            this.nudNumber.Location = new System.Drawing.Point(160, 227);
+            this.nudNumber.Location = new System.Drawing.Point(160, 226);
             this.nudNumber.Maximum = new decimal(new int[] {
             5,
             0,

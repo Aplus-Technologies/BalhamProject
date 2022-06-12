@@ -46,7 +46,7 @@ namespace BalhamCollege
             frmLogin = lgin;
             frmLogin.Hide();
 
-            // keep track of original control size, for autoresizing (original location and size)
+             // keep track of original control size, for autoresizing (original location and size)
             formOriginalSize = this.Size;
             btnAddAssessmentOriginalRect = new Rectangle(btnAddAssessment.Location.X, btnAddAssessment.Location.Y, btnAddAssessment.Width, btnAddAssessment.Height);
             btnUpdateAssessmentOriginalRect = new Rectangle(btnUpdateAssessment.Location.X, btnUpdateAssessment.Location.Y, btnUpdateAssessment.Width, btnUpdateAssessment.Height);
@@ -55,6 +55,14 @@ namespace BalhamCollege
             btnProduceAssessmentsReportOriginalRect = new Rectangle(btnProduceAssessmentsReport.Location.X, btnProduceAssessmentsReport.Location.Y, btnProduceAssessmentsReport.Width, btnProduceAssessmentsReport.Height);
             btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
             btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+          
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {  
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
+
         }
 
         private void resizeChildrenControls()

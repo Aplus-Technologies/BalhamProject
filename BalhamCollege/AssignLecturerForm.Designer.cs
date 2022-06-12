@@ -82,7 +82,7 @@ namespace BalhamCollege
             // lblCredits
             // 
             this.lblCredits.AutoSize = true;
-            this.lblCredits.Location = new System.Drawing.Point(422, 133);
+            this.lblCredits.Location = new System.Drawing.Point(426, 133);
             this.lblCredits.Name = "lblCredits";
             this.lblCredits.Size = new System.Drawing.Size(55, 20);
             this.lblCredits.TabIndex = 36;
@@ -91,7 +91,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(381, 91);
+            this.lblCourseName.Location = new System.Drawing.Point(386, 91);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 35;
@@ -109,7 +109,7 @@ namespace BalhamCollege
             // lblCourseID
             // 
             this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(405, 48);
+            this.lblCourseID.Location = new System.Drawing.Point(409, 48);
             this.lblCourseID.Name = "lblCourseID";
             this.lblCourseID.Size = new System.Drawing.Size(72, 20);
             this.lblCourseID.TabIndex = 33;
@@ -164,7 +164,7 @@ namespace BalhamCollege
             this.lbl9.AutoSize = true;
             this.lbl9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl9.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl9.Location = new System.Drawing.Point(426, 386);
+            this.lbl9.Location = new System.Drawing.Point(427, 386);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(14, 20);
             this.lbl9.TabIndex = 75;
@@ -173,7 +173,7 @@ namespace BalhamCollege
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(439, 386);
+            this.lblRole.Location = new System.Drawing.Point(440, 386);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(41, 20);
             this.lblRole.TabIndex = 74;
@@ -239,7 +239,7 @@ namespace BalhamCollege
             // lblRanking
             // 
             this.lblRanking.AutoSize = true;
-            this.lblRanking.Location = new System.Drawing.Point(416, 344);
+            this.lblRanking.Location = new System.Drawing.Point(420, 344);
             this.lblRanking.Name = "lblRanking";
             this.lblRanking.Size = new System.Drawing.Size(61, 20);
             this.lblRanking.TabIndex = 52;
@@ -248,7 +248,7 @@ namespace BalhamCollege
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(398, 302);
+            this.lblFirstName.Location = new System.Drawing.Point(404, 302);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(77, 20);
             this.lblFirstName.TabIndex = 46;
@@ -257,7 +257,7 @@ namespace BalhamCollege
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(399, 260);
+            this.lblLastName.Location = new System.Drawing.Point(405, 260);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 20);
             this.lblLastName.TabIndex = 45;
@@ -266,7 +266,7 @@ namespace BalhamCollege
             // lblLecturerID
             // 
             this.lblLecturerID.AutoSize = true;
-            this.lblLecturerID.Location = new System.Drawing.Point(397, 218);
+            this.lblLecturerID.Location = new System.Drawing.Point(404, 218);
             this.lblLecturerID.Name = "lblLecturerID";
             this.lblLecturerID.Size = new System.Drawing.Size(77, 20);
             this.lblLecturerID.TabIndex = 44;

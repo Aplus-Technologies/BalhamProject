@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteAssessmentForm));
             this.txtAssessmentName = new System.Windows.Forms.TextBox();
             this.lblAssessmentName = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -66,7 +67,7 @@ namespace BalhamCollege
             this.txtAssessmentName.MaxLength = 50;
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
-            this.txtAssessmentName.Size = new System.Drawing.Size(361, 26);
+            this.txtAssessmentName.Size = new System.Drawing.Size(361, 35);
             this.txtAssessmentName.TabIndex = 142;
             // 
             // lblAssessmentName
@@ -74,13 +75,14 @@ namespace BalhamCollege
             this.lblAssessmentName.AutoSize = true;
             this.lblAssessmentName.Location = new System.Drawing.Point(26, 275);
             this.lblAssessmentName.Name = "lblAssessmentName";
-            this.lblAssessmentName.Size = new System.Drawing.Size(126, 20);
+            this.lblAssessmentName.Size = new System.Drawing.Size(182, 29);
             this.lblAssessmentName.TabIndex = 141;
             this.lblAssessmentName.Text = "Assessment Name:";
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(199)))), ((int)(((byte)(238)))));
+            this.btnReturn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnReturn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReturn.Location = new System.Drawing.Point(376, 394);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(134, 39);
@@ -91,7 +93,8 @@ namespace BalhamCollege
             // 
             // btnDeleteAssessment
             // 
-            this.btnDeleteAssessment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(199)))), ((int)(((byte)(238)))));
+            this.btnDeleteAssessment.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnDeleteAssessment.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDeleteAssessment.Location = new System.Drawing.Point(9, 394);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
             this.btnDeleteAssessment.Size = new System.Drawing.Size(159, 39);
@@ -106,7 +109,7 @@ namespace BalhamCollege
             this.txtType.MaxLength = 14;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
-            this.txtType.Size = new System.Drawing.Size(106, 26);
+            this.txtType.Size = new System.Drawing.Size(106, 35);
             this.txtType.TabIndex = 138;
             // 
             // txtAssessmentNumber
@@ -115,7 +118,7 @@ namespace BalhamCollege
             this.txtAssessmentNumber.MaxLength = 1;
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
-            this.txtAssessmentNumber.Size = new System.Drawing.Size(19, 26);
+            this.txtAssessmentNumber.Size = new System.Drawing.Size(19, 35);
             this.txtAssessmentNumber.TabIndex = 137;
             // 
             // txtCourseName
@@ -124,7 +127,7 @@ namespace BalhamCollege
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(361, 35);
             this.txtCourseName.TabIndex = 136;
             // 
             // txtAssessmentID
@@ -133,7 +136,7 @@ namespace BalhamCollege
             this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
-            this.txtAssessmentID.Size = new System.Drawing.Size(33, 26);
+            this.txtAssessmentID.Size = new System.Drawing.Size(33, 35);
             this.txtAssessmentID.TabIndex = 135;
             // 
             // lblType
@@ -141,7 +144,7 @@ namespace BalhamCollege
             this.lblType.AutoSize = true;
             this.lblType.Location = new System.Drawing.Point(109, 306);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(43, 20);
+            this.lblType.Size = new System.Drawing.Size(61, 29);
             this.lblType.TabIndex = 134;
             this.lblType.Text = "Type:";
             // 
@@ -150,7 +153,7 @@ namespace BalhamCollege
             this.lblAssessmentNumber.AutoSize = true;
             this.lblAssessmentNumber.Location = new System.Drawing.Point(14, 245);
             this.lblAssessmentNumber.Name = "lblAssessmentNumber";
-            this.lblAssessmentNumber.Size = new System.Drawing.Size(138, 20);
+            this.lblAssessmentNumber.Size = new System.Drawing.Size(200, 29);
             this.lblAssessmentNumber.TabIndex = 133;
             this.lblAssessmentNumber.Text = "Assessment Number:";
             // 
@@ -159,7 +162,7 @@ namespace BalhamCollege
             this.lblCourseName.AutoSize = true;
             this.lblCourseName.Location = new System.Drawing.Point(57, 337);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(95, 20);
+            this.lblCourseName.Size = new System.Drawing.Size(139, 29);
             this.lblCourseName.TabIndex = 132;
             this.lblCourseName.Text = "Course Name:";
             // 
@@ -168,7 +171,7 @@ namespace BalhamCollege
             this.lblAssessmentID.AutoSize = true;
             this.lblAssessmentID.Location = new System.Drawing.Point(50, 215);
             this.lblAssessmentID.Name = "lblAssessmentID";
-            this.lblAssessmentID.Size = new System.Drawing.Size(103, 20);
+            this.lblAssessmentID.Size = new System.Drawing.Size(148, 29);
             this.lblAssessmentID.TabIndex = 131;
             this.lblAssessmentID.Text = "Assessment ID:";
             // 
@@ -177,18 +180,18 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 20);
+            this.label1.Size = new System.Drawing.Size(271, 29);
             this.label1.TabIndex = 130;
             this.label1.Text = "Please select an assessment:";
             // 
             // lstAssessments
             // 
             this.lstAssessments.FormattingEnabled = true;
-            this.lstAssessments.ItemHeight = 20;
+            this.lstAssessments.ItemHeight = 29;
             this.lstAssessments.Location = new System.Drawing.Point(18, 56);
             this.lstAssessments.Name = "lstAssessments";
             this.lstAssessments.ScrollAlwaysVisible = true;
-            this.lstAssessments.Size = new System.Drawing.Size(492, 144);
+            this.lstAssessments.Size = new System.Drawing.Size(492, 120);
             this.lstAssessments.TabIndex = 1;
             this.lstAssessments.SelectedIndexChanged += new System.EventHandler(this.lstAssessments_SelectedIndexChanged);
             // 
@@ -253,7 +256,7 @@ namespace BalhamCollege
             // 
             // DeleteAssessmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(527, 449);
@@ -273,6 +276,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lstAssessments);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteAssessmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeleteAssessmentForm";

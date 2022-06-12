@@ -29,6 +29,7 @@ namespace BalhamCollege
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@ namespace BalhamCollege
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgot = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,6 +205,10 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +254,7 @@ namespace BalhamCollege
         private System.Windows.Forms.Button btnEnrolmentsAdmin;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnForgot;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

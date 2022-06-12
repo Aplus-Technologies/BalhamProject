@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteStudentForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.label1.Location = new System.Drawing.Point(27, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 20);
+            this.label1.Size = new System.Drawing.Size(219, 29);
             this.label1.TabIndex = 43;
             this.label1.Text = "Please select a student:";
             // 
@@ -104,7 +105,7 @@
             this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(87, 26);
+            this.txtStatus.Size = new System.Drawing.Size(87, 35);
             this.txtStatus.TabIndex = 40;
             // 
             // txtPhoneNumber
@@ -114,7 +115,7 @@
             this.txtPhoneNumber.MaxLength = 16;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.ReadOnly = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(121, 26);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(121, 35);
             this.txtPhoneNumber.TabIndex = 39;
             // 
             // txtEmailAddress
@@ -124,7 +125,7 @@
             this.txtEmailAddress.MaxLength = 50;
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.ReadOnly = true;
-            this.txtEmailAddress.Size = new System.Drawing.Size(371, 26);
+            this.txtEmailAddress.Size = new System.Drawing.Size(371, 35);
             this.txtEmailAddress.TabIndex = 38;
             // 
             // txtCity
@@ -134,7 +135,7 @@
             this.txtCity.MaxLength = 30;
             this.txtCity.Name = "txtCity";
             this.txtCity.ReadOnly = true;
-            this.txtCity.Size = new System.Drawing.Size(214, 26);
+            this.txtCity.Size = new System.Drawing.Size(214, 35);
             this.txtCity.TabIndex = 37;
             // 
             // txtSuburb
@@ -144,7 +145,7 @@
             this.txtSuburb.MaxLength = 30;
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
-            this.txtSuburb.Size = new System.Drawing.Size(214, 26);
+            this.txtSuburb.Size = new System.Drawing.Size(214, 35);
             this.txtSuburb.TabIndex = 36;
             // 
             // txtStreetAddress
@@ -154,7 +155,7 @@
             this.txtStreetAddress.MaxLength = 50;
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
-            this.txtStreetAddress.Size = new System.Drawing.Size(371, 26);
+            this.txtStreetAddress.Size = new System.Drawing.Size(371, 35);
             this.txtStreetAddress.TabIndex = 35;
             // 
             // txtFirstName
@@ -164,7 +165,7 @@
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(214, 26);
+            this.txtFirstName.Size = new System.Drawing.Size(214, 35);
             this.txtFirstName.TabIndex = 34;
             // 
             // txtLastName
@@ -174,7 +175,7 @@
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(214, 26);
+            this.txtLastName.Size = new System.Drawing.Size(214, 35);
             this.txtLastName.TabIndex = 33;
             // 
             // txtStudentID
@@ -184,7 +185,7 @@
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(64, 26);
+            this.txtStudentID.Size = new System.Drawing.Size(64, 35);
             this.txtStudentID.TabIndex = 32;
             // 
             // lblStatus
@@ -193,7 +194,7 @@
             this.lblStatus.Location = new System.Drawing.Point(495, 324);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(49, 20);
+            this.lblStatus.Size = new System.Drawing.Size(73, 29);
             this.lblStatus.TabIndex = 31;
             this.lblStatus.Text = "Status:";
             // 
@@ -203,7 +204,7 @@
             this.lblPhoneNumber.Location = new System.Drawing.Point(441, 291);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(103, 20);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(150, 29);
             this.lblPhoneNumber.TabIndex = 30;
             this.lblPhoneNumber.Text = "Phone Number:";
             // 
@@ -213,7 +214,7 @@
             this.lblEmailAddress.Location = new System.Drawing.Point(443, 258);
             this.lblEmailAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailAddress.Name = "lblEmailAddress";
-            this.lblEmailAddress.Size = new System.Drawing.Size(101, 20);
+            this.lblEmailAddress.Size = new System.Drawing.Size(144, 29);
             this.lblEmailAddress.TabIndex = 29;
             this.lblEmailAddress.Text = "Email Address:";
             // 
@@ -223,7 +224,7 @@
             this.lblCity.Location = new System.Drawing.Point(509, 225);
             this.lblCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(35, 20);
+            this.lblCity.Size = new System.Drawing.Size(50, 29);
             this.lblCity.TabIndex = 28;
             this.lblCity.Text = "City:";
             // 
@@ -233,7 +234,7 @@
             this.lblSuburb.Location = new System.Drawing.Point(487, 190);
             this.lblSuburb.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSuburb.Name = "lblSuburb";
-            this.lblSuburb.Size = new System.Drawing.Size(56, 20);
+            this.lblSuburb.Size = new System.Drawing.Size(82, 29);
             this.lblSuburb.TabIndex = 27;
             this.lblSuburb.Text = "Suburb:";
             // 
@@ -243,7 +244,7 @@
             this.lblStreetAddress.Location = new System.Drawing.Point(440, 156);
             this.lblStreetAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStreetAddress.Name = "lblStreetAddress";
-            this.lblStreetAddress.Size = new System.Drawing.Size(103, 20);
+            this.lblStreetAddress.Size = new System.Drawing.Size(148, 29);
             this.lblStreetAddress.TabIndex = 26;
             this.lblStreetAddress.Text = "Street Address:";
             // 
@@ -253,7 +254,7 @@
             this.lblFirstName.Location = new System.Drawing.Point(466, 123);
             this.lblFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(77, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(113, 29);
             this.lblFirstName.TabIndex = 25;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -263,7 +264,7 @@
             this.lblLastName.Location = new System.Drawing.Point(467, 88);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(76, 20);
+            this.lblLastName.Size = new System.Drawing.Size(112, 29);
             this.lblLastName.TabIndex = 24;
             this.lblLastName.Text = "Last Name:";
             // 
@@ -273,18 +274,18 @@
             this.lblStudentID.Location = new System.Drawing.Point(470, 54);
             this.lblStudentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStudentID.Name = "lblStudentID";
-            this.lblStudentID.Size = new System.Drawing.Size(74, 20);
+            this.lblStudentID.Size = new System.Drawing.Size(108, 29);
             this.lblStudentID.TabIndex = 23;
             this.lblStudentID.Text = "Student ID:";
             // 
             // lstStudents
             // 
             this.lstStudents.FormattingEnabled = true;
-            this.lstStudents.ItemHeight = 20;
+            this.lstStudents.ItemHeight = 29;
             this.lstStudents.Location = new System.Drawing.Point(29, 47);
             this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(408, 304);
+            this.lstStudents.Size = new System.Drawing.Size(408, 294);
             this.lstStudents.TabIndex = 1;
             this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
             // 
@@ -344,7 +345,7 @@
             // 
             // DeleteStudentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 441);
             this.Controls.Add(this.pictureBox1);
@@ -371,6 +372,7 @@
             this.Controls.Add(this.lblStudentID);
             this.Controls.Add(this.lstStudents);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

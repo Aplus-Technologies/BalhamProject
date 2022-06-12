@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteProgrammeForm));
             this.txtProgrammeName = new System.Windows.Forms.TextBox();
             this.lblProgrammeName = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@ namespace BalhamCollege
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
-            this.txtProgrammeName.Size = new System.Drawing.Size(361, 26);
+            this.txtProgrammeName.Size = new System.Drawing.Size(361, 35);
             this.txtProgrammeName.TabIndex = 152;
             // 
             // lblProgrammeName
@@ -69,7 +70,7 @@ namespace BalhamCollege
             this.lblProgrammeName.Location = new System.Drawing.Point(24, 331);
             this.lblProgrammeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProgrammeName.Name = "lblProgrammeName";
-            this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
+            this.lblProgrammeName.Size = new System.Drawing.Size(178, 29);
             this.lblProgrammeName.TabIndex = 151;
             this.lblProgrammeName.Text = "Programme Name:";
             // 
@@ -102,7 +103,7 @@ namespace BalhamCollege
             this.txtLevel.MaxLength = 2;
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
-            this.txtLevel.Size = new System.Drawing.Size(29, 26);
+            this.txtLevel.Size = new System.Drawing.Size(29, 35);
             this.txtLevel.TabIndex = 148;
             // 
             // txtProgrammeID
@@ -112,7 +113,7 @@ namespace BalhamCollege
             this.txtProgrammeID.MaxLength = 2;
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
-            this.txtProgrammeID.Size = new System.Drawing.Size(29, 26);
+            this.txtProgrammeID.Size = new System.Drawing.Size(29, 35);
             this.txtProgrammeID.TabIndex = 147;
             // 
             // lblLevel
@@ -121,7 +122,7 @@ namespace BalhamCollege
             this.lblLevel.Location = new System.Drawing.Point(100, 364);
             this.lblLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.Size = new System.Drawing.Size(64, 29);
             this.lblLevel.TabIndex = 146;
             this.lblLevel.Text = "Level:";
             // 
@@ -131,7 +132,7 @@ namespace BalhamCollege
             this.lblProgrammeID.Location = new System.Drawing.Point(47, 298);
             this.lblProgrammeID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProgrammeID.Name = "lblProgrammeID";
-            this.lblProgrammeID.Size = new System.Drawing.Size(99, 20);
+            this.lblProgrammeID.Size = new System.Drawing.Size(144, 29);
             this.lblProgrammeID.TabIndex = 145;
             this.lblProgrammeID.Text = "Programme ID:";
             // 
@@ -141,19 +142,19 @@ namespace BalhamCollege
             this.label1.Location = new System.Drawing.Point(23, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 20);
+            this.label1.Size = new System.Drawing.Size(256, 29);
             this.label1.TabIndex = 144;
             this.label1.Text = "Please select a programme:";
             // 
             // lstProgrammes
             // 
             this.lstProgrammes.FormattingEnabled = true;
-            this.lstProgrammes.ItemHeight = 20;
+            this.lstProgrammes.ItemHeight = 29;
             this.lstProgrammes.Location = new System.Drawing.Point(26, 53);
             this.lstProgrammes.Margin = new System.Windows.Forms.Padding(4);
             this.lstProgrammes.Name = "lstProgrammes";
             this.lstProgrammes.ScrollAlwaysVisible = true;
-            this.lstProgrammes.Size = new System.Drawing.Size(478, 224);
+            this.lstProgrammes.Size = new System.Drawing.Size(478, 207);
             this.lstProgrammes.TabIndex = 1;
             this.lstProgrammes.SelectedIndexChanged += new System.EventHandler(this.lstProgrammes_SelectedIndexChanged);
             // 
@@ -208,7 +209,7 @@ namespace BalhamCollege
             // 
             // DeleteProgrammeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 472);
             this.Controls.Add(this.txtProgrammeName);
@@ -223,6 +224,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lstProgrammes);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeleteProgrammeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
