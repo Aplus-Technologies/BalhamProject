@@ -117,10 +117,10 @@ namespace BalhamCollege
 
                 // new location of txtUsername upon form maximize
                 int newX = (int)(txtUserNameOriginalRect.X * xRatio) ;
-                int newY = (int)(txtUserNameOriginalRect.Y * yRatio) + 15;
+                int newY = (int)(txtUserNameOriginalRect.Y * yRatio) + 13;
                 // new location of txtPassword upon form maximize
                 int newX2 = (int)(txtPasswordOriginalRect.X * xRatio);
-                int newY2 = (int)(txtPasswordOriginalRect.Y * yRatio) + 18;
+                int newY2 = (int)(txtPasswordOriginalRect.Y * yRatio) + 16;
 
                 // new size of txtUsername upon form maximize
                 int newWidth = (int)(txtUserNameOriginalRect.Width * xRatio);
