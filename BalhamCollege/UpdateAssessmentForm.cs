@@ -102,7 +102,7 @@ namespace BalhamCollege
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the assessment's's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the assessment's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Save changes
                     updateAssessmentRow["AssessmentNumber"] = nudNumber.Value;

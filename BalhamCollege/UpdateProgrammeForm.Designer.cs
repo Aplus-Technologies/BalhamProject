@@ -56,7 +56,7 @@ namespace BalhamCollege
             // 
             // nudLevel
             // 
-            this.nudLevel.Location = new System.Drawing.Point(157, 321);
+            this.nudLevel.Location = new System.Drawing.Point(157, 320);
             this.nudLevel.Maximum = new decimal(new int[] {
             10,
             0,
@@ -87,11 +87,11 @@ namespace BalhamCollege
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(109, 323);
+            this.lblLevel.Location = new System.Drawing.Point(35, 323);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.Size = new System.Drawing.Size(120, 20);
             this.lblLevel.TabIndex = 89;
-            this.lblLevel.Text = "Level:";
+            this.lblLevel.Text = "Programme Level:";
             // 
             // lbl8
             // 
@@ -166,7 +166,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(96, 323);
+            this.label1.Location = new System.Drawing.Point(22, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 97;
