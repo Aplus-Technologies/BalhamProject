@@ -56,13 +56,7 @@ namespace BalhamCollege
             btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
             btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
           
-            // open form to maximize after 1 sec interval 
-            if (this.WindowState == FormWindowState.Normal)
-            {  
-                timer1.Interval = 1000;
-                this.WindowState = FormWindowState.Maximized;
-            }
-
+           
         }
 
         private void resizeChildrenControls()
@@ -97,7 +91,7 @@ namespace BalhamCollege
             int newY;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newY = (int)(OriginalControlRect.Y * yRatio) + 15;
+                newY = (int)(OriginalControlRect.Y * yRatio) + 10;
             }
             else
             {// Y location when minimized
@@ -118,13 +112,13 @@ namespace BalhamCollege
 
             if (this.WindowState == FormWindowState.Maximized)
             { // button font size upon maximize
-                btnAddAssessment.Font = new Font("Arial", 12);
-                btnUpdateAssessment.Font = new Font("Arial", 12);
-                btnDeleteAssessment.Font = new Font("Arial", 12);
-                btnEnterResult.Font = new Font("Arial", 12);
-                btnProduceAssessmentsReport.Font = new Font("Arial", 12);
-                btnReturn.Font = new Font("Arial", 12);
-                btnExit.Font = new Font("Arial", 12); 
+                btnAddAssessment.Font = new Font("Arial", 10);
+                btnUpdateAssessment.Font = new Font("Arial", 10);
+                btnDeleteAssessment.Font = new Font("Arial", 10);
+                btnEnterResult.Font = new Font("Arial", 10);
+                btnProduceAssessmentsReport.Font = new Font("Arial", 10);
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10); 
             }
             else
             {// button font size when not maximized
@@ -185,6 +179,13 @@ namespace BalhamCollege
             this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
             this.rESULTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESULT);
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void btnProduceAssessmentsReport_Click(object sender, EventArgs e)

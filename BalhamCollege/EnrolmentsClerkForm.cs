@@ -59,12 +59,7 @@ namespace BalhamCollege
             btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
             btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
 
-            //open form to maximize 
-            if (this.WindowState == FormWindowState.Normal)
-            {  // open form to maximize after 1 sec interval 
-                timer1.Interval = 1000;
-                this.WindowState = FormWindowState.Maximized;
-            }
+           
         }
 
         private void resizeChildrenControls()
@@ -122,14 +117,14 @@ namespace BalhamCollege
 
             if (this.WindowState == FormWindowState.Maximized)
             { // button font size upon maximize
-                btnAddStudent.Font = new Font("Arial", 12);
-                btnUpdateStudent.Font = new Font("Arial", 12);
-                btnDeleteStudent.Font = new Font("Arial", 12);
-                btnEnrolStudent.Font = new Font("Arial", 12);
-                btnWithdrawStudent.Font = new Font("Arial", 12);
-                btnStudentsReport.Font = new Font("Arial", 12);
-                btnReturn.Font = new Font("Arial", 12);
-                btnExit.Font = new Font("Arial", 12);
+                btnAddStudent.Font = new Font("Arial", 10);
+                btnUpdateStudent.Font = new Font("Arial", 10);
+                btnDeleteStudent.Font = new Font("Arial", 10);
+                btnEnrolStudent.Font = new Font("Arial", 10);
+                btnWithdrawStudent.Font = new Font("Arial", 10);
+                btnStudentsReport.Font = new Font("Arial", 10);
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
             }
             else
             {// button font size when not maximized
@@ -503,6 +498,14 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
             DC = new DataController(); // create the data controller and load the dataset
+
+
+            //open form to maximize 
+            if (this.WindowState == FormWindowState.Normal)
+            {  // open form to maximize after 1 sec interval 
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
        

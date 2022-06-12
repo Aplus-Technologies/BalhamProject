@@ -235,4 +235,7 @@
   <data name="BackgroundBalham1366x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackgroundBalham1366x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HumanResClerk1980x1080" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HumanResClerk1980x1080.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
