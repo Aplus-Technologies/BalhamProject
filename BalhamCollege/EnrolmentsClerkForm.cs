@@ -21,6 +21,19 @@ namespace BalhamCollege
 
         private WithdrawStudentForm frmWithdrawStudent; //the reference to the Withdraw Student form
         private EnrolBackgroundForm frmBackground; //the reference to the Background form
+
+        // variables to store control location and size    
+        private Rectangle btnAddStudentOriginalRect;
+        private Rectangle btnUpdateStudentOriginalRect;
+        private Rectangle btnDeleteStudentOriginalRect;
+        private Rectangle btnEnrolStudentOriginalRect;
+        private Rectangle btnWithdrawStudentReportOriginalRect;
+        private Rectangle btnStudentsReportOriginalRect;
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
+
         // Variables to produce Report
         private DataRow[] studentssForPrint;
         private int studentForNextPage;
@@ -34,6 +47,94 @@ namespace BalhamCollege
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnAddStudentOriginalRect = new Rectangle(btnAddStudent.Location.X, btnAddStudent.Location.Y,btnAddStudent.Width, btnAddStudent.Height);
+            btnUpdateStudentOriginalRect = new Rectangle(btnUpdateStudent.Location.X, btnUpdateStudent.Location.Y, btnUpdateStudent.Width, btnUpdateStudent.Height);
+            btnDeleteStudentOriginalRect = new Rectangle(btnDeleteStudent.Location.X, btnDeleteStudent.Location.Y, btnDeleteStudent.Width, btnDeleteStudent.Height);
+            btnEnrolStudentOriginalRect = new Rectangle(btnEnrolStudent.Location.X, btnEnrolStudent.Location.Y, btnEnrolStudent.Width, btnEnrolStudent.Height);
+            btnWithdrawStudentReportOriginalRect = new Rectangle(btnWithdrawStudent.Location.X, btnWithdrawStudent.Location.Y, btnWithdrawStudent.Width, btnWithdrawStudent.Height);
+            btnStudentsReportOriginalRect = new Rectangle(btnStudentsReport.Location.X, btnStudentsReport.Location.Y, btnStudentsReport.Width, btnStudentsReport.Height);
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+        }
+
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnAddStudentOriginalRect,btnAddStudent);
+            resizeControl(btnUpdateStudentOriginalRect, btnUpdateStudent);
+            resizeControl(btnDeleteStudentOriginalRect, btnDeleteStudent);
+            resizeControl(btnEnrolStudentOriginalRect, btnEnrolStudent);
+            resizeControl(btnWithdrawStudentReportOriginalRect, btnWithdrawStudent);
+            resizeControl(btnStudentsReportOriginalRect, btnStudentsReport);
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 3;
+            }
+            else
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 10;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        } 
+        
+        private void EnrolmentsClerkForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnAddStudent.Font = new Font("Arial", 12);
+                btnUpdateStudent.Font = new Font("Arial", 12);
+                btnDeleteStudent.Font = new Font("Arial", 12);
+                btnEnrolStudent.Font = new Font("Arial", 12);
+                btnWithdrawStudent.Font = new Font("Arial", 12);
+                btnStudentsReport.Font = new Font("Arial", 12);
+                btnReturn.Font = new Font("Arial", 12);
+                btnExit.Font = new Font("Arial", 12);
+            }
+            else
+            {// button font size when not maximized
+                btnAddStudent.Font = new Font("Arial", 8);
+                btnUpdateStudent.Font = new Font("Arial", 8);
+                btnDeleteStudent.Font = new Font("Arial", 8);
+                btnEnrolStudent.Font = new Font("Arial", 8);
+                btnWithdrawStudent.Font = new Font("Arial", 8);
+                btnStudentsReport.Font = new Font("Arial", 8);
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+            }
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
@@ -404,5 +505,7 @@ namespace BalhamCollege
             Application.Exit();
             // exit application 
         }
+
+       
     }
 }
