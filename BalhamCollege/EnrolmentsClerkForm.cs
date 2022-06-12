@@ -58,6 +58,13 @@ namespace BalhamCollege
             btnStudentsReportOriginalRect = new Rectangle(btnStudentsReport.Location.X, btnStudentsReport.Location.Y, btnStudentsReport.Width, btnStudentsReport.Height);
             btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
             btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+
+            //open form to maximize 
+            if (this.WindowState == FormWindowState.Normal)
+            {  // open form to maximize after 1 sec interval 
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
 
         private void resizeChildrenControls()

@@ -52,6 +52,7 @@ namespace BalhamCollege
             this.printStudents = new System.Drawing.Printing.PrintDocument();
             this.prvStudents = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbEnrolmentsClerk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
@@ -340,5 +341,6 @@ namespace BalhamCollege
         private System.Drawing.Printing.PrintDocument printStudents;
         private System.Windows.Forms.PrintPreviewDialog prvStudents;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Timer timer1;
     }
 }

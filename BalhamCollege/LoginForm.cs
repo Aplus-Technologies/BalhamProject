@@ -39,7 +39,7 @@ namespace BalhamCollege
         public LoginForm()
         {
             InitializeComponent();
-            
+
         }
 
       
@@ -47,7 +47,6 @@ namespace BalhamCollege
         {
             DC = new DataController();
             Font LargeFont = new Font("Arial", 12);
-
 
             // keep track of original control size, for autoresizing (original location and size)
             formOriginalSize = this.Size;
@@ -63,6 +62,14 @@ namespace BalhamCollege
             btnProgAdminOriginalRect = new Rectangle(btnProgrammeAdmin.Location.X, btnProgrammeAdmin.Location.Y, btnProgrammeAdmin.Width, btnProgrammeAdmin.Height);
             btnResAdminOriginalRect = new Rectangle(btnResearchAdmin.Location.X, btnResearchAdmin.Location.Y, btnResearchAdmin.Width, btnResearchAdmin.Height);
             btnEnrolmentsClerkOriginalRect = new Rectangle(btnEnrolmentsAdmin.Location.X, btnEnrolmentsAdmin.Location.Y, btnEnrolmentsAdmin.Width, btnEnrolmentsAdmin.Height);
+
+            //open form maximized 
+            if (this.WindowState == FormWindowState.Normal)
+            {  // open form to maximize after 1 sec interval 
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
+
 
         }
 
