@@ -48,6 +48,8 @@ namespace BalhamCollege
         {
             DC = new DataController();
 
+            
+
             // keep track of original control size, for autoresizing (original location and size)
             formOriginalSize = this.Size;
             txtUserNameOriginalRect = new Rectangle(txtUsername.Location.X, txtUsername.Location.Y, txtUsername.Width, txtUsername.Height);

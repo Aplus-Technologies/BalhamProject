@@ -50,12 +50,12 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.txtPassword.Location = new System.Drawing.Point(399, 310);
+            this.txtPassword.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(415, 310);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPassword.MaxLength = 20;
+            this.txtPassword.MaxLength = 30;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(164, 17);
+            this.txtPassword.Size = new System.Drawing.Size(133, 18);
             this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
@@ -65,12 +65,12 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.BackColor = System.Drawing.SystemColors.Window;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Arial Narrow", 11F);
-            this.txtUsername.Location = new System.Drawing.Point(399, 251);
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(415, 251);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsername.MaxLength = 20;
+            this.txtUsername.MaxLength = 30;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(164, 17);
+            this.txtUsername.Size = new System.Drawing.Size(133, 18);
             this.txtUsername.TabIndex = 1;
             // 
             // btnCourseAdmin
@@ -162,7 +162,7 @@ namespace BalhamCollege
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(388, 406);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(177, 30);
+            this.btnLogin.Size = new System.Drawing.Size(186, 30);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "LOG IN";
             this.btnLogin.UseVisualStyleBackColor = false;
