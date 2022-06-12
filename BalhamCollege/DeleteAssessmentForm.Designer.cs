@@ -63,17 +63,17 @@ namespace BalhamCollege
             // 
             // txtAssessmentName
             // 
-            this.txtAssessmentName.Location = new System.Drawing.Point(144, 262);
+            this.txtAssessmentName.Location = new System.Drawing.Point(152, 262);
             this.txtAssessmentName.MaxLength = 50;
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
-            this.txtAssessmentName.Size = new System.Drawing.Size(361, 26);
+            this.txtAssessmentName.Size = new System.Drawing.Size(323, 26);
             this.txtAssessmentName.TabIndex = 142;
             // 
             // lblAssessmentName
             // 
             this.lblAssessmentName.AutoSize = true;
-            this.lblAssessmentName.Location = new System.Drawing.Point(21, 265);
+            this.lblAssessmentName.Location = new System.Drawing.Point(29, 265);
             this.lblAssessmentName.Name = "lblAssessmentName";
             this.lblAssessmentName.Size = new System.Drawing.Size(126, 20);
             this.lblAssessmentName.TabIndex = 141;
@@ -105,7 +105,7 @@ namespace BalhamCollege
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(144, 298);
+            this.txtType.Location = new System.Drawing.Point(152, 298);
             this.txtType.MaxLength = 14;
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
@@ -114,7 +114,7 @@ namespace BalhamCollege
             // 
             // txtAssessmentNumber
             // 
-            this.txtAssessmentNumber.Location = new System.Drawing.Point(144, 227);
+            this.txtAssessmentNumber.Location = new System.Drawing.Point(152, 227);
             this.txtAssessmentNumber.MaxLength = 1;
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
@@ -123,16 +123,16 @@ namespace BalhamCollege
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(144, 334);
+            this.txtCourseName.Location = new System.Drawing.Point(152, 334);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(323, 26);
             this.txtCourseName.TabIndex = 136;
             // 
             // txtAssessmentID
             // 
-            this.txtAssessmentID.Location = new System.Drawing.Point(144, 192);
+            this.txtAssessmentID.Location = new System.Drawing.Point(152, 192);
             this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
@@ -142,7 +142,7 @@ namespace BalhamCollege
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(104, 301);
+            this.lblType.Location = new System.Drawing.Point(112, 301);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(43, 20);
             this.lblType.TabIndex = 134;
@@ -151,7 +151,7 @@ namespace BalhamCollege
             // lblAssessmentNumber
             // 
             this.lblAssessmentNumber.AutoSize = true;
-            this.lblAssessmentNumber.Location = new System.Drawing.Point(9, 230);
+            this.lblAssessmentNumber.Location = new System.Drawing.Point(17, 230);
             this.lblAssessmentNumber.Name = "lblAssessmentNumber";
             this.lblAssessmentNumber.Size = new System.Drawing.Size(138, 20);
             this.lblAssessmentNumber.TabIndex = 133;
@@ -160,7 +160,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(52, 337);
+            this.lblCourseName.Location = new System.Drawing.Point(60, 337);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 132;
@@ -169,7 +169,7 @@ namespace BalhamCollege
             // lblAssessmentID
             // 
             this.lblAssessmentID.AutoSize = true;
-            this.lblAssessmentID.Location = new System.Drawing.Point(45, 195);
+            this.lblAssessmentID.Location = new System.Drawing.Point(53, 195);
             this.lblAssessmentID.Name = "lblAssessmentID";
             this.lblAssessmentID.Size = new System.Drawing.Size(103, 20);
             this.lblAssessmentID.TabIndex = 131;
