@@ -540,10 +540,15 @@
     <None Include="Resources\CourseAdmin1980x1080v2.png" />
   </ItemGroup>
   <ItemGroup>
+
     <None Include="Resources\BackgroundBalham1980x.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BackgroundBalham1199w692h.png" />
+    <None Include="Resources\EnrolmentsClerk1980x1080v2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnrolmentsClerk1980x1080.png" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
