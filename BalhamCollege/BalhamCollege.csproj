@@ -549,6 +549,15 @@
     <None Include="Resources\EnrolmentsClerk1980x1080.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\BackgroundBalham800x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundBalham1199w692h1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackgroundBalham1366x.png" />
+ </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\HumanResClerk1980x1080.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -75,17 +75,17 @@ namespace BalhamCollege
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 228);
+            this.label2.Location = new System.Drawing.Point(24, 228);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 29);
+            this.label2.Size = new System.Drawing.Size(154, 20);
             this.label2.TabIndex = 126;
             this.label2.Text = "Please select a lecturer:";
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnReturn.Location = new System.Drawing.Point(768, 506);
+            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
+            this.btnReturn.Location = new System.Drawing.Point(732, 506);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 41);
@@ -96,8 +96,8 @@ namespace BalhamCollege
             // 
             // btnRemoveLecturer
             // 
-            this.btnRemoveLecturer.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnRemoveLecturer.Location = new System.Drawing.Point(32, 506);
+            this.btnRemoveLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
+            this.btnRemoveLecturer.Location = new System.Drawing.Point(24, 506);
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
             this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 41);
@@ -108,193 +108,194 @@ namespace BalhamCollege
             // 
             // txtRole
             // 
-            this.txtRole.Location = new System.Drawing.Point(554, 392);
+            this.txtRole.Location = new System.Drawing.Point(531, 398);
             this.txtRole.Margin = new System.Windows.Forms.Padding(4);
             this.txtRole.MaxLength = 9;
             this.txtRole.Name = "txtRole";
             this.txtRole.ReadOnly = true;
-            this.txtRole.Size = new System.Drawing.Size(96, 35);
+            this.txtRole.Size = new System.Drawing.Size(96, 26);
             this.txtRole.TabIndex = 123;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(554, 359);
+            this.txtFirstName.Location = new System.Drawing.Point(531, 363);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(214, 35);
+            this.txtFirstName.Size = new System.Drawing.Size(214, 26);
             this.txtFirstName.TabIndex = 122;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(554, 326);
+            this.txtLastName.Location = new System.Drawing.Point(531, 328);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(214, 35);
+            this.txtLastName.Size = new System.Drawing.Size(214, 26);
             this.txtLastName.TabIndex = 121;
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Location = new System.Drawing.Point(554, 294);
+            this.txtLecturerID.Location = new System.Drawing.Point(531, 293);
             this.txtLecturerID.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecturerID.MaxLength = 4;
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.ReadOnly = true;
-            this.txtLecturerID.Size = new System.Drawing.Size(33, 35);
+            this.txtLecturerID.Size = new System.Drawing.Size(33, 26);
             this.txtLecturerID.TabIndex = 120;
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(516, 395);
+            this.lblRole.Location = new System.Drawing.Point(493, 401);
             this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(58, 29);
+            this.lblRole.Size = new System.Drawing.Size(41, 20);
             this.lblRole.TabIndex = 119;
             this.lblRole.Text = "Role:";
             // 
             // lblFirstNAme
             // 
             this.lblFirstNAme.AutoSize = true;
-            this.lblFirstNAme.Location = new System.Drawing.Point(480, 362);
+            this.lblFirstNAme.Location = new System.Drawing.Point(457, 366);
             this.lblFirstNAme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstNAme.Name = "lblFirstNAme";
-            this.lblFirstNAme.Size = new System.Drawing.Size(113, 29);
+            this.lblFirstNAme.Size = new System.Drawing.Size(77, 20);
             this.lblFirstNAme.TabIndex = 118;
             this.lblFirstNAme.Text = "First Name:";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(481, 329);
+            this.lblLastName.Location = new System.Drawing.Point(458, 331);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(112, 29);
+            this.lblLastName.Size = new System.Drawing.Size(76, 20);
             this.lblLastName.TabIndex = 117;
             this.lblLastName.Text = "Last Name:";
             // 
             // lblLecturerID
             // 
             this.lblLecturerID.AutoSize = true;
-            this.lblLecturerID.Location = new System.Drawing.Point(480, 297);
+            this.lblLecturerID.Location = new System.Drawing.Point(457, 296);
             this.lblLecturerID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLecturerID.Name = "lblLecturerID";
-            this.lblLecturerID.Size = new System.Drawing.Size(114, 29);
+            this.lblLecturerID.Size = new System.Drawing.Size(77, 20);
             this.lblLecturerID.TabIndex = 116;
             this.lblLecturerID.Text = "Lecturer ID:";
             // 
             // lstLecturers
             // 
             this.lstLecturers.FormattingEnabled = true;
-            this.lstLecturers.ItemHeight = 29;
-            this.lstLecturers.Location = new System.Drawing.Point(32, 253);
+            this.lstLecturers.HorizontalScrollbar = true;
+            this.lstLecturers.ItemHeight = 20;
+            this.lstLecturers.Location = new System.Drawing.Point(24, 253);
             this.lstLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.lstLecturers.Name = "lstLecturers";
-            this.lstLecturers.Size = new System.Drawing.Size(441, 207);
+            this.lstLecturers.Size = new System.Drawing.Size(372, 204);
             this.lstLecturers.TabIndex = 2;
             this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 10);
+            this.label1.Location = new System.Drawing.Point(24, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 29);
+            this.label1.Size = new System.Drawing.Size(151, 20);
             this.label1.TabIndex = 114;
             this.label1.Text = "Please select a course:";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(553, 127);
+            this.txtStatus.Location = new System.Drawing.Point(530, 125);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(80, 35);
+            this.txtStatus.Size = new System.Drawing.Size(80, 26);
             this.txtStatus.TabIndex = 113;
             // 
             // txtProgrammeName
             // 
-            this.txtProgrammeName.Location = new System.Drawing.Point(553, 160);
+            this.txtProgrammeName.Location = new System.Drawing.Point(530, 160);
             this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
-            this.txtProgrammeName.Size = new System.Drawing.Size(361, 35);
+            this.txtProgrammeName.Size = new System.Drawing.Size(361, 26);
             this.txtProgrammeName.TabIndex = 112;
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(553, 94);
+            this.txtCourseName.Location = new System.Drawing.Point(530, 90);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(361, 35);
+            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
             this.txtCourseName.TabIndex = 111;
             // 
             // txtCourseID
             // 
-            this.txtCourseID.Location = new System.Drawing.Point(553, 62);
+            this.txtCourseID.Location = new System.Drawing.Point(530, 55);
             this.txtCourseID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseID.MaxLength = 4;
             this.txtCourseID.Name = "txtCourseID";
             this.txtCourseID.ReadOnly = true;
-            this.txtCourseID.Size = new System.Drawing.Size(38, 35);
+            this.txtCourseID.Size = new System.Drawing.Size(38, 26);
             this.txtCourseID.TabIndex = 110;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(508, 130);
+            this.lblStatus.Location = new System.Drawing.Point(485, 128);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(73, 29);
+            this.lblStatus.Size = new System.Drawing.Size(49, 20);
             this.lblStatus.TabIndex = 109;
             this.lblStatus.Text = "Status:";
             // 
             // lblProgrammeName
             // 
             this.lblProgrammeName.AutoSize = true;
-            this.lblProgrammeName.Location = new System.Drawing.Point(434, 163);
+            this.lblProgrammeName.Location = new System.Drawing.Point(411, 163);
             this.lblProgrammeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProgrammeName.Name = "lblProgrammeName";
-            this.lblProgrammeName.Size = new System.Drawing.Size(178, 29);
+            this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
             this.lblProgrammeName.TabIndex = 108;
             this.lblProgrammeName.Text = "Programme Name:";
             // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(461, 97);
+            this.lblCourseName.Location = new System.Drawing.Point(438, 93);
             this.lblCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(139, 29);
+            this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 107;
             this.lblCourseName.Text = "Course Name:";
             // 
             // lblCourseID
             // 
             this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(485, 65);
+            this.lblCourseID.Location = new System.Drawing.Point(462, 58);
             this.lblCourseID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseID.Name = "lblCourseID";
-            this.lblCourseID.Size = new System.Drawing.Size(105, 29);
+            this.lblCourseID.Size = new System.Drawing.Size(72, 20);
             this.lblCourseID.TabIndex = 106;
             this.lblCourseID.Text = "Course ID:";
             // 
             // lstCourses
             // 
             this.lstCourses.FormattingEnabled = true;
-            this.lstCourses.ItemHeight = 29;
-            this.lstCourses.Location = new System.Drawing.Point(32, 35);
+            this.lstCourses.ItemHeight = 20;
+            this.lstCourses.Location = new System.Drawing.Point(24, 35);
             this.lstCourses.Margin = new System.Windows.Forms.Padding(4);
             this.lstCourses.Name = "lstCourses";
-            this.lstCourses.Size = new System.Drawing.Size(394, 178);
+            this.lstCourses.Size = new System.Drawing.Size(372, 164);
             this.lstCourses.TabIndex = 1;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
@@ -359,17 +360,17 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(874, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(851, -1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(65, 80);
             this.pictureBox1.TabIndex = 127;
             this.pictureBox1.TabStop = false;
             // 
             // RemoveLecturerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 568);
+            this.ClientSize = new System.Drawing.Size(918, 568);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnReturn);
