@@ -71,11 +71,11 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(209)))));
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(679, 303);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(134, 39);
+            this.btnReturn.Size = new System.Drawing.Size(134, 40);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -83,11 +83,11 @@ namespace BalhamCollege
             // 
             // btnDeleteLecturer
             // 
-            this.btnDeleteLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(209)))));
+            this.btnDeleteLecturer.BackColor = System.Drawing.Color.SteelBlue;
             this.btnDeleteLecturer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDeleteLecturer.Location = new System.Drawing.Point(346, 303);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
-            this.btnDeleteLecturer.Size = new System.Drawing.Size(159, 39);
+            this.btnDeleteLecturer.Size = new System.Drawing.Size(159, 40);
             this.btnDeleteLecturer.TabIndex = 2;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = false;

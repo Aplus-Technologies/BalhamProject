@@ -85,7 +85,7 @@ namespace BalhamCollege
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(372, 394);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(134, 39);
+            this.btnReturn.Size = new System.Drawing.Size(134, 40);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@ namespace BalhamCollege
             this.btnDeleteAssessment.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDeleteAssessment.Location = new System.Drawing.Point(13, 394);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
-            this.btnDeleteAssessment.Size = new System.Drawing.Size(159, 39);
+            this.btnDeleteAssessment.Size = new System.Drawing.Size(159, 40);
             this.btnDeleteAssessment.TabIndex = 2;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = false;
