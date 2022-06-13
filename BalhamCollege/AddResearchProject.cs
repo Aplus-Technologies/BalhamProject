@@ -181,8 +181,9 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            
+
             // closes form
+            Application.OpenForms["ResearchBackgroundForm"].Close();
             this.Close();
             frmResearchAdminForm.Show(); // show Research Administrator menu 
         }

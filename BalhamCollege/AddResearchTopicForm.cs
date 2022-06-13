@@ -16,6 +16,7 @@ namespace BalhamCollege
         private DataController DC;
         private ResearchAdministratorForm frmResearchAdmin; // reference to Research Administrator Form
 
+
         public AddResearchTopicForm(DataController dc, ResearchAdministratorForm resAdmin)
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             // returns user back to research administrator menu
+            Application.OpenForms["ResearchBackgroundForm"].Close();
             this.Close(); // close current form 
             frmResearchAdmin.Show(); // show research administrator menu 
         }
@@ -75,6 +77,8 @@ namespace BalhamCollege
                 ClearFields();
 
             }
-        }    
+        }
+
+       
     }
 }

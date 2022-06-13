@@ -45,6 +45,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {// returns user back to human resources clerk menu
+            Application.OpenForms["HumanBackgroundForm"].Close();
             this.Close(); // close current form 
             frmHumanResources.Show(); // show human resources clerk menu 
         }

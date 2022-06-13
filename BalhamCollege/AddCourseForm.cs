@@ -67,7 +67,7 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             // closes form
-
+            Application.OpenForms["ProgrammeBackgroundForm"].Close();
             this.Close();
             frmProgramAdmin.Show(); // show Program Administrator menu 
         }
