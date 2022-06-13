@@ -198,7 +198,7 @@ namespace BalhamCollege
             this.btnAddResearchProject.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddResearchProject.Location = new System.Drawing.Point(46, 545);
             this.btnAddResearchProject.Name = "btnAddResearchProject";
-            this.btnAddResearchProject.Size = new System.Drawing.Size(193, 42);
+            this.btnAddResearchProject.Size = new System.Drawing.Size(193, 40);
             this.btnAddResearchProject.TabIndex = 10;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = false;
@@ -210,7 +210,7 @@ namespace BalhamCollege
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(925, 545);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(193, 42);
+            this.btnReturn.Size = new System.Drawing.Size(193, 40);
             this.btnReturn.TabIndex = 11;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;

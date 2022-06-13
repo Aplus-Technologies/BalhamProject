@@ -113,7 +113,7 @@ namespace BalhamCollege
             this.btnAddCourse.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddCourse.Location = new System.Drawing.Point(186, 343);
             this.btnAddCourse.Name = "btnAddCourse";
-            this.btnAddCourse.Size = new System.Drawing.Size(115, 39);
+            this.btnAddCourse.Size = new System.Drawing.Size(115, 40);
             this.btnAddCourse.TabIndex = 8;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = false;
@@ -125,7 +125,7 @@ namespace BalhamCollege
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(467, 343);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(115, 37);
+            this.btnReturn.Size = new System.Drawing.Size(115, 40);
             this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;

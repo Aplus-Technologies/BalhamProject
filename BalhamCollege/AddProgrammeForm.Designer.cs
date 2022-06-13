@@ -103,9 +103,9 @@ namespace BalhamCollege
             // 
             this.btnAddProgramme.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAddProgramme.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddProgramme.Location = new System.Drawing.Point(124, 304);
+            this.btnAddProgramme.Location = new System.Drawing.Point(125, 326);
             this.btnAddProgramme.Name = "btnAddProgramme";
-            this.btnAddProgramme.Size = new System.Drawing.Size(148, 43);
+            this.btnAddProgramme.Size = new System.Drawing.Size(148, 40);
             this.btnAddProgramme.TabIndex = 2;
             this.btnAddProgramme.Text = "Add Programme";
             this.btnAddProgramme.UseVisualStyleBackColor = false;
@@ -115,9 +115,9 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(448, 304);
+            this.btnReturn.Location = new System.Drawing.Point(449, 326);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(148, 43);
+            this.btnReturn.Size = new System.Drawing.Size(148, 40);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -128,7 +128,7 @@ namespace BalhamCollege
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiredFields.ForeColor = System.Drawing.Color.Red;
-            this.lblRequiredFields.Location = new System.Drawing.Point(486, 268);
+            this.lblRequiredFields.Location = new System.Drawing.Point(487, 290);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
             this.lblRequiredFields.TabIndex = 8;
