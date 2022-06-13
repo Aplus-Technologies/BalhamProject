@@ -37,7 +37,7 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.BackgroundBalham1366x;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1366, 700);
             this.pictureBox1.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1099, 668);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProgrammeBackgroundForm";
