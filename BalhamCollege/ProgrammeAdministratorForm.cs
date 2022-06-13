@@ -27,6 +27,20 @@ namespace BalhamCollege
 
         private ProgrammeBackgroundForm frmProg; // reference to Background Form
 
+        // variables to store control location and size    
+        private Rectangle btnAddCourseOriginalRect;
+        private Rectangle btnUpdateCourseOriginalRect;
+        private Rectangle btnDeleteCourseOriginalRect;
+        private Rectangle btnAddProgrammeOriginalRect;
+        private Rectangle btnUpdateProgrammeOriginalRect;
+        private Rectangle btnDeleteProgrammeOriginalRect;
+        private Rectangle btnAssignLecturerOriginalRect;
+        private Rectangle btnRemoveLecturerOriginalRect;
+        private Rectangle btnProduceCoursesReportOriginalRect;
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
 
 
         //Produce report variables
@@ -43,7 +57,117 @@ namespace BalhamCollege
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnAddCourseOriginalRect = new Rectangle(btnAddCourse.Location.X, btnAddCourse.Location.Y, btnAddCourse.Width, btnAddCourse.Height);
+            btnUpdateCourseOriginalRect = new Rectangle(btnUpdateCourse.Location.X, btnUpdateCourse.Location.Y,btnUpdateCourse.Width, btnUpdateCourse.Height);
+            btnDeleteCourseOriginalRect = new Rectangle(btnDeleteCourse.Location.X, btnDeleteCourse.Location.Y, btnDeleteCourse.Width, btnDeleteCourse.Height);
+           
+            btnAddProgrammeOriginalRect = new Rectangle(btnAddProgramme.Location.X, btnAddProgramme.Location.Y, btnAddProgramme.Width, btnAddProgramme.Height);
+            btnUpdateProgrammeOriginalRect = new Rectangle(btnUpdateProgramme.Location.X, btnUpdateProgramme.Location.Y, btnUpdateProgramme.Width, btnUpdateProgramme.Height);
+            btnDeleteProgrammeOriginalRect = new Rectangle(btnDeleteProgramme.Location.X, btnDeleteProgramme.Location.Y, btnDeleteProgramme.Width, btnDeleteProgramme.Height);
+           
+            btnAssignLecturerOriginalRect = new Rectangle(btnAssignLecturer.Location.X, btnAssignLecturer.Location.Y, btnAssignLecturer.Width, btnAssignLecturer.Height);
+            btnRemoveLecturerOriginalRect = new Rectangle(btnRemoveLecturer.Location.X,btnRemoveLecturer.Location.Y, btnRemoveLecturer.Width, btnRemoveLecturer.Height);
+            btnProduceCoursesReportOriginalRect = new Rectangle(btnProduceCoursesReport.Location.X, btnProduceCoursesReport.Location.Y, btnProduceCoursesReport.Width, btnProduceCoursesReport.Height);
+
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
         }
+
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnAddCourseOriginalRect, btnAddCourse);
+            resizeControl(btnUpdateCourseOriginalRect, btnUpdateCourse);
+            resizeControl(btnDeleteCourseOriginalRect, btnDeleteCourse);
+            resizeControl(btnAddProgrammeOriginalRect, btnAddProgramme);
+            resizeControl(btnUpdateProgrammeOriginalRect, btnUpdateProgramme);
+
+            resizeControl(btnDeleteProgrammeOriginalRect, btnDeleteProgramme);
+            resizeControl(btnAssignLecturerOriginalRect, btnAssignLecturer);
+            resizeControl(btnRemoveLecturerOriginalRect, btnRemoveLecturer);
+            resizeControl(btnProduceCoursesReportOriginalRect, btnProduceCoursesReport);
+
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 2;
+            }
+            else
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 20;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        } 
+        private void ProgrammeAdministratorForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnAddCourse.Font = new Font("Arial", 10);
+                btnUpdateCourse.Font = new Font("Arial", 10);
+                btnDeleteCourse.Font = new Font("Arial", 10);
+                btnAddProgramme.Font = new Font("Arial", 10);
+                btnUpdateProgramme.Font = new Font("Arial", 10);
+
+                btnDeleteProgramme.Font = new Font("Arial", 10);
+                btnAssignLecturer.Font = new Font("Arial", 10);
+                btnRemoveLecturer.Font = new Font("Arial", 10);
+                btnProduceCoursesReport.Font = new Font("Arial", 10);
+
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
+            }
+            else
+            {// button font size when not maximized
+                btnAddCourse.Font = new Font("Arial", 8);
+                btnUpdateCourse.Font = new Font("Arial", 8);
+                btnDeleteCourse.Font = new Font("Arial", 8);
+                btnAddProgramme.Font = new Font("Arial", 8);
+                btnUpdateProgramme.Font = new Font("Arial", 8);
+
+                btnDeleteProgramme.Font = new Font("Arial", 8);
+                btnAssignLecturer.Font = new Font("Arial", 8);
+                btnRemoveLecturer.Font = new Font("Arial", 8);
+                btnProduceCoursesReport.Font = new Font("Arial", 8);
+
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+            }
+        }
+
+
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
@@ -97,6 +221,13 @@ namespace BalhamCollege
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
 
         }
         private void btnProduceCoursesReport_Click(object sender, EventArgs e)
@@ -303,5 +434,7 @@ namespace BalhamCollege
             Application.Exit();
             // closes application
         }
+
+       
     }
 }
