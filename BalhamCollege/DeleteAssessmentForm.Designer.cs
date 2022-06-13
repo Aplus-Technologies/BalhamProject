@@ -260,6 +260,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(518, 449);
+            this.ControlBox = false;
             this.Controls.Add(this.txtAssessmentName);
             this.Controls.Add(this.lblAssessmentName);
             this.Controls.Add(this.btnReturn);
@@ -279,7 +280,7 @@ namespace BalhamCollege
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DeleteAssessmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DeleteAssessmentForm";
+            this.Text = "Delete Assessment";
             this.Load += new System.EventHandler(this.DeleteAssessmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aSSESSMENTBindingSource)).EndInit();
