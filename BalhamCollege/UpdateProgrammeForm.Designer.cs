@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateProgrammeForm));
             this.nudLevel = new System.Windows.Forms.NumericUpDown();
             this.txtProgrammeName = new System.Windows.Forms.TextBox();
             this.lblLevel = new System.Windows.Forms.Label();
@@ -254,6 +255,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblSelectProgramme);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateProgrammeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
