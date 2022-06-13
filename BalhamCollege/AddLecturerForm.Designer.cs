@@ -67,10 +67,12 @@ namespace BalhamCollege
             this.lblAsterix9 = new System.Windows.Forms.Label();
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLastName
@@ -243,6 +245,7 @@ namespace BalhamCollege
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(199, 26);
             this.txtPhoneNumber.TabIndex = 6;
+            this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 
             // cboRanking
             // 
@@ -421,6 +424,10 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -471,6 +478,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,5 +522,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblAsterix9;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
