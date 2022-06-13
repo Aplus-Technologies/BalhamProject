@@ -137,10 +137,9 @@ namespace BalhamCollege
             private void btnAddAssessment_Click(object sender, EventArgs e)
         {
             // show Add Assessment form upon click
-            if (frmAddAssessment == null)
-            {
-                frmAddAssessment = new AddAssessmentForm(DC, this);
-            }
+            frmCourse = new CourseBackgroundForm(this);
+            frmCourse.Show();
+            frmAddAssessment = new AddAssessmentForm(DC, this);
             frmAddAssessment.ShowDialog();
         }
 

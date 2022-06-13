@@ -128,11 +128,10 @@ namespace BalhamCollege
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
-            // show Add Lecturer form upon click
-            if (frmAddLecturer == null)
-            {
-                frmAddLecturer = new AddLecturerForm(DC, this);
-            }
+            // show Add Lecturer form upon click        
+            frmHuman = new HumanBackgroundForm(this);
+            frmHuman.Show();
+            frmAddLecturer = new AddLecturerForm(DC, this);
             frmAddLecturer.ShowDialog();
 
         }

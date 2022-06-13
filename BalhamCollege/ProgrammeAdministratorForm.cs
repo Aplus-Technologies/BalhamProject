@@ -172,10 +172,9 @@ namespace BalhamCollege
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
             // show Add Course form upon click
-            if (frmAddCourse == null)
-            {
-                frmAddCourse = new AddCourseForm(DC, this);
-            }
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmAddCourse = new AddCourseForm(DC, this);
             frmAddCourse.ShowDialog();
 
         }
@@ -393,10 +392,9 @@ namespace BalhamCollege
         private void btnAddProgramme_Click(object sender, EventArgs e)
         {
             // show Add Programme form upon click
-            if (frmAddProgramme == null)
-            {
-                frmAddProgramme = new AddProgrammeForm(DC, this);
-            }
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmAddProgramme = new AddProgrammeForm(DC, this);
             frmAddProgramme.ShowDialog();
         }
 

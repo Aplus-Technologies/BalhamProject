@@ -465,10 +465,11 @@ namespace BalhamCollege
 
         private void btnEnrolStudent_Click(object sender, EventArgs e)
         {// show Enrol Student form 
-            if (frmEnrolStudent == null)
-            {
-                frmEnrolStudent = new EnrolStudentForm(DC, this);
-            }
+            //show Background form on click
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
+            //show Add Student form upon click
+            frmEnrolStudent = new EnrolStudentForm(DC, this);
             frmEnrolStudent.ShowDialog();
         }
 

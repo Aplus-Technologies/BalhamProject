@@ -144,11 +144,10 @@ namespace BalhamCollege
 
         private void btnAddResearchProject_Click(object sender, EventArgs e)
         {
-            //show Add Research Project form upon click
-            if (frmAddResearchProject == null)
-            {
-                frmAddResearchProject = new AddResearchProject(DC, this);
-            }
+            //show Add Research Project form upon click           
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
+            frmAddResearchProject = new AddResearchProject(DC, this);
             frmAddResearchProject.ShowDialog();
 
         }
@@ -164,12 +163,12 @@ namespace BalhamCollege
 
         private void btnAddResearchTopic_Click(object sender, EventArgs e)
         {
-            //show Add Research Topic form upon click
-            if (frmAddResearchTopic == null)
-            {
-                frmAddResearchTopic = new AddResearchTopicForm(DC, this);
-            }
+            //show Add Research Topic form upon click                   
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
+            frmAddResearchTopic = new AddResearchTopicForm(DC, this);
             frmAddResearchTopic.ShowDialog();
+
         }
 
         private void btnDeleteResearchTopic_Click(object sender, EventArgs e)
