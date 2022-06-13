@@ -30,6 +30,7 @@ namespace BalhamCollege
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WithdrawStudentForm));
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnWithdrawStudent = new System.Windows.Forms.Button();
             this.txtCity = new System.Windows.Forms.TextBox();
@@ -336,6 +337,7 @@ namespace BalhamCollege
             this.Controls.Add(this.lblSelectStudent);
             this.Controls.Add(this.lstStudents);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WithdrawStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
