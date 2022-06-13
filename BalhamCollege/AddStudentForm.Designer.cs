@@ -238,9 +238,9 @@ namespace BalhamCollege
             // 
             this.btnAddStudent.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAddStudent.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddStudent.Location = new System.Drawing.Point(129, 344);
+            this.btnAddStudent.Location = new System.Drawing.Point(129, 340);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(162, 36);
+            this.btnAddStudent.Size = new System.Drawing.Size(162, 40);
             this.btnAddStudent.TabIndex = 8;
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -250,9 +250,9 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(404, 344);
+            this.btnReturn.Location = new System.Drawing.Point(404, 340);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(162, 36);
+            this.btnReturn.Size = new System.Drawing.Size(162, 40);
             this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -439,6 +439,8 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Student Form";

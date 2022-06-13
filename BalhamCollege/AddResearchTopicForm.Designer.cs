@@ -53,19 +53,19 @@ namespace BalhamCollege
             // lblResTopicDesc
             // 
             this.lblResTopicDesc.AutoSize = true;
-            this.lblResTopicDesc.Location = new System.Drawing.Point(46, 88);
+            this.lblResTopicDesc.Location = new System.Drawing.Point(52, 88);
             this.lblResTopicDesc.Name = "lblResTopicDesc";
             this.lblResTopicDesc.Size = new System.Drawing.Size(178, 20);
-            this.lblResTopicDesc.TabIndex = 0;
+            this.lblResTopicDesc.TabIndex = 5;
             this.lblResTopicDesc.Text = "Research Topic Description:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(178, 211);
+            this.label1.Location = new System.Drawing.Point(178, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 20);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 6;
             this.label1.Text = "Impact:";
             // 
             // txtResearchTopicDesc
@@ -76,7 +76,7 @@ namespace BalhamCollege
             this.txtResearchTopicDesc.Name = "txtResearchTopicDesc";
             this.txtResearchTopicDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtResearchTopicDesc.Size = new System.Drawing.Size(364, 91);
-            this.txtResearchTopicDesc.TabIndex = 2;
+            this.txtResearchTopicDesc.TabIndex = 0;
             // 
             // cboImpact
             // 
@@ -85,10 +85,10 @@ namespace BalhamCollege
             "High",
             "Medium",
             "Low"});
-            this.cboImpact.Location = new System.Drawing.Point(230, 208);
+            this.cboImpact.Location = new System.Drawing.Point(230, 186);
             this.cboImpact.Name = "cboImpact";
             this.cboImpact.Size = new System.Drawing.Size(136, 28);
-            this.cboImpact.TabIndex = 3;
+            this.cboImpact.TabIndex = 1;
             // 
             // btnAddResearchTopic
             // 
@@ -96,8 +96,8 @@ namespace BalhamCollege
             this.btnAddResearchTopic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAddResearchTopic.Location = new System.Drawing.Point(69, 327);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
-            this.btnAddResearchTopic.Size = new System.Drawing.Size(189, 36);
-            this.btnAddResearchTopic.TabIndex = 4;
+            this.btnAddResearchTopic.Size = new System.Drawing.Size(189, 40);
+            this.btnAddResearchTopic.TabIndex = 2;
             this.btnAddResearchTopic.Text = "Add Research Topic";
             this.btnAddResearchTopic.UseVisualStyleBackColor = false;
             this.btnAddResearchTopic.Click += new System.EventHandler(this.btnAddResearchTopic_Click);
@@ -108,8 +108,8 @@ namespace BalhamCollege
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(426, 327);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(189, 36);
-            this.btnReturn.TabIndex = 5;
+            this.btnReturn.Size = new System.Drawing.Size(189, 40);
+            this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -122,7 +122,7 @@ namespace BalhamCollege
             this.lblRequiredFields.Location = new System.Drawing.Point(505, 282);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
-            this.lblRequiredFields.TabIndex = 28;
+            this.lblRequiredFields.TabIndex = 8;
             this.lblRequiredFields.Text = "*Required Fields";
             // 
             // lblAsterix1
@@ -130,10 +130,10 @@ namespace BalhamCollege
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix1.Location = new System.Drawing.Point(35, 77);
+            this.lblAsterix1.Location = new System.Drawing.Point(43, 84);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
-            this.lblAsterix1.TabIndex = 29;
+            this.lblAsterix1.TabIndex = 4;
             this.lblAsterix1.Text = "*";
             // 
             // lblAsterix2
@@ -141,10 +141,10 @@ namespace BalhamCollege
             this.lblAsterix2.AutoSize = true;
             this.lblAsterix2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix2.ForeColor = System.Drawing.Color.Red;
-            this.lblAsterix2.Location = new System.Drawing.Point(168, 208);
+            this.lblAsterix2.Location = new System.Drawing.Point(170, 189);
             this.lblAsterix2.Name = "lblAsterix2";
             this.lblAsterix2.Size = new System.Drawing.Size(14, 20);
-            this.lblAsterix2.TabIndex = 30;
+            this.lblAsterix2.TabIndex = 7;
             this.lblAsterix2.Text = "*";
             // 
             // dsBalhamCollegeAzure
@@ -206,6 +206,8 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddResearchTopicForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddResearchTopicForm";
