@@ -86,7 +86,10 @@ namespace BalhamCollege
         {
             // Convert database row into listitem text
             DataRow courseRow = (DataRow)e.ListItem;
-            e.Value = courseRow["CourseID"] + " " + courseRow["CourseName"];
+            if (courseRow.RowState != DataRowState.Detached)
+            {
+                e.Value = courseRow["CourseID"] + " " + courseRow["CourseName"];
+            }
         }
 
         private void btnUpdateCourse_Click(object sender, EventArgs e)
