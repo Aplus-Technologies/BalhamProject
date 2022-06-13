@@ -43,10 +43,10 @@ namespace BalhamCollege
             this.rESEARCHPROJECTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rESEARCHPROJECTTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHPROJECTTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
-            this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
-            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
+            this.rESEARCHTOPICTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.RESEARCHTOPICTableAdapter();
+            this.rESEARCHTOPICBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lECTURERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printResearch = new System.Drawing.Printing.PrintDocument();
             this.prvResearches = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
@@ -59,14 +59,17 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
+            this.btnReturn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(34, 585);
+            this.btnReturn.Location = new System.Drawing.Point(25, 467);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(242, 50);
+            this.btnReturn.Size = new System.Drawing.Size(181, 38);
             this.btnReturn.TabIndex = 20;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -74,14 +77,17 @@ namespace BalhamCollege
             // 
             // btnUpdateResearchTopic
             // 
+            this.btnUpdateResearchTopic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateResearchTopic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnUpdateResearchTopic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateResearchTopic.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateResearchTopic.Location = new System.Drawing.Point(34, 423);
+            this.btnUpdateResearchTopic.Location = new System.Drawing.Point(25, 339);
             this.btnUpdateResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateResearchTopic.Name = "btnUpdateResearchTopic";
-            this.btnUpdateResearchTopic.Size = new System.Drawing.Size(242, 50);
+            this.btnUpdateResearchTopic.Size = new System.Drawing.Size(181, 38);
             this.btnUpdateResearchTopic.TabIndex = 19;
             this.btnUpdateResearchTopic.Text = "Update Research Topic";
             this.btnUpdateResearchTopic.UseVisualStyleBackColor = false;
@@ -89,14 +95,17 @@ namespace BalhamCollege
             // 
             // btnAddResearchProject
             // 
+            this.btnAddResearchProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddResearchProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnAddResearchProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddResearchProject.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddResearchProject.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddResearchProject.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddResearchProject.Location = new System.Drawing.Point(34, 259);
+            this.btnAddResearchProject.Location = new System.Drawing.Point(25, 213);
             this.btnAddResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchProject.Name = "btnAddResearchProject";
-            this.btnAddResearchProject.Size = new System.Drawing.Size(242, 50);
+            this.btnAddResearchProject.Size = new System.Drawing.Size(181, 38);
             this.btnAddResearchProject.TabIndex = 18;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = false;
@@ -104,14 +113,17 @@ namespace BalhamCollege
             // 
             // btnDeleteResearchTopic
             // 
+            this.btnDeleteResearchTopic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteResearchTopic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnDeleteResearchTopic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteResearchTopic.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteResearchTopic.Location = new System.Drawing.Point(34, 477);
+            this.btnDeleteResearchTopic.Location = new System.Drawing.Point(25, 381);
             this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteResearchTopic.Name = "btnDeleteResearchTopic";
-            this.btnDeleteResearchTopic.Size = new System.Drawing.Size(242, 50);
+            this.btnDeleteResearchTopic.Size = new System.Drawing.Size(181, 38);
             this.btnDeleteResearchTopic.TabIndex = 17;
             this.btnDeleteResearchTopic.Text = "Delete Research Topic";
             this.btnDeleteResearchTopic.UseVisualStyleBackColor = false;
@@ -119,14 +131,17 @@ namespace BalhamCollege
             // 
             // btnAddResearchTopic
             // 
+            this.btnAddResearchTopic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddResearchTopic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnAddResearchTopic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddResearchTopic.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddResearchTopic.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddResearchTopic.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddResearchTopic.Location = new System.Drawing.Point(34, 369);
+            this.btnAddResearchTopic.Location = new System.Drawing.Point(25, 297);
             this.btnAddResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
-            this.btnAddResearchTopic.Size = new System.Drawing.Size(242, 50);
+            this.btnAddResearchTopic.Size = new System.Drawing.Size(181, 38);
             this.btnAddResearchTopic.TabIndex = 16;
             this.btnAddResearchTopic.Text = "Add Research Topic";
             this.btnAddResearchTopic.UseVisualStyleBackColor = false;
@@ -134,14 +149,17 @@ namespace BalhamCollege
             // 
             // btnProduceResearchReport
             // 
+            this.btnProduceResearchReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProduceResearchReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnProduceResearchReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduceResearchReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduceResearchReport.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduceResearchReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnProduceResearchReport.Location = new System.Drawing.Point(34, 531);
+            this.btnProduceResearchReport.Location = new System.Drawing.Point(25, 425);
             this.btnProduceResearchReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceResearchReport.Name = "btnProduceResearchReport";
-            this.btnProduceResearchReport.Size = new System.Drawing.Size(242, 50);
+            this.btnProduceResearchReport.Size = new System.Drawing.Size(181, 38);
             this.btnProduceResearchReport.TabIndex = 15;
             this.btnProduceResearchReport.Text = "Produce Research Report";
             this.btnProduceResearchReport.UseVisualStyleBackColor = false;
@@ -149,14 +167,17 @@ namespace BalhamCollege
             // 
             // btnRemoveResearchProject
             // 
+            this.btnRemoveResearchProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemoveResearchProject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnRemoveResearchProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveResearchProject.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveResearchProject.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveResearchProject.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveResearchProject.Location = new System.Drawing.Point(34, 313);
+            this.btnRemoveResearchProject.Location = new System.Drawing.Point(25, 255);
             this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveResearchProject.Name = "btnRemoveResearchProject";
-            this.btnRemoveResearchProject.Size = new System.Drawing.Size(242, 50);
+            this.btnRemoveResearchProject.Size = new System.Drawing.Size(181, 38);
             this.btnRemoveResearchProject.TabIndex = 14;
             this.btnRemoveResearchProject.Text = "Remove Research Project";
             this.btnRemoveResearchProject.UseVisualStyleBackColor = false;
@@ -164,10 +185,14 @@ namespace BalhamCollege
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.researchAdminPage;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.ResearchAdmin1980x1080;
             this.pictureBox1.Location = new System.Drawing.Point(0, -3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1109, 706);
+            this.pictureBox1.Size = new System.Drawing.Size(979, 576);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
             // 
@@ -202,23 +227,23 @@ namespace BalhamCollege
             this.tableAdapterManager.STUDENTTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // rESEARCHTOPICBindingSource
+            // lECTURERTableAdapter
             // 
-            this.rESEARCHTOPICBindingSource.DataMember = "RESEARCHTOPIC";
-            this.rESEARCHTOPICBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            this.lECTURERTableAdapter.ClearBeforeFill = true;
             // 
             // rESEARCHTOPICTableAdapter
             // 
             this.rESEARCHTOPICTableAdapter.ClearBeforeFill = true;
             // 
+            // rESEARCHTOPICBindingSource
+            // 
+            this.rESEARCHTOPICBindingSource.DataMember = "RESEARCHTOPIC";
+            this.rESEARCHTOPICBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
             // lECTURERBindingSource
             // 
             this.lECTURERBindingSource.DataMember = "LECTURER";
             this.lECTURERBindingSource.DataSource = this.dsBalhamCollegeAzure;
-            // 
-            // lECTURERTableAdapter
-            // 
-            this.lECTURERTableAdapter.ClearBeforeFill = true;
             // 
             // printResearch
             // 
@@ -237,14 +262,17 @@ namespace BalhamCollege
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Location = new System.Drawing.Point(34, 639);
+            this.btnExit.Location = new System.Drawing.Point(25, 509);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(242, 50);
+            this.btnExit.Size = new System.Drawing.Size(181, 38);
             this.btnExit.TabIndex = 22;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -255,7 +283,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1104, 700);
+            this.ClientSize = new System.Drawing.Size(970, 570);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnUpdateResearchTopic);
