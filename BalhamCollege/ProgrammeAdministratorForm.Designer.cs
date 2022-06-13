@@ -216,26 +216,11 @@ namespace BalhamCollege
             // pbProgrammeAdmin
             // 
             this.pbProgrammeAdmin.Image = global::BalhamCollege.Properties.Resources.programmeAdminPage;
-            this.pbProgrammeAdmin.Location = new System.Drawing.Point(-3, -7);
+            this.pbProgrammeAdmin.Location = new System.Drawing.Point(-3, -8);
             this.pbProgrammeAdmin.Name = "pbProgrammeAdmin";
             this.pbProgrammeAdmin.Size = new System.Drawing.Size(1115, 707);
             this.pbProgrammeAdmin.TabIndex = 34;
             this.pbProgrammeAdmin.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Location = new System.Drawing.Point(32, 651);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(242, 39);
-            this.btnExit.TabIndex = 35;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // printCourses
             // 
@@ -309,6 +294,21 @@ namespace BalhamCollege
             // 
             this.aSSESSMENTBindingSource.DataMember = "ASSESSMENT";
             this.aSSESSMENTBindingSource.DataSource = this.dsBalhamCollegeAzure;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnExit.Location = new System.Drawing.Point(32, 651);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(242, 39);
+            this.btnExit.TabIndex = 35;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // ProgrammeAdministratorForm
             // 
