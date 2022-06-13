@@ -72,7 +72,7 @@ namespace BalhamCollege
             {
 
                 DataRow deleteResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
-                if (MessageBox.Show("Are you sure you want to delete this Research Topic?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this Research Topic?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     
                     this.rESEARCHTOPICTableAdapter.Delete(Convert.ToInt32(txtResearchTopicID.Text), txtTopicDescription.Text, txtImpact.Text);
