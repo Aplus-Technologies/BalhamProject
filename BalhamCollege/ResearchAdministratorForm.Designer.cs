@@ -50,6 +50,7 @@ namespace BalhamCollege
             this.printResearch = new System.Drawing.Printing.PrintDocument();
             this.prvResearches = new System.Windows.Forms.PrintPreviewDialog();
             this.btnExit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).BeginInit();
@@ -299,6 +300,7 @@ namespace BalhamCollege
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Research Administrator Menu";
             this.Load += new System.EventHandler(this.ResearchAdministratorForm_Load);
+            this.Resize += new System.EventHandler(this.ResearchAdministratorForm_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHPROJECTBindingSource)).EndInit();
@@ -329,5 +331,6 @@ namespace BalhamCollege
         private System.Drawing.Printing.PrintDocument printResearch;
         private System.Windows.Forms.PrintPreviewDialog prvResearches;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
