@@ -74,7 +74,7 @@ namespace BalhamCollege
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(187, 40);
-            this.btnDeleteStudent.TabIndex = 0;
+            this.btnDeleteStudent.TabIndex = 2;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
@@ -92,7 +92,7 @@ namespace BalhamCollege
             this.btnUpdateStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(187, 40);
-            this.btnUpdateStudent.TabIndex = 2;
+            this.btnUpdateStudent.TabIndex = 1;
             this.btnUpdateStudent.Text = "Update Student";
             this.btnUpdateStudent.UseVisualStyleBackColor = false;
             this.btnUpdateStudent.Click += new System.EventHandler(this.btnUpdateStudent_Click);
@@ -110,7 +110,7 @@ namespace BalhamCollege
             this.btnAddStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(187, 40);
-            this.btnAddStudent.TabIndex = 4;
+            this.btnAddStudent.TabIndex = 0;
             this.btnAddStudent.Text = "Add a Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
@@ -128,7 +128,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(187, 40);
-            this.btnReturn.TabIndex = 10;
+            this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -146,7 +146,7 @@ namespace BalhamCollege
             this.btnStudentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnStudentsReport.Name = "btnStudentsReport";
             this.btnStudentsReport.Size = new System.Drawing.Size(187, 40);
-            this.btnStudentsReport.TabIndex = 9;
+            this.btnStudentsReport.TabIndex = 5;
             this.btnStudentsReport.Text = "Produce Students Report";
             this.btnStudentsReport.UseVisualStyleBackColor = false;
             this.btnStudentsReport.Click += new System.EventHandler(this.btnStudentsReport_Click);
@@ -164,7 +164,7 @@ namespace BalhamCollege
             this.btnEnrolStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnrolStudent.Name = "btnEnrolStudent";
             this.btnEnrolStudent.Size = new System.Drawing.Size(187, 40);
-            this.btnEnrolStudent.TabIndex = 8;
+            this.btnEnrolStudent.TabIndex = 3;
             this.btnEnrolStudent.Text = "Enrol Student";
             this.btnEnrolStudent.UseVisualStyleBackColor = false;
             this.btnEnrolStudent.Click += new System.EventHandler(this.btnEnrolStudent_Click);
@@ -182,7 +182,7 @@ namespace BalhamCollege
             this.btnWithdrawStudent.Margin = new System.Windows.Forms.Padding(2);
             this.btnWithdrawStudent.Name = "btnWithdrawStudent";
             this.btnWithdrawStudent.Size = new System.Drawing.Size(187, 40);
-            this.btnWithdrawStudent.TabIndex = 7;
+            this.btnWithdrawStudent.TabIndex = 4;
             this.btnWithdrawStudent.Text = "Withdraw Student";
             this.btnWithdrawStudent.UseVisualStyleBackColor = false;
             this.btnWithdrawStudent.Click += new System.EventHandler(this.btnWithdrawStudent_Click);
@@ -281,7 +281,7 @@ namespace BalhamCollege
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(187, 40);
-            this.btnExit.TabIndex = 12;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
