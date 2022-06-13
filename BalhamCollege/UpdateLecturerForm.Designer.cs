@@ -70,9 +70,13 @@ namespace BalhamCollege
             this.lECTURERTableAdapter = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter();
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // lstLecturers
@@ -236,6 +240,7 @@ namespace BalhamCollege
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(122, 26);
             this.txtPhoneNumber.TabIndex = 18;
+            this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             // 
             // txtEmailAddress
             // 
@@ -244,6 +249,7 @@ namespace BalhamCollege
             this.txtEmailAddress.Name = "txtEmailAddress";
             this.txtEmailAddress.Size = new System.Drawing.Size(362, 26);
             this.txtEmailAddress.TabIndex = 19;
+            this.txtEmailAddress.TextChanged += new System.EventHandler(this.txtEmailAddress_TextChanged);
             // 
             // cboRanking
             // 
@@ -444,17 +450,25 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(790, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(797, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // UpdateLecturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 511);
+            this.ClientSize = new System.Drawing.Size(875, 511);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.lbl9);
@@ -500,6 +514,8 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -545,5 +561,7 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.LECTURERTableAdapter lECTURERTableAdapter;
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }
