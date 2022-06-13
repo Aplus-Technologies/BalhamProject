@@ -60,7 +60,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReturn.Location = new System.Drawing.Point(30, 454);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
@@ -78,7 +78,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLecturerReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnLecturerReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLecturerReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLecturerReport.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLecturerReport.ForeColor = System.Drawing.SystemColors.Control;
             this.btnLecturerReport.Location = new System.Drawing.Point(30, 396);
             this.btnLecturerReport.Margin = new System.Windows.Forms.Padding(2);
@@ -96,7 +96,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnAddLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddLecturer.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddLecturer.Location = new System.Drawing.Point(30, 228);
             this.btnAddLecturer.Margin = new System.Windows.Forms.Padding(2);
@@ -114,7 +114,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnUpdateLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateLecturer.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateLecturer.Location = new System.Drawing.Point(30, 285);
             this.btnUpdateLecturer.Margin = new System.Windows.Forms.Padding(2);
@@ -132,7 +132,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnDeleteLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteLecturer.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteLecturer.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDeleteLecturer.Location = new System.Drawing.Point(30, 344);
             this.btnDeleteLecturer.Margin = new System.Windows.Forms.Padding(2);
@@ -218,7 +218,7 @@ namespace BalhamCollege
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(94)))), ((int)(((byte)(132)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnExit.Location = new System.Drawing.Point(30, 510);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);

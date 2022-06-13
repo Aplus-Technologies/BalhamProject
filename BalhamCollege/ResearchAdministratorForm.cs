@@ -22,7 +22,19 @@ namespace BalhamCollege
         private AddResearchTopicForm frmAddResearchTopic; // reference to add research topic form
 
         private ResearchBackgroundForm frmResearch; //reference to research background form
-        
+
+        // variables to store control location and size    
+        private Rectangle btnAddResearchProjectOriginalRect;
+        private Rectangle btnRemoveResearchProjectOriginalRect;
+        private Rectangle btnAddResearchTopicOriginalRect;
+        private Rectangle btnUpdateResearchTopicOriginalRect;
+        private Rectangle btnDeleteResearchTopicOriginalRect;
+        private Rectangle btnProduceResearchReportOriginalRect;
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
+
 
 
         //Produce report variables
@@ -38,6 +50,96 @@ namespace BalhamCollege
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnAddResearchProjectOriginalRect = new Rectangle(btnAddResearchProject.Location.X, btnAddResearchProject.Location.Y, btnAddResearchProject.Width, btnAddResearchProject.Height);
+            btnRemoveResearchProjectOriginalRect = new Rectangle(btnRemoveResearchProject.Location.X, btnRemoveResearchProject.Location.Y,btnRemoveResearchProject.Width, btnRemoveResearchProject.Height);
+            btnAddResearchTopicOriginalRect = new Rectangle(btnAddResearchTopic.Location.X, btnAddResearchTopic.Location.Y, btnAddResearchTopic.Width, btnAddResearchTopic.Height);
+            btnUpdateResearchTopicOriginalRect = new Rectangle(btnUpdateResearchTopic.Location.X, btnUpdateResearchTopic.Location.Y, btnUpdateResearchTopic.Width, btnUpdateResearchTopic.Height);
+            btnDeleteResearchTopicOriginalRect = new Rectangle(btnDeleteResearchTopic.Location.X, btnDeleteResearchTopic.Location.Y, btnDeleteResearchTopic.Width, btnDeleteResearchTopic.Height);
+            btnProduceResearchReportOriginalRect = new Rectangle(btnProduceResearchReport.Location.X, btnProduceResearchReport.Location.Y, btnProduceResearchReport.Width, btnProduceResearchReport.Height);
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+
+        }
+
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnAddResearchProjectOriginalRect, btnAddResearchProject);
+            resizeControl(btnRemoveResearchProjectOriginalRect, btnRemoveResearchProject);
+            resizeControl(btnAddResearchTopicOriginalRect, btnAddResearchTopic);
+            resizeControl(btnUpdateResearchTopicOriginalRect, btnUpdateResearchTopic);
+            resizeControl(btnDeleteResearchTopicOriginalRect, btnDeleteResearchTopic);
+            resizeControl(btnProduceResearchReportOriginalRect, btnProduceResearchReport);
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 5;
+            }
+            else
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 20;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        }
+        
+        private void ResearchAdministratorForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnAddResearchProject.Font = new Font("Arial", 10);
+                btnRemoveResearchProject.Font = new Font("Arial", 10);
+                btnAddResearchTopic.Font = new Font("Arial", 10);
+                btnUpdateResearchTopic.Font = new Font("Arial", 10);
+                btnDeleteResearchTopic.Font = new Font("Arial", 10);
+                btnProduceResearchReport.Font = new Font("Arial", 10);
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
+            }
+            else
+            {// button font size when not maximized
+                btnAddResearchProject.Font = new Font("Arial", 8);
+                btnRemoveResearchProject.Font = new Font("Arial", 8);
+                btnAddResearchTopic.Font = new Font("Arial",8);
+                btnUpdateResearchTopic.Font = new Font("Arial", 8);
+                btnDeleteResearchTopic.Font = new Font("Arial", 8);
+                btnProduceResearchReport.Font = new Font("Arial", 8);
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+
+            }
         }
 
         private void btnAddResearchProject_Click(object sender, EventArgs e)
@@ -104,6 +206,13 @@ namespace BalhamCollege
             this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.RESEARCHPROJECT' table. You can move, or remove it, as needed.
             this.rESEARCHPROJECTTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHPROJECT);
+
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
         }
         private void btnProduceResearchReport_Click(object sender, EventArgs e)
         {
@@ -302,5 +411,7 @@ namespace BalhamCollege
             Application.Exit();
             // exit application
         }
+
+        
     }
 }
