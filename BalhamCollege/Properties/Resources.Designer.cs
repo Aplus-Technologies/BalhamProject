@@ -473,6 +473,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap StudentSupportClerk1980x1080 {
+            get {
+                object obj = ResourceManager.GetObject("StudentSupportClerk1980x1080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap studentSupportClerkPage {
             get {
                 object obj = ResourceManager.GetObject("studentSupportClerkPage", resourceCulture);
