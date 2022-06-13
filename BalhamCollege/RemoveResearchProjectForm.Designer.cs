@@ -372,6 +372,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 559);
+            this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnRemoveResearchProject);
@@ -400,7 +401,7 @@ namespace BalhamCollege
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RemoveResearchProjectForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RemoveResearchProjectForm";
+            this.Text = "Remove Research Project";
             this.Load += new System.EventHandler(this.RemoveResearchProjectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
