@@ -234,22 +234,24 @@ namespace BalhamCollege
             // 
             // btnUpdateCourse
             // 
+            this.btnUpdateCourse.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateCourse.Location = new System.Drawing.Point(483, 323);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
-            this.btnUpdateCourse.Size = new System.Drawing.Size(122, 35);
+            this.btnUpdateCourse.Size = new System.Drawing.Size(122, 40);
             this.btnUpdateCourse.TabIndex = 24;
             this.btnUpdateCourse.Text = "Update Course";
-            this.btnUpdateCourse.UseVisualStyleBackColor = true;
+            this.btnUpdateCourse.UseVisualStyleBackColor = false;
             this.btnUpdateCourse.Click += new System.EventHandler(this.btnUpdateCourse_Click);
             // 
             // btnReturn
             // 
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.Location = new System.Drawing.Point(723, 323);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(122, 35);
+            this.btnReturn.Size = new System.Drawing.Size(122, 40);
             this.btnReturn.TabIndex = 25;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lblRequiredFields

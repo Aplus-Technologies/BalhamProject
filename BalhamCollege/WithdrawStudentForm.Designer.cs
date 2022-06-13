@@ -69,22 +69,24 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.Location = new System.Drawing.Point(705, 453);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(140, 35);
+            this.btnReturn.Size = new System.Drawing.Size(140, 40);
             this.btnReturn.TabIndex = 53;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnWithdrawStudent
             // 
+            this.btnWithdrawStudent.BackColor = System.Drawing.Color.SteelBlue;
             this.btnWithdrawStudent.Location = new System.Drawing.Point(483, 453);
             this.btnWithdrawStudent.Name = "btnWithdrawStudent";
-            this.btnWithdrawStudent.Size = new System.Drawing.Size(140, 35);
+            this.btnWithdrawStudent.Size = new System.Drawing.Size(140, 40);
             this.btnWithdrawStudent.TabIndex = 52;
             this.btnWithdrawStudent.Text = "Withdraw Student";
-            this.btnWithdrawStudent.UseVisualStyleBackColor = true;
+            this.btnWithdrawStudent.UseVisualStyleBackColor = false;
             this.btnWithdrawStudent.Click += new System.EventHandler(this.btnWithdrawStudent_Click);
             // 
             // txtCity
