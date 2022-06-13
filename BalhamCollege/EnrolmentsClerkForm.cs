@@ -459,6 +459,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
+            (prvStudents as Form).WindowState = FormWindowState.Maximized;
+            prvStudents.PrintPreviewControl.Zoom = 1;
         }
 
         private void btnEnrolStudent_Click(object sender, EventArgs e)

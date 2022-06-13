@@ -68,6 +68,7 @@ namespace BalhamCollege
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
@@ -75,224 +76,229 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iSSUEBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(861, 169);
+            this.label4.Location = new System.Drawing.Point(821, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 29;
             this.label4.Text = "Street Address:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(837, 135);
+            this.label3.Location = new System.Drawing.Point(798, 154);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 17);
+            this.label3.Size = new System.Drawing.Size(126, 20);
             this.label3.TabIndex = 28;
             this.label3.Text = "Student First Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(889, 70);
+            this.label1.Location = new System.Drawing.Point(848, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 17);
+            this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 27;
             this.label1.Text = "Student ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(834, 104);
+            this.label2.Location = new System.Drawing.Point(799, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 17);
+            this.label2.Size = new System.Drawing.Size(125, 20);
             this.label2.TabIndex = 26;
             this.label2.Text = "Student Last Name:";
             // 
             // txtStudentFirstName
             // 
-            this.txtStudentFirstName.Location = new System.Drawing.Point(973, 134);
-            this.txtStudentFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtStudentFirstName.Location = new System.Drawing.Point(923, 151);
+            this.txtStudentFirstName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentFirstName.Name = "txtStudentFirstName";
             this.txtStudentFirstName.ReadOnly = true;
-            this.txtStudentFirstName.Size = new System.Drawing.Size(248, 22);
+            this.txtStudentFirstName.Size = new System.Drawing.Size(248, 26);
             this.txtStudentFirstName.TabIndex = 25;
             // 
             // txtStudentLastName
             // 
-            this.txtStudentLastName.Location = new System.Drawing.Point(973, 101);
-            this.txtStudentLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtStudentLastName.Location = new System.Drawing.Point(920, 115);
+            this.txtStudentLastName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentLastName.Name = "txtStudentLastName";
             this.txtStudentLastName.ReadOnly = true;
-            this.txtStudentLastName.Size = new System.Drawing.Size(248, 22);
+            this.txtStudentLastName.Size = new System.Drawing.Size(248, 26);
             this.txtStudentLastName.TabIndex = 24;
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(973, 169);
-            this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtStreetAddress.Location = new System.Drawing.Point(923, 186);
+            this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
-            this.txtStreetAddress.Size = new System.Drawing.Size(284, 22);
+            this.txtStreetAddress.Size = new System.Drawing.Size(284, 26);
             this.txtStreetAddress.TabIndex = 23;
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(973, 67);
-            this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtStudentID.Location = new System.Drawing.Point(920, 81);
+            this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(58, 22);
+            this.txtStudentID.Size = new System.Drawing.Size(57, 26);
             this.txtStudentID.TabIndex = 22;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(932, 232);
+            this.label5.Location = new System.Drawing.Point(889, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 17);
+            this.label5.Size = new System.Drawing.Size(35, 20);
             this.label5.TabIndex = 33;
             this.label5.Text = "City:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(909, 202);
+            this.label6.Location = new System.Drawing.Point(868, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 17);
+            this.label6.Size = new System.Drawing.Size(56, 20);
             this.label6.TabIndex = 32;
             this.label6.Text = "Suburb:";
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(973, 199);
-            this.txtSuburb.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSuburb.Location = new System.Drawing.Point(923, 221);
+            this.txtSuburb.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
-            this.txtSuburb.Size = new System.Drawing.Size(248, 22);
+            this.txtSuburb.Size = new System.Drawing.Size(248, 26);
             this.txtSuburb.TabIndex = 31;
             // 
             // txtcity
             // 
-            this.txtcity.Location = new System.Drawing.Point(973, 229);
-            this.txtcity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcity.Location = new System.Drawing.Point(923, 256);
+            this.txtcity.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtcity.Name = "txtcity";
             this.txtcity.ReadOnly = true;
-            this.txtcity.Size = new System.Drawing.Size(248, 22);
+            this.txtcity.Size = new System.Drawing.Size(248, 26);
             this.txtcity.TabIndex = 30;
             // 
             // dgvStudents
             // 
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudents.Location = new System.Drawing.Point(41, 53);
+            this.dgvStudents.Location = new System.Drawing.Point(24, 52);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
-            this.dgvStudents.Size = new System.Drawing.Size(750, 230);
+            this.dgvStudents.Size = new System.Drawing.Size(750, 255);
             this.dgvStudents.TabIndex = 34;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
             // dgvEnrolments
             // 
             this.dgvEnrolments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolments.Location = new System.Drawing.Point(41, 332);
+            this.dgvEnrolments.Location = new System.Drawing.Point(24, 369);
             this.dgvEnrolments.Name = "dgvEnrolments";
             this.dgvEnrolments.RowHeadersWidth = 51;
             this.dgvEnrolments.RowTemplate.Height = 24;
-            this.dgvEnrolments.Size = new System.Drawing.Size(590, 200);
+            this.dgvEnrolments.Size = new System.Drawing.Size(589, 250);
             this.dgvEnrolments.TabIndex = 35;
             this.dgvEnrolments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnrolments_CellClick);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(38, 33);
+            this.label7.Location = new System.Drawing.Point(20, 28);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(159, 17);
+            this.label7.Size = new System.Drawing.Size(153, 20);
             this.label7.TabIndex = 36;
             this.label7.Text = "Please select a student:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 312);
+            this.label8.Location = new System.Drawing.Point(20, 345);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 17);
+            this.label8.Size = new System.Drawing.Size(173, 20);
             this.label8.TabIndex = 37;
             this.label8.Text = "Please select an Enrolment";
             // 
             // txtIssueDescription
             // 
-            this.txtIssueDescription.Location = new System.Drawing.Point(695, 332);
+            this.txtIssueDescription.Location = new System.Drawing.Point(651, 369);
             this.txtIssueDescription.Multiline = true;
             this.txtIssueDescription.Name = "txtIssueDescription";
-            this.txtIssueDescription.Size = new System.Drawing.Size(300, 80);
+            this.txtIssueDescription.Size = new System.Drawing.Size(302, 99);
             this.txtIssueDescription.TabIndex = 38;
             // 
             // txtActionTaken
             // 
-            this.txtActionTaken.Location = new System.Drawing.Point(693, 452);
+            this.txtActionTaken.Location = new System.Drawing.Point(650, 519);
             this.txtActionTaken.Multiline = true;
             this.txtActionTaken.Name = "txtActionTaken";
-            this.txtActionTaken.Size = new System.Drawing.Size(300, 80);
+            this.txtActionTaken.Size = new System.Drawing.Size(302, 99);
             this.txtActionTaken.TabIndex = 39;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(692, 432);
+            this.label10.Location = new System.Drawing.Point(648, 494);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 17);
+            this.label10.Size = new System.Drawing.Size(90, 20);
             this.label10.TabIndex = 41;
             this.label10.Text = "Action Taken:";
             // 
             // dtpIssueDate
             // 
             this.dtpIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIssueDate.Location = new System.Drawing.Point(1177, 330);
+            this.dtpIssueDate.Location = new System.Drawing.Point(1088, 366);
             this.dtpIssueDate.Name = "dtpIssueDate";
-            this.dtpIssueDate.Size = new System.Drawing.Size(109, 22);
+            this.dtpIssueDate.Size = new System.Drawing.Size(109, 26);
             this.dtpIssueDate.TabIndex = 42;
             // 
             // btnRecordIssue
             // 
-            this.btnRecordIssue.Location = new System.Drawing.Point(1119, 387);
+            this.btnRecordIssue.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRecordIssue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRecordIssue.Location = new System.Drawing.Point(1036, 437);
             this.btnRecordIssue.Name = "btnRecordIssue";
             this.btnRecordIssue.Size = new System.Drawing.Size(187, 62);
             this.btnRecordIssue.TabIndex = 43;
             this.btnRecordIssue.Text = "Record Issue";
-            this.btnRecordIssue.UseVisualStyleBackColor = true;
+            this.btnRecordIssue.UseVisualStyleBackColor = false;
             this.btnRecordIssue.Click += new System.EventHandler(this.btnRecordIssue_Click);
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(1119, 470);
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReturn.Location = new System.Drawing.Point(1036, 519);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(187, 62);
             this.btnReturn.TabIndex = 44;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(692, 312);
+            this.label9.Location = new System.Drawing.Point(648, 345);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 17);
+            this.label9.Size = new System.Drawing.Size(116, 20);
             this.label9.TabIndex = 40;
             this.label9.Text = "Issue Description:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1092, 332);
+            this.label11.Location = new System.Drawing.Point(1010, 369);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 17);
+            this.label11.Size = new System.Drawing.Size(76, 20);
             this.label11.TabIndex = 45;
             this.label11.Text = "Issue Date:";
             // 
@@ -358,9 +364,9 @@ namespace BalhamCollege
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(1270, 546);
+            this.label12.Location = new System.Drawing.Point(1154, 599);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 17);
+            this.label12.Size = new System.Drawing.Size(69, 20);
             this.label12.TabIndex = 46;
             this.label12.Text = "*Required";
             // 
@@ -368,9 +374,9 @@ namespace BalhamCollege
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(673, 432);
+            this.label14.Location = new System.Drawing.Point(630, 494);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 17);
+            this.label14.Size = new System.Drawing.Size(14, 20);
             this.label14.TabIndex = 48;
             this.label14.Text = "*";
             // 
@@ -378,9 +384,9 @@ namespace BalhamCollege
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(673, 312);
+            this.label15.Location = new System.Drawing.Point(630, 345);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(13, 17);
+            this.label15.Size = new System.Drawing.Size(14, 20);
             this.label15.TabIndex = 49;
             this.label15.Text = "*";
             // 
@@ -388,17 +394,27 @@ namespace BalhamCollege
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(1083, 332);
+            this.label13.Location = new System.Drawing.Point(996, 369);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 17);
+            this.label13.Size = new System.Drawing.Size(14, 20);
             this.label13.TabIndex = 47;
             this.label13.Text = "*";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(1209, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(70, 80);
+            this.pictureBox1.TabIndex = 72;
+            this.pictureBox1.TabStop = false;
+            // 
             // RecordIssueForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1378, 582);
+            this.ClientSize = new System.Drawing.Size(1278, 648);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -427,6 +443,7 @@ namespace BalhamCollege
             this.Controls.Add(this.txtStudentLastName);
             this.Controls.Add(this.txtStreetAddress);
             this.Controls.Add(this.txtStudentID);
+            this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "RecordIssueForm";
             this.Text = "Record Issue";
             this.Load += new System.EventHandler(this.RecordIssueForm_Load);
@@ -437,6 +454,7 @@ namespace BalhamCollege
             ((System.ComponentModel.ISupportInitialize)(this.eNROLMENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOURSEBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iSSUEBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,5 +500,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

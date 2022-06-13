@@ -237,6 +237,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
+            (prvCourses as Form).WindowState = FormWindowState.Maximized;
+            prvCourses.PrintPreviewControl.Zoom = 1;
         }
         private void btnAssignLecturer_Click(object sender, EventArgs e)
         {

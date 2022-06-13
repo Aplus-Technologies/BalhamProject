@@ -389,7 +389,7 @@ namespace BalhamCollege
                         linesSoFar++;
 
                         g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 26, topMargin + (linesSoFar * labelsFont.Height));
-
+                        linesSoFar++;
                     }
                     else
                     {
@@ -397,13 +397,14 @@ namespace BalhamCollege
                         linesSoFar++;
                         linesSoFar++;
                         g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * textFont.Height));
+                        linesSoFar++;
                     }
                     linesSoFar++;
                     linesSoFar++;
                     linesSoFar++;
                 }
                 i++;
-                if ((65 - linesSoFar) < (linesSoFar - assessmentInitialLines))
+                if ((60 - linesSoFar) < (linesSoFar - assessmentInitialLines))
                 {
                     keepPrinting = false;
                 }
@@ -418,6 +419,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
+            (prvAssessments as Form).WindowState = FormWindowState.Maximized;
+            prvAssessments.PrintPreviewControl.Zoom = 1;
         }
 
         private void btnEnterResult_Click(object sender, EventArgs e)

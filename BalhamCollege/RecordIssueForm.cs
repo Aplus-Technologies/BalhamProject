@@ -90,8 +90,8 @@ namespace BalhamCollege
 
             dgvStudents.DataSource = students;
             dgvStudents.Columns[0].Width = 70;
-            dgvStudents.Columns[1].Width = 235;
-            dgvStudents.Columns[2].Width = 235;
+            dgvStudents.Columns[1].Width = 330;
+            dgvStudents.Columns[2].Width = 330;
 
             dgvStudents.Columns[3].Visible = false;
             dgvStudents.Columns[4].Visible = false;
@@ -174,7 +174,7 @@ namespace BalhamCollege
             dgvEnrolments.Columns[0].Width = 70;
             dgvEnrolments.Columns[1].Width = 70;
             dgvEnrolments.Columns[2].Width = 70;
-            dgvEnrolments.Columns[3].Width = 227;
+            dgvEnrolments.Columns[3].Width = 359;
             dgvEnrolments.Columns["Course ID"].Visible = false;
 
             dgvEnrolments.RowHeadersVisible = false;
@@ -285,5 +285,7 @@ namespace BalhamCollege
                 }
             }
         }
+
+        
     }
 }

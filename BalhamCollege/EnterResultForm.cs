@@ -76,10 +76,10 @@ namespace BalhamCollege
             dgvAssessments.ClearSelection();
 
             dgvAssessments.DataSource = assessments;
-            dgvAssessments.Columns[0].Width = 70;
-            dgvAssessments.Columns[1].Width = 70;
-            dgvAssessments.Columns[2].Width = 300;
-            dgvAssessments.Columns[3].Width = 300;
+            dgvAssessments.Columns[0].Width = 66;
+            dgvAssessments.Columns[1].Width = 66;
+            dgvAssessments.Columns[2].Width = 299;
+            dgvAssessments.Columns[3].Width = 299;
             dgvAssessments.Columns["Maximum Mark"].Visible = false;
             dgvAssessments.Columns["CourseID"].Visible = false;
             dgvAssessments.RowHeadersVisible = false;
@@ -181,7 +181,7 @@ namespace BalhamCollege
 
             dgvEnrolments.DataSource = enrolments;
             dgvEnrolments.Columns[0].Width = 370;
-            dgvEnrolments.Columns[1].Width = 70;
+            dgvEnrolments.Columns[1].Width = 60;
             dgvEnrolments.Columns[2].Width = 150;
             dgvEnrolments.Columns[3].Width = 150;
             dgvEnrolments.Columns["StudentID"].Visible = false;

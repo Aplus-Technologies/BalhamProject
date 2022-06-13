@@ -288,7 +288,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
-
+            (prvResearches as Form).WindowState = FormWindowState.Maximized;
+            prvResearches.PrintPreviewControl.Zoom = 1;
         }
         private void btnReturn_Click(object sender, EventArgs e)
         { // return user to login page 

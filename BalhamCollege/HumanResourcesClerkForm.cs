@@ -31,7 +31,6 @@ namespace BalhamCollege
         //variables for producing the report
         private DataRow[] lecturersForPrint;
 
-        private int amountOfLecturersPrinted;
         private HumanBackgroundForm frmHuman;
 
         private int lecturerForNextPage;
@@ -319,6 +318,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
+            (prvLecturers as Form).WindowState = FormWindowState.Maximized;
+            prvLecturers.PrintPreviewControl.Zoom = 1;
         }
 
        

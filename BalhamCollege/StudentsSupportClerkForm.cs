@@ -239,6 +239,8 @@ namespace BalhamCollege
             {
                 e.HasMorePages = true;
             }
+            (prvIssues as Form).WindowState = FormWindowState.Maximized;
+            prvIssues.PrintPreviewControl.Zoom = 1;
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
