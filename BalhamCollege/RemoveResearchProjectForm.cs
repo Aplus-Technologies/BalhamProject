@@ -174,7 +174,7 @@ namespace BalhamCollege
             if (lstResearchProjects.SelectedItem != null)
             {
                 DataRow deleteResearchProjectRow = dtResearchProject2.Rows[cmResearchProject.Position];
-                if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     string researchProject;
                     researchProject = lstResearchProjects.SelectedItem.ToString();
