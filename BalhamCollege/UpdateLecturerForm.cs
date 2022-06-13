@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions; // class to check for  regular expression pattern 
 
 namespace BalhamCollege
 {
@@ -20,6 +21,9 @@ namespace BalhamCollege
         private DataTable dtLecturer2;
         private DataView lecturerView2;
 
+        private bool resultMatch; // boolean to check if email pattern is valid 
+        private bool numberMatch; // boolean to check if phone number pattern is valid
+
         public UpdateLecturerForm(DataController dc, HumanResourcesClerkForm humanResourcesClerk)
         {
             InitializeComponent();
@@ -28,6 +32,7 @@ namespace BalhamCollege
             humanResourcesClerk.Hide();
             BindControls();
             TableAndView(); // generate updated table and views
+            
         }
 
         private void TableAndView()
@@ -91,7 +96,7 @@ namespace BalhamCollege
 
             // Validate the entries in the fields
             if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") ||
-                (txtCity.Text == "") || (txtPhoneNumber.Text == "") || (txtEmailAddress.Text == "") || (cboRanking.Text == "") || (cboType.Text == ""))
+                (txtCity.Text == "") || (numberMatch == false) || (resultMatch == false) || (cboRanking.Text == "") || (cboType.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error");
             }
@@ -133,6 +138,7 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
+           
             LoadLecturers();
             ClearFields();
         }
@@ -159,6 +165,56 @@ namespace BalhamCollege
             this.Validate();
             this.lECTURERBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
+        }
+
+       
+        private void txtPhoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            // flash error symbol beside PhoneNumber text box if pattern does not match; only a string of numbers is valid 
+            string pattern = "^-?[0-9][0-9,\\.]+$";
+            numberMatch = false;
+
+            if (Regex.IsMatch(txtPhoneNumber.Text, pattern))
+            {
+                errorProvider2.Clear();
+                numberMatch = true;
+
+            }
+            else if(txtPhoneNumber.Text == "")
+            {// clear error provider upon form re-load 
+                errorProvider2.Clear();
+               
+            }
+            else
+            {
+                errorProvider2.SetError(this.txtPhoneNumber, "Numbers only");
+                numberMatch = false;
+                return;
+            }
+        }
+
+        private void txtEmailAddress_TextChanged(object sender, EventArgs e)
+        {
+            // flash error symbol beside Email address text box if pattern does not match 
+            string pattern = "^([0-9a-zA-Z]([-\\.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+            resultMatch = false;
+
+            if (Regex.IsMatch(txtEmailAddress.Text, pattern))
+            {
+                errorProvider1.Clear();
+                resultMatch = true;
+
+            }
+            else if(txtEmailAddress.Text == "")
+            { // clear error provider upon form re-load 
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtEmailAddress, "Input valid email address format");
+                resultMatch = false;
+                return;
+            }
         }
     }
 }
