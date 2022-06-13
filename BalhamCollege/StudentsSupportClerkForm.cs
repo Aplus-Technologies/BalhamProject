@@ -20,12 +20,93 @@ namespace BalhamCollege
         private int issuesForNextPage;
         private int countOfIssues;
         private int PagePrinted;
+
+        // variables to store control location and size    
+        private Rectangle btnRecordIssueOriginalRect;
+        private Rectangle btnProduceIssuesReportOriginalRect;       
+        private Rectangle btnReturnOriginalRect;
+        private Rectangle btnExitOriginalRect;
+
+        private Size formOriginalSize;
         public StudentsSupportClerkForm(DataController dc, LoginForm lgin)
         {
             InitializeComponent();
             DC = dc;
             frmLogin = lgin;
             frmLogin.Hide();
+
+            // keep track of original control size, for autoresizing (original location and size)
+            formOriginalSize = this.Size;
+            btnRecordIssueOriginalRect = new Rectangle(btnRecordIssue.Location.X, btnRecordIssue.Location.Y, btnRecordIssue.Width, btnRecordIssue.Height);
+            btnProduceIssuesReportOriginalRect = new Rectangle(btnProduceIssuesReport.Location.X, btnProduceIssuesReport.Location.Y, btnProduceIssuesReport.Width, btnProduceIssuesReport.Height);            
+            btnReturnOriginalRect = new Rectangle(btnReturn.Location.X, btnReturn.Location.Y, btnReturn.Width, btnReturn.Height);
+            btnExitOriginalRect = new Rectangle(btnExit.Location.X, btnExit.Location.Y, btnExit.Width, btnExit.Height);
+        }
+
+        private void resizeChildrenControls()
+        {// resize children controls 
+            resizeControl(btnRecordIssueOriginalRect, btnRecordIssue);
+            resizeControl(btnProduceIssuesReportOriginalRect, btnProduceIssuesReport);
+            
+            resizeControl(btnReturnOriginalRect, btnReturn);
+            resizeControl(btnExitOriginalRect, btnExit);
+
+        }
+
+        private void resizeControl(Rectangle OriginalControlRect, Control control)
+        {// auto adjust control based on original location, height and width
+            float xRatio = (float)(this.Width) / (float)(formOriginalSize.Width);
+            float yRatio = (float)(this.Height) / (float)(formOriginalSize.Height);
+
+            // X location of controls when maximized
+            int newX;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newX = (int)(OriginalControlRect.X * xRatio) + 5;
+            }
+            else
+            { // X location when minimized 
+                newX = (int)(OriginalControlRect.X * xRatio);
+            }
+
+            // Y location of controls when maximized
+            int newY;
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                newY = (int)(OriginalControlRect.Y * yRatio) + 15;
+            }
+            else
+            {// Y location when minimized
+                newY = (int)(OriginalControlRect.Y * yRatio);
+            }
+
+            int newWidth = (int)(OriginalControlRect.Width * xRatio);
+            int newHeight = (int)(OriginalControlRect.Height * yRatio);
+
+            control.Location = new Point(newX, newY);
+            control.Size = new Size(newWidth, newHeight);
+
+        }
+        private void StudentsSupportClerkForm_Resize(object sender, EventArgs e)
+        {
+            // autosize form controls upon window size change 
+            resizeChildrenControls();
+
+            if (this.WindowState == FormWindowState.Maximized)
+            { // button font size upon maximize
+                btnRecordIssue.Font = new Font("Arial", 10);
+                btnProduceIssuesReport.Font = new Font("Arial", 10);             
+                btnReturn.Font = new Font("Arial", 10);
+                btnExit.Font = new Font("Arial", 10);
+            }
+            else
+            {// button font size when not maximized
+                btnRecordIssue.Font = new Font("Arial", 8);
+                btnProduceIssuesReport.Font = new Font("Arial", 8);
+                btnReturn.Font = new Font("Arial", 8);
+                btnExit.Font = new Font("Arial", 8);
+
+            }
         }
 
         private void btnRecordIssue_Click(object sender, EventArgs e)
@@ -55,6 +136,13 @@ namespace BalhamCollege
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ISSUE' table. You can move, or remove it, as needed.
             this.iSSUETableAdapter.Fill(this.dsBalhamCollegeAzure.ISSUE);
+
+            // open form to maximize after 1 sec interval 
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                timer1.Interval = 1000;
+                this.WindowState = FormWindowState.Maximized;
+            }
 
         }
         // Get text lenght
@@ -254,5 +342,7 @@ namespace BalhamCollege
             Application.Exit();
             // exit application 
         }
+
+        
     }
 }
