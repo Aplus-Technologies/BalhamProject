@@ -32,7 +32,7 @@ namespace BalhamCollege
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveResearchProjectForm));
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnRemoveResearchProject = new System.Windows.Forms.Button();
             this.txtTopicDescription = new System.Windows.Forms.TextBox();
             this.txtProjectDescription = new System.Windows.Forms.TextBox();
@@ -79,26 +79,30 @@ namespace BalhamCollege
             this.label2.TabIndex = 148;
             this.label2.Text = "Please select a research project:";
             // 
-            // button1
+            // btnReturn
             // 
-            this.button1.Location = new System.Drawing.Point(630, 500);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 41);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Return";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnReturn.Location = new System.Drawing.Point(622, 500);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(203, 40);
+            this.btnReturn.TabIndex = 4;
+            this.btnReturn.Text = "Return";
+            this.btnReturn.UseVisualStyleBackColor = false;
+            this.btnReturn.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRemoveResearchProject
             // 
+            this.btnRemoveResearchProject.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRemoveResearchProject.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnRemoveResearchProject.Location = new System.Drawing.Point(19, 500);
             this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveResearchProject.Name = "btnRemoveResearchProject";
-            this.btnRemoveResearchProject.Size = new System.Drawing.Size(188, 41);
+            this.btnRemoveResearchProject.Size = new System.Drawing.Size(203, 40);
             this.btnRemoveResearchProject.TabIndex = 3;
             this.btnRemoveResearchProject.Text = "Remove Research Project";
-            this.btnRemoveResearchProject.UseVisualStyleBackColor = true;
+            this.btnRemoveResearchProject.UseVisualStyleBackColor = false;
             this.btnRemoveResearchProject.Click += new System.EventHandler(this.btnRemoveResearchProject_Click);
             // 
             // txtTopicDescription
@@ -369,7 +373,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 559);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnRemoveResearchProject);
             this.Controls.Add(this.txtTopicDescription);
             this.Controls.Add(this.txtProjectDescription);
@@ -411,7 +415,7 @@ namespace BalhamCollege
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Button btnRemoveResearchProject;
         private System.Windows.Forms.TextBox txtTopicDescription;
         private System.Windows.Forms.TextBox txtProjectDescription;

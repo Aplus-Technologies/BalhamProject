@@ -81,7 +81,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(345, 409);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(159, 39);
+            this.btnReturn.Size = new System.Drawing.Size(159, 40);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -94,7 +94,7 @@ namespace BalhamCollege
             this.btnDeleteProgramme.Location = new System.Drawing.Point(26, 409);
             this.btnDeleteProgramme.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteProgramme.Name = "btnDeleteProgramme";
-            this.btnDeleteProgramme.Size = new System.Drawing.Size(159, 41);
+            this.btnDeleteProgramme.Size = new System.Drawing.Size(159, 40);
             this.btnDeleteProgramme.TabIndex = 2;
             this.btnDeleteProgramme.Text = "Delete Programme";
             this.btnDeleteProgramme.UseVisualStyleBackColor = false;

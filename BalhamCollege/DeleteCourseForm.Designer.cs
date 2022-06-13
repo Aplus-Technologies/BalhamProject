@@ -73,22 +73,26 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(339, 337);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(134, 40);
             this.btnReturn.TabIndex = 3;
             this.btnReturn.Text = "Return";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // btnDeleteCourse
             // 
+            this.btnDeleteCourse.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDeleteCourse.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDeleteCourse.Location = new System.Drawing.Point(16, 337);
             this.btnDeleteCourse.Name = "btnDeleteCourse";
             this.btnDeleteCourse.Size = new System.Drawing.Size(159, 40);
             this.btnDeleteCourse.TabIndex = 2;
             this.btnDeleteCourse.Text = "Delete Course";
-            this.btnDeleteCourse.UseVisualStyleBackColor = true;
+            this.btnDeleteCourse.UseVisualStyleBackColor = false;
             this.btnDeleteCourse.Click += new System.EventHandler(this.btnDeleteCourse_Click);
             // 
             // txtStatus

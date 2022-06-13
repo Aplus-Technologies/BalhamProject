@@ -84,11 +84,12 @@ namespace BalhamCollege
             // 
             // btnReturn
             // 
-            this.btnReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
+            this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(712, 478);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(159, 41);
+            this.btnReturn.Size = new System.Drawing.Size(159, 40);
             this.btnReturn.TabIndex = 4;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -96,11 +97,12 @@ namespace BalhamCollege
             // 
             // btnRemoveLecturer
             // 
-            this.btnRemoveLecturer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(188)))), ((int)(((byte)(209)))));
+            this.btnRemoveLecturer.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnRemoveLecturer.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnRemoveLecturer.Location = new System.Drawing.Point(395, 478);
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
-            this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 41);
+            this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 40);
             this.btnRemoveLecturer.TabIndex = 3;
             this.btnRemoveLecturer.Text = "Remove Lecturer";
             this.btnRemoveLecturer.UseVisualStyleBackColor = false;
