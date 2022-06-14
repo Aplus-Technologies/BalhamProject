@@ -114,7 +114,7 @@ namespace BalhamCollege
             int newY;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newY = (int)(OriginalControlRect.Y * yRatio) + 20;
+                newY = (int)(OriginalControlRect.Y * yRatio) + 12;
             }
             else
             {// Y location when minimized
@@ -171,7 +171,7 @@ namespace BalhamCollege
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
-            // show Add Course form upon click
+            // show Add Course form and programme background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
             frmAddCourse = new AddCourseForm(DC, this);
@@ -181,24 +181,20 @@ namespace BalhamCollege
 
         private void btnUpdateCourse_Click(object sender, EventArgs e)
         {
-            // show Update Course form upon click
-            if (frmUpdateCourse == null)
-            {
-                frmUpdateCourse = new UpdateCourseForm(DC, this);
-            }
+            // show Update Course form and programme background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmUpdateCourse = new UpdateCourseForm(DC, this);           
             frmUpdateCourse.ShowDialog();
 
         }
 
         private void btnDeleteCourse_Click(object sender, EventArgs e)
         {
-            // show Delete Course form and background form upon click
+            // show Delete Course form and programme background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
-            frmProg.Show();
-            
-            
-            frmDeleteCourse = new DeleteCourseForm(DC, this);
-            
+            frmProg.Show();            
+            frmDeleteCourse = new DeleteCourseForm(DC, this);            
             frmDeleteCourse.ShowDialog();
 
         }
@@ -247,7 +243,7 @@ namespace BalhamCollege
             PagePrinted = 1;
             prvCourses.ShowDialog();
         }
-        // Get text lenght
+        // Get text length
         private float GetLength(string text)
         {
             using (System.Drawing.Graphics graphics = System.Drawing.Graphics.FromImage(new Bitmap(1, 1)))
@@ -373,17 +369,16 @@ namespace BalhamCollege
         }
         private void btnAssignLecturer_Click(object sender, EventArgs e)
         {
-            // show Assign Lecturer form upon click
-            if (frmAssignLecturer == null)
-            {
-                frmAssignLecturer = new AssignLecturerForm(DC, this);
-            }
+            // show Assign Lecturer form and programme background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmAssignLecturer = new AssignLecturerForm(DC, this);           
             frmAssignLecturer.ShowDialog();
         }
 
         private void btnRemoveLecturer_Click(object sender, EventArgs e)
         {
-            // show Remove Lecturer form and background form upon click
+            // show Remove Lecturer form and programme background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
             frmRemoveLecturer = new RemoveLecturerForm(DC, this);           
@@ -392,7 +387,7 @@ namespace BalhamCollege
 
         private void btnAddProgramme_Click(object sender, EventArgs e)
         {
-            // show Add Programme form upon click
+            // show Add Programme form and programme background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
             frmProg.Show();
             frmAddProgramme = new AddProgrammeForm(DC, this);
@@ -401,24 +396,20 @@ namespace BalhamCollege
 
         private void btnUpdateProgramme_Click(object sender, EventArgs e)
         {
-            // show Update Programme form upon click
-            if (frmUpdateProgramme == null)
-            {
-                frmUpdateProgramme = new UpdateProgrammeForm(DC, this);
-            }
+            // show Update Programme form and programme background form upon click
+            frmProg = new ProgrammeBackgroundForm(this);
+            frmProg.Show();
+            frmUpdateProgramme = new UpdateProgrammeForm(DC, this);            
             frmUpdateProgramme.ShowDialog();
 
         }
 
         private void btnDeleteProgramme_Click(object sender, EventArgs e)
         {
-            // show Delete Programme form and background form upon click
+            // show Delete Programme form and programme background form upon click
             frmProg = new ProgrammeBackgroundForm(this);
-            frmProg.Show();
-           
-            
-            frmDeleteProgramme = new DeleteProgrammeForm (DC, this);
-            
+            frmProg.Show();            
+            frmDeleteProgramme = new DeleteProgrammeForm (DC, this);           
             frmDeleteProgramme.ShowDialog();
 
         }

@@ -98,6 +98,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            Application.OpenForms["ProgrammeBackgroundForm"].Close(); // closes background along with form
             this.Close(); // prevents 'cannot accessed disposed object error' upon producing report 
             frmProgrammeAdministrator.Show();
         }

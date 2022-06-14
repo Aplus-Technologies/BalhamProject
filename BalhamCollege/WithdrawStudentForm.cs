@@ -202,6 +202,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            Application.OpenForms["EnrolBackgroundForm"].Close(); // closes background along with form
             this.Close();
             frmEnrolmentsClerk.Show();
         }

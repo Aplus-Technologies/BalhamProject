@@ -86,7 +86,7 @@ namespace BalhamCollege
             int newY;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newY = (int)(OriginalControlRect.Y * yRatio) + 10;
+                newY = (int)(OriginalControlRect.Y * yRatio) + 5;
             }
             else
             {// Y location when minimized
@@ -128,7 +128,7 @@ namespace BalhamCollege
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
-            // show Add Lecturer form upon click        
+            // show Add Lecturer form and human background form upon click        
             frmHuman = new HumanBackgroundForm(this);
             frmHuman.Show();
             frmAddLecturer = new AddLecturerForm(DC, this);
@@ -138,11 +138,10 @@ namespace BalhamCollege
 
         private void btnUpdateLecturer_Click(object sender, EventArgs e)
         {
-            // show Update Lecturer form upon click
-            if (frmUpdateLecturer == null)
-            {
-                frmUpdateLecturer = new UpdateLecturerForm(DC, this);
-            }
+            // show Update Lecturer form and human background form upon click
+            frmHuman = new HumanBackgroundForm(this);
+            frmHuman.Show();
+            frmUpdateLecturer = new UpdateLecturerForm(DC, this);       
             frmUpdateLecturer.ShowDialog();
         }
 
@@ -150,7 +149,7 @@ namespace BalhamCollege
 
         private void btnDeleteLecturer_Click(object sender, EventArgs e)
         {
-            // show Delete Lecturer form and background upon click
+            // show Delete Lecturer form and human background form upon click
             frmHuman = new HumanBackgroundForm(this);
             frmHuman.Show();
             frmDeleteLecturer = new DeleteLecturerForm(DC, this);

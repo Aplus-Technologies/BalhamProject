@@ -235,6 +235,12 @@
     <Compile Include="ResearchBackgroundForm.Designer.cs">
       <DependentUpon>ResearchBackgroundForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentBackgroundForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentBackgroundForm.Designer.cs">
+      <DependentUpon>StudentBackgroundForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WithdrawStudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResearchBackgroundForm.resx">
       <DependentUpon>ResearchBackgroundForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentBackgroundForm.resx">
+      <DependentUpon>StudentBackgroundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsSupportClerkForm.resx">
       <DependentUpon>StudentsSupportClerkForm.cs</DependentUpon>

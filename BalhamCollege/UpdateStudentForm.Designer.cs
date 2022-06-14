@@ -263,6 +263,7 @@ namespace BalhamCollege
             // btnUpdateStudent
             // 
             this.btnUpdateStudent.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateStudent.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnUpdateStudent.Location = new System.Drawing.Point(483, 404);
             this.btnUpdateStudent.Name = "btnUpdateStudent";
             this.btnUpdateStudent.Size = new System.Drawing.Size(122, 40);
@@ -274,6 +275,7 @@ namespace BalhamCollege
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(723, 404);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(122, 40);
@@ -433,6 +435,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(876, 465);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl7);

@@ -15,6 +15,7 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private RecordIssueForm frmRecordIssue;
+        private StudentBackgroundForm frmStud; // reference to Background Form
         //Produce report variables
         private DataRow[] issuesForPrint;
         private int issuesForNextPage;
@@ -73,7 +74,7 @@ namespace BalhamCollege
             int newY;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newY = (int)(OriginalControlRect.Y * yRatio) + 15;
+                newY = (int)(OriginalControlRect.Y * yRatio) + 12;
             }
             else
             {// Y location when minimized
@@ -111,15 +112,9 @@ namespace BalhamCollege
 
         private void btnRecordIssue_Click(object sender, EventArgs e)
         {
-            //frmCourse = new CourseBackgroundForm(this);
-            //frmCourse.Show();
-            //frmRecordIssue = new RecordIssueForm(DC, this);
-            //frmRecordIssue.ShowDialog();
-
-            if (frmRecordIssue == null)
-            {
-                frmRecordIssue = new RecordIssueForm(DC, this);
-            }
+            frmStud = new StudentBackgroundForm(this);
+            frmStud.Show();
+            frmRecordIssue = new RecordIssueForm(DC, this);          
             frmRecordIssue.StartPosition = FormStartPosition.CenterScreen;
             frmRecordIssue.ShowDialog();
 

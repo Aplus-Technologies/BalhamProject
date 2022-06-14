@@ -95,7 +95,7 @@ namespace BalhamCollege
             int newY;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newY = (int)(OriginalControlRect.Y * yRatio) + 10;
+                newY = (int)(OriginalControlRect.Y * yRatio) + 5;
             }
             else
             {// Y location when minimized
@@ -152,10 +152,9 @@ namespace BalhamCollege
         private void btnUpdateStudent_Click(object sender, EventArgs e)
         {
             // show Update Student form upon click
-            if (frmUpdateStudent == null)
-            {
-                frmUpdateStudent = new UpdateStudentForm(DC, this);
-            }
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
+            frmUpdateStudent = new UpdateStudentForm(DC, this);           
             frmUpdateStudent.ShowDialog();
         }
 
@@ -477,10 +476,9 @@ namespace BalhamCollege
         private void btnWithdrawStudent_Click(object sender, EventArgs e)
         {
             // show Withdraw Student form upon click
-            if (frmWithdrawStudent == null)
-            {
-                frmWithdrawStudent = new WithdrawStudentForm(DC, this);
-            }
+            frmBackground = new EnrolBackgroundForm(this);
+            frmBackground.Show();
+            frmWithdrawStudent = new WithdrawStudentForm(DC, this);            
             frmWithdrawStudent.ShowDialog();
         }
 
