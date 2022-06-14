@@ -202,6 +202,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(703, 392);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAsterix2);
             this.Controls.Add(this.lblAsterix1);
@@ -219,7 +220,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "AddProgrammeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Programme Form";
+            this.Text = "Add Programme ";
             this.Load += new System.EventHandler(this.AddProgrammeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();

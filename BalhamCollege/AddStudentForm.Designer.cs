@@ -415,6 +415,7 @@ namespace BalhamCollege
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(725, 392);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtEmailAddress);
@@ -450,7 +451,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "AddStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Student Form";
+            this.Text = "Add Student";
             this.Load += new System.EventHandler(this.AddStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();

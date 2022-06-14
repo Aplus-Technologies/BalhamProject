@@ -193,6 +193,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(703, 392);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblAsterix2);
@@ -210,7 +211,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "AddResearchTopicForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddResearchTopicForm";
+            this.Text = "Add Research Topic";
             this.Load += new System.EventHandler(this.AddResearchTopicForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rESEARCHTOPICBindingSource)).EndInit();

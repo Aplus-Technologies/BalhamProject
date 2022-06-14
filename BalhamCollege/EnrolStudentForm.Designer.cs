@@ -562,6 +562,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(938, 639);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nudSemester);
             this.Controls.Add(this.lblSemester);
@@ -608,7 +609,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "EnrolStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Enrol Student Form";
+            this.Text = "Enrol Student ";
             this.Load += new System.EventHandler(this.EnrolStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudYear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSemester)).EndInit();
