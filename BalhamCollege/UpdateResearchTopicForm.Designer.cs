@@ -128,6 +128,7 @@ namespace BalhamCollege
             // btnReturn
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReturn.Location = new System.Drawing.Point(372, 417);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(147, 40);
@@ -139,6 +140,7 @@ namespace BalhamCollege
             // btnUpdateTopic
             // 
             this.btnUpdateTopic.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnUpdateTopic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnUpdateTopic.Location = new System.Drawing.Point(157, 417);
             this.btnUpdateTopic.Name = "btnUpdateTopic";
             this.btnUpdateTopic.Size = new System.Drawing.Size(147, 40);
