@@ -18,8 +18,7 @@ namespace BalhamCollege
         private UpdateAssessmentForm frmUpdateAssessment; // the reference to the Update Assessment form
         private DeleteAssessmentForm frmDeleteAssessment; // reference to delete assessment form
         private AddAssessmentForm frmAddAssessment; // reference to add assessment form
-
-        private CourseBackgroundForm frmCourse; // reference to background form
+        private CourseBackgroundForm frmCourse; // reference to course background form
 
         // variables to store control location and size    
         private Rectangle btnAddAssessmentOriginalRect;
@@ -132,11 +131,9 @@ namespace BalhamCollege
             }
         }
 
-       
-
             private void btnAddAssessment_Click(object sender, EventArgs e)
         {
-            // show Add Assessment form upon click
+            // show Add Assessment form and course background form upon click
             frmCourse = new CourseBackgroundForm(this);
             frmCourse.Show();
             frmAddAssessment = new AddAssessmentForm(DC, this);
@@ -145,18 +142,17 @@ namespace BalhamCollege
 
         private void btnUpdateAssessment_Click(object sender, EventArgs e)
         {
-            // show Update Assessment form upon click
-            if (frmUpdateAssessment == null)
-            {
-                frmUpdateAssessment = new UpdateAssessmentForm(DC, this);
-            }
+            // show Update Assessment form and course background form upon click
+            frmCourse = new CourseBackgroundForm(this);
+            frmCourse.Show();
+            frmUpdateAssessment = new UpdateAssessmentForm(DC, this);            
             frmUpdateAssessment.ShowDialog();
 
         }
 
         private void btnDeleteAssessment_Click(object sender, EventArgs e)
-        { // show delete assessment form
-
+        {
+            // show Delete Assessment form and course background form form upon click
             frmCourse = new CourseBackgroundForm(this);
             frmCourse.Show();
             frmDeleteAssessment = new DeleteAssessmentForm(DC, this);
@@ -423,16 +419,17 @@ namespace BalhamCollege
         }
 
         private void btnEnterResult_Click(object sender, EventArgs e)
-        {// show enter result form 
-            if (frmEnterResult == null)
-            {
-                frmEnterResult = new EnterResultForm(DC, this);
-            }
+        {
+            // show enter result form and course background form
+            frmCourse = new CourseBackgroundForm(this);
+            frmCourse.Show();
+            frmEnterResult = new EnterResultForm(DC, this);           
             frmEnterResult.ShowDialog();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
-        { // return to login menu 
+        { 
+            // return to login menu 
             this.Close();
             frmLogin.Show();
         }
