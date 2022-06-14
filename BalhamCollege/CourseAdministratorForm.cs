@@ -79,7 +79,7 @@ namespace BalhamCollege
             int newX;
             if (this.WindowState == FormWindowState.Maximized)
             {
-                newX = (int)(OriginalControlRect.X * xRatio) + 10;
+                newX = (int)(OriginalControlRect.X * xRatio) + 4;
             }
             else 
             { // X location when minimized 
