@@ -232,6 +232,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 480);
+            this.ControlBox = false;
             this.Controls.Add(this.cboImpact);
             this.Controls.Add(this.txtTopicID);
             this.Controls.Add(this.lstResearchTopics);

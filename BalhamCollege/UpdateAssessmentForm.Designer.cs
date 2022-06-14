@@ -397,6 +397,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(547, 544);
+            this.ControlBox = false;
             this.Controls.Add(this.lstAssessments);
             this.Controls.Add(this.nudNumber);
             this.Controls.Add(this.txtAssessmentName);
