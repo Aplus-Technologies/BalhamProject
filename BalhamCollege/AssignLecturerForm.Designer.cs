@@ -92,7 +92,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(386, 91);
+            this.lblCourseName.Location = new System.Drawing.Point(390, 90);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
             this.lblCourseName.TabIndex = 35;
@@ -110,7 +110,7 @@ namespace BalhamCollege
             // lblCourseID
             // 
             this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(409, 48);
+            this.lblCourseID.Location = new System.Drawing.Point(413, 48);
             this.lblCourseID.Name = "lblCourseID";
             this.lblCourseID.Size = new System.Drawing.Size(72, 20);
             this.lblCourseID.TabIndex = 33;
