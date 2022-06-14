@@ -183,10 +183,9 @@ namespace BalhamCollege
         private void btnUpdateResearchTopic_Click(object sender, EventArgs e)
         {
             // show Update Research Topic form upon click
-            if (frmUpdateResearchTopic == null)
-            {
-                frmUpdateResearchTopic = new UpdateResearchTopicForm(DC, this);
-            }
+            frmResearch = new ResearchBackgroundForm(this);
+            frmResearch.Show();
+            frmUpdateResearchTopic = new UpdateResearchTopicForm(DC, this);            
             frmUpdateResearchTopic.ShowDialog();
 
         }

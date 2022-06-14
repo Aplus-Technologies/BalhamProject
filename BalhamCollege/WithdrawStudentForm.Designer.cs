@@ -320,6 +320,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 509);
+            this.ControlBox = false;
             this.Controls.Add(this.lblSelectEnrolment);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvEnrolments);
