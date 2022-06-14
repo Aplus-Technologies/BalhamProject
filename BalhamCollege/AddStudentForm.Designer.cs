@@ -64,10 +64,12 @@ namespace BalhamCollege
             this.tableAdapterManager = new BalhamCollege.dsBalhamCollegeAzureTableAdapters.TableAdapterManager();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // txtLastName
@@ -133,6 +135,7 @@ namespace BalhamCollege
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(106, 26);
             this.txtPhoneNumber.TabIndex = 6;
+            this.txtPhoneNumber.Leave += new System.EventHandler(this.txtPhoneNumber_Leave);
             // 
             // cboStatus
             // 
@@ -238,9 +241,9 @@ namespace BalhamCollege
             // 
             this.btnAddStudent.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAddStudent.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddStudent.Location = new System.Drawing.Point(129, 344);
+            this.btnAddStudent.Location = new System.Drawing.Point(129, 340);
             this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(162, 36);
+            this.btnAddStudent.Size = new System.Drawing.Size(162, 40);
             this.btnAddStudent.TabIndex = 8;
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
@@ -250,9 +253,9 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(404, 344);
+            this.btnReturn.Location = new System.Drawing.Point(404, 340);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(162, 36);
+            this.btnReturn.Size = new System.Drawing.Size(162, 40);
             this.btnReturn.TabIndex = 9;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -401,6 +404,10 @@ namespace BalhamCollege
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
             // AddStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -408,6 +415,7 @@ namespace BalhamCollege
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(725, 392);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtEmailAddress);
@@ -439,14 +447,17 @@ namespace BalhamCollege
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Student Form";
+            this.Text = "Add Student";
             this.Load += new System.EventHandler(this.AddStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTUDENTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -487,5 +498,6 @@ namespace BalhamCollege
         private dsBalhamCollegeAzureTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
     }
 }

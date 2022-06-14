@@ -419,6 +419,7 @@ namespace BalhamCollege
         }
 
         private void btnEnterResult_Click(object sender, EventArgs e)
+
         {
             // show enter result form and course background form
             frmCourse = new CourseBackgroundForm(this);

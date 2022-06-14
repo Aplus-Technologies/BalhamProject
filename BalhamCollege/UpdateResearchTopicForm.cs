@@ -71,7 +71,10 @@ namespace BalhamCollege
             // Convert database row into listitem text
 
             DataRow researchTopicRow = (DataRow)e.ListItem;
-            e.Value = researchTopicRow["TopicID"] + " " + researchTopicRow["TopicDescription"];
+            if (researchTopicRow.RowState != DataRowState.Detached)
+            {
+                e.Value = researchTopicRow["TopicID"] + " " + researchTopicRow["TopicDescription"];
+            }
         }
 
         private void btnUpdateTopic_Click(object sender, EventArgs e)

@@ -77,7 +77,7 @@ namespace BalhamCollege
             this.btnUpdateAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
             this.btnUpdateAssessment.Size = new System.Drawing.Size(178, 50);
-            this.btnUpdateAssessment.TabIndex = 36;
+            this.btnUpdateAssessment.TabIndex = 1;
             this.btnUpdateAssessment.Text = "Update Assessment";
             this.btnUpdateAssessment.UseVisualStyleBackColor = false;
             this.btnUpdateAssessment.Click += new System.EventHandler(this.btnUpdateAssessment_Click);
@@ -95,7 +95,7 @@ namespace BalhamCollege
             this.btnDeleteAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
             this.btnDeleteAssessment.Size = new System.Drawing.Size(178, 45);
-            this.btnDeleteAssessment.TabIndex = 35;
+            this.btnDeleteAssessment.TabIndex = 2;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = false;
             this.btnDeleteAssessment.Click += new System.EventHandler(this.btnDeleteAssessment_Click);
@@ -113,7 +113,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(178, 41);
-            this.btnReturn.TabIndex = 34;
+            this.btnReturn.TabIndex = 5;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -131,7 +131,7 @@ namespace BalhamCollege
             this.btnAddAssessment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAssessment.Name = "btnAddAssessment";
             this.btnAddAssessment.Size = new System.Drawing.Size(178, 47);
-            this.btnAddAssessment.TabIndex = 33;
+            this.btnAddAssessment.TabIndex = 0;
             this.btnAddAssessment.Text = "Add Assessment";
             this.btnAddAssessment.UseVisualStyleBackColor = false;
             this.btnAddAssessment.Click += new System.EventHandler(this.btnAddAssessment_Click);
@@ -149,7 +149,7 @@ namespace BalhamCollege
             this.btnProduceAssessmentsReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceAssessmentsReport.Name = "btnProduceAssessmentsReport";
             this.btnProduceAssessmentsReport.Size = new System.Drawing.Size(178, 43);
-            this.btnProduceAssessmentsReport.TabIndex = 32;
+            this.btnProduceAssessmentsReport.TabIndex = 4;
             this.btnProduceAssessmentsReport.Text = "Produce Assessments Report";
             this.btnProduceAssessmentsReport.UseVisualStyleBackColor = false;
             this.btnProduceAssessmentsReport.Click += new System.EventHandler(this.btnProduceAssessmentsReport_Click);
@@ -167,7 +167,7 @@ namespace BalhamCollege
             this.btnEnterResult.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnterResult.Name = "btnEnterResult";
             this.btnEnterResult.Size = new System.Drawing.Size(178, 46);
-            this.btnEnterResult.TabIndex = 31;
+            this.btnEnterResult.TabIndex = 3;
             this.btnEnterResult.Text = "Enter Result";
             this.btnEnterResult.UseVisualStyleBackColor = false;
             this.btnEnterResult.Click += new System.EventHandler(this.btnEnterResult_Click);
@@ -280,7 +280,7 @@ namespace BalhamCollege
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(178, 41);
-            this.btnExit.TabIndex = 38;
+            this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

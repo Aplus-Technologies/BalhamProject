@@ -106,14 +106,20 @@ namespace BalhamCollege
         {
             // Convert database row into listitem text (for courses)
             DataRow courseRow = (DataRow)e.ListItem;
-            e.Value = courseRow["CourseID"] + " " + courseRow["CourseName"];
+            if (courseRow.RowState != DataRowState.Detached)
+            {
+                e.Value = courseRow["CourseID"] + " " + courseRow["CourseName"];
+            }
         }
 
         private void lstLecturers_Format(object sender, ListControlConvertEventArgs e)
         {
             // Convert database row into listitem text (for lecturers)
             DataRow lecturerRow = (DataRow)e.ListItem;
-            e.Value = lecturerRow["LecturerID"] + " " + lecturerRow["LastName"] + ", " + lecturerRow["FirstName"];
+            if (lecturerRow.RowState != DataRowState.Detached)
+            {
+                e.Value = lecturerRow["LecturerID"] + " " + lecturerRow["LastName"] + ", " + lecturerRow["FirstName"];
+            }
         }
 
         private void btnAssignLecturer_Click(object sender, EventArgs e)

@@ -57,7 +57,7 @@ namespace BalhamCollege
             // 
             // nudLevel
             // 
-            this.nudLevel.Location = new System.Drawing.Point(157, 320);
+            this.nudLevel.Location = new System.Drawing.Point(157, 306);
             this.nudLevel.Maximum = new decimal(new int[] {
             10,
             0,
@@ -79,7 +79,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeName
             // 
-            this.txtProgrammeName.Location = new System.Drawing.Point(157, 278);
+            this.txtProgrammeName.Location = new System.Drawing.Point(157, 271);
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.Size = new System.Drawing.Size(362, 26);
@@ -88,7 +88,7 @@ namespace BalhamCollege
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(35, 323);
+            this.lblLevel.Location = new System.Drawing.Point(35, 309);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(120, 20);
             this.lblLevel.TabIndex = 89;
@@ -99,7 +99,7 @@ namespace BalhamCollege
             this.lbl8.AutoSize = true;
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl8.Location = new System.Drawing.Point(20, 281);
+            this.lbl8.Location = new System.Drawing.Point(20, 274);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(14, 20);
             this.lbl8.TabIndex = 88;
@@ -140,7 +140,7 @@ namespace BalhamCollege
             // lblProgrammeName
             // 
             this.lblProgrammeName.AutoSize = true;
-            this.lblProgrammeName.Location = new System.Drawing.Point(33, 281);
+            this.lblProgrammeName.Location = new System.Drawing.Point(33, 274);
             this.lblProgrammeName.Name = "lblProgrammeName";
             this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
             this.lblProgrammeName.TabIndex = 79;
@@ -169,7 +169,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(22, 323);
+            this.label1.Location = new System.Drawing.Point(22, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 97;
@@ -178,6 +178,7 @@ namespace BalhamCollege
             // lstProgrammes
             // 
             this.lstProgrammes.FormattingEnabled = true;
+            this.lstProgrammes.HorizontalScrollbar = true;
             this.lstProgrammes.ItemHeight = 20;
             this.lstProgrammes.Location = new System.Drawing.Point(30, 51);
             this.lstProgrammes.Name = "lstProgrammes";

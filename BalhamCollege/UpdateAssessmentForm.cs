@@ -88,7 +88,10 @@ namespace BalhamCollege
                 // Convert database row into listitem text
                 DataRow assessmentRow = (DataRow)e.ListItem;
 
-                e.Value = assessmentRow["AssessmentID"] + ", #" + assessmentRow["AssessmentNumber"] + " " + assessmentRow["AssessmentName"];
+                if (assessmentRow.RowState != DataRowState.Detached)
+                {
+                    e.Value = assessmentRow["AssessmentID"] + ", #" + assessmentRow["AssessmentNumber"] + " " + assessmentRow["AssessmentName"];
+                }
             }
         }
 

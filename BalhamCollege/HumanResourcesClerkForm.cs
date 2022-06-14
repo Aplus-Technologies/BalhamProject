@@ -190,7 +190,6 @@ namespace BalhamCollege
                 timer1.Interval = 1000;
                 this.WindowState = FormWindowState.Maximized;
             }
-
         }
 
         private void btnLecturerReport_Click(object sender, EventArgs e)

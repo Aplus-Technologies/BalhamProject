@@ -71,7 +71,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(181, 38);
-            this.btnReturn.TabIndex = 20;
+            this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -89,7 +89,7 @@ namespace BalhamCollege
             this.btnUpdateResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateResearchTopic.Name = "btnUpdateResearchTopic";
             this.btnUpdateResearchTopic.Size = new System.Drawing.Size(181, 38);
-            this.btnUpdateResearchTopic.TabIndex = 19;
+            this.btnUpdateResearchTopic.TabIndex = 3;
             this.btnUpdateResearchTopic.Text = "Update Research Topic";
             this.btnUpdateResearchTopic.UseVisualStyleBackColor = false;
             this.btnUpdateResearchTopic.Click += new System.EventHandler(this.btnUpdateResearchTopic_Click);
@@ -107,7 +107,7 @@ namespace BalhamCollege
             this.btnAddResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchProject.Name = "btnAddResearchProject";
             this.btnAddResearchProject.Size = new System.Drawing.Size(181, 38);
-            this.btnAddResearchProject.TabIndex = 18;
+            this.btnAddResearchProject.TabIndex = 0;
             this.btnAddResearchProject.Text = "Add Research Project";
             this.btnAddResearchProject.UseVisualStyleBackColor = false;
             this.btnAddResearchProject.Click += new System.EventHandler(this.btnAddResearchProject_Click);
@@ -125,7 +125,7 @@ namespace BalhamCollege
             this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteResearchTopic.Name = "btnDeleteResearchTopic";
             this.btnDeleteResearchTopic.Size = new System.Drawing.Size(181, 38);
-            this.btnDeleteResearchTopic.TabIndex = 17;
+            this.btnDeleteResearchTopic.TabIndex = 4;
             this.btnDeleteResearchTopic.Text = "Delete Research Topic";
             this.btnDeleteResearchTopic.UseVisualStyleBackColor = false;
             this.btnDeleteResearchTopic.Click += new System.EventHandler(this.btnDeleteResearchTopic_Click);
@@ -143,7 +143,7 @@ namespace BalhamCollege
             this.btnAddResearchTopic.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddResearchTopic.Name = "btnAddResearchTopic";
             this.btnAddResearchTopic.Size = new System.Drawing.Size(181, 38);
-            this.btnAddResearchTopic.TabIndex = 16;
+            this.btnAddResearchTopic.TabIndex = 2;
             this.btnAddResearchTopic.Text = "Add Research Topic";
             this.btnAddResearchTopic.UseVisualStyleBackColor = false;
             this.btnAddResearchTopic.Click += new System.EventHandler(this.btnAddResearchTopic_Click);
@@ -161,7 +161,7 @@ namespace BalhamCollege
             this.btnProduceResearchReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceResearchReport.Name = "btnProduceResearchReport";
             this.btnProduceResearchReport.Size = new System.Drawing.Size(181, 38);
-            this.btnProduceResearchReport.TabIndex = 15;
+            this.btnProduceResearchReport.TabIndex = 5;
             this.btnProduceResearchReport.Text = "Produce Research Report";
             this.btnProduceResearchReport.UseVisualStyleBackColor = false;
             this.btnProduceResearchReport.Click += new System.EventHandler(this.btnProduceResearchReport_Click);
@@ -179,7 +179,7 @@ namespace BalhamCollege
             this.btnRemoveResearchProject.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveResearchProject.Name = "btnRemoveResearchProject";
             this.btnRemoveResearchProject.Size = new System.Drawing.Size(181, 38);
-            this.btnRemoveResearchProject.TabIndex = 14;
+            this.btnRemoveResearchProject.TabIndex = 1;
             this.btnRemoveResearchProject.Text = "Remove Research Project";
             this.btnRemoveResearchProject.UseVisualStyleBackColor = false;
             this.btnRemoveResearchProject.Click += new System.EventHandler(this.btnRemoveResearchProject_Click);
@@ -274,7 +274,7 @@ namespace BalhamCollege
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(181, 38);
-            this.btnExit.TabIndex = 22;
+            this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
