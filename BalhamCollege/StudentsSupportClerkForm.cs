@@ -115,6 +115,7 @@ namespace BalhamCollege
             {
                 frmRecordIssue = new RecordIssueForm(DC, this);
             }
+            frmRecordIssue.StartPosition = FormStartPosition.CenterScreen;
             frmRecordIssue.ShowDialog();
         }
 

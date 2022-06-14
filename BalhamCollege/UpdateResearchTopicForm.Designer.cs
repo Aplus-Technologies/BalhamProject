@@ -66,6 +66,7 @@ namespace BalhamCollege
             // lstResearchTopics
             // 
             this.lstResearchTopics.FormattingEnabled = true;
+            this.lstResearchTopics.HorizontalScrollbar = true;
             this.lstResearchTopics.ItemHeight = 20;
             this.lstResearchTopics.Location = new System.Drawing.Point(30, 51);
             this.lstResearchTopics.Name = "lstResearchTopics";
@@ -79,7 +80,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(90, 352);
+            this.label1.Location = new System.Drawing.Point(94, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 110;
@@ -87,7 +88,7 @@ namespace BalhamCollege
             // 
             // txtTopicDescription
             // 
-            this.txtTopicDescription.Location = new System.Drawing.Point(157, 280);
+            this.txtTopicDescription.Location = new System.Drawing.Point(157, 273);
             this.txtTopicDescription.MaxLength = 100;
             this.txtTopicDescription.Multiline = true;
             this.txtTopicDescription.Name = "txtTopicDescription";
@@ -97,7 +98,7 @@ namespace BalhamCollege
             // lblImpact
             // 
             this.lblImpact.AutoSize = true;
-            this.lblImpact.Location = new System.Drawing.Point(103, 352);
+            this.lblImpact.Location = new System.Drawing.Point(107, 338);
             this.lblImpact.Name = "lblImpact";
             this.lblImpact.Size = new System.Drawing.Size(52, 20);
             this.lblImpact.TabIndex = 107;
@@ -108,7 +109,7 @@ namespace BalhamCollege
             this.lbl8.AutoSize = true;
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl8.Location = new System.Drawing.Point(25, 283);
+            this.lbl8.Location = new System.Drawing.Point(29, 276);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(14, 20);
             this.lbl8.TabIndex = 106;
@@ -149,7 +150,7 @@ namespace BalhamCollege
             // lblTopicDescription
             // 
             this.lblTopicDescription.AutoSize = true;
-            this.lblTopicDescription.Location = new System.Drawing.Point(38, 283);
+            this.lblTopicDescription.Location = new System.Drawing.Point(42, 276);
             this.lblTopicDescription.Name = "lblTopicDescription";
             this.lblTopicDescription.Size = new System.Drawing.Size(117, 20);
             this.lblTopicDescription.TabIndex = 102;
@@ -158,7 +159,7 @@ namespace BalhamCollege
             // lblTopicID
             // 
             this.lblTopicID.AutoSize = true;
-            this.lblTopicID.Location = new System.Drawing.Point(93, 241);
+            this.lblTopicID.Location = new System.Drawing.Point(97, 241);
             this.lblTopicID.Name = "lblTopicID";
             this.lblTopicID.Size = new System.Drawing.Size(62, 20);
             this.lblTopicID.TabIndex = 101;
@@ -180,7 +181,7 @@ namespace BalhamCollege
             "High",
             "Medium",
             "Low"});
-            this.cboImpact.Location = new System.Drawing.Point(157, 348);
+            this.cboImpact.Location = new System.Drawing.Point(157, 334);
             this.cboImpact.MaxLength = 6;
             this.cboImpact.Name = "cboImpact";
             this.cboImpact.Size = new System.Drawing.Size(71, 28);
@@ -230,7 +231,7 @@ namespace BalhamCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 493);
+            this.ClientSize = new System.Drawing.Size(547, 480);
             this.Controls.Add(this.cboImpact);
             this.Controls.Add(this.txtTopicID);
             this.Controls.Add(this.lstResearchTopics);

@@ -70,7 +70,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(177, 48);
-            this.btnReturn.TabIndex = 35;
+            this.btnReturn.TabIndex = 2;
             this.btnReturn.Text = "Log Out";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -88,7 +88,7 @@ namespace BalhamCollege
             this.btnProduceIssuesReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceIssuesReport.Name = "btnProduceIssuesReport";
             this.btnProduceIssuesReport.Size = new System.Drawing.Size(177, 48);
-            this.btnProduceIssuesReport.TabIndex = 34;
+            this.btnProduceIssuesReport.TabIndex = 1;
             this.btnProduceIssuesReport.Text = "Produce Issues Report";
             this.btnProduceIssuesReport.UseVisualStyleBackColor = false;
             this.btnProduceIssuesReport.Click += new System.EventHandler(this.btnProduceIssuesReport_Click);
@@ -106,7 +106,7 @@ namespace BalhamCollege
             this.btnRecordIssue.Margin = new System.Windows.Forms.Padding(2);
             this.btnRecordIssue.Name = "btnRecordIssue";
             this.btnRecordIssue.Size = new System.Drawing.Size(177, 48);
-            this.btnRecordIssue.TabIndex = 33;
+            this.btnRecordIssue.TabIndex = 0;
             this.btnRecordIssue.Text = "Record Issue";
             this.btnRecordIssue.UseVisualStyleBackColor = false;
             this.btnRecordIssue.Click += new System.EventHandler(this.btnRecordIssue_Click);
@@ -210,7 +210,7 @@ namespace BalhamCollege
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(177, 48);
-            this.btnExit.TabIndex = 37;
+            this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);

@@ -76,6 +76,7 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            Application.OpenForms["CourseBackgroundForm"].Close();
             this.Close(); // prevents 'cannot accessed disposed object error' upon producing report 
             frmCourseAdministrator.Show();
         }
@@ -87,7 +88,10 @@ namespace BalhamCollege
                 // Convert database row into listitem text
                 DataRow assessmentRow = (DataRow)e.ListItem;
 
-                e.Value = assessmentRow["AssessmentID"] + ", #" + assessmentRow["AssessmentNumber"] + " " + assessmentRow["AssessmentName"];
+                if (assessmentRow.RowState != DataRowState.Detached)
+                {
+                    e.Value = assessmentRow["AssessmentID"] + ", #" + assessmentRow["AssessmentNumber"] + " " + assessmentRow["AssessmentName"];
+                }
             }
         }
 

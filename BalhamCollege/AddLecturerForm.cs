@@ -18,6 +18,7 @@ namespace BalhamCollege
         private HumanResourcesClerkForm frmHumanResources; // reference to Human Resources Clerk Form
 
         private bool resultMatch; // boolean to check if email pattern is valid 
+        private bool numberMatch; // boolean to check if phone number is a string of numbers 
         public AddLecturerForm(DataController dc, HumanResourcesClerkForm humanRes)
         {
             InitializeComponent();
@@ -68,9 +69,9 @@ namespace BalhamCollege
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
-            
+
             // check if required fields are blank 
-            if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") || (txtCity.Text == "") || (resultMatch == false) || (txtPhoneNumber.Text == "") || (cboRanking.Text == "") || (cboType.Text == ""))
+            if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") || (txtCity.Text == "") || (resultMatch == false) || (numberMatch == false) || (cboRanking.Text == "") || (cboType.Text == ""))
             {// error message
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -102,12 +103,32 @@ namespace BalhamCollege
             }
             else
             {
-                errorProvider2.SetError(this.txtEmailAddress, "Please fill in all fields correctly");
+                errorProvider2.SetError(this.txtEmailAddress, "Input valid email address format");
                 resultMatch = false;
                 return;
             }
 
-          
+
+        }
+
+        private void txtPhoneNumber_Leave(object sender, EventArgs e)
+        {
+            // flash error symbol beside PhoneNumber text box if pattern does not match; only a string of numbers is valid 
+            string pattern = "^-?[0-9][0-9,\\.]+$";
+            numberMatch = false;
+
+            if (Regex.IsMatch(txtPhoneNumber.Text, pattern))
+            {
+                errorProvider1.Clear();
+                numberMatch = true;
+
+            }
+            else
+            {
+                errorProvider1.SetError(this.txtPhoneNumber, "Numbers only");
+                numberMatch = false;
+                return;
+            }
         }
     }
 }

@@ -66,6 +66,7 @@ namespace BalhamCollege
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMark)).BeginInit();
@@ -383,8 +384,11 @@ namespace BalhamCollege
             // 
             // EnterResultForm
             // 
+            //this.MinimizeBox = false;
+            
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1266, 654);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);

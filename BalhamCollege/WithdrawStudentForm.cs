@@ -145,7 +145,10 @@ namespace BalhamCollege
         {
             // Convert database row into listitem text
             DataRow studentRow = (DataRow)e.ListItem;
-            e.Value = studentRow["StudentID"] + " " + studentRow["LastName"] + ", " + studentRow["FirstName"];
+            if (studentRow.RowState != DataRowState.Detached)
+            {
+                e.Value = studentRow["StudentID"] + " " + studentRow["LastName"] + ", " + studentRow["FirstName"];
+            }
         }
 
         private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)

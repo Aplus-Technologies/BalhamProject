@@ -23,7 +23,7 @@ namespace BalhamCollege
             InitializeComponent();
             DC = dc;
             frmStudentSupport = stusup;
-            frmStudentSupport.Hide();
+            //frmStudentSupport.Hide();
             students.Columns.Add("ID", typeof(int));
             students.Columns.Add("Last Name", typeof(string));
             students.Columns.Add("First Name", typeof(string));

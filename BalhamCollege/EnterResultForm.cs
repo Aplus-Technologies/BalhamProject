@@ -21,12 +21,16 @@ namespace BalhamCollege
         string selectedCourseID = "";
         int selectedAssessmentID;
         int selectedEnrolmentID;
+ 
+        
+
+
         public EnterResultForm(DataController dc, CourseAdministratorForm couadm)
         {
             InitializeComponent();
             DC = dc;
             frmCourseAdministrator = couadm;
-            frmCourseAdministrator.Hide();
+            //frmCourseAdministrator.Hide();
             assessments.Columns.Add("ID", typeof(int));
             assessments.Columns.Add("Number", typeof(string));
             assessments.Columns.Add("Name", typeof(string));
@@ -35,6 +39,7 @@ namespace BalhamCollege
             assessments.Columns.Add("CourseID", typeof(int));
             GetAssessments();
             LoadAssessments();
+            
 
         }
 
@@ -109,9 +114,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
             //closes course background form along with enter result form
-            Application.OpenForms["CourseBackgroundForm"].Close();
+            //Application.OpenForms["CourseBackgroundForm"].Close();
             this.Close();
             UnBindIt();
             ClearFields();
