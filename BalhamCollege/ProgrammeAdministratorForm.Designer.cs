@@ -73,7 +73,7 @@ namespace BalhamCollege
             this.btnUpdateProgramme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateProgramme.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProgramme.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateProgramme.Location = new System.Drawing.Point(22, 304);
+            this.btnUpdateProgramme.Location = new System.Drawing.Point(30, 311);
             this.btnUpdateProgramme.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProgramme.Name = "btnUpdateProgramme";
             this.btnUpdateProgramme.Size = new System.Drawing.Size(185, 31);
@@ -91,7 +91,7 @@ namespace BalhamCollege
             this.btnDeleteProgramme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteProgramme.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteProgramme.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteProgramme.Location = new System.Drawing.Point(22, 339);
+            this.btnDeleteProgramme.Location = new System.Drawing.Point(30, 344);
             this.btnDeleteProgramme.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteProgramme.Name = "btnDeleteProgramme";
             this.btnDeleteProgramme.Size = new System.Drawing.Size(185, 31);
@@ -109,7 +109,7 @@ namespace BalhamCollege
             this.btnAssignLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAssignLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAssignLecturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAssignLecturer.Location = new System.Drawing.Point(22, 374);
+            this.btnAssignLecturer.Location = new System.Drawing.Point(30, 377);
             this.btnAssignLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAssignLecturer.Name = "btnAssignLecturer";
             this.btnAssignLecturer.Size = new System.Drawing.Size(185, 31);
@@ -127,7 +127,7 @@ namespace BalhamCollege
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReturn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReturn.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnReturn.Location = new System.Drawing.Point(22, 479);
+            this.btnReturn.Location = new System.Drawing.Point(30, 476);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(185, 31);
@@ -145,7 +145,7 @@ namespace BalhamCollege
             this.btnUpdateCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateCourse.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCourse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdateCourse.Location = new System.Drawing.Point(22, 199);
+            this.btnUpdateCourse.Location = new System.Drawing.Point(30, 212);
             this.btnUpdateCourse.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateCourse.Name = "btnUpdateCourse";
             this.btnUpdateCourse.Size = new System.Drawing.Size(185, 31);
@@ -163,7 +163,7 @@ namespace BalhamCollege
             this.btnAddCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCourse.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCourse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddCourse.Location = new System.Drawing.Point(22, 164);
+            this.btnAddCourse.Location = new System.Drawing.Point(30, 179);
             this.btnAddCourse.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(185, 31);
@@ -181,7 +181,7 @@ namespace BalhamCollege
             this.btnDeleteCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteCourse.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteCourse.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDeleteCourse.Location = new System.Drawing.Point(22, 234);
+            this.btnDeleteCourse.Location = new System.Drawing.Point(30, 245);
             this.btnDeleteCourse.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteCourse.Name = "btnDeleteCourse";
             this.btnDeleteCourse.Size = new System.Drawing.Size(185, 31);
@@ -199,7 +199,7 @@ namespace BalhamCollege
             this.btnAddProgramme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProgramme.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProgramme.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAddProgramme.Location = new System.Drawing.Point(22, 269);
+            this.btnAddProgramme.Location = new System.Drawing.Point(30, 278);
             this.btnAddProgramme.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProgramme.Name = "btnAddProgramme";
             this.btnAddProgramme.Size = new System.Drawing.Size(185, 31);
@@ -217,7 +217,7 @@ namespace BalhamCollege
             this.btnProduceCoursesReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduceCoursesReport.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduceCoursesReport.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnProduceCoursesReport.Location = new System.Drawing.Point(22, 444);
+            this.btnProduceCoursesReport.Location = new System.Drawing.Point(30, 443);
             this.btnProduceCoursesReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnProduceCoursesReport.Name = "btnProduceCoursesReport";
             this.btnProduceCoursesReport.Size = new System.Drawing.Size(185, 31);
@@ -235,7 +235,7 @@ namespace BalhamCollege
             this.btnRemoveLecturer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveLecturer.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveLecturer.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRemoveLecturer.Location = new System.Drawing.Point(22, 409);
+            this.btnRemoveLecturer.Location = new System.Drawing.Point(30, 410);
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
             this.btnRemoveLecturer.Size = new System.Drawing.Size(185, 31);
@@ -249,7 +249,7 @@ namespace BalhamCollege
             this.pbProgrammeAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbProgrammeAdmin.Image = global::BalhamCollege.Properties.Resources.ProgrammeAdmin1980x1080;
+            this.pbProgrammeAdmin.Image = global::BalhamCollege.Properties.Resources.ProgrammeAdmin1980x1080v3;
             this.pbProgrammeAdmin.Location = new System.Drawing.Point(-3, -8);
             this.pbProgrammeAdmin.Name = "pbProgrammeAdmin";
             this.pbProgrammeAdmin.Size = new System.Drawing.Size(979, 576);
@@ -339,7 +339,7 @@ namespace BalhamCollege
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnExit.Location = new System.Drawing.Point(22, 514);
+            this.btnExit.Location = new System.Drawing.Point(30, 510);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(185, 31);

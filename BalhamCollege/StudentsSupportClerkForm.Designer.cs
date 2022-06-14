@@ -116,7 +116,7 @@ namespace BalhamCollege
             this.pbStudentSupportClerk.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbStudentSupportClerk.Image = global::BalhamCollege.Properties.Resources.StudentSupportClerk1980x1080;
+            this.pbStudentSupportClerk.Image = global::BalhamCollege.Properties.Resources.StudentSupportClerk1980x1080v3;
             this.pbStudentSupportClerk.Location = new System.Drawing.Point(0, -4);
             this.pbStudentSupportClerk.Name = "pbStudentSupportClerk";
             this.pbStudentSupportClerk.Size = new System.Drawing.Size(979, 576);
