@@ -361,6 +361,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(919, 441);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAsterix4);
             this.Controls.Add(this.lblAsterix3);
@@ -389,7 +390,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "AddAssessmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Assessment Form";
+            this.Text = "Add Assessment ";
             this.Load += new System.EventHandler(this.AddAssessmentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudAsmntNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeighting)).EndInit();

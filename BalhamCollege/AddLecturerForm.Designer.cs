@@ -434,6 +434,7 @@ namespace BalhamCollege
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(741, 493);
+            this.ControlBox = false;
             this.Controls.Add(this.cboRanking);
             this.Controls.Add(this.txtSuburb);
             this.Controls.Add(this.txtLastName);
@@ -472,7 +473,7 @@ namespace BalhamCollege
             this.MinimizeBox = false;
             this.Name = "AddLecturerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Lecturer Form";
+            this.Text = "Add Lecturer ";
             this.Load += new System.EventHandler(this.AddLecturerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsBalhamCollegeAzure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lECTURERBindingSource)).EndInit();
