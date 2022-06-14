@@ -115,12 +115,13 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             //closes course background form along with enter result form
-            //Application.OpenForms["CourseBackgroundForm"].Close();
+            
             this.Close();
             UnBindIt();
             ClearFields();
             LoadAssessments();
             initCount = 0;
+            Application.OpenForms["CourseBackgroundForm"].Close();
             frmCourseAdministrator.Show();
         }
 
