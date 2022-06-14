@@ -283,6 +283,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CourseAdmin1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("CourseAdmin1980x1080v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap courseAdminPage {
             get {
                 object obj = ResourceManager.GetObject("courseAdminPage", resourceCulture);
@@ -343,6 +353,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EnrolmentsClerk1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("EnrolmentsClerk1980x1080v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap enrolmentsClerkPage {
             get {
                 object obj = ResourceManager.GetObject("enrolmentsClerkPage", resourceCulture);
@@ -366,6 +386,16 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap HumanResClerk1980x1080 {
             get {
                 object obj = ResourceManager.GetObject("HumanResClerk1980x1080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HumanResClerk1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("HumanResClerk1980x1080v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,6 +473,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ProgrammeAdmin1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("ProgrammeAdmin1980x1080v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap programmeAdminPage {
             get {
                 object obj = ResourceManager.GetObject("programmeAdminPage", resourceCulture);
@@ -463,6 +503,16 @@ namespace BalhamCollege.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ResearchAdmin1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("ResearchAdmin1980x1080v3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap researchAdminPage {
             get {
                 object obj = ResourceManager.GetObject("researchAdminPage", resourceCulture);
@@ -476,6 +526,16 @@ namespace BalhamCollege.Properties {
         internal static System.Drawing.Bitmap StudentSupportClerk1980x1080 {
             get {
                 object obj = ResourceManager.GetObject("StudentSupportClerk1980x1080", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StudentSupportClerk1980x1080v3 {
+            get {
+                object obj = ResourceManager.GetObject("StudentSupportClerk1980x1080v3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -148,7 +148,7 @@ namespace BalhamCollege
             this.pbHumanResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbHumanResources.Image = global::BalhamCollege.Properties.Resources.HumanResClerk1980x1080;
+            this.pbHumanResources.Image = global::BalhamCollege.Properties.Resources.HumanResClerk1980x1080v3;
             this.pbHumanResources.Location = new System.Drawing.Point(0, -2);
             this.pbHumanResources.Name = "pbHumanResources";
             this.pbHumanResources.Size = new System.Drawing.Size(979, 586);
