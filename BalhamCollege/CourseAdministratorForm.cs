@@ -255,7 +255,8 @@ namespace BalhamCollege
             int topMarginDetails = topMargin + 70;
             int rightMargin = e.MarginBounds.Right;
             int rightLabelsMargin = e.MarginBounds.Right - 520;
-            int rightInfoMargin = e.MarginBounds.Left + 110;
+            int rightInfoMargin = rightLabelsMargin + 2;
+            //int rightInfoMargin = e.MarginBounds.Left + 110;
             int subTitlesRightMargin = e.MarginBounds.Left + 500;
             string markTit = "  Mark  ";
 

@@ -217,7 +217,8 @@ namespace BalhamCollege
             int topMarginDetails = topMargin + 70;
             int rightMargin = e.MarginBounds.Right;
             int rightLabelsMargin = e.MarginBounds.Right - 520;
-            int rightInfoMargin = e.MarginBounds.Left + 110;
+            //int rightInfoMargin = e.MarginBounds.Left + 110;
+            int rightInfoMargin = rightLabelsMargin+2;
             int subTitlesRightMargin = e.MarginBounds.Left + 500;
             string yearTit = "Year";
             string semesterTit = "Semester";
@@ -285,7 +286,7 @@ namespace BalhamCollege
                     linesSoFar++;
                     //LINE 4
                     g.DrawString("Phone Number: ", labelsFont, brush, rightLabelsMargin - GetLength("Phone Number: "), 12 + topMargin + (linesSoFar * labelsFont.Height));
-                    g.DrawString(Convert.ToString(drStudent["PhoneNumber"]), textFont, brush, rightInfoMargin + 2, 12 + topMargin + (linesSoFar * textFont.Height));
+                    g.DrawString(Convert.ToString(drStudent["PhoneNumber"]), textFont, brush, rightInfoMargin, 12 + topMargin + (linesSoFar * textFont.Height));
                     g.DrawString("Status: ", labelsFont, brush, rightLabelsMargin - GetLength("Status: ") + 280, 12 + topMargin + (linesSoFar * labelsFont.Height));
                     g.DrawString(Convert.ToString(drStudent["Status"]), textFont, brush, rightInfoMargin + 282, 12 + topMargin + (linesSoFar * textFont.Height));
 

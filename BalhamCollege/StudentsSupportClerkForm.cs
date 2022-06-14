@@ -117,6 +117,7 @@ namespace BalhamCollege
             frmRecordIssue = new RecordIssueForm(DC, this);          
             frmRecordIssue.StartPosition = FormStartPosition.CenterScreen;
             frmRecordIssue.ShowDialog();
+
         }
 
         private void iSSUEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -192,7 +193,8 @@ namespace BalhamCollege
             int topMarginDetails = topMargin + 70;
             int rightMargin = e.MarginBounds.Right;
             int rightLabelsMargin = e.MarginBounds.Right - 520;
-            int rightInfoMargin = e.MarginBounds.Left + 110;
+            //int rightInfoMargin = e.MarginBounds.Left + 110;
+            int rightInfoMargin = rightLabelsMargin + 2;
             int subTitlesRightMargin = e.MarginBounds.Left + 500;
             int position = 50;
 
