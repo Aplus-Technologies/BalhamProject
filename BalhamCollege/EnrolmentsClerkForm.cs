@@ -321,7 +321,9 @@ namespace BalhamCollege
                         g.DrawString("|", labelsFont, brush, margin4, 24 + topMargin + (linesSoFar * labelsFont.Height));
                         g.DrawString(progTit, labelsFont, brush, margin45 - GetLength(progTit) / 2, 24 + topMargin + (linesSoFar * labelsFont.Height));
                         g.DrawString("|", labelsFont, brush, margin5, 24 + topMargin + (linesSoFar * labelsFont.Height));
-                        g.DrawString("____________________________________________________________________________________", textFont, brush, leftMargin - 19, topMargin + (linesSoFar * textFont.Height) + 26);
+                        Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+                        g.DrawLine(pen, margin0 + bar * 2, topMargin + (linesSoFar * textFont.Height) + 42, margin5, topMargin + 42 + (linesSoFar * textFont.Height));
+                        //g.DrawString("____________________________________________________________________________________", textFont, brush, leftMargin - 19, topMargin + (linesSoFar * textFont.Height) + 26);
                         linesSoFar++;
 
                         //LINE 7
@@ -429,15 +431,17 @@ namespace BalhamCollege
                             }
                         }
                         linesSoFar++;
-
-                        g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * labelsFont.Height));
+                        g.DrawLine(pen, margin0 + bar * 2 - 20, topMargin + (linesSoFar * textFont.Height) + 16, margin5 + 20, topMargin + 16 + (linesSoFar * textFont.Height));
+                        //g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * labelsFont.Height));
                     }
                     else
                     {
-                        g.DrawString("Enrolments: None", labelsFont, brush, rightLabelsMargin - GetLength("Enrolments: "), 20 + topMargin + (linesSoFar * labelsFont.Height));
+                        g.DrawString("Enrolments:  None", labelsFont, brush, rightLabelsMargin - GetLength("Enrolments: "), 20 + topMargin + (linesSoFar * labelsFont.Height));
                         linesSoFar++;
                         linesSoFar++;
-                        g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * textFont.Height));
+                        //g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * textFont.Height));
+                        Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+                        g.DrawLine(pen, margin0 + bar * 2 - 20, topMargin + (linesSoFar * textFont.Height) + 16, margin5 + 20, topMargin + 16 + (linesSoFar * textFont.Height));
                     }
                     linesSoFar++;
                     linesSoFar++;
