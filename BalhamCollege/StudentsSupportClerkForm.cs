@@ -15,6 +15,7 @@ namespace BalhamCollege
         private DataController DC;
         private LoginForm frmLogin;
         private RecordIssueForm frmRecordIssue;
+        private StudentBackgroundForm frmStud; // reference to Background Form
         //Produce report variables
         private DataRow[] issuesForPrint;
         private int issuesForNextPage;
@@ -111,10 +112,9 @@ namespace BalhamCollege
 
         private void btnRecordIssue_Click(object sender, EventArgs e)
         {
-            if (frmRecordIssue == null)
-            {
-                frmRecordIssue = new RecordIssueForm(DC, this);
-            }
+            frmStud = new StudentBackgroundForm(this);
+            frmStud.Show();
+            frmRecordIssue = new RecordIssueForm(DC, this);          
             frmRecordIssue.StartPosition = FormStartPosition.CenterScreen;
             frmRecordIssue.ShowDialog();
         }
