@@ -428,6 +428,7 @@ namespace BalhamCollege
             {
                 frmEnterResult = new EnterResultForm(DC, this);
             }
+            frmEnterResult.StartPosition = FormStartPosition.CenterScreen;
             frmEnterResult.ShowDialog();
         }
 
