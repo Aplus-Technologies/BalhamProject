@@ -117,7 +117,7 @@ namespace BalhamCollege
             // 
             // txtStudentFirstName
             // 
-            this.txtStudentFirstName.Location = new System.Drawing.Point(923, 151);
+            this.txtStudentFirstName.Location = new System.Drawing.Point(924, 151);
             this.txtStudentFirstName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentFirstName.Name = "txtStudentFirstName";
             this.txtStudentFirstName.ReadOnly = true;
@@ -126,7 +126,7 @@ namespace BalhamCollege
             // 
             // txtStudentLastName
             // 
-            this.txtStudentLastName.Location = new System.Drawing.Point(920, 115);
+            this.txtStudentLastName.Location = new System.Drawing.Point(924, 115);
             this.txtStudentLastName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentLastName.Name = "txtStudentLastName";
             this.txtStudentLastName.ReadOnly = true;
@@ -135,7 +135,7 @@ namespace BalhamCollege
             // 
             // txtStreetAddress
             // 
-            this.txtStreetAddress.Location = new System.Drawing.Point(923, 186);
+            this.txtStreetAddress.Location = new System.Drawing.Point(924, 186);
             this.txtStreetAddress.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
@@ -144,7 +144,7 @@ namespace BalhamCollege
             // 
             // txtStudentID
             // 
-            this.txtStudentID.Location = new System.Drawing.Point(920, 81);
+            this.txtStudentID.Location = new System.Drawing.Point(924, 81);
             this.txtStudentID.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
@@ -171,7 +171,7 @@ namespace BalhamCollege
             // 
             // txtSuburb
             // 
-            this.txtSuburb.Location = new System.Drawing.Point(923, 221);
+            this.txtSuburb.Location = new System.Drawing.Point(924, 221);
             this.txtSuburb.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtSuburb.Name = "txtSuburb";
             this.txtSuburb.ReadOnly = true;
@@ -180,7 +180,7 @@ namespace BalhamCollege
             // 
             // txtcity
             // 
-            this.txtcity.Location = new System.Drawing.Point(923, 256);
+            this.txtcity.Location = new System.Drawing.Point(924, 256);
             this.txtcity.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtcity.Name = "txtcity";
             this.txtcity.ReadOnly = true;
@@ -411,10 +411,10 @@ namespace BalhamCollege
             // 
             // RecordIssueForm
             // 
-            this.ControlBox = false;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 648);
+            this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);

@@ -199,7 +199,7 @@ namespace BalhamCollege
             ClearFields();
             LoadStudents();
             initCount = 0;
-            //Application.OpenForms["CourseBackgroundForm"].Close();
+            Application.OpenForms["StudentBackgroundForm"].Close();
             frmStudentSupport.Show();
         }
         private void BindFields()
