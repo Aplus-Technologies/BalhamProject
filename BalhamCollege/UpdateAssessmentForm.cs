@@ -102,11 +102,11 @@ namespace BalhamCollege
             // Validate the entries in the fields
             if ((nudNumber.Text == "") || (txtAssessmentName.Text == "") || (cboType.Text == "") || (nudWeighting.Text == "") || (nudMaximumMark.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the assessment's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the assessment's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Save changes
                     updateAssessmentRow["AssessmentNumber"] = nudNumber.Value;
@@ -121,7 +121,7 @@ namespace BalhamCollege
                     this.aSSESSMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSESSMENT);
 
                     LoadAssessments();
-                    MessageBox.Show("Assessment updated successfully", "Success");
+                    MessageBox.Show("Assessment updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else

@@ -85,11 +85,11 @@ namespace BalhamCollege
             // Validate the entries in the fields
             if ((txtTopicDescription.Text == "") || (cboImpact.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the research topic's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the research topic's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Save changes
                     updateResearchTopicRow["TopicDescription"] = txtTopicDescription.Text;
@@ -101,7 +101,7 @@ namespace BalhamCollege
                     this.rESEARCHTOPICTableAdapter.Fill(this.dsBalhamCollegeAzure.RESEARCHTOPIC);
 
                     LoadResearchTopics();
-                    MessageBox.Show("Research topic updated successfully", "Success");
+                    MessageBox.Show("Research topic updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else
