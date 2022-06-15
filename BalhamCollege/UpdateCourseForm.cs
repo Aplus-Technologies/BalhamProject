@@ -100,11 +100,11 @@ namespace BalhamCollege
             // Validate the entries in the fields
             if ((txtCourseName.Text == "") || (nudCredits.Text == "") || (cboStatus.Text == "") || (nudFee.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the course's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the course's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Save changes
                     updateCourseRow["CourseName"] = txtCourseName.Text;
@@ -118,7 +118,7 @@ namespace BalhamCollege
                     this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
                     LoadCourses();
-                    MessageBox.Show("Course updated successfully", "Success");
+                    MessageBox.Show("Course updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else

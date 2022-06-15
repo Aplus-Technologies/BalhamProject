@@ -195,7 +195,8 @@ namespace BalhamCollege
             // Refresh the DataGrid before the message
             GetEnrolments();
 
-            MessageBox.Show("Student withdrawn successfully", "Acknowledgement", MessageBoxButtons.OK);
+            MessageBox.Show("Student withdrawn successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             LoadStudents();
             ClearFields();
         }

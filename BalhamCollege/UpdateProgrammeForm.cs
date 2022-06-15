@@ -87,11 +87,11 @@ namespace BalhamCollege
             // Validate the entries in the fields
             if ((txtProgrammeName.Text == "") || (nudLevel.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the programme's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the programme's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Save changes
                     updateProgrammeRow["ProgrammeName"] = txtProgrammeName.Text;
@@ -103,7 +103,7 @@ namespace BalhamCollege
                     this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
 
                     LoadProgrammes();
-                    MessageBox.Show("Programme updated successfully", "Success");
+                    MessageBox.Show("Programme updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else

@@ -72,7 +72,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(705, 453);
+            this.btnReturn.Location = new System.Drawing.Point(640, 451);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(140, 40);
             this.btnReturn.TabIndex = 53;
@@ -84,7 +84,7 @@ namespace BalhamCollege
             // 
             this.btnWithdrawStudent.BackColor = System.Drawing.Color.SteelBlue;
             this.btnWithdrawStudent.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnWithdrawStudent.Location = new System.Drawing.Point(483, 453);
+            this.btnWithdrawStudent.Location = new System.Drawing.Point(415, 451);
             this.btnWithdrawStudent.Name = "btnWithdrawStudent";
             this.btnWithdrawStudent.Size = new System.Drawing.Size(140, 40);
             this.btnWithdrawStudent.TabIndex = 52;
@@ -143,7 +143,7 @@ namespace BalhamCollege
             this.txtStudentID.MaxLength = 8;
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.ReadOnly = true;
-            this.txtStudentID.Size = new System.Drawing.Size(61, 26);
+            this.txtStudentID.Size = new System.Drawing.Size(64, 26);
             this.txtStudentID.TabIndex = 43;
             // 
             // lblCity
@@ -219,7 +219,7 @@ namespace BalhamCollege
             this.lstStudents.Location = new System.Drawing.Point(23, 47);
             this.lstStudents.Margin = new System.Windows.Forms.Padding(4);
             this.lstStudents.Name = "lstStudents";
-            this.lstStudents.Size = new System.Drawing.Size(304, 364);
+            this.lstStudents.Size = new System.Drawing.Size(304, 444);
             this.lstStudents.TabIndex = 32;
             this.lstStudents.SelectedIndexChanged += new System.EventHandler(this.lstStudents_SelectedIndexChanged);
             this.lstStudents.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.lstStudents_Format);

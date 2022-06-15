@@ -128,7 +128,7 @@ namespace BalhamCollege
             // Validate the entries in the fields
             if (lstCourses.SelectedItem == null || lstLecturers.SelectedItem == null || cboRole.Text == "")
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -149,13 +149,14 @@ namespace BalhamCollege
                     this.aSSIGNMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ASSIGNMENT);
 
                     LoadCourses();
-                    MessageBox.Show("Lecturer assigned successfully", "Acknowledgment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Lecturer assigned successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 catch (System.Data.OleDb.OleDbException)
                 {
                     // If an exception happened, then this lecturer is already assigned
-                    MessageBox.Show("Lecturer already assigned to the course.", "Error");
+                    MessageBox.Show("Lecturer already assigned to the course", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+ 
                     LoadLecturers();
                     txtLecturerID.Text = string.Empty;
                     txtLastName.Text = string.Empty;

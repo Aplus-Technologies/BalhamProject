@@ -99,11 +99,11 @@ namespace BalhamCollege
             if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") ||
                 (txtCity.Text == "") || (numberMatch == false) || (resultMatch == false) || (cboRanking.Text == "") || (cboType.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the lecturer's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to change the lecturer's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // Save changes
                     updateLecturerRow["LastName"] = txtLastName.Text;
@@ -122,7 +122,7 @@ namespace BalhamCollege
                     this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
                     LoadLecturers();
-                    MessageBox.Show("Lecturer updated successfully", "Success");
+                    MessageBox.Show("Lecturer updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else

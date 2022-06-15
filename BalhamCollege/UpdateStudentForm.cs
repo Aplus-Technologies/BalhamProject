@@ -97,12 +97,12 @@ namespace BalhamCollege
             if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") ||
                 (txtCity.Text == "") || (resultMatch == false) || (numberMatch == false) || (cboStatus.Text == ""))
             {
-                MessageBox.Show("Please fill in all fields correctly", "Error");
+                MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                if (MessageBox.Show("Are you sure you want to change the student's details?", "Warning", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
+                if (MessageBox.Show("Are you sure you want to change the student's details?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                    {
                     // Save changes
                     updateStudentRow["LastName"] = txtLastName.Text;
                     updateStudentRow["FirstName"] = txtFirstName.Text;
@@ -119,7 +119,7 @@ namespace BalhamCollege
                     this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
                     LoadStudents();
-                    MessageBox.Show("Student updated successfully", "Success");
+                    MessageBox.Show("Student updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields();
                 }
                 else

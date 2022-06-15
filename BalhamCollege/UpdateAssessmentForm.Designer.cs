@@ -139,7 +139,7 @@ namespace BalhamCollege
             // 
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(396, 453);
+            this.lblRequiredFields.Location = new System.Drawing.Point(396, 458);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(105, 20);
             this.lblRequiredFields.TabIndex = 55;
@@ -161,7 +161,7 @@ namespace BalhamCollege
             // 
             this.btnUpdateAssessment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateAssessment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUpdateAssessment.Location = new System.Drawing.Point(160, 481);
+            this.btnUpdateAssessment.Location = new System.Drawing.Point(27, 481);
             this.btnUpdateAssessment.Name = "btnUpdateAssessment";
             this.btnUpdateAssessment.Size = new System.Drawing.Size(147, 40);
             this.btnUpdateAssessment.TabIndex = 80;
@@ -175,7 +175,7 @@ namespace BalhamCollege
             this.txtAssessmentID.MaxLength = 3;
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
-            this.txtAssessmentID.Size = new System.Drawing.Size(28, 26);
+            this.txtAssessmentID.Size = new System.Drawing.Size(33, 26);
             this.txtAssessmentID.TabIndex = 73;
             // 
             // lblMaximumMark

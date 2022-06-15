@@ -109,7 +109,7 @@ namespace BalhamCollege
             // 
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(393, 358);
+            this.lblRequiredFields.Location = new System.Drawing.Point(392, 363);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(105, 20);
             this.lblRequiredFields.TabIndex = 83;
@@ -131,7 +131,7 @@ namespace BalhamCollege
             // 
             this.btnUpdateProgramme.BackColor = System.Drawing.Color.SteelBlue;
             this.btnUpdateProgramme.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUpdateProgramme.Location = new System.Drawing.Point(157, 386);
+            this.btnUpdateProgramme.Location = new System.Drawing.Point(30, 386);
             this.btnUpdateProgramme.Name = "btnUpdateProgramme";
             this.btnUpdateProgramme.Size = new System.Drawing.Size(147, 40);
             this.btnUpdateProgramme.TabIndex = 92;
@@ -195,7 +195,7 @@ namespace BalhamCollege
             this.txtProgrammeID.MaxLength = 2;
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
-            this.txtProgrammeID.Size = new System.Drawing.Size(19, 26);
+            this.txtProgrammeID.Size = new System.Drawing.Size(29, 26);
             this.txtProgrammeID.TabIndex = 89;
             // 
             // dsBalhamCollegeAzure
