@@ -75,7 +75,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(339, 337);
+            this.btnReturn.Location = new System.Drawing.Point(325, 337);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(134, 40);
             this.btnReturn.TabIndex = 3;
@@ -119,7 +119,7 @@ namespace BalhamCollege
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(361, 26);
+            this.txtCourseName.Size = new System.Drawing.Size(348, 26);
             this.txtCourseName.TabIndex = 65;
             // 
             // txtCourseID
@@ -174,7 +174,7 @@ namespace BalhamCollege
             this.lstCourses.Location = new System.Drawing.Point(16, 55);
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.ScrollAlwaysVisible = true;
-            this.lstCourses.Size = new System.Drawing.Size(457, 104);
+            this.lstCourses.Size = new System.Drawing.Size(443, 104);
             this.lstCourses.TabIndex = 1;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
@@ -239,7 +239,7 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(425, -4);
+            this.pictureBox1.Location = new System.Drawing.Point(413, -4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 80);
             this.pictureBox1.TabIndex = 71;
@@ -249,7 +249,7 @@ namespace BalhamCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 390);
+            this.ClientSize = new System.Drawing.Size(477, 396);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReturn);

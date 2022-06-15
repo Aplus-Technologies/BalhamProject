@@ -75,7 +75,7 @@ namespace BalhamCollege
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 228);
+            this.label2.Location = new System.Drawing.Point(24, 243);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 20);
@@ -86,7 +86,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(712, 478);
+            this.btnReturn.Location = new System.Drawing.Point(677, 453);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 40);
@@ -99,7 +99,7 @@ namespace BalhamCollege
             // 
             this.btnRemoveLecturer.BackColor = System.Drawing.Color.SteelBlue;
             this.btnRemoveLecturer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemoveLecturer.Location = new System.Drawing.Point(395, 478);
+            this.btnRemoveLecturer.Location = new System.Drawing.Point(448, 453);
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
             this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 40);
@@ -193,10 +193,10 @@ namespace BalhamCollege
             this.lstLecturers.FormattingEnabled = true;
             this.lstLecturers.HorizontalScrollbar = true;
             this.lstLecturers.ItemHeight = 20;
-            this.lstLecturers.Location = new System.Drawing.Point(24, 253);
+            this.lstLecturers.Location = new System.Drawing.Point(24, 268);
             this.lstLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.lstLecturers.Name = "lstLecturers";
-            this.lstLecturers.Size = new System.Drawing.Size(354, 204);
+            this.lstLecturers.Size = new System.Drawing.Size(354, 224);
             this.lstLecturers.TabIndex = 2;
             this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
@@ -297,7 +297,7 @@ namespace BalhamCollege
             this.lstCourses.Location = new System.Drawing.Point(24, 44);
             this.lstCourses.Margin = new System.Windows.Forms.Padding(4);
             this.lstCourses.Name = "lstCourses";
-            this.lstCourses.Size = new System.Drawing.Size(354, 164);
+            this.lstCourses.Size = new System.Drawing.Size(354, 184);
             this.lstCourses.TabIndex = 1;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
