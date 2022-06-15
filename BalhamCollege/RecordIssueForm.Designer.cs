@@ -255,7 +255,7 @@ namespace BalhamCollege
             // dtpIssueDate
             // 
             this.dtpIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIssueDate.Location = new System.Drawing.Point(1088, 366);
+            this.dtpIssueDate.Location = new System.Drawing.Point(1099, 398);
             this.dtpIssueDate.Name = "dtpIssueDate";
             this.dtpIssueDate.Size = new System.Drawing.Size(109, 26);
             this.dtpIssueDate.TabIndex = 42;
@@ -264,9 +264,9 @@ namespace BalhamCollege
             // 
             this.btnRecordIssue.BackColor = System.Drawing.Color.SteelBlue;
             this.btnRecordIssue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRecordIssue.Location = new System.Drawing.Point(1036, 437);
+            this.btnRecordIssue.Location = new System.Drawing.Point(1033, 519);
             this.btnRecordIssue.Name = "btnRecordIssue";
-            this.btnRecordIssue.Size = new System.Drawing.Size(187, 62);
+            this.btnRecordIssue.Size = new System.Drawing.Size(187, 40);
             this.btnRecordIssue.TabIndex = 43;
             this.btnRecordIssue.Text = "Record Issue";
             this.btnRecordIssue.UseVisualStyleBackColor = false;
@@ -276,9 +276,9 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(1036, 519);
+            this.btnReturn.Location = new System.Drawing.Point(1033, 579);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(187, 62);
+            this.btnReturn.Size = new System.Drawing.Size(187, 40);
             this.btnReturn.TabIndex = 44;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -296,7 +296,7 @@ namespace BalhamCollege
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1010, 369);
+            this.label11.Location = new System.Drawing.Point(1021, 401);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 20);
             this.label11.TabIndex = 45;
@@ -364,7 +364,7 @@ namespace BalhamCollege
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(1154, 599);
+            this.label12.Location = new System.Drawing.Point(1095, 475);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 20);
             this.label12.TabIndex = 46;
@@ -394,7 +394,7 @@ namespace BalhamCollege
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(996, 369);
+            this.label13.Location = new System.Drawing.Point(1007, 401);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(14, 20);
             this.label13.TabIndex = 47;

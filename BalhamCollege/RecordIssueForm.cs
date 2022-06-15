@@ -112,7 +112,7 @@ namespace BalhamCollege
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dgvEnrolments.ClearSelection();
-            dgvStudents.DefaultCellStyle.SelectionBackColor = Color.Blue;
+            dgvStudents.DefaultCellStyle.SelectionBackColor = SystemColors.Highlight;
             dgvStudents.DefaultCellStyle.SelectionForeColor = Color.White;
 
             int selectedrowIndex = dgvStudents.SelectedCells[0].RowIndex;
@@ -237,7 +237,7 @@ namespace BalhamCollege
 
         private void dgvEnrolments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvEnrolments.DefaultCellStyle.SelectionBackColor = Color.Blue;
+            dgvEnrolments.DefaultCellStyle.SelectionBackColor = SystemColors.Highlight;
             dgvEnrolments.DefaultCellStyle.SelectionForeColor = Color.White;
             int selectedrowindex = dgvEnrolments.SelectedCells[0].RowIndex;
             DataGridViewRow selectedRow = dgvEnrolments.Rows[selectedrowindex];

@@ -261,6 +261,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddResearchProject.resx">
       <DependentUpon>AddResearchProject.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AddResearchTopicForm.resx">
       <DependentUpon>AddResearchTopicForm.cs</DependentUpon>

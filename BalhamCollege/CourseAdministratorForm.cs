@@ -397,7 +397,7 @@ namespace BalhamCollege
                         linesSoFar++;
                         //g.DrawString("_______________________________________________________________________________________", textFont, brush, leftMargin - 30, topMargin + (linesSoFar * textFont.Height));
                         Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-                        g.DrawLine(pen, margin0 + bar * 2 - 20, topMargin + (linesSoFar * textFont.Height) + 16, margin3 + 20, topMargin + 16 + (linesSoFar * textFont.Height));
+                        g.DrawLine(pen, margin0 + bar * 2 - 20, topMargin + (linesSoFar * textFont.Height) + 24, margin3 + 20, topMargin + 24 + (linesSoFar * textFont.Height));
                         linesSoFar++;
                     }
                     linesSoFar++;

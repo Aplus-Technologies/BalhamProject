@@ -117,7 +117,7 @@ namespace BalhamCollege
             this.txtAssessmentNumber.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
-            this.txtAssessmentNumber.Size = new System.Drawing.Size(86, 30);
+            this.txtAssessmentNumber.Size = new System.Drawing.Size(32, 26);
             this.txtAssessmentNumber.TabIndex = 12;
             // 
             // txtCourseName
@@ -126,7 +126,7 @@ namespace BalhamCollege
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
-            this.txtCourseName.Size = new System.Drawing.Size(284, 30);
+            this.txtCourseName.Size = new System.Drawing.Size(284, 26);
             this.txtCourseName.TabIndex = 13;
             // 
             // txtAssessmentName
@@ -136,7 +136,7 @@ namespace BalhamCollege
             this.txtAssessmentName.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
-            this.txtAssessmentName.Size = new System.Drawing.Size(284, 30);
+            this.txtAssessmentName.Size = new System.Drawing.Size(284, 26);
             this.txtAssessmentName.TabIndex = 14;
             // 
             // txtMaximumMark
@@ -145,7 +145,7 @@ namespace BalhamCollege
             this.txtMaximumMark.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtMaximumMark.Name = "txtMaximumMark";
             this.txtMaximumMark.ReadOnly = true;
-            this.txtMaximumMark.Size = new System.Drawing.Size(66, 30);
+            this.txtMaximumMark.Size = new System.Drawing.Size(66, 26);
             this.txtMaximumMark.TabIndex = 15;
             // 
             // label2
@@ -153,7 +153,7 @@ namespace BalhamCollege
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(822, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 24);
+            this.label2.Size = new System.Drawing.Size(126, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Assessment Name:";
             // 
@@ -162,7 +162,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(810, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 24);
+            this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "Assessment Number:";
             // 
@@ -171,7 +171,7 @@ namespace BalhamCollege
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(849, 153);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 24);
+            this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 20;
             this.label3.Text = "Maximim Mark:";
             // 
@@ -180,16 +180,16 @@ namespace BalhamCollege
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(853, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 24);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 21;
             this.label4.Text = "Course Name:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(969, 299);
+            this.label5.Location = new System.Drawing.Point(969, 308);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 24);
+            this.label5.Size = new System.Drawing.Size(42, 20);
             this.label5.TabIndex = 22;
             this.label5.Text = "Mark:";
             // 
@@ -198,7 +198,7 @@ namespace BalhamCollege
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(930, 366);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 24);
+            this.label6.Size = new System.Drawing.Size(81, 20);
             this.label6.TabIndex = 23;
             this.label6.Text = "Result Date:";
             // 
@@ -208,12 +208,12 @@ namespace BalhamCollege
             this.dtpDate.Location = new System.Drawing.Point(1007, 361);
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(112, 30);
+            this.dtpDate.Size = new System.Drawing.Size(112, 26);
             this.dtpDate.TabIndex = 24;
             // 
             // numMark
             // 
-            this.numMark.Location = new System.Drawing.Point(1007, 297);
+            this.numMark.Location = new System.Drawing.Point(1007, 306);
             this.numMark.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.numMark.Maximum = new decimal(new int[] {
             40,
@@ -221,7 +221,7 @@ namespace BalhamCollege
             0,
             0});
             this.numMark.Name = "numMark";
-            this.numMark.Size = new System.Drawing.Size(75, 30);
+            this.numMark.Size = new System.Drawing.Size(48, 26);
             this.numMark.TabIndex = 25;
             // 
             // btnEnterResult
@@ -312,7 +312,7 @@ namespace BalhamCollege
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(26, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 24);
+            this.label7.Size = new System.Drawing.Size(147, 20);
             this.label7.TabIndex = 30;
             this.label7.Text = "Select an Assessment:";
             // 
@@ -321,7 +321,7 @@ namespace BalhamCollege
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(26, 278);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 24);
+            this.label8.Size = new System.Drawing.Size(133, 20);
             this.label8.TabIndex = 31;
             this.label8.Text = "Select an Enrolment:";
             // 
@@ -347,9 +347,9 @@ namespace BalhamCollege
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(1113, 435);
+            this.label9.Location = new System.Drawing.Point(1088, 437);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 24);
+            this.label9.Size = new System.Drawing.Size(110, 20);
             this.label9.TabIndex = 32;
             this.label9.Text = "*Required Fields";
             // 
@@ -359,7 +359,7 @@ namespace BalhamCollege
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(921, 366);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 24);
+            this.label10.Size = new System.Drawing.Size(14, 20);
             this.label10.TabIndex = 33;
             this.label10.Text = "*";
             // 
@@ -367,9 +367,9 @@ namespace BalhamCollege
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(957, 299);
+            this.label11.Location = new System.Drawing.Point(957, 308);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(16, 24);
+            this.label11.Size = new System.Drawing.Size(14, 20);
             this.label11.TabIndex = 34;
             this.label11.Text = "*";
             // 
@@ -384,7 +384,7 @@ namespace BalhamCollege
             // 
             // EnterResultForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1266, 554);
