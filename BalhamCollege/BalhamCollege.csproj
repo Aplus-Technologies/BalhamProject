@@ -578,5 +578,23 @@
   <ItemGroup>
     <None Include="Resources\StudentSupportClerk1980x1080.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CourseAdmin1980x1080v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnrolmentsClerk1980x1080v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HumanResClerk1980x1080v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgrammeAdmin1980x1080v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResearchAdmin1980x1080v3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StudentSupportClerk1980x1080v3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

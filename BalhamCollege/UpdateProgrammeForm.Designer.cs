@@ -88,7 +88,7 @@ namespace BalhamCollege
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(35, 309);
+            this.lblLevel.Location = new System.Drawing.Point(39, 309);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(120, 20);
             this.lblLevel.TabIndex = 89;
@@ -99,7 +99,7 @@ namespace BalhamCollege
             this.lbl8.AutoSize = true;
             this.lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lbl8.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl8.Location = new System.Drawing.Point(20, 274);
+            this.lbl8.Location = new System.Drawing.Point(24, 274);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(14, 20);
             this.lbl8.TabIndex = 88;
@@ -142,7 +142,7 @@ namespace BalhamCollege
             // lblProgrammeName
             // 
             this.lblProgrammeName.AutoSize = true;
-            this.lblProgrammeName.Location = new System.Drawing.Point(33, 274);
+            this.lblProgrammeName.Location = new System.Drawing.Point(37, 274);
             this.lblProgrammeName.Name = "lblProgrammeName";
             this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
             this.lblProgrammeName.TabIndex = 79;
@@ -151,7 +151,7 @@ namespace BalhamCollege
             // lblProgrammeID
             // 
             this.lblProgrammeID.AutoSize = true;
-            this.lblProgrammeID.Location = new System.Drawing.Point(56, 239);
+            this.lblProgrammeID.Location = new System.Drawing.Point(60, 239);
             this.lblProgrammeID.Name = "lblProgrammeID";
             this.lblProgrammeID.Size = new System.Drawing.Size(99, 20);
             this.lblProgrammeID.TabIndex = 78;
@@ -171,7 +171,7 @@ namespace BalhamCollege
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(22, 309);
+            this.label1.Location = new System.Drawing.Point(26, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(14, 20);
             this.label1.TabIndex = 97;

@@ -181,6 +181,8 @@ namespace BalhamCollege
             // 
             this.dgvResearchTopics.AllowUserToAddRows = false;
             this.dgvResearchTopics.AllowUserToDeleteRows = false;
+            this.dgvResearchTopics.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvResearchTopics.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvResearchTopics.ColumnHeadersHeight = 29;
             this.dgvResearchTopics.Location = new System.Drawing.Point(24, 330);
             this.dgvResearchTopics.Name = "dgvResearchTopics";
@@ -229,6 +231,8 @@ namespace BalhamCollege
             // 
             this.dgvResearchProjects.AllowUserToAddRows = false;
             this.dgvResearchProjects.AllowUserToDeleteRows = false;
+            this.dgvResearchProjects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvResearchProjects.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvResearchProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResearchProjects.Location = new System.Drawing.Point(386, 128);
             this.dgvResearchProjects.Name = "dgvResearchProjects";
