@@ -60,7 +60,7 @@ namespace BalhamCollege
             this.txtTopicID.MaxLength = 2;
             this.txtTopicID.Name = "txtTopicID";
             this.txtTopicID.ReadOnly = true;
-            this.txtTopicID.Size = new System.Drawing.Size(19, 26);
+            this.txtTopicID.Size = new System.Drawing.Size(26, 26);
             this.txtTopicID.TabIndex = 112;
             // 
             // lstResearchTopics
