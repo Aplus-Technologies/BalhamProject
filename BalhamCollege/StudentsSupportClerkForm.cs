@@ -270,7 +270,7 @@ namespace BalhamCollege
                     linesSoFar++;
 
                     //LINE 4
-                    g.DrawString("Topic Description: ", labelsFont, brush, rightLabelsMargin - GetLength("Topic Description: ") + position, 12 + topMargin + (linesSoFar * labelsFont.Height));
+                    g.DrawString("Action Taken: ", labelsFont, brush, rightLabelsMargin - GetLength("Action Taken: ") + position, 12 + topMargin + (linesSoFar * labelsFont.Height));
                     int letter = 1;
                     int letterMaxPlace = drIssues["ActionTaken"].ToString().Length;
                     int topicDescriptionBoundary = 1;
