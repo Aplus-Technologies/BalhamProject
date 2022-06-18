@@ -115,8 +115,8 @@ namespace BalhamCollege
           
            dgvResearchProjects.DataSource = projectsA;  // the data table created previously 
            dgvResearchProjects.Columns[0].Width = 100;
-           dgvResearchProjects.Columns[1].Width = 350;
-           dgvResearchProjects.Columns[2].Width = 350;
+           dgvResearchProjects.Columns[1].Width = 319;
+           dgvResearchProjects.Columns[2].Width = 319;
 
            dgvResearchProjects.DefaultCellStyle.SelectionBackColor = Color.White;
            dgvResearchProjects.DefaultCellStyle.SelectionForeColor = Color.Black;
