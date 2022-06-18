@@ -54,7 +54,7 @@ namespace BalhamCollege
             // lblProgrammeName
             // 
             this.lblProgrammeName.AutoSize = true;
-            this.lblProgrammeName.Location = new System.Drawing.Point(41, 48);
+            this.lblProgrammeName.Location = new System.Drawing.Point(40, 58);
             this.lblProgrammeName.Name = "lblProgrammeName";
             this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
             this.lblProgrammeName.TabIndex = 5;
@@ -63,7 +63,7 @@ namespace BalhamCollege
             // lblProgrammeLevel
             // 
             this.lblProgrammeLevel.AutoSize = true;
-            this.lblProgrammeLevel.Location = new System.Drawing.Point(117, 84);
+            this.lblProgrammeLevel.Location = new System.Drawing.Point(116, 94);
             this.lblProgrammeLevel.Name = "lblProgrammeLevel";
             this.lblProgrammeLevel.Size = new System.Drawing.Size(46, 20);
             this.lblProgrammeLevel.TabIndex = 7;
@@ -71,7 +71,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeName
             // 
-            this.txtProgrammeName.Location = new System.Drawing.Point(158, 47);
+            this.txtProgrammeName.Location = new System.Drawing.Point(157, 57);
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.Size = new System.Drawing.Size(363, 26);
@@ -79,7 +79,7 @@ namespace BalhamCollege
             // 
             // nudLevel
             // 
-            this.nudLevel.Location = new System.Drawing.Point(158, 83);
+            this.nudLevel.Location = new System.Drawing.Point(157, 93);
             this.nudLevel.Maximum = new decimal(new int[] {
             10,
             0,
@@ -103,7 +103,7 @@ namespace BalhamCollege
             // 
             this.btnAddProgramme.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAddProgramme.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddProgramme.Location = new System.Drawing.Point(12, 135);
+            this.btnAddProgramme.Location = new System.Drawing.Point(12, 164);
             this.btnAddProgramme.Name = "btnAddProgramme";
             this.btnAddProgramme.Size = new System.Drawing.Size(129, 40);
             this.btnAddProgramme.TabIndex = 2;
@@ -115,7 +115,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(472, 135);
+            this.btnReturn.Location = new System.Drawing.Point(472, 164);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(129, 40);
             this.btnReturn.TabIndex = 3;
@@ -128,7 +128,7 @@ namespace BalhamCollege
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(482, 112);
+            this.lblRequiredFields.Location = new System.Drawing.Point(482, 141);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
             this.lblRequiredFields.TabIndex = 8;
@@ -139,7 +139,7 @@ namespace BalhamCollege
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix1.Location = new System.Drawing.Point(32, 42);
+            this.lblAsterix1.Location = new System.Drawing.Point(31, 52);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix1.TabIndex = 4;
@@ -150,7 +150,7 @@ namespace BalhamCollege
             this.lblAsterix2.AutoSize = true;
             this.lblAsterix2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix2.Location = new System.Drawing.Point(108, 81);
+            this.lblAsterix2.Location = new System.Drawing.Point(107, 91);
             this.lblAsterix2.Name = "lblAsterix2";
             this.lblAsterix2.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix2.TabIndex = 6;
@@ -201,7 +201,7 @@ namespace BalhamCollege
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(613, 187);
+            this.ClientSize = new System.Drawing.Size(613, 216);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblAsterix2);
