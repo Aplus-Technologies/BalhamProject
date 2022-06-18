@@ -115,8 +115,8 @@ namespace BalhamCollege
           
            dgvResearchProjects.DataSource = projectsA;  // the data table created previously 
            dgvResearchProjects.Columns[0].Width = 100;
-           dgvResearchProjects.Columns[1].Width = 300;
-           dgvResearchProjects.Columns[2].Width = 300;
+           dgvResearchProjects.Columns[1].Width = 350;
+           dgvResearchProjects.Columns[2].Width = 350;
 
            dgvResearchProjects.DefaultCellStyle.SelectionBackColor = Color.White;
            dgvResearchProjects.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -145,7 +145,7 @@ namespace BalhamCollege
                 //show list of topics in data grid view for Research Topics 
                 dgvResearchTopics.DataSource = dsBalhamCollegeAzure.RESEARCHTOPIC;
                 dgvResearchTopics.Columns[0].Width = 80; // set column[0] width
-                dgvResearchTopics.Columns[1].Width = 300; // set column[300] width
+                dgvResearchTopics.Columns[1].Width = 420; // set column[300] width
                 dgvResearchTopics.Columns[2].Width = 100;  // set column[100] width
                
                
