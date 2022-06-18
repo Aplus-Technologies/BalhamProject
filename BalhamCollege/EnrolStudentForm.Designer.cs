@@ -110,7 +110,7 @@ namespace BalhamCollege
             this.lstCourses.Location = new System.Drawing.Point(28, 341);
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.ScrollAlwaysVisible = true;
-            this.lstCourses.Size = new System.Drawing.Size(234, 224);
+            this.lstCourses.Size = new System.Drawing.Size(234, 284);
             this.lstCourses.TabIndex = 8;
             this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
@@ -262,9 +262,9 @@ namespace BalhamCollege
             // 
             this.btnEnrolStudent.BackColor = System.Drawing.Color.SteelBlue;
             this.btnEnrolStudent.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEnrolStudent.Location = new System.Drawing.Point(28, 587);
+            this.btnEnrolStudent.Location = new System.Drawing.Point(290, 585);
             this.btnEnrolStudent.Name = "btnEnrolStudent";
-            this.btnEnrolStudent.Size = new System.Drawing.Size(180, 40);
+            this.btnEnrolStudent.Size = new System.Drawing.Size(134, 40);
             this.btnEnrolStudent.TabIndex = 16;
             this.btnEnrolStudent.Text = "Enrol Student";
             this.btnEnrolStudent.UseVisualStyleBackColor = false;
@@ -274,9 +274,9 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(662, 587);
+            this.btnReturn.Location = new System.Drawing.Point(719, 587);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(180, 40);
+            this.btnReturn.Size = new System.Drawing.Size(134, 40);
             this.btnReturn.TabIndex = 17;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
@@ -453,7 +453,7 @@ namespace BalhamCollege
             // 
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(697, 564);
+            this.lblRequiredFields.Location = new System.Drawing.Point(732, 564);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
             this.lblRequiredFields.TabIndex = 37;
