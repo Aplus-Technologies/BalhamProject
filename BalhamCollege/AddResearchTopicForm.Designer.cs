@@ -87,7 +87,7 @@ namespace BalhamCollege
             "Low"});
             this.cboImpact.Location = new System.Drawing.Point(220, 161);
             this.cboImpact.Name = "cboImpact";
-            this.cboImpact.Size = new System.Drawing.Size(61, 28);
+            this.cboImpact.Size = new System.Drawing.Size(90, 28);
             this.cboImpact.TabIndex = 1;
             // 
             // btnAddResearchTopic
@@ -130,7 +130,7 @@ namespace BalhamCollege
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix1.Location = new System.Drawing.Point(37, 59);
+            this.lblAsterix1.Location = new System.Drawing.Point(35, 59);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix1.TabIndex = 4;
@@ -141,7 +141,7 @@ namespace BalhamCollege
             this.lblAsterix2.AutoSize = true;
             this.lblAsterix2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix2.Location = new System.Drawing.Point(163, 159);
+            this.lblAsterix2.Location = new System.Drawing.Point(161, 159);
             this.lblAsterix2.Name = "lblAsterix2";
             this.lblAsterix2.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix2.TabIndex = 7;
@@ -198,12 +198,12 @@ namespace BalhamCollege
             this.Controls.Add(this.cboImpact);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblAsterix2);
-            this.Controls.Add(this.lblAsterix1);
             this.Controls.Add(this.lblRequiredFields);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnAddResearchTopic);
             this.Controls.Add(this.lblResTopicDesc);
+            this.Controls.Add(this.lblAsterix2);
+            this.Controls.Add(this.lblAsterix1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

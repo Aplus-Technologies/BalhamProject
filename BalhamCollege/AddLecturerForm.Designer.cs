@@ -158,7 +158,7 @@ namespace BalhamCollege
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Location = new System.Drawing.Point(381, 299);
+            this.lblType.Location = new System.Drawing.Point(367, 299);
             this.lblType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblType.Name = "lblType";
             this.lblType.Size = new System.Drawing.Size(43, 20);
@@ -265,9 +265,9 @@ namespace BalhamCollege
             this.cboType.Items.AddRange(new object[] {
             "Academic",
             "Contract"});
-            this.cboType.Location = new System.Drawing.Point(420, 297);
+            this.cboType.Location = new System.Drawing.Point(406, 297);
             this.cboType.Name = "cboType";
-            this.cboType.Size = new System.Drawing.Size(82, 28);
+            this.cboType.Size = new System.Drawing.Size(96, 28);
             this.cboType.TabIndex = 8;
             // 
             // dsBalhamCollegeAzure
@@ -317,7 +317,7 @@ namespace BalhamCollege
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix1.Location = new System.Drawing.Point(63, 40);
+            this.lblAsterix1.Location = new System.Drawing.Point(61, 40);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix1.TabIndex = 12;
@@ -339,7 +339,7 @@ namespace BalhamCollege
             this.lblAsterix3.AutoSize = true;
             this.lblAsterix3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix3.Location = new System.Drawing.Point(38, 115);
+            this.lblAsterix3.Location = new System.Drawing.Point(36, 115);
             this.lblAsterix3.Name = "lblAsterix3";
             this.lblAsterix3.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix3.TabIndex = 15;
@@ -350,7 +350,7 @@ namespace BalhamCollege
             this.lblAsterix4.AutoSize = true;
             this.lblAsterix4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix4.Location = new System.Drawing.Point(85, 152);
+            this.lblAsterix4.Location = new System.Drawing.Point(83, 152);
             this.lblAsterix4.Name = "lblAsterix4";
             this.lblAsterix4.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix4.TabIndex = 18;
@@ -361,7 +361,7 @@ namespace BalhamCollege
             this.lblAsterix5.AutoSize = true;
             this.lblAsterix5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix5.Location = new System.Drawing.Point(106, 186);
+            this.lblAsterix5.Location = new System.Drawing.Point(104, 186);
             this.lblAsterix5.Name = "lblAsterix5";
             this.lblAsterix5.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix5.TabIndex = 20;
@@ -372,7 +372,7 @@ namespace BalhamCollege
             this.lblAsterix6.AutoSize = true;
             this.lblAsterix6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix6.Location = new System.Drawing.Point(40, 220);
+            this.lblAsterix6.Location = new System.Drawing.Point(38, 220);
             this.lblAsterix6.Name = "lblAsterix6";
             this.lblAsterix6.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix6.TabIndex = 24;
@@ -383,7 +383,7 @@ namespace BalhamCollege
             this.lblAsterix7.AutoSize = true;
             this.lblAsterix7.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix7.Location = new System.Drawing.Point(38, 260);
+            this.lblAsterix7.Location = new System.Drawing.Point(36, 260);
             this.lblAsterix7.Name = "lblAsterix7";
             this.lblAsterix7.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix7.TabIndex = 22;
@@ -394,7 +394,7 @@ namespace BalhamCollege
             this.lblAsterix8.AutoSize = true;
             this.lblAsterix8.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix8.Location = new System.Drawing.Point(81, 291);
+            this.lblAsterix8.Location = new System.Drawing.Point(79, 291);
             this.lblAsterix8.Name = "lblAsterix8";
             this.lblAsterix8.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix8.TabIndex = 26;
@@ -405,7 +405,7 @@ namespace BalhamCollege
             this.lblAsterix9.AutoSize = true;
             this.lblAsterix9.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsterix9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix9.Location = new System.Drawing.Point(372, 291);
+            this.lblAsterix9.Location = new System.Drawing.Point(356, 291);
             this.lblAsterix9.Name = "lblAsterix9";
             this.lblAsterix9.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix9.TabIndex = 28;
@@ -445,20 +445,11 @@ namespace BalhamCollege
             this.Controls.Add(this.txtEmailAddress);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.lblAsterix9);
             this.Controls.Add(this.lblRanking);
-            this.Controls.Add(this.lblAsterix8);
             this.Controls.Add(this.lblPhoneNumber);
-            this.Controls.Add(this.lblAsterix7);
             this.Controls.Add(this.lblEmailAddress);
-            this.Controls.Add(this.lblAsterix6);
             this.Controls.Add(this.lblCity);
-            this.Controls.Add(this.lblAsterix5);
             this.Controls.Add(this.lblSuburb);
-            this.Controls.Add(this.lblAsterix4);
-            this.Controls.Add(this.lblAsterix3);
-            this.Controls.Add(this.lblAsterix2);
-            this.Controls.Add(this.lblAsterix1);
             this.Controls.Add(this.lblRequiredFields);
             this.Controls.Add(this.cboType);
             this.Controls.Add(this.txtStreetAddress);
@@ -466,6 +457,15 @@ namespace BalhamCollege
             this.Controls.Add(this.btnAddLecturer);
             this.Controls.Add(this.lblType);
             this.Controls.Add(this.lblStreetAddress);
+            this.Controls.Add(this.lblAsterix9);
+            this.Controls.Add(this.lblAsterix8);
+            this.Controls.Add(this.lblAsterix7);
+            this.Controls.Add(this.lblAsterix6);
+            this.Controls.Add(this.lblAsterix5);
+            this.Controls.Add(this.lblAsterix4);
+            this.Controls.Add(this.lblAsterix3);
+            this.Controls.Add(this.lblAsterix2);
+            this.Controls.Add(this.lblAsterix1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

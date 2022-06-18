@@ -445,7 +445,7 @@ namespace BalhamCollege
             "Complete"});
             this.cboStatus.Location = new System.Drawing.Point(387, 535);
             this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(92, 28);
+            this.cboStatus.Size = new System.Drawing.Size(100, 28);
             this.cboStatus.TabIndex = 14;
             this.cboStatus.ValueMember = "Pending";
             // 
@@ -463,7 +463,7 @@ namespace BalhamCollege
             // 
             this.lblAsterix1.AutoSize = true;
             this.lblAsterix1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix1.Location = new System.Drawing.Point(339, 495);
+            this.lblAsterix1.Location = new System.Drawing.Point(337, 495);
             this.lblAsterix1.Name = "lblAsterix1";
             this.lblAsterix1.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix1.TabIndex = 31;
@@ -473,7 +473,7 @@ namespace BalhamCollege
             // 
             this.lblAsterix2.AutoSize = true;
             this.lblAsterix2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix2.Location = new System.Drawing.Point(334, 538);
+            this.lblAsterix2.Location = new System.Drawing.Point(332, 538);
             this.lblAsterix2.Name = "lblAsterix2";
             this.lblAsterix2.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix2.TabIndex = 33;
@@ -483,7 +483,7 @@ namespace BalhamCollege
             // 
             this.lblAsterix3.AutoSize = true;
             this.lblAsterix3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix3.Location = new System.Drawing.Point(583, 497);
+            this.lblAsterix3.Location = new System.Drawing.Point(581, 497);
             this.lblAsterix3.Name = "lblAsterix3";
             this.lblAsterix3.Size = new System.Drawing.Size(14, 20);
             this.lblAsterix3.TabIndex = 35;
@@ -566,9 +566,6 @@ namespace BalhamCollege
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nudSemester);
             this.Controls.Add(this.lblSemester);
-            this.Controls.Add(this.lblAsterix3);
-            this.Controls.Add(this.lblAsterix2);
-            this.Controls.Add(this.lblAsterix1);
             this.Controls.Add(this.lblRequiredFields);
             this.Controls.Add(this.cboStatus);
             this.Controls.Add(this.nudYear);
@@ -602,6 +599,9 @@ namespace BalhamCollege
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblStudentID);
+            this.Controls.Add(this.lblAsterix3);
+            this.Controls.Add(this.lblAsterix2);
+            this.Controls.Add(this.lblAsterix1);
             this.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
