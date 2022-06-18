@@ -75,7 +75,7 @@ namespace BalhamCollege
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 243);
+            this.label2.Location = new System.Drawing.Point(19, 241);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 20);
@@ -86,7 +86,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(677, 453);
+            this.btnReturn.Location = new System.Drawing.Point(673, 453);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 40);
@@ -99,7 +99,7 @@ namespace BalhamCollege
             // 
             this.btnRemoveLecturer.BackColor = System.Drawing.Color.SteelBlue;
             this.btnRemoveLecturer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemoveLecturer.Location = new System.Drawing.Point(448, 453);
+            this.btnRemoveLecturer.Location = new System.Drawing.Point(444, 453);
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
             this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 40);
@@ -110,7 +110,7 @@ namespace BalhamCollege
             // 
             // txtRole
             // 
-            this.txtRole.Location = new System.Drawing.Point(511, 395);
+            this.txtRole.Location = new System.Drawing.Point(507, 395);
             this.txtRole.Margin = new System.Windows.Forms.Padding(4);
             this.txtRole.MaxLength = 9;
             this.txtRole.Name = "txtRole";
@@ -120,7 +120,7 @@ namespace BalhamCollege
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(511, 360);
+            this.txtFirstName.Location = new System.Drawing.Point(507, 360);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.MaxLength = 30;
             this.txtFirstName.Name = "txtFirstName";
@@ -130,7 +130,7 @@ namespace BalhamCollege
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(511, 325);
+            this.txtLastName.Location = new System.Drawing.Point(507, 325);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.MaxLength = 30;
             this.txtLastName.Name = "txtLastName";
@@ -140,7 +140,7 @@ namespace BalhamCollege
             // 
             // txtLecturerID
             // 
-            this.txtLecturerID.Location = new System.Drawing.Point(511, 290);
+            this.txtLecturerID.Location = new System.Drawing.Point(507, 290);
             this.txtLecturerID.Margin = new System.Windows.Forms.Padding(4);
             this.txtLecturerID.MaxLength = 4;
             this.txtLecturerID.Name = "txtLecturerID";
@@ -151,7 +151,7 @@ namespace BalhamCollege
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(473, 398);
+            this.lblRole.Location = new System.Drawing.Point(469, 398);
             this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(41, 20);
@@ -161,7 +161,7 @@ namespace BalhamCollege
             // lblFirstNAme
             // 
             this.lblFirstNAme.AutoSize = true;
-            this.lblFirstNAme.Location = new System.Drawing.Point(437, 363);
+            this.lblFirstNAme.Location = new System.Drawing.Point(433, 363);
             this.lblFirstNAme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstNAme.Name = "lblFirstNAme";
             this.lblFirstNAme.Size = new System.Drawing.Size(77, 20);
@@ -171,7 +171,7 @@ namespace BalhamCollege
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(438, 328);
+            this.lblLastName.Location = new System.Drawing.Point(434, 328);
             this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 20);
@@ -181,7 +181,7 @@ namespace BalhamCollege
             // lblLecturerID
             // 
             this.lblLecturerID.AutoSize = true;
-            this.lblLecturerID.Location = new System.Drawing.Point(437, 293);
+            this.lblLecturerID.Location = new System.Drawing.Point(433, 293);
             this.lblLecturerID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLecturerID.Name = "lblLecturerID";
             this.lblLecturerID.Size = new System.Drawing.Size(77, 20);
@@ -193,7 +193,7 @@ namespace BalhamCollege
             this.lstLecturers.FormattingEnabled = true;
             this.lstLecturers.HorizontalScrollbar = true;
             this.lstLecturers.ItemHeight = 20;
-            this.lstLecturers.Location = new System.Drawing.Point(24, 268);
+            this.lstLecturers.Location = new System.Drawing.Point(20, 268);
             this.lstLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.lstLecturers.Name = "lstLecturers";
             this.lstLecturers.Size = new System.Drawing.Size(354, 224);
@@ -203,7 +203,7 @@ namespace BalhamCollege
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 19);
+            this.label1.Location = new System.Drawing.Point(20, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 20);
@@ -212,7 +212,7 @@ namespace BalhamCollege
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(510, 134);
+            this.txtStatus.Location = new System.Drawing.Point(506, 134);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.MaxLength = 9;
             this.txtStatus.Name = "txtStatus";
@@ -222,7 +222,7 @@ namespace BalhamCollege
             // 
             // txtProgrammeName
             // 
-            this.txtProgrammeName.Location = new System.Drawing.Point(510, 169);
+            this.txtProgrammeName.Location = new System.Drawing.Point(506, 169);
             this.txtProgrammeName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProgrammeName.MaxLength = 50;
             this.txtProgrammeName.Name = "txtProgrammeName";
@@ -232,7 +232,7 @@ namespace BalhamCollege
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(510, 99);
+            this.txtCourseName.Location = new System.Drawing.Point(506, 99);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.Name = "txtCourseName";
@@ -242,7 +242,7 @@ namespace BalhamCollege
             // 
             // txtCourseID
             // 
-            this.txtCourseID.Location = new System.Drawing.Point(510, 64);
+            this.txtCourseID.Location = new System.Drawing.Point(506, 64);
             this.txtCourseID.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseID.MaxLength = 4;
             this.txtCourseID.Name = "txtCourseID";
@@ -253,7 +253,7 @@ namespace BalhamCollege
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(465, 137);
+            this.lblStatus.Location = new System.Drawing.Point(461, 137);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(49, 20);
@@ -263,7 +263,7 @@ namespace BalhamCollege
             // lblProgrammeName
             // 
             this.lblProgrammeName.AutoSize = true;
-            this.lblProgrammeName.Location = new System.Drawing.Point(391, 172);
+            this.lblProgrammeName.Location = new System.Drawing.Point(387, 172);
             this.lblProgrammeName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblProgrammeName.Name = "lblProgrammeName";
             this.lblProgrammeName.Size = new System.Drawing.Size(122, 20);
@@ -273,7 +273,7 @@ namespace BalhamCollege
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
-            this.lblCourseName.Location = new System.Drawing.Point(418, 102);
+            this.lblCourseName.Location = new System.Drawing.Point(414, 102);
             this.lblCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(95, 20);
@@ -283,7 +283,7 @@ namespace BalhamCollege
             // lblCourseID
             // 
             this.lblCourseID.AutoSize = true;
-            this.lblCourseID.Location = new System.Drawing.Point(442, 67);
+            this.lblCourseID.Location = new System.Drawing.Point(438, 67);
             this.lblCourseID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseID.Name = "lblCourseID";
             this.lblCourseID.Size = new System.Drawing.Size(72, 20);
@@ -294,7 +294,7 @@ namespace BalhamCollege
             // 
             this.lstCourses.FormattingEnabled = true;
             this.lstCourses.ItemHeight = 20;
-            this.lstCourses.Location = new System.Drawing.Point(24, 44);
+            this.lstCourses.Location = new System.Drawing.Point(20, 44);
             this.lstCourses.Margin = new System.Windows.Forms.Padding(4);
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.Size = new System.Drawing.Size(354, 184);
@@ -362,7 +362,7 @@ namespace BalhamCollege
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(832, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(825, -4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 80);
             this.pictureBox1.TabIndex = 127;
@@ -372,7 +372,7 @@ namespace BalhamCollege
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 539);
+            this.ClientSize = new System.Drawing.Size(889, 512);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
