@@ -305,6 +305,7 @@ namespace BalhamCollege
         private void numMark_Leave(object sender, EventArgs e)
         {
            // errorProvider1.SetError(this.numMark, "Maximum mark cannot exceed the assessment maximum mark");
+          //  errorProvider1.SetIconPadding(this.numMark, 3);
         }
     }
 }
