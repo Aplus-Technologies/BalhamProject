@@ -138,7 +138,7 @@ namespace BalhamCollege
             // 
             this.btnAddAssessment.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAddAssessment.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAddAssessment.Location = new System.Drawing.Point(281, 286);
+            this.btnAddAssessment.Location = new System.Drawing.Point(321, 286);
             this.btnAddAssessment.Name = "btnAddAssessment";
             this.btnAddAssessment.Size = new System.Drawing.Size(137, 40);
             this.btnAddAssessment.TabIndex = 6;
@@ -150,7 +150,7 @@ namespace BalhamCollege
             // 
             this.btnReturn.BackColor = System.Drawing.Color.SteelBlue;
             this.btnReturn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnReturn.Location = new System.Drawing.Point(670, 286);
+            this.btnReturn.Location = new System.Drawing.Point(636, 286);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(137, 40);
             this.btnReturn.TabIndex = 7;
@@ -245,7 +245,7 @@ namespace BalhamCollege
             this.lblRequiredFields.AutoSize = true;
             this.lblRequiredFields.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequiredFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblRequiredFields.Location = new System.Drawing.Point(684, 263);
+            this.lblRequiredFields.Location = new System.Drawing.Point(650, 263);
             this.lblRequiredFields.Name = "lblRequiredFields";
             this.lblRequiredFields.Size = new System.Drawing.Size(110, 20);
             this.lblRequiredFields.TabIndex = 19;
