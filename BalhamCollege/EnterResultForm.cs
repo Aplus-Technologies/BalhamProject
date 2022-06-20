@@ -154,6 +154,7 @@ namespace BalhamCollege
 
         private void LoadEnrolments()
         {
+            //numMark.Maximum = Convert.ToInt32(txtMaximumMark.Text);
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             this.studentTableAdapter1.Fill(this.dsBalhamCollegeAzure.STUDENT);
             DataTable enrolments = new DataTable();
@@ -285,6 +286,7 @@ namespace BalhamCollege
                             ClearFields();
                             LoadAssessments();
                             initCount = 0;
+                            Application.OpenForms["CourseBackgroundForm"].Close();
                             frmCourseAdministrator.Show();
                         }
                     }
