@@ -22,8 +22,8 @@ namespace BalhamCollege
             InitializeComponent();
             // call the following functions upon form initialization 
             DC = dc;
-            frmResearchAdmin = resAdmin;
-            frmResearchAdmin.Hide();
+            frmResearchAdmin = resAdmin; 
+            frmResearchAdmin.Hide(); // hide Research Administrator menu
         }
 
         private void ClearFields()
@@ -35,13 +35,13 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             // returns user back to research administrator menu
-            Application.OpenForms["ResearchBackgroundForm"].Close();
+            Application.OpenForms["ResearchBackgroundForm"].Close(); // close background form
             this.Close(); // close current form 
             frmResearchAdmin.Show(); // show research administrator menu 
         }
 
         private void rESEARCHTOPICBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { // navigator bar functions 
             this.Validate();
             this.rESEARCHTOPICBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);

@@ -15,7 +15,7 @@ namespace BalhamCollege
     {
         //declare global variables
         private DataController DC;
-        private CourseAdministratorForm frmCourseAdminForm;
+        private CourseAdministratorForm frmCourseAdminForm; // reference to Course Administrator form 
 
         private DataTable dtCourse2; // reference to course table
         private DataView courseView2; // reference to dataview of course table 
@@ -27,12 +27,12 @@ namespace BalhamCollege
             InitializeComponent();
             DC = dc;
             frmCourseAdminForm = courseAdmin;
-            frmCourseAdminForm.Hide();
+            frmCourseAdminForm.Hide(); // hide course administrator form 
             TableAndView(); // generate updated table and views of the Course table
         }
 
         private void TableAndView()
-        {// create instances of course table and dataview of course table 
+        {// create instances of the course table and dataview of course table 
             dtCourse2 = dsBalhamCollegeAzure.COURSE;
             courseView2 = new DataView(dtCourse2);
             courseView2.Sort = "CourseID"; 
@@ -51,7 +51,7 @@ namespace BalhamCollege
 
         private void LoadCourses()
         {
-            // To load all Courses
+            // To load all Courses into the Course list 
             string courseText;
             foreach (DataRow drCourse in dtCourse2.Rows)
             {
@@ -66,13 +66,13 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         {// closes form
-            Application.OpenForms["CourseBackgroundForm"].Close();
-            this.Close();
+            Application.OpenForms["CourseBackgroundForm"].Close(); // close background form
+            this.Close(); // close the form 
            frmCourseAdminForm.Show(); // show Course Administrator menu 
         }
 
         private void cOURSEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { // navigator bar functions 
             this.Validate();
             this.cOURSEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -86,13 +86,13 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
 
-            ClearFields(); 
-            lstCourses.Items.Clear(); 
+            ClearFields(); // clear controls or reset controls to default values 
+            lstCourses.Items.Clear(); // clear course list
             LoadCourses(); // load courses upon form opening 
         }
 
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {// check if list has a selected item 
             if (lstCourses.SelectedItem != null)
             {
                 string course;
@@ -128,9 +128,9 @@ namespace BalhamCollege
 
                 MessageBox.Show("Assessment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // controls are reset to blank 
-                lstCourses.Items.Clear();
-                LoadCourses(); 
-                ClearFields();
+                lstCourses.Items.Clear(); // clear course list
+                LoadCourses();  // load courses
+                ClearFields(); // clear controls or reset controls to their default values 
             }
         }
     }

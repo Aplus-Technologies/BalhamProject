@@ -16,7 +16,7 @@ namespace BalhamCollege
     {
         // To create global variables
         private DataController DC;
-        private EnrolmentsClerkForm frmEnrolMenu;
+        private EnrolmentsClerkForm frmEnrolMenu; // reference to Enrolments Clerk Menu 
         private CurrencyManager cmStudent; // reference to currency manager for Student table
         private CurrencyManager cmEnrolment; // reference to currency manager for Enrolment table
         private CurrencyManager cmCourse; // reference to currency manager for Course table
@@ -40,14 +40,14 @@ namespace BalhamCollege
             // call the following functions upon form initialization 
             DC = dc;
             frmEnrolMenu = enrolmnu;
-            frmEnrolMenu.Hide();
+            frmEnrolMenu.Hide(); // hide enrolments clerk menu 
             BindControls(); // bind the controls 
             TableAndView();  // generate updated table and views
             
         }
 
         private void TableAndView()
-        { // create instances of Student, enrolment and course tables with their views
+        { // create instances of Student, enrolment and course tables and their dataviews
             dtStudent2 = dsBalhamCollegeAzure.STUDENT;
             dtEnrolment2 = dsBalhamCollegeAzure.ENROLMENT;
             dtCourse2 = dsBalhamCollegeAzure.COURSE;
@@ -68,7 +68,7 @@ namespace BalhamCollege
 
 
         public void BindControls()
-        { // To create instances of the Currency Manager class 
+        { // To create instances of the Currency Manager class for the Student, Enrolment, Course and Programme tables
             cmStudent = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "STUDENT"];
             cmEnrolment = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "ENROLMENT"];
             cmCourse = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "COURSE"];
@@ -77,7 +77,7 @@ namespace BalhamCollege
 
         private void LoadStudents()
         {
-            // To load all students
+            // To load all students to the student list
             string studentText;
             foreach (DataRow drStudent in dtStudent2.Rows)
             {
@@ -92,11 +92,12 @@ namespace BalhamCollege
         
         private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // check if an item is selected in the list
             if (lstStudents.SelectedItem != null)
             {
-                lstCourses.Items.Clear();
-                lstEnrolments.Items.Clear();
-                LoadCourses();
+                lstCourses.Items.Clear(); // clear course list
+                lstEnrolments.Items.Clear(); // clear enrolment list
+                LoadCourses(); // re-load courses
                 string student;
                 // Converts the selected item in the Student listbox to a string
                 // using index 0 of the string, which is the StudentID to find the row it belongs to in the Student Table using Currency Manager
@@ -133,10 +134,10 @@ namespace BalhamCollege
 
         private void LoadCourses()
         {
-           
+          
             string courseText;
             foreach (DataRow drCourse in dtCourse2.Rows)
-            { // only load courses with a current status 
+            { // only load courses with a current status to the course list
                 if (drCourse["Status"].ToString() == "Current")
                 {
                     courseText = drCourse["CourseID"].ToString() + ", ";
@@ -149,7 +150,7 @@ namespace BalhamCollege
         }
         
         private void lstCourses_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        { // check an item is selected from the course list 
             if (lstCourses.SelectedItem != null)
             {
                 string course;
@@ -178,7 +179,7 @@ namespace BalhamCollege
         }
 
         private void ClearFields()
-        {
+        { // clear controls or set controls to their default values
             lstStudents.SelectedItem = null;
             txtStudentID.Text = "";
             txtLastName.Text = "";
@@ -230,9 +231,9 @@ namespace BalhamCollege
 
                         MessageBox.Show("Student already enrolled in that course this semester and year", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         ClearFields(); // reset the fields that can be filled in to blank or to their default values
-                        lstCourses.Items.Clear();
-                        lstStudents.Items.Clear();
-                        LoadStudents();
+                        lstCourses.Items.Clear(); // clear course list
+                        lstStudents.Items.Clear(); // clear students list
+                        LoadStudents(); // load students to student list
                     }
                     else
                     {
@@ -252,9 +253,9 @@ namespace BalhamCollege
 
                         MessageBox.Show("Enrolment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearFields(); // reset the fields that can be filled in to blank or to their default values
-                        lstCourses.Items.Clear();
-                        lstStudents.Items.Clear();
-                        LoadStudents();
+                        lstCourses.Items.Clear(); // clear course list
+                        lstStudents.Items.Clear(); // clear students list
+                        LoadStudents(); // load students to student list
                     }
                 }
                 else
@@ -275,9 +276,9 @@ namespace BalhamCollege
 
                     MessageBox.Show("Enrolment added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearFields(); // reset the fields that can be filled in to blank or to their default values
-                    lstCourses.Items.Clear();
-                    lstStudents.Items.Clear();
-                    LoadStudents();
+                    lstCourses.Items.Clear(); // clear course list
+                    lstStudents.Items.Clear(); // clear student list
+                    LoadStudents(); // load students to student list
                 }
                 
             }
@@ -288,8 +289,8 @@ namespace BalhamCollege
 
         private void btnReturn_Click(object sender, EventArgs e)
         { // closes the form
-            Application.OpenForms["EnrolBackgroundForm"].Close();
-            this.Close();
+            Application.OpenForms["EnrolBackgroundForm"].Close(); // close background form 
+            this.Close(); // close form 
             frmEnrolMenu.Show(); // show enrolments clerk menu
 
         }
@@ -297,7 +298,7 @@ namespace BalhamCollege
       
 
         private void sTUDENTBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { // navigation bar functions
             this.Validate();
             this.sTUDENTBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -315,10 +316,10 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
             this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
-            ClearFields(); 
-           lstEnrolments.Items.Clear(); 
+            ClearFields(); // clear controls or reset controls to their default values 
+           lstEnrolments.Items.Clear(); // clear enrolments list
            lstStudents.Items.Clear(); // clear student list 
-           LoadStudents();  
+           LoadStudents();  // load students
         }
 
        

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions; // // class to check for  regular expression pattern 
+using System.Text.RegularExpressions; // // class to check for regular expression pattern 
 
 namespace BalhamCollege
 {
@@ -25,7 +25,7 @@ namespace BalhamCollege
             // call the following functions upon form initialization 
             DC = dc;
             frmHumanResources = humanRes;
-            frmHumanResources.Hide();
+            frmHumanResources.Hide(); // hide the human resources clerk menu 
         }
 
         private void ClearFields()
@@ -52,7 +52,7 @@ namespace BalhamCollege
         }
 
         private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        {// navigtor bar functions 
             this.Validate();
             this.lECTURERBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -98,12 +98,12 @@ namespace BalhamCollege
 
             if (Regex.IsMatch(txtEmailAddress.Text, pattern))
             {
-                errorProvider2.Clear();
+                errorProvider2.Clear(); // clears error provider
                 resultMatch = true; 
             }
             else
             {
-                errorProvider2.SetError(this.txtEmailAddress, "Input valid email address format");
+                errorProvider2.SetError(this.txtEmailAddress, "Input valid email address format"); // specify the error message that appears on the error provider upon mouse hover
                 resultMatch = false;
                 return;
             }
@@ -119,13 +119,13 @@ namespace BalhamCollege
 
             if (Regex.IsMatch(txtPhoneNumber.Text, pattern))
             {
-                errorProvider1.Clear();
+                errorProvider1.Clear(); // clears error provider
                 numberMatch = true;
 
             }
             else
             {
-                errorProvider1.SetError(this.txtPhoneNumber, "Numbers only");
+                errorProvider1.SetError(this.txtPhoneNumber, "Numbers only"); // specify the error message that appears on the error provider upon mouse hover
                 numberMatch = false;
                 return;
             }
