@@ -85,7 +85,7 @@ namespace BalhamCollege
 
 
             // Validate the entries in the fields
-            if ((txtProgrammeName.Text == "") || (nudLevel.Text == ""))
+            if ((lstProgrammes.SelectedItem == null) || (txtProgrammeName.Text == "") || (nudLevel.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

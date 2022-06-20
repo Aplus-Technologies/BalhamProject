@@ -94,7 +94,7 @@ namespace BalhamCollege
             DataRow updateStudentRow = dtStudent2.Rows[cmStudent.Position];
 
             // Validate the entries in the fields
-            if ((txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") ||
+            if ((lstStudents.SelectedItem == null) || (txtLastName.Text == "") || (txtFirstName.Text == "") || (txtStreetAddress.Text == "") || (txtSuburb.Text == "") ||
                 (txtCity.Text == "") || (resultMatch == false) || (numberMatch == false) || (cboStatus.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

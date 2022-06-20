@@ -100,7 +100,7 @@ namespace BalhamCollege
             DataRow updateAssessmentRow = dtAssessment2.Rows[cmAssessment.Position];
 
             // Validate the entries in the fields
-            if ((nudNumber.Text == "") || (txtAssessmentName.Text == "") || (cboType.Text == "") || (nudWeighting.Text == "") || (nudMaximumMark.Text == ""))
+            if ((lstAssessments.SelectedItem == null) || (nudNumber.Text == "") || (txtAssessmentName.Text == "") || (cboType.Text == "") || (nudWeighting.Text == "") || (nudMaximumMark.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

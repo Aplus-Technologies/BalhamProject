@@ -98,7 +98,7 @@ namespace BalhamCollege
             DataRow updateCourseRow = dtCourse2.Rows[cmCourse.Position];
 
             // Validate the entries in the fields
-            if ((txtCourseName.Text == "") || (nudCredits.Text == "") || (cboStatus.Text == "") || (nudFee.Text == ""))
+            if ((lstCourses.SelectedItem == null) || (txtCourseName.Text == "") || (nudCredits.Text == "") || (cboStatus.Text == "") || (nudFee.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -170,35 +170,38 @@ namespace BalhamCollege
 
         private void btnWithdrawStudent_Click(object sender, EventArgs e)
         {
-            // 0 - index of the "Enrolment ID" column of the DGV
-            object enrolmentID = dgvEnrolments.CurrentRow.Cells[0].Value;
-            cmEnrolment.Position = enrolmentView2.Find(enrolmentID);
-            DataRow deleteEnrolmentRow = dtEnrolment2.Rows[cmEnrolment.Position];
+            if (lstStudents.SelectedItem != null)
+            {
+                // 0 - index of the "Enrolment ID" column of the DGV
+                object enrolmentID = dgvEnrolments.CurrentRow.Cells[0].Value;
+                cmEnrolment.Position = enrolmentView2.Find(enrolmentID);
+                DataRow deleteEnrolmentRow = dtEnrolment2.Rows[cmEnrolment.Position];
 
-            this.eNROLMENTTableAdapter.Delete(
-                Convert.ToInt32(deleteEnrolmentRow["EnrolmentID"]),
-                Convert.ToInt32(deleteEnrolmentRow["Year"]),
-                Convert.ToInt32(deleteEnrolmentRow["Semester"]),
-                                deleteEnrolmentRow["Status"].ToString(),
-                Convert.ToInt32(deleteEnrolmentRow["StudentID"]),
-                Convert.ToInt32(deleteEnrolmentRow["CourseID"]));
+                this.eNROLMENTTableAdapter.Delete(
+                    Convert.ToInt32(deleteEnrolmentRow["EnrolmentID"]),
+                    Convert.ToInt32(deleteEnrolmentRow["Year"]),
+                    Convert.ToInt32(deleteEnrolmentRow["Semester"]),
+                                    deleteEnrolmentRow["Status"].ToString(),
+                    Convert.ToInt32(deleteEnrolmentRow["StudentID"]),
+                    Convert.ToInt32(deleteEnrolmentRow["CourseID"]));
 
-            this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
+                this.dsBalhamCollegeAzure.AcceptChanges(); // prevent system exception error 
 
-            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
-            this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
-            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ENROLMENT' table. You can move, or remove it, as needed.
-            this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
-            // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
-            this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.COURSE' table. You can move, or remove it, as needed.
+                this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.ENROLMENT' table. You can move, or remove it, as needed.
+                this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
+                // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.STUDENT' table. You can move, or remove it, as needed.
+                this.sTUDENTTableAdapter.Fill(this.dsBalhamCollegeAzure.STUDENT);
 
-            // Refresh the DataGrid before the message
-            GetEnrolments();
+                // Refresh the DataGrid before the message
+                GetEnrolments();
 
-            MessageBox.Show("Student withdrawn successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Student withdrawn successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            LoadStudents();
-            ClearFields();
+                LoadStudents();
+                ClearFields();
+            }
         }
 
         private void btnReturn_Click(object sender, EventArgs e)

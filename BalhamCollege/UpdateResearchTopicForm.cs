@@ -83,7 +83,7 @@ namespace BalhamCollege
             DataRow updateResearchTopicRow = dtResearchTopic2.Rows[cmResearchTopic.Position];
 
             // Validate the entries in the fields
-            if ((txtTopicDescription.Text == "") || (cboImpact.Text == ""))
+            if ((lstResearchTopics.SelectedItem == null) || (txtTopicDescription.Text == "") || (cboImpact.Text == ""))
             {
                 MessageBox.Show("Please fill in all fields correctly", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
