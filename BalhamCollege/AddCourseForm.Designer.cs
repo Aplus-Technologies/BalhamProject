@@ -250,7 +250,7 @@ namespace BalhamCollege
             // 
             // txtPlaceHolder
             // 
-            this.txtPlaceHolder.Location = new System.Drawing.Point(156, 225);
+            this.txtPlaceHolder.Location = new System.Drawing.Point(156, 221);
             this.txtPlaceHolder.MaxLength = 50;
             this.txtPlaceHolder.Multiline = true;
             this.txtPlaceHolder.Name = "txtPlaceHolder";
@@ -279,7 +279,10 @@ namespace BalhamCollege
             // 
             // cboProgramme
             // 
+            this.cboProgramme.BackColor = System.Drawing.Color.White;
             this.cboProgramme.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProgramme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboProgramme.ForeColor = System.Drawing.SystemColors.InfoText;
             this.cboProgramme.FormattingEnabled = true;
             this.cboProgramme.Location = new System.Drawing.Point(156, 224);
             this.cboProgramme.Name = "cboProgramme";
