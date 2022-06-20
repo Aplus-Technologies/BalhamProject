@@ -17,7 +17,7 @@ namespace BalhamCollege
         private ResearchAdministratorForm frmResearchAdminForm;
         private CurrencyManager cmLecturer;
         private CurrencyManager cmProject;
-        private CurrencyManager cmTopic;
+        private CurrencyManager cmTopic; 
 
         private DataTable dtLecturer2; // reference to lecturer table
         private DataView lecturerView2;  // reference to dataview of lecturer table 
@@ -33,29 +33,32 @@ namespace BalhamCollege
             InitializeComponent();
             DC = dc;
             frmResearchAdminForm = resAdmin;
-            frmResearchAdminForm.Hide();
+            frmResearchAdminForm.Hide(); // hide Research Administrator menu 
             TableAndView(); // generate updated tables and views
-            BindControls(); 
+            BindControls(); // call BindControls function
 
         }
 
         public void BindControls()
-        { // create instance of currency manager for Lecturer table 
+        { // create instances of the currency manager for Lecturer table, research project table and research topic table
             cmLecturer = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "LECTURER"];
             cmProject = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "RESEARCHPROJECT"];
             cmTopic = (CurrencyManager)this.BindingContext[dsBalhamCollegeAzure, "RESEARCHTOPIC"];
         }
 
         private void TableAndView()
-        { // generate instances of lecturer table and dataview of lecturer table 
+        {
+            // generate instances of lecturer table and dataview of lecturer table 
             dtLecturer2 = dsBalhamCollegeAzure.LECTURER;
             lecturerView2 = new DataView(dtLecturer2);
             lecturerView2.Sort = "LecturerID";
-
+        
+            // generate instances of research project table and dataview of research project table 
             dtResearchProject2 = dsBalhamCollegeAzure.RESEARCHPROJECT;
             researchProjectView2 = new DataView(dtResearchProject2);
             researchProjectView2.Sort = "ResearchProjectID";
-
+        
+            // generate instances of the research topic table and dataview of research topic table 
             dtResearchTopic2 = dsBalhamCollegeAzure.RESEARCHTOPIC;
             researchTopicView2 = new DataView(dtResearchTopic2);
             researchTopicView2.Sort = "TopicID"; 
@@ -63,7 +66,7 @@ namespace BalhamCollege
 
         private void LoadLecturers()
         {
-            // To load all lecturers
+            // To load all lecturers and populate lecturer list
             string lecturerText;
             foreach (DataRow drLecturer in dtLecturer2.Rows)
             {
@@ -78,7 +81,7 @@ namespace BalhamCollege
         }
 
         private void ClearFields()
-        { // Clears all controls
+        { // Clears all controls and set default values
             txtLecturerID.Text = "";
             txtLastName.Text = "";
             txtFirstName.Text = "";
@@ -91,7 +94,7 @@ namespace BalhamCollege
         } 
 
         private void GetProjects()
-        {
+        {// customize the information that will be displayed in the datagrid for Research Projects
             DataTable projectsA = new DataTable();
             projectsA.Columns.Add("Output", typeof(string));
             projectsA.Columns.Add("Research Project Description", typeof(string));
@@ -114,12 +117,12 @@ namespace BalhamCollege
             }
           
            dgvResearchProjects.DataSource = projectsA;  // the data table created previously 
-           dgvResearchProjects.Columns[0].Width = 100;
-           dgvResearchProjects.Columns[1].Width = 319;
-           dgvResearchProjects.Columns[2].Width = 305;
+           dgvResearchProjects.Columns[0].Width = 100;  // set column[0] width
+           dgvResearchProjects.Columns[1].Width = 319;  // set column[1] width
+           dgvResearchProjects.Columns[2].Width = 305;  // set column[2] width
 
-           dgvResearchProjects.DefaultCellStyle.SelectionBackColor = Color.White;
-           dgvResearchProjects.DefaultCellStyle.SelectionForeColor = Color.Black;
+           dgvResearchProjects.DefaultCellStyle.SelectionBackColor = Color.White; // set backcolor of datagrid
+           dgvResearchProjects.DefaultCellStyle.SelectionForeColor = Color.Black; // set forecolor of datagrid
         }
 
         
@@ -147,16 +150,14 @@ namespace BalhamCollege
                 dgvResearchTopics.Columns[0].Width = 80; // set column[0] width
                 dgvResearchTopics.Columns[1].Width = 418; // set column[1] width
                 dgvResearchTopics.Columns[2].Width = 88;  // set column[2] width
-               
-               
-
-                GetProjects();
+                             
+                GetProjects();  // call the GetProjects function
 
             }
         }
 
         private void lECTURERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { // functions for navigator bar 
             this.Validate();
             this.lECTURERBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -172,19 +173,18 @@ namespace BalhamCollege
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.LECTURER' table. You can move, or remove it, as needed.
             this.lECTURERTableAdapter.Fill(this.dsBalhamCollegeAzure.LECTURER);
 
-            dgvResearchProjects.DataSource = "";
-            dgvResearchTopics.DataSource = ""; 
-            ClearFields(); 
-            lstLecturers.Items.Clear();
-            LoadLecturers();
+            dgvResearchProjects.DataSource = "";   // clear datagrid for research projects
+            dgvResearchTopics.DataSource = "";     // clear datagrid for research topics
+            ClearFields();    // clear controls
+            lstLecturers.Items.Clear();   // clear lecturer list
+            LoadLecturers();   // load lecturer list
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
             // closes form
-            Application.OpenForms["ResearchBackgroundForm"].Close();
-            this.Close();
+            Application.OpenForms["ResearchBackgroundForm"].Close(); // close background form
+            this.Close(); // close form 
             frmResearchAdminForm.Show(); // show Research Administrator menu 
         }
 
@@ -228,9 +228,9 @@ namespace BalhamCollege
                 MessageBox.Show("Research project added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // controls are reset to blank 
                
-                dgvResearchProjects.DataSource = "";
-                dgvResearchTopics.DataSource = ""; 
-                ClearFields();
+                dgvResearchProjects.DataSource = ""; // clear datagrid for research projects
+                dgvResearchTopics.DataSource = "";   // clear datagrid for research topics
+                ClearFields();  // clear controls 
             }
         }
     }

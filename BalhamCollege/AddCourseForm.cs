@@ -14,7 +14,7 @@ namespace BalhamCollege
     {
         //declare global variables
         private DataController DC;
-        private ProgrammeAdministratorForm frmProgramAdmin;
+        private ProgrammeAdministratorForm frmProgramAdmin;// reference to Programme Administrator Menu
        
         private DataTable dtProgramme2; // reference to programme table
         private DataView programmeView2; // reference to dataview of programme table 
@@ -26,7 +26,7 @@ namespace BalhamCollege
             InitializeComponent();
             DC = dc;
             frmProgramAdmin = progAdmin;
-            frmProgramAdmin.Hide();
+            frmProgramAdmin.Hide(); // hide programme administrator menu 
             TableAndView(); // generate updated table and views
             BindControls();
            
@@ -46,7 +46,7 @@ namespace BalhamCollege
       
 
         private void TableAndView()
-        { // generate table and view instances of programme table 
+        { // generate the table and view instances of programme table 
             dtProgramme2 = dsBalhamCollegeAzure.PROGRAMME;
             programmeView2 = new DataView(dtProgramme2);
             programmeView2.Sort = "ProgrammeID"; 
@@ -67,15 +67,15 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             // closes form
-            Application.OpenForms["ProgrammeBackgroundForm"].Close();
-            this.Close();
+            Application.OpenForms["ProgrammeBackgroundForm"].Close(); // close background form 
+            this.Close(); // close the form 
             frmProgramAdmin.Show(); // show Program Administrator menu 
         }
 
        
 
         private void pROGRAMMEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        { // navigator bar functions
             this.Validate();
             this.pROGRAMMEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -88,9 +88,7 @@ namespace BalhamCollege
             this.cOURSETableAdapter.Fill(this.dsBalhamCollegeAzure.COURSE);
             // TODO: This line of code loads data into the 'dsBalhamCollegeAzure.PROGRAMME' table. You can move, or remove it, as needed.
             this.pROGRAMMETableAdapter.Fill(this.dsBalhamCollegeAzure.PROGRAMME);
-           
-            
-           // txtProgrammeID.Visible = false;
+          
             txtPlaceHolder2.Visible = true;
             txtPlaceHolder.Visible = true; 
             ClearFields(); 

@@ -21,7 +21,7 @@ namespace BalhamCollege
             // call the following functions upon form initialization 
             DC = dc;
            frmProgramAdmin = progAdmin;
-           frmProgramAdmin.Hide();
+           frmProgramAdmin.Hide(); // hide programme administrator menu 
         }
 
         private void ClearFields()
@@ -31,7 +31,7 @@ namespace BalhamCollege
         }
 
         private void pROGRAMMEBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        {// functions of navigator bar
             this.Validate();
             this.pROGRAMMEBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dsBalhamCollegeAzure);
@@ -48,7 +48,7 @@ namespace BalhamCollege
         private void btnReturn_Click(object sender, EventArgs e)
         {
             // returns user back to Programme Administrator menu
-            Application.OpenForms["ProgrammeBackgroundForm"].Close();
+            Application.OpenForms["ProgrammeBackgroundForm"].Close(); // close background form 
             this.Close(); // close current form 
             frmProgramAdmin.Show(); // show Programme Administrator menu
         }
