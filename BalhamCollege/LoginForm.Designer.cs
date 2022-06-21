@@ -33,12 +33,6 @@ namespace BalhamCollege
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnCourseAdmin = new System.Windows.Forms.Button();
-            this.btnStudentSupport = new System.Windows.Forms.Button();
-            this.btnHumanResources = new System.Windows.Forms.Button();
-            this.btnProgrammeAdmin = new System.Windows.Forms.Button();
-            this.btnResearchAdmin = new System.Windows.Forms.Button();
-            this.btnEnrolmentsAdmin = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgot = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,84 +68,6 @@ namespace BalhamCollege
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(144, 13);
             this.txtUsername.TabIndex = 1;
-            // 
-            // btnCourseAdmin
-            // 
-            this.btnCourseAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCourseAdmin.Location = new System.Drawing.Point(725, 50);
-            this.btnCourseAdmin.Name = "btnCourseAdmin";
-            this.btnCourseAdmin.Size = new System.Drawing.Size(164, 44);
-            this.btnCourseAdmin.TabIndex = 4;
-            this.btnCourseAdmin.Text = "Course Admin";
-            this.btnCourseAdmin.UseVisualStyleBackColor = true;
-            this.btnCourseAdmin.Click += new System.EventHandler(this.btnCourseAdmin_Click);
-            // 
-            // btnStudentSupport
-            // 
-            this.btnStudentSupport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStudentSupport.Location = new System.Drawing.Point(725, 154);
-            this.btnStudentSupport.Name = "btnStudentSupport";
-            this.btnStudentSupport.Size = new System.Drawing.Size(164, 40);
-            this.btnStudentSupport.TabIndex = 6;
-            this.btnStudentSupport.Text = "Student Support";
-            this.btnStudentSupport.UseVisualStyleBackColor = true;
-            this.btnStudentSupport.Click += new System.EventHandler(this.btnStudentSupport_Click);
-            // 
-            // btnHumanResources
-            // 
-            this.btnHumanResources.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHumanResources.Location = new System.Drawing.Point(725, 100);
-            this.btnHumanResources.Name = "btnHumanResources";
-            this.btnHumanResources.Size = new System.Drawing.Size(164, 45);
-            this.btnHumanResources.TabIndex = 5;
-            this.btnHumanResources.Text = "Human Resources";
-            this.btnHumanResources.UseVisualStyleBackColor = true;
-            this.btnHumanResources.Click += new System.EventHandler(this.btnHumanResources_Click);
-            // 
-            // btnProgrammeAdmin
-            // 
-            this.btnProgrammeAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProgrammeAdmin.Location = new System.Drawing.Point(725, 200);
-            this.btnProgrammeAdmin.Name = "btnProgrammeAdmin";
-            this.btnProgrammeAdmin.Size = new System.Drawing.Size(164, 45);
-            this.btnProgrammeAdmin.TabIndex = 7;
-            this.btnProgrammeAdmin.Text = "Programme Admin";
-            this.btnProgrammeAdmin.UseVisualStyleBackColor = true;
-            this.btnProgrammeAdmin.Click += new System.EventHandler(this.btnProgrammeAdmin_Click);
-            // 
-            // btnResearchAdmin
-            // 
-            this.btnResearchAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnResearchAdmin.Location = new System.Drawing.Point(725, 251);
-            this.btnResearchAdmin.Name = "btnResearchAdmin";
-            this.btnResearchAdmin.Size = new System.Drawing.Size(164, 47);
-            this.btnResearchAdmin.TabIndex = 8;
-            this.btnResearchAdmin.Text = "Research Admin";
-            this.btnResearchAdmin.UseVisualStyleBackColor = true;
-            this.btnResearchAdmin.Click += new System.EventHandler(this.btnResearchAdmin_Click);
-            // 
-            // btnEnrolmentsAdmin
-            // 
-            this.btnEnrolmentsAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEnrolmentsAdmin.Location = new System.Drawing.Point(725, 304);
-            this.btnEnrolmentsAdmin.Name = "btnEnrolmentsAdmin";
-            this.btnEnrolmentsAdmin.Size = new System.Drawing.Size(164, 47);
-            this.btnEnrolmentsAdmin.TabIndex = 9;
-            this.btnEnrolmentsAdmin.Text = "Enrolments Clerk";
-            this.btnEnrolmentsAdmin.UseVisualStyleBackColor = true;
-            this.btnEnrolmentsAdmin.Click += new System.EventHandler(this.btnEnrolmentsAdmin_Click);
             // 
             // btnLogin
             // 
@@ -219,12 +135,6 @@ namespace BalhamCollege
             this.ClientSize = new System.Drawing.Size(963, 537);
             this.Controls.Add(this.btnForgot);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnEnrolmentsAdmin);
-            this.Controls.Add(this.btnResearchAdmin);
-            this.Controls.Add(this.btnProgrammeAdmin);
-            this.Controls.Add(this.btnHumanResources);
-            this.Controls.Add(this.btnStudentSupport);
-            this.Controls.Add(this.btnCourseAdmin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
@@ -246,12 +156,6 @@ namespace BalhamCollege
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnCourseAdmin;
-        private System.Windows.Forms.Button btnStudentSupport;
-        private System.Windows.Forms.Button btnHumanResources;
-        private System.Windows.Forms.Button btnProgrammeAdmin;
-        private System.Windows.Forms.Button btnResearchAdmin;
-        private System.Windows.Forms.Button btnEnrolmentsAdmin;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnForgot;
         private System.Windows.Forms.Timer timer1;

@@ -26,14 +26,7 @@ namespace BalhamCollege
         private Rectangle btnLoginOriginalRect;
         private Rectangle btnForgotOriginalRect;
          
-        // will delete line 30-35 when testing is finished
-        private Rectangle btnCourseAdminOriginalRect;
-        private Rectangle btnStudentSupportOriginalRect;
-        private Rectangle btnHumanResOriginalRect;
-        private Rectangle btnProgAdminOriginalRect;
-        private Rectangle btnResAdminOriginalRect;
-        private Rectangle btnEnrolmentsClerkOriginalRect;
-
+        
         private Size formOriginalSize;
 
         public LoginForm()
@@ -54,15 +47,7 @@ namespace BalhamCollege
             txtPasswordOriginalRect = new Rectangle(txtPassword.Location.X, txtPassword.Location.Y, txtPassword.Width, txtPassword.Height);
             btnLoginOriginalRect = new Rectangle(btnLogin.Location.X, btnLogin.Location.Y, btnLogin.Width, btnLogin.Height);
             btnForgotOriginalRect = new Rectangle(btnForgot.Location.X, btnForgot.Location.Y, btnForgot.Width, btnForgot.Height);
-          
-            // delete the following lines until end of block (for autoresizing of buttons, original button location and size)
-            btnCourseAdminOriginalRect = new Rectangle(btnCourseAdmin.Location.X, btnCourseAdmin.Location.Y, btnCourseAdmin.Width, btnCourseAdmin.Height);
-            btnStudentSupportOriginalRect = new Rectangle(btnStudentSupport.Location.X, btnStudentSupport.Location.Y, btnStudentSupport.Width, btnStudentSupport.Height);
-            btnHumanResOriginalRect = new Rectangle(btnHumanResources.Location.X, btnHumanResources.Location.Y, btnHumanResources.Width, btnHumanResources.Height);
-            btnProgAdminOriginalRect = new Rectangle(btnProgrammeAdmin.Location.X, btnProgrammeAdmin.Location.Y, btnProgrammeAdmin.Width, btnProgrammeAdmin.Height);
-            btnResAdminOriginalRect = new Rectangle(btnResearchAdmin.Location.X, btnResearchAdmin.Location.Y, btnResearchAdmin.Width, btnResearchAdmin.Height);
-            btnEnrolmentsClerkOriginalRect = new Rectangle(btnEnrolmentsAdmin.Location.X, btnEnrolmentsAdmin.Location.Y, btnEnrolmentsAdmin.Width, btnEnrolmentsAdmin.Height);
-
+                   
             //open form maximized 
             if (this.WindowState == FormWindowState.Normal)
             {  // open form to maximize after 1 sec interval 
@@ -81,14 +66,6 @@ namespace BalhamCollege
             resizeControl(btnLoginOriginalRect, btnLogin);
             resizeControl(btnForgotOriginalRect, btnForgot);
            
-            // delete the following lines until the end of the block after testing is over
-            resizeControl(btnCourseAdminOriginalRect, btnCourseAdmin);
-            resizeControl(btnStudentSupportOriginalRect, btnStudentSupport);
-            resizeControl(btnHumanResOriginalRect, btnHumanResources);
-            resizeControl(btnProgAdminOriginalRect, btnProgrammeAdmin);
-            resizeControl(btnResAdminOriginalRect, btnResearchAdmin);
-            resizeControl(btnEnrolmentsClerkOriginalRect, btnEnrolmentsAdmin);
-
         }
 
         private void resizeControl(Rectangle OriginalControlRect, Control control)
@@ -163,71 +140,14 @@ namespace BalhamCollege
         }
 
 
-
-        private void btnCourseAdmin_Click(object sender, EventArgs e)
-        {
-            if (frmCourseAdministrator == null)
-            {
-                frmCourseAdministrator = new CourseAdministratorForm(DC, this);
-            }
-            ClearFields();
-            frmCourseAdministrator.ShowDialog();
-        }
-
-        private void btnStudentSupport_Click(object sender, EventArgs e)
-        {
-            if (frmStudentsSupportClerk == null)
-            {
-                frmStudentsSupportClerk = new StudentsSupportClerkForm(DC, this);
-            }
-            ClearFields();
-            frmStudentsSupportClerk.ShowDialog();
-        }
-
-        private void btnHumanResources_Click(object sender, EventArgs e)
-        {
-            if (frmHumanResourcesClerk == null)
-            {
-                frmHumanResourcesClerk = new HumanResourcesClerkForm(DC, this);
-            }
-            ClearFields();
-            frmHumanResourcesClerk.ShowDialog();
-        }
-
-        private void btnProgrammeAdmin_Click(object sender, EventArgs e)
-        {
-            if (frmProgramAdministrator == null)
-            {
-                frmProgramAdministrator = new ProgrammeAdministratorForm(DC, this);
-            }
-            ClearFields();
-            frmProgramAdministrator.ShowDialog();
-        }
-
-        private void btnResearchAdmin_Click(object sender, EventArgs e)
-        {
-            if (frmResearchAdministrator == null)
-            {
-                frmResearchAdministrator = new ResearchAdministratorForm(DC, this);
-            }
-            ClearFields();
-            frmResearchAdministrator.ShowDialog();
-        }
-
-        private void btnEnrolmentsAdmin_Click(object sender, EventArgs e)
-        {
-            if (frmEnrolmentClerk == null)
-            {
-                frmEnrolmentClerk = new EnrolmentsClerkForm(DC, this);
-            }
-            ClearFields();
-            frmEnrolmentClerk.ShowDialog();
-        }
-
         // system checks username and password combination and takes user to matching page
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "enrol" && txtPassword.Text == "enrol123")
+            // remove whitespace from input of username and password
+            String txtUsernameTrim = String.Concat(txtUsername.Text.Where(c => !Char.IsWhiteSpace(c)));
+            String txtPasswordTrim = String.Concat(txtPassword.Text.Where(c => !Char.IsWhiteSpace(c)));
+
+            if (txtUsernameTrim == "enrol" && txtPasswordTrim == "enrol123")
             {
                 if (frmEnrolmentClerk == null)
                 {
@@ -236,7 +156,7 @@ namespace BalhamCollege
                 ClearFields();
                 frmEnrolmentClerk.ShowDialog();
             }
-            else if (txtUsername.Text == "course" && txtPassword.Text == "course123")
+            else if (txtUsernameTrim == "course" && txtPasswordTrim == "course123")
             {
                 if (frmCourseAdministrator == null)
                 {
@@ -245,7 +165,7 @@ namespace BalhamCollege
                 ClearFields();
                 frmCourseAdministrator.ShowDialog();
             }
-            else if (txtUsername.Text == "human" && txtPassword.Text == "human123")
+            else if (txtUsernameTrim == "human" && txtPasswordTrim == "human123")
             {
                 if (frmHumanResourcesClerk == null)
                 {
@@ -254,7 +174,7 @@ namespace BalhamCollege
                 ClearFields();
                 frmHumanResourcesClerk.ShowDialog();
             }
-            else if (txtUsername.Text == "programme" && txtPassword.Text == "programme123")
+            else if (txtUsernameTrim == "programme" && txtPasswordTrim == "programme123")
             {
                 if (frmProgramAdministrator == null)
                 {
@@ -263,7 +183,7 @@ namespace BalhamCollege
                 ClearFields();
                 frmProgramAdministrator.ShowDialog();
             }
-            else if (txtUsername.Text == "research" && txtPassword.Text == "research123")
+            else if (txtUsernameTrim == "research" && txtPasswordTrim == "research123")
             {
                 if (frmResearchAdministrator == null)
                 {
@@ -272,7 +192,7 @@ namespace BalhamCollege
                 ClearFields();
                 frmResearchAdministrator.ShowDialog();
             }
-            else if (txtUsername.Text == "student" && txtPassword.Text == "student123")
+            else if (txtUsernameTrim == "student" && txtPasswordTrim == "student123")
             {
                 if (frmStudentsSupportClerk == null)
                 {
