@@ -154,7 +154,7 @@ namespace BalhamCollege
 
         private void LoadEnrolments()
         {
-          //  numMark.Maximum = Convert.ToInt32(txtMaximumMark.Text); // numMark maximum value is equal to the assessment mark maximum value
+            numMark.Maximum = Convert.ToInt32(txtMaximumMark.Text); // numMark maximum value is equal to the assessment mark maximum value
             this.eNROLMENTTableAdapter.Fill(this.dsBalhamCollegeAzure.ENROLMENT);
             this.studentTableAdapter1.Fill(this.dsBalhamCollegeAzure.STUDENT);
             DataTable enrolments = new DataTable();
@@ -232,7 +232,7 @@ namespace BalhamCollege
             txtMaximumMark.Text = "";
             numMark.Value = 0;
             dtpDate.Text = "";
-         // errorProvider1.Clear();   //Clears the information icon
+            errorProvider1.Clear();   //Clears the information icon
         }
         private void dgvEnrolments_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -304,8 +304,8 @@ namespace BalhamCollege
         // Display information icon beside numMark when user leaves the number up down
         private void numMark_Leave(object sender, EventArgs e)
         {
-           // errorProvider1.SetError(this.numMark, "Maximum mark cannot exceed the assessment maximum mark");
-          //  errorProvider1.SetIconPadding(this.numMark, 3);
+              errorProvider1.SetError(this.numMark, "Maximum mark cannot exceed the assessment maximum mark");
+              errorProvider1.SetIconPadding(this.numMark, 3);
         }
     }
 }
