@@ -140,7 +140,7 @@ namespace BalhamCollege
             this.txtStreetAddress.Name = "txtStreetAddress";
             this.txtStreetAddress.ReadOnly = true;
             this.txtStreetAddress.Size = new System.Drawing.Size(284, 26);
-            this.txtStreetAddress.TabIndex = 23;
+            this.txtStreetAddress.TabIndex = 26;
             // 
             // txtStudentID
             // 
@@ -185,7 +185,7 @@ namespace BalhamCollege
             this.txtcity.Name = "txtcity";
             this.txtcity.ReadOnly = true;
             this.txtcity.Size = new System.Drawing.Size(248, 26);
-            this.txtcity.TabIndex = 30;
+            this.txtcity.TabIndex = 32;
             // 
             // dgvStudents
             // 
@@ -195,7 +195,7 @@ namespace BalhamCollege
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
             this.dgvStudents.Size = new System.Drawing.Size(750, 255);
-            this.dgvStudents.TabIndex = 34;
+            this.dgvStudents.TabIndex = 21;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
             // dgvEnrolments
@@ -206,7 +206,7 @@ namespace BalhamCollege
             this.dgvEnrolments.RowHeadersWidth = 51;
             this.dgvEnrolments.RowTemplate.Height = 24;
             this.dgvEnrolments.Size = new System.Drawing.Size(589, 250);
-            this.dgvEnrolments.TabIndex = 35;
+            this.dgvEnrolments.TabIndex = 33;
             this.dgvEnrolments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnrolments_CellClick);
             // 
             // label7
@@ -233,7 +233,7 @@ namespace BalhamCollege
             this.txtIssueDescription.Multiline = true;
             this.txtIssueDescription.Name = "txtIssueDescription";
             this.txtIssueDescription.Size = new System.Drawing.Size(302, 99);
-            this.txtIssueDescription.TabIndex = 38;
+            this.txtIssueDescription.TabIndex = 34;
             // 
             // txtActionTaken
             // 
@@ -241,7 +241,7 @@ namespace BalhamCollege
             this.txtActionTaken.Multiline = true;
             this.txtActionTaken.Name = "txtActionTaken";
             this.txtActionTaken.Size = new System.Drawing.Size(302, 99);
-            this.txtActionTaken.TabIndex = 39;
+            this.txtActionTaken.TabIndex = 36;
             // 
             // label10
             // 
@@ -258,7 +258,7 @@ namespace BalhamCollege
             this.dtpIssueDate.Location = new System.Drawing.Point(1099, 398);
             this.dtpIssueDate.Name = "dtpIssueDate";
             this.dtpIssueDate.Size = new System.Drawing.Size(109, 26);
-            this.dtpIssueDate.TabIndex = 42;
+            this.dtpIssueDate.TabIndex = 35;
             // 
             // btnRecordIssue
             // 
@@ -267,7 +267,7 @@ namespace BalhamCollege
             this.btnRecordIssue.Location = new System.Drawing.Point(1033, 519);
             this.btnRecordIssue.Name = "btnRecordIssue";
             this.btnRecordIssue.Size = new System.Drawing.Size(187, 40);
-            this.btnRecordIssue.TabIndex = 43;
+            this.btnRecordIssue.TabIndex = 37;
             this.btnRecordIssue.Text = "Record Issue";
             this.btnRecordIssue.UseVisualStyleBackColor = false;
             this.btnRecordIssue.Click += new System.EventHandler(this.btnRecordIssue_Click);
@@ -279,7 +279,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(1033, 579);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(187, 40);
-            this.btnReturn.TabIndex = 44;
+            this.btnReturn.TabIndex = 38;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);

@@ -68,7 +68,7 @@ namespace BalhamCollege
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
             this.txtAssessmentName.Size = new System.Drawing.Size(323, 26);
-            this.txtAssessmentName.TabIndex = 142;
+            this.txtAssessmentName.TabIndex = 4;
             // 
             // lblAssessmentName
             // 
@@ -86,7 +86,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(339, 387);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(134, 40);
-            this.btnReturn.TabIndex = 3;
+            this.btnReturn.TabIndex = 8;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -98,7 +98,7 @@ namespace BalhamCollege
             this.btnDeleteAssessment.Location = new System.Drawing.Point(19, 387);
             this.btnDeleteAssessment.Name = "btnDeleteAssessment";
             this.btnDeleteAssessment.Size = new System.Drawing.Size(159, 40);
-            this.btnDeleteAssessment.TabIndex = 2;
+            this.btnDeleteAssessment.TabIndex = 7;
             this.btnDeleteAssessment.Text = "Delete Assessment";
             this.btnDeleteAssessment.UseVisualStyleBackColor = false;
             this.btnDeleteAssessment.Click += new System.EventHandler(this.btnDeleteAssessment_Click);
@@ -110,7 +110,7 @@ namespace BalhamCollege
             this.txtType.Name = "txtType";
             this.txtType.ReadOnly = true;
             this.txtType.Size = new System.Drawing.Size(106, 26);
-            this.txtType.TabIndex = 138;
+            this.txtType.TabIndex = 5;
             // 
             // txtAssessmentNumber
             // 
@@ -119,7 +119,7 @@ namespace BalhamCollege
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
             this.txtAssessmentNumber.Size = new System.Drawing.Size(19, 26);
-            this.txtAssessmentNumber.TabIndex = 137;
+            this.txtAssessmentNumber.TabIndex = 3;
             // 
             // txtCourseName
             // 
@@ -128,7 +128,7 @@ namespace BalhamCollege
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(323, 26);
-            this.txtCourseName.TabIndex = 136;
+            this.txtCourseName.TabIndex = 6;
             // 
             // txtAssessmentID
             // 
@@ -137,7 +137,7 @@ namespace BalhamCollege
             this.txtAssessmentID.Name = "txtAssessmentID";
             this.txtAssessmentID.ReadOnly = true;
             this.txtAssessmentID.Size = new System.Drawing.Size(33, 26);
-            this.txtAssessmentID.TabIndex = 135;
+            this.txtAssessmentID.TabIndex = 2;
             // 
             // lblType
             // 

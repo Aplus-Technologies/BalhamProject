@@ -63,7 +63,7 @@ namespace BalhamCollege
             this.txtTopicDescription.Name = "txtTopicDescription";
             this.txtTopicDescription.ReadOnly = true;
             this.txtTopicDescription.Size = new System.Drawing.Size(361, 47);
-            this.txtTopicDescription.TabIndex = 162;
+            this.txtTopicDescription.TabIndex = 3;
             // 
             // lblTopicDescription
             // 
@@ -83,7 +83,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 40);
-            this.btnReturn.TabIndex = 3;
+            this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -96,7 +96,7 @@ namespace BalhamCollege
             this.btnDeleteResearchTopic.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteResearchTopic.Name = "btnDeleteResearchTopic";
             this.btnDeleteResearchTopic.Size = new System.Drawing.Size(159, 40);
-            this.btnDeleteResearchTopic.TabIndex = 2;
+            this.btnDeleteResearchTopic.TabIndex = 5;
             this.btnDeleteResearchTopic.Text = "Delete Research Topic";
             this.btnDeleteResearchTopic.UseVisualStyleBackColor = false;
             this.btnDeleteResearchTopic.Click += new System.EventHandler(this.btnDeleteResearchTopic_Click);
@@ -109,7 +109,7 @@ namespace BalhamCollege
             this.txtImpact.Name = "txtImpact";
             this.txtImpact.ReadOnly = true;
             this.txtImpact.Size = new System.Drawing.Size(73, 26);
-            this.txtImpact.TabIndex = 158;
+            this.txtImpact.TabIndex = 4;
             // 
             // txtResearchTopicID
             // 
@@ -119,7 +119,7 @@ namespace BalhamCollege
             this.txtResearchTopicID.Name = "txtResearchTopicID";
             this.txtResearchTopicID.ReadOnly = true;
             this.txtResearchTopicID.Size = new System.Drawing.Size(26, 26);
-            this.txtResearchTopicID.TabIndex = 100;
+            this.txtResearchTopicID.TabIndex = 2;
             // 
             // lblImpact
             // 

@@ -120,7 +120,7 @@ namespace BalhamCollege
             this.txtAssessmentNumber.Name = "txtAssessmentNumber";
             this.txtAssessmentNumber.ReadOnly = true;
             this.txtAssessmentNumber.Size = new System.Drawing.Size(32, 26);
-            this.txtAssessmentNumber.TabIndex = 12;
+            this.txtAssessmentNumber.TabIndex = 2;
             // 
             // txtCourseName
             // 
@@ -129,7 +129,7 @@ namespace BalhamCollege
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(284, 26);
-            this.txtCourseName.TabIndex = 13;
+            this.txtCourseName.TabIndex = 5;
             // 
             // txtAssessmentName
             // 
@@ -139,7 +139,7 @@ namespace BalhamCollege
             this.txtAssessmentName.Name = "txtAssessmentName";
             this.txtAssessmentName.ReadOnly = true;
             this.txtAssessmentName.Size = new System.Drawing.Size(284, 26);
-            this.txtAssessmentName.TabIndex = 14;
+            this.txtAssessmentName.TabIndex = 3;
             // 
             // txtMaximumMark
             // 
@@ -148,7 +148,7 @@ namespace BalhamCollege
             this.txtMaximumMark.Name = "txtMaximumMark";
             this.txtMaximumMark.ReadOnly = true;
             this.txtMaximumMark.Size = new System.Drawing.Size(66, 26);
-            this.txtMaximumMark.TabIndex = 15;
+            this.txtMaximumMark.TabIndex = 4;
             // 
             // label2
             // 
@@ -211,7 +211,7 @@ namespace BalhamCollege
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(112, 26);
-            this.dtpDate.TabIndex = 24;
+            this.dtpDate.TabIndex = 8;
             // 
             // numMark
             // 
@@ -224,7 +224,7 @@ namespace BalhamCollege
             0});
             this.numMark.Name = "numMark";
             this.numMark.Size = new System.Drawing.Size(48, 26);
-            this.numMark.TabIndex = 25;
+            this.numMark.TabIndex = 7;
             this.numMark.Leave += new System.EventHandler(this.numMark_Leave);
             // 
             // btnEnterResult
@@ -235,7 +235,7 @@ namespace BalhamCollege
             this.btnEnterResult.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnEnterResult.Name = "btnEnterResult";
             this.btnEnterResult.Size = new System.Drawing.Size(180, 50);
-            this.btnEnterResult.TabIndex = 26;
+            this.btnEnterResult.TabIndex = 9;
             this.btnEnterResult.Text = "Enter Result";
             this.btnEnterResult.UseVisualStyleBackColor = false;
             this.btnEnterResult.Click += new System.EventHandler(this.btnEnterResult_Click);
@@ -248,7 +248,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(180, 50);
-            this.btnReturn.TabIndex = 27;
+            this.btnReturn.TabIndex = 10;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -283,7 +283,7 @@ namespace BalhamCollege
             this.dgvAssessments.RowHeadersWidth = 51;
             this.dgvAssessments.RowTemplate.Height = 24;
             this.dgvAssessments.Size = new System.Drawing.Size(750, 215);
-            this.dgvAssessments.TabIndex = 28;
+            this.dgvAssessments.TabIndex = 1;
             this.dgvAssessments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAssessments_CellClick);
             // 
             // cOURSEBindingSource
@@ -307,7 +307,7 @@ namespace BalhamCollege
             this.dgvEnrolments.RowHeadersWidth = 51;
             this.dgvEnrolments.RowTemplate.Height = 24;
             this.dgvEnrolments.Size = new System.Drawing.Size(750, 215);
-            this.dgvEnrolments.TabIndex = 29;
+            this.dgvEnrolments.TabIndex = 6;
             this.dgvEnrolments.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEnrolments_CellClick);
             // 
             // label7

@@ -62,7 +62,7 @@ namespace BalhamCollege
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
             this.txtProgrammeName.Size = new System.Drawing.Size(361, 26);
-            this.txtProgrammeName.TabIndex = 152;
+            this.txtProgrammeName.TabIndex = 3;
             // 
             // lblProgrammeName
             // 
@@ -82,7 +82,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 40);
-            this.btnReturn.TabIndex = 3;
+            this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -95,7 +95,7 @@ namespace BalhamCollege
             this.btnDeleteProgramme.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteProgramme.Name = "btnDeleteProgramme";
             this.btnDeleteProgramme.Size = new System.Drawing.Size(159, 40);
-            this.btnDeleteProgramme.TabIndex = 2;
+            this.btnDeleteProgramme.TabIndex = 5;
             this.btnDeleteProgramme.Text = "Delete Programme";
             this.btnDeleteProgramme.UseVisualStyleBackColor = false;
             this.btnDeleteProgramme.Click += new System.EventHandler(this.btnDeleteProgramme_Click);
@@ -108,7 +108,7 @@ namespace BalhamCollege
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
             this.txtLevel.Size = new System.Drawing.Size(29, 26);
-            this.txtLevel.TabIndex = 148;
+            this.txtLevel.TabIndex = 4;
             // 
             // txtProgrammeID
             // 
@@ -118,7 +118,7 @@ namespace BalhamCollege
             this.txtProgrammeID.Name = "txtProgrammeID";
             this.txtProgrammeID.ReadOnly = true;
             this.txtProgrammeID.Size = new System.Drawing.Size(29, 26);
-            this.txtProgrammeID.TabIndex = 147;
+            this.txtProgrammeID.TabIndex = 2;
             // 
             // lblLevel
             // 
