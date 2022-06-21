@@ -90,7 +90,7 @@ namespace BalhamCollege
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(159, 40);
-            this.btnReturn.TabIndex = 4;
+            this.btnReturn.TabIndex = 12;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.Return_Click);
@@ -103,7 +103,7 @@ namespace BalhamCollege
             this.btnRemoveLecturer.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemoveLecturer.Name = "btnRemoveLecturer";
             this.btnRemoveLecturer.Size = new System.Drawing.Size(159, 40);
-            this.btnRemoveLecturer.TabIndex = 3;
+            this.btnRemoveLecturer.TabIndex = 11;
             this.btnRemoveLecturer.Text = "Remove Lecturer";
             this.btnRemoveLecturer.UseVisualStyleBackColor = false;
             this.btnRemoveLecturer.Click += new System.EventHandler(this.btnRemoveLecturer_Click);
@@ -116,7 +116,7 @@ namespace BalhamCollege
             this.txtRole.Name = "txtRole";
             this.txtRole.ReadOnly = true;
             this.txtRole.Size = new System.Drawing.Size(96, 26);
-            this.txtRole.TabIndex = 123;
+            this.txtRole.TabIndex = 10;
             // 
             // txtFirstName
             // 
@@ -126,7 +126,7 @@ namespace BalhamCollege
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
             this.txtFirstName.Size = new System.Drawing.Size(214, 26);
-            this.txtFirstName.TabIndex = 122;
+            this.txtFirstName.TabIndex = 9;
             // 
             // txtLastName
             // 
@@ -136,7 +136,7 @@ namespace BalhamCollege
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
             this.txtLastName.Size = new System.Drawing.Size(214, 26);
-            this.txtLastName.TabIndex = 121;
+            this.txtLastName.TabIndex = 8;
             // 
             // txtLecturerID
             // 
@@ -146,7 +146,7 @@ namespace BalhamCollege
             this.txtLecturerID.Name = "txtLecturerID";
             this.txtLecturerID.ReadOnly = true;
             this.txtLecturerID.Size = new System.Drawing.Size(33, 26);
-            this.txtLecturerID.TabIndex = 120;
+            this.txtLecturerID.TabIndex = 7;
             // 
             // lblRole
             // 
@@ -197,7 +197,7 @@ namespace BalhamCollege
             this.lstLecturers.Margin = new System.Windows.Forms.Padding(4);
             this.lstLecturers.Name = "lstLecturers";
             this.lstLecturers.Size = new System.Drawing.Size(354, 224);
-            this.lstLecturers.TabIndex = 2;
+            this.lstLecturers.TabIndex = 6;
             this.lstLecturers.SelectedIndexChanged += new System.EventHandler(this.lstLecturers_SelectedIndexChanged);
             // 
             // label1
@@ -218,7 +218,7 @@ namespace BalhamCollege
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(80, 26);
-            this.txtStatus.TabIndex = 113;
+            this.txtStatus.TabIndex = 4;
             // 
             // txtProgrammeName
             // 
@@ -228,7 +228,7 @@ namespace BalhamCollege
             this.txtProgrammeName.Name = "txtProgrammeName";
             this.txtProgrammeName.ReadOnly = true;
             this.txtProgrammeName.Size = new System.Drawing.Size(361, 26);
-            this.txtProgrammeName.TabIndex = 112;
+            this.txtProgrammeName.TabIndex = 5;
             // 
             // txtCourseName
             // 
@@ -238,7 +238,7 @@ namespace BalhamCollege
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.ReadOnly = true;
             this.txtCourseName.Size = new System.Drawing.Size(361, 26);
-            this.txtCourseName.TabIndex = 111;
+            this.txtCourseName.TabIndex = 3;
             // 
             // txtCourseID
             // 
@@ -248,7 +248,7 @@ namespace BalhamCollege
             this.txtCourseID.Name = "txtCourseID";
             this.txtCourseID.ReadOnly = true;
             this.txtCourseID.Size = new System.Drawing.Size(38, 26);
-            this.txtCourseID.TabIndex = 110;
+            this.txtCourseID.TabIndex = 2;
             // 
             // lblStatus
             // 

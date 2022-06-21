@@ -76,7 +76,7 @@ namespace BalhamCollege
             this.btnReturn.Location = new System.Drawing.Point(559, 304);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(150, 40);
-            this.btnReturn.TabIndex = 3;
+            this.btnReturn.TabIndex = 57;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -88,7 +88,7 @@ namespace BalhamCollege
             this.btnDeleteLecturer.Location = new System.Drawing.Point(344, 304);
             this.btnDeleteLecturer.Name = "btnDeleteLecturer";
             this.btnDeleteLecturer.Size = new System.Drawing.Size(150, 40);
-            this.btnDeleteLecturer.TabIndex = 2;
+            this.btnDeleteLecturer.TabIndex = 56;
             this.btnDeleteLecturer.Text = "Delete Lecturer";
             this.btnDeleteLecturer.UseVisualStyleBackColor = false;
             this.btnDeleteLecturer.Click += new System.EventHandler(this.btnDeleteLecturer_Click);

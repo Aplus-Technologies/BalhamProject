@@ -84,7 +84,7 @@
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(143, 41);
-            this.btnReturn.TabIndex = 3;
+            this.btnReturn.TabIndex = 42;
             this.btnReturn.Text = "Return";
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
@@ -97,7 +97,7 @@
             this.btnDeleteStudent.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteStudent.Name = "btnDeleteStudent";
             this.btnDeleteStudent.Size = new System.Drawing.Size(143, 41);
-            this.btnDeleteStudent.TabIndex = 2;
+            this.btnDeleteStudent.TabIndex = 41;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
