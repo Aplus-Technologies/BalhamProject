@@ -171,7 +171,13 @@ namespace BalhamCollege
              
                     lstLecturers.Items.Clear();
                     ClearFields();
-                    }           
+                }
+                else
+                {
+                    ClearFields();
+                }
+
+
 
             }
            

@@ -137,7 +137,11 @@ namespace BalhamCollege
                     MessageBox.Show("Assessment deleted successfully", "Success", MessageBoxButtons.OK);
 
                     ClearFields();
-                }              
+                }
+                else
+                {
+                    ClearFields();
+                }
             }
         }
 
