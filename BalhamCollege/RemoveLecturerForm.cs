@@ -174,7 +174,10 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstCourses.Items.Clear();
+                    lstLecturers.Items.Clear();
                     ClearFields();
+                    LoadCourses();
                 }
 
 
