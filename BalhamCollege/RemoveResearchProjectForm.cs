@@ -204,7 +204,11 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstLecturers.Items.Clear();
+                    lstResearchProjects.Items.Clear();
+                    LoadLecturers();
                     ClearFields();
+
                 }
             }
         }
