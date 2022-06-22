@@ -201,7 +201,11 @@ namespace BalhamCollege
                     LoadLecturers(); // refresh lecturer list, in case a lecturer has zero assigned research projects
                     lstResearchProjects.Items.Clear();
                     ClearFields();
-                }           
+                }
+                else
+                {
+                    ClearFields();
+                }
             }
         }
 

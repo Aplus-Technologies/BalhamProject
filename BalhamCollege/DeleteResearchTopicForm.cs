@@ -90,7 +90,11 @@ namespace BalhamCollege
                     MessageBox.Show("Research Topic deleted successfully", "Success", MessageBoxButtons.OK);
 
                     ClearFields();
-                }          
+                }
+                else
+                {
+                    ClearFields();
+                }
             }
         }
 

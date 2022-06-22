@@ -127,7 +127,11 @@ namespace BalhamCollege
                     MessageBox.Show("Course deleted successfully", "Success", MessageBoxButtons.OK);
 
                     ClearFields();
-                }              
+                }
+                else
+                {
+                    ClearFields();
+                }
             }
         }
 

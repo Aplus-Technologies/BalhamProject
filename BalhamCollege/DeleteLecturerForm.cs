@@ -93,7 +93,11 @@ namespace BalhamCollege
                     MessageBox.Show("Lecturer deleted successfully", "Success", MessageBoxButtons.OK);
 
                     ClearFields();
-                }              
+                }
+                else
+                {
+                    ClearFields();
+                }
             }
         }
 
