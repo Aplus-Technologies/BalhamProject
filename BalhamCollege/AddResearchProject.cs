@@ -117,9 +117,9 @@ namespace BalhamCollege
             }
           
            dgvResearchProjects.DataSource = projectsA;  // the data table created previously 
-           dgvResearchProjects.Columns[0].Width = 100;  // set column[0] width
-           dgvResearchProjects.Columns[1].Width = 319;  // set column[1] width
-           dgvResearchProjects.Columns[2].Width = 305;  // set column[2] width
+           dgvResearchProjects.Columns[0].Width = 130;  // set column[0] width
+           dgvResearchProjects.Columns[1].Width = 265;  // set column[1] width
+           dgvResearchProjects.Columns[2].Width = 265;  // set column[2] width
 
            dgvResearchProjects.DefaultCellStyle.SelectionBackColor = Color.White; // set backcolor of datagrid
            dgvResearchProjects.DefaultCellStyle.SelectionForeColor = Color.Black; // set forecolor of datagrid
@@ -147,10 +147,13 @@ namespace BalhamCollege
 
                 //show list of topics in data grid view for Research Topics 
                 dgvResearchTopics.DataSource = dsBalhamCollegeAzure.RESEARCHTOPIC;
-                dgvResearchTopics.Columns[0].Width = 80; // set column[0] width
-                dgvResearchTopics.Columns[1].Width = 418; // set column[1] width
-                dgvResearchTopics.Columns[2].Width = 88;  // set column[2] width
-                             
+                dgvResearchTopics.Columns[0].Width = 60; // set column[0] width
+                dgvResearchTopics.Columns[1].Width = 380; // set column[1] width
+                dgvResearchTopics.Columns[2].Width = 80;  // set column[2] width
+                dgvResearchTopics.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+                dgvResearchTopics.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
                 GetProjects();  // call the GetProjects function
 
             }

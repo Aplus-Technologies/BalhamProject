@@ -260,7 +260,7 @@ namespace BalhamCollege
                     this.iSSUETableAdapter.Fill(this.dsBalhamCollegeAzure.ISSUE);
 
                     LoadEnrolments();
-                    DialogResult dialogResult = MessageBox.Show("Issue recorde successfully!\n\nDo you want to record another issue?", "Balham College", MessageBoxButtons.YesNo);
+                    DialogResult dialogResult = MessageBox.Show("Issue recorded successfully!\n\nDo you want to record another issue?", "Balham College", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
                         UnBindIt();
