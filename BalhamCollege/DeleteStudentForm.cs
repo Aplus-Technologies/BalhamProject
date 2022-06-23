@@ -119,7 +119,11 @@ namespace BalhamCollege
                     ClearFields();
                 }
                 else
-                {
+                {   
+                    // clear list upon form load
+                    lstStudents.Items.Clear();
+                    // load students 
+                    LoadStudents();
                     ClearFields();
                 }
             }

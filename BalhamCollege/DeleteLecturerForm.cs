@@ -96,6 +96,8 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstLecturers.Items.Clear();
+                    LoadLecturers();
                     ClearFields();
                 }
             }

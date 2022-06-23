@@ -119,7 +119,10 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstProgrammes.Items.Clear();
+                    LoadProgrammes();
                     ClearFields();
+
                 }
             }
         }

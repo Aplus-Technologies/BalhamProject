@@ -130,6 +130,8 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstCourses.Items.Clear();
+                    LoadCourses();
                     ClearFields();
                 }
             }

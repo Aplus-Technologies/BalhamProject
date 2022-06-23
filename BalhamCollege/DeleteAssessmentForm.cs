@@ -140,7 +140,9 @@ namespace BalhamCollege
                 }
                 else
                 {
+                    lstAssessments.Items.Clear();
                     ClearFields();
+                    LoadAssessments();
                 }
             }
         }
