@@ -61,7 +61,6 @@ namespace BalhamCollege
             this.lblAsterix3 = new System.Windows.Forms.Label();
             this.lblAsterix4 = new System.Windows.Forms.Label();
             this.lblAsterix5 = new System.Windows.Forms.Label();
-            this.lblAsterix6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCredits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFee)).BeginInit();
@@ -252,11 +251,10 @@ namespace BalhamCollege
             // 
             this.txtPlaceHolder.Location = new System.Drawing.Point(156, 221);
             this.txtPlaceHolder.MaxLength = 50;
-            this.txtPlaceHolder.Multiline = true;
             this.txtPlaceHolder.Name = "txtPlaceHolder";
             this.txtPlaceHolder.ReadOnly = true;
             this.txtPlaceHolder.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlaceHolder.Size = new System.Drawing.Size(360, 31);
+            this.txtPlaceHolder.Size = new System.Drawing.Size(360, 26);
             this.txtPlaceHolder.TabIndex = 4;
             // 
             // txtProgrammeID
@@ -301,21 +299,20 @@ namespace BalhamCollege
             // 
             this.lblLevel.AutoSize = true;
             this.lblLevel.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(114, 264);
+            this.lblLevel.Location = new System.Drawing.Point(40, 265);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(46, 20);
+            this.lblLevel.Size = new System.Drawing.Size(120, 20);
             this.lblLevel.TabIndex = 22;
-            this.lblLevel.Text = "Level:";
+            this.lblLevel.Text = "Programme Level:";
             // 
             // txtPlaceHolder2
             // 
             this.txtPlaceHolder2.Location = new System.Drawing.Point(156, 262);
             this.txtPlaceHolder2.MaxLength = 50;
-            this.txtPlaceHolder2.Multiline = true;
             this.txtPlaceHolder2.Name = "txtPlaceHolder2";
             this.txtPlaceHolder2.ReadOnly = true;
             this.txtPlaceHolder2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtPlaceHolder2.Size = new System.Drawing.Size(48, 27);
+            this.txtPlaceHolder2.Size = new System.Drawing.Size(48, 26);
             this.txtPlaceHolder2.TabIndex = 6;
             // 
             // lblRequiredFields
@@ -384,17 +381,6 @@ namespace BalhamCollege
             this.lblAsterix5.TabIndex = 19;
             this.lblAsterix5.Text = "*";
             // 
-            // lblAsterix6
-            // 
-            this.lblAsterix6.AutoSize = true;
-            this.lblAsterix6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsterix6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAsterix6.Location = new System.Drawing.Point(100, 261);
-            this.lblAsterix6.Name = "lblAsterix6";
-            this.lblAsterix6.Size = new System.Drawing.Size(14, 18);
-            this.lblAsterix6.TabIndex = 21;
-            this.lblAsterix6.Text = "*";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::BalhamCollege.Properties.Resources.Logo;
@@ -431,7 +417,6 @@ namespace BalhamCollege
             this.Controls.Add(this.cboProgramme);
             this.Controls.Add(this.lblProgrammeName);
             this.Controls.Add(this.lblLevel);
-            this.Controls.Add(this.lblAsterix6);
             this.Controls.Add(this.lblAsterix5);
             this.Controls.Add(this.lblAsterix4);
             this.Controls.Add(this.lblAsterix3);
@@ -489,7 +474,6 @@ namespace BalhamCollege
         private System.Windows.Forms.Label lblAsterix3;
         private System.Windows.Forms.Label lblAsterix4;
         private System.Windows.Forms.Label lblAsterix5;
-        private System.Windows.Forms.Label lblAsterix6;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
