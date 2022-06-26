@@ -99,7 +99,7 @@ namespace BalhamCollege
             {
 
                 DataRow deleteProgrammeRow = dtProgramme2.Rows[cmProgramme.Position];
-                if (MessageBox.Show("Are you sure you want to delete this Programme?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this programme?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     
                     //deleteProgrammeRow.Delete();

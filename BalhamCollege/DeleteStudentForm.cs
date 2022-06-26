@@ -100,7 +100,7 @@ namespace BalhamCollege
 
                 DataRow deleteStudentRow = dtStudent2.Rows[cmStudent.Position];
 
-                if (MessageBox.Show("Are you sure you want to delete this Student?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this student?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     
                     this.studentTableAdapter1.Delete(Convert.ToInt32(txtStudentID.Text), txtLastName.Text, txtFirstName.Text, txtStreetAddress.Text, txtSuburb.Text, txtCity.Text, txtEmailAddress.Text, txtPhoneNumber.Text, txtStatus.Text);
