@@ -174,7 +174,7 @@ namespace BalhamCollege
             if (lstResearchProjects.SelectedItem != null)
             {
                 DataRow deleteResearchProjectRow = dtResearchProject2.Rows[cmResearchProject.Position];
-                if (MessageBox.Show("Are you sure you want to remove this Research Project?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to remove this research project?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     string researchProject;
                     researchProject = lstResearchProjects.SelectedItem.ToString();
@@ -196,7 +196,7 @@ namespace BalhamCollege
 
                     DC.UpdateResearchProject();
 
-                    MessageBox.Show("Research Project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
+                    MessageBox.Show("Research project removed successfully", "Acknowledgement", MessageBoxButtons.OK);
                     lstLecturers.Items.Clear();
                     LoadLecturers(); // refresh lecturer list, in case a lecturer has zero assigned research projects
                     lstResearchProjects.Items.Clear();

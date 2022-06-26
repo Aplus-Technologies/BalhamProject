@@ -113,7 +113,7 @@ namespace BalhamCollege
             if (lstAssessments.SelectedItem != null)
             {
                 DataRow deleteAssessmentRow = dtAssessment2.Rows[cmAssessment.Position];
-                if (MessageBox.Show("Are you sure you want to delete this Assessment?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this assessment?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     // deleteAssessmentRow.Delete();
 

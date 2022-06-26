@@ -76,7 +76,7 @@ namespace BalhamCollege
             {
 
                 DataRow deleteLecturerRow = dtLecturer2.Rows[cmLecturer.Position];
-                if (MessageBox.Show("Are you sure you want to delete this Lecturer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this lecturer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     
                     // deleteLecturerRow.Delete();

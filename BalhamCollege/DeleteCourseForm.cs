@@ -108,7 +108,7 @@ namespace BalhamCollege
             {
 
                 DataRow deleteCourseRow = dtCourse2.Rows[cmCourse.Position];
-                if (MessageBox.Show("Are you sure you want to delete this Course?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to delete this course?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     
                     // deleteCourseRow.Delete();

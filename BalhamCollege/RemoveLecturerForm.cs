@@ -137,7 +137,7 @@ namespace BalhamCollege
             if (lstLecturers.SelectedItem != null)
             {
                 DataRow deleteAssignmentRow = dtAssignment2.Rows[cmAssignment.Position];
-                if (MessageBox.Show("Are you sure you want to remove this Lecturer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                if (MessageBox.Show("Are you sure you want to remove this lecturer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
                 {
                     string lecturer;
                     lecturer = lstLecturers.SelectedItem.ToString();
