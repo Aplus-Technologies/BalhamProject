@@ -189,6 +189,7 @@ namespace BalhamCollege
             // 
             // dgvStudents
             // 
+            this.dgvStudents.AllowUserToAddRows = false;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Location = new System.Drawing.Point(24, 52);
             this.dgvStudents.Name = "dgvStudents";
@@ -200,6 +201,7 @@ namespace BalhamCollege
             // 
             // dgvEnrolments
             // 
+            this.dgvEnrolments.AllowUserToAddRows = false;
             this.dgvEnrolments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnrolments.Location = new System.Drawing.Point(24, 369);
             this.dgvEnrolments.Name = "dgvEnrolments";
