@@ -5,7 +5,7 @@
 - Database conected to Azure SQL Server
 - Manage information related to lecturers and students with the functinalities of:
 
-| Dev1 | Dev2 | Dev3 | Xergius |
+| Amy | Svetlana2k | jakamum | Xergius |
 | --- | --- | --- | --- |
 | Add Student | Update Student | Delete Student | Student's Report |
 | Add Lecturer | Update Lecturer | Delete Lecturer | Lecturer's Report |
