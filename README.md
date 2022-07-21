@@ -17,6 +17,26 @@
 | Enrol Student | Withdraw Student | Remove Research Project | Record Issue |
 
 ### Screenshots:
-- Add a Student
+-Enrolments Clerk Menu:
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/enrol_menu.png)
+
+- Add a Student:
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/add_student.png)
+
+- Update a Student:
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/update_student.png)
+
+- Delete a Student:
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/delete_student.png)
+
+- Enrol a Student:
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/enrol_student.png)
+
+- Students report:
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/report_student.png)
