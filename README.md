@@ -1,6 +1,6 @@
 # Balham College Project
 ## Final project for the Diploma in Information Systems
-### The desktop program is a management system for a school and it has the features of:
+### The desktop program is a college management system and it has the features of:
 - Basic multiuser access.
   1. Enrolments Clerk
   2. Human Resources Clerk
