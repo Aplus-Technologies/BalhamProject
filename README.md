@@ -15,3 +15,7 @@
 | Add Research Topic | Update Research Topic | Delete Research Topic | Issues Report |
 | Add Research Project | Assign Lecturer | Remove Lecturer | Enter Result |
 | Enrol Student | Withdraw Student | Remove Research Project | Record Issue |
+
+### Screenshots:
+- Add a Student
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/add student.png)
