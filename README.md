@@ -18,4 +18,4 @@
 
 ### Screenshots:
 - Add a Student
-![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/add student.png)
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/add_student.png)
