@@ -2,6 +2,12 @@
 ## Final project for the Diploma in Information Systems
 ### The desktop program is a management system for a school and it has the features of:
 - Basic multiuser access.
+  1. Enrolments Clerk
+  2. Human Resources Clerk
+  3. Program Administrator
+  4. Course Administrator
+  5. Research Administrator
+  6. Students Support Clerk
 - Database conected to Azure SQL Server
 - Manage information related to lecturers and students with the functionalities of:
 
@@ -41,6 +47,6 @@
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/report_student.png)
 
-### Basic ERD
+### Overall Class Diagram
 
-![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/ERD.png)
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/Class_diagram.png)
