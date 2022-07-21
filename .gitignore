@@ -178,7 +178,7 @@ DocProject/Help/html
 
 # Click-Once directory
 publish/
-Properties/
+BalhamCollege/Properties/
 # Publish Web Output
 *.[Pp]ublish.xml
 *.azurePubxml
