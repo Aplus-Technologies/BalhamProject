@@ -17,7 +17,7 @@
 | Enrol Student | Withdraw Student | Remove Research Project | Record Issue |
 
 ### Screenshots:
--Enrolments Clerk Menu:
+- Enrolments Clerk Menu:
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/enrol_menu.png)
 
