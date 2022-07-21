@@ -3,7 +3,7 @@
 ### The program is a management system for a school and it has the features of:
 - Basic multiuser access.
 - Database conected to Azure SQL Server
-- Manage information related to lecturers and students with the functinalities of:
+- Manage information related to lecturers and students with the functionalities of:
 
 | Amy | Svetlana2k | jakamum | Xergius |
 | --- | --- | --- | --- |
