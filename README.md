@@ -1,6 +1,6 @@
 # Balham College Project
 ## Final project for the Diploma in Information Systems
-### The program is a management system for a school and it has the features of:
+### The desktop program is a management system for a school and it has the features of:
 - Basic multiuser access.
 - Database conected to Azure SQL Server
 - Manage information related to lecturers and students with the functionalities of:
@@ -40,3 +40,7 @@
 - Students report:
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/report_student.png)
+
+### Basic ERD
+
+![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/ERD.png)
