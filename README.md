@@ -16,7 +16,7 @@
 | Add Student | Update Student | Delete Student | Student's Report |
 | Add Lecturer | Update Lecturer | Delete Lecturer | Lecturer's Report |
 | Add Course | Update Course | Delete Course | Course's Report |
-| Add Assessment | Update Assessment | Delete Assessment | Assessment's Report |
+| [Add Assessment](https://github.com/Xergius/BalhamCollegeProject/blob/master/BalhamCollege/AddAssessmentForm.Designer.cs) | Update Assessment | Delete Assessment | Assessment's Report |
 | Add Programme | Update Programme | Delete Programme | Research Report |
 | Add Research Topic | Update Research Topic | Delete Research Topic | Issues Report |
 | Add Research Project | Assign Lecturer | Remove Lecturer | Enter Result |
@@ -43,7 +43,7 @@
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/enrol_student.png)
 
-- Students report: [a link](https://github.com/Xergius/BalhamCollegeProject/blob/master/BalhamCollege/EnrolmentsClerkForm.cs "code link")
+- Students report: [Code link](https://github.com/Xergius/BalhamCollegeProject/blob/master/BalhamCollege/EnrolmentsClerkForm.cs)
 
 ![Alt text](https://balhamstorage.blob.core.windows.net/balham-desk-images/report_student.png)
 
